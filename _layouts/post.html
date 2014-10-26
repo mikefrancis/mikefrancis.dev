@@ -23,7 +23,7 @@ layout: default
         <div class="project__content">
           {{ content }}
           <p>
-            {% if page.link == blank %}
+            {% if page.link %}
             <a class="btn btn--primary" href="{{ page.link }}">View</a>
             {% endif %}
             <a class="btn" href="/">Back to home</a>
