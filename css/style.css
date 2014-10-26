@@ -189,7 +189,8 @@ img {
 }
 
 .project--single .project__content {
-  margin-top: 8rem;
+  margin: 8rem auto 0;
+  max-width: 640px;
 }
 
 @media screen and (max-width: 768px) {
