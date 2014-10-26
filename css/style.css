@@ -61,6 +61,10 @@ img {
   padding: 0 2rem;
 }
 
+.container--small {
+  max-width: 640px;
+}
+
 .container:before, .container:after {
   content: '';
   display: table;
@@ -189,8 +193,7 @@ img {
 }
 
 .project--single .project__content {
-  margin: 8rem auto 0;
-  max-width: 640px;
+  margin-top: 8rem;
 }
 
 @media screen and (max-width: 768px) {
