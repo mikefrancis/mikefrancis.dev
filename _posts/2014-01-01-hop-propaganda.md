@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BrewDog Email Templates"
+title:  "Hop Propaganda"
 date:   2014-01-01 00:00:00
 categories: brewdog html design
 thumbnail: /img/brewdog-email.png

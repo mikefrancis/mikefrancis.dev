@@ -6,14 +6,14 @@ layout: default
     <section class="section section--intro">
       <div class="container">
         <h1 class="project__title">{{ page.title }}</h1>
-        <div class="window project__thumb">
+        <div class="window">
           <div class="window__header">
             <span class="window__header__button window__header__button--close"></span>
             <span class="window__header__button window__header__button--minimise"></span>
             <span class="window__header__button window__header__button--maximise"></span>
           </div>
           <div class="window__content">
-            <img src="{{ page.thumbnail }}" alt="{{ page.title }}">
+            <img class="project__thumb" src="{{ page.thumbnail }}" alt="{{ page.title }}">
           </div>
         </div>
       </div>

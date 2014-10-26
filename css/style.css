@@ -157,8 +157,6 @@ img {
       margin-bottom: 1.5rem;
     }
 
-    
-
     .project:hover > a:after,
     .project:hover .project__overlay {
       opacity: 0;
@@ -185,7 +183,7 @@ img {
 }
 
 .project--single .project__thumb {
-  margin: 0 auto -25%;
+  margin: 0 auto -50%;
   position: relative;
 }
 
@@ -196,7 +194,7 @@ img {
 }
 
 .project--single .project__content {
-  margin-top: 8rem;
+  margin-top: 13rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -235,8 +233,7 @@ img {
     }
 
 .window {
-  border-radius: .5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  border-radius: 0.5rem;
   margin: 0 auto 1.5rem;
   max-width: 640px;
 }
@@ -267,3 +264,7 @@ img {
     .window__header__button--maximise {
       background-color: green;
     }
+  
+  .window__content img {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
