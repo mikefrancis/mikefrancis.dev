@@ -216,7 +216,7 @@ img {
   }
 
   .nav > li:after {    
-    content: '/';
+    content: '\2022';
     margin: 0 0.5rem;
   }
 
