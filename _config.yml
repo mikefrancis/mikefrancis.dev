@@ -1,0 +1,10 @@
+# Site settings
+title: Mike Francis
+email: mikeffrancis@gmail.com
+description: "Web designer and developer based in London, UK."
+baseurl: ""
+url: "http://mikefrancis.me"
+
+# Build settings
+markdown: kramdown
+permalink: /work/:title

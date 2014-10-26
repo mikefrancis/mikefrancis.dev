@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<main class="main" role="main">
+  
+
+  <section class="section">
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title">Work</h2>
+        <p class="section__description">A small selection of my work, if you'd like to see more just let me know.</p>
+      </header>
+      <div class="row">
+        {% for post in site.posts %}
+        <div class="column">
+          <article class="project">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+              <img class="project__thumb" src="{{ post.thumbnail }}" alt=""{{ post.title }}>
+              <div class="project__overlay">
+                <h3 class="project__title">{{ post.title }}</h3>
+              </div>
+            </a>
+          </article>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
