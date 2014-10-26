@@ -14,10 +14,10 @@ html {
 }
 
 body {
-  animation: fadeIn;
+  -webkit-animation: fadeIn 1s;
 }
 
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
@@ -208,6 +208,7 @@ img {
   }
 
   .nav > li:after {
+    color: #34495e;
     content: '/';
     margin: 0 0.5rem;
   }
@@ -219,4 +220,39 @@ img {
 
     .nav > li > a {
       color: #34495e;
+      font-weight: bold;
+    }
+
+.window {
+  border-radius: .5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+}
+
+  .window__header {
+    background-image: linear-gradient(#eee,#ddd);
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.01rem 0.5rem;
+    text-align: left;
+  }
+
+    .window__header__button {
+      border-radius: 100%;
+      display: inline-block;
+      height: 0.5rem;
+      opacity: 0.5;
+      width: 0.5rem;
+    }
+
+    .window__header__button--close {
+      background-color: red;
+    }
+
+    .window__header__button--minimise {
+      background-color: yellow;
+    }
+
+    .window__header__button--maximise {
+      background-color: green;
     }

@@ -6,4 +6,4 @@ categories: website wordpress php html
 thumbnail: /img/progress-sc.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, cum, architecto! Accusantium culpa tempora placeat quasi deleniti eum consequatur ratione provident, obcaecati laborum, voluptates porro odit eligendi quis, impedit non.
+Progress Sports Communications are a integrated agency based in Scotland. I was appointed by them to lead the development of a WordPress site while working with their in-house design team.

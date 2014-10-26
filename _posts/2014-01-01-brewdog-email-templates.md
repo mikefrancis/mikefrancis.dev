@@ -6,4 +6,4 @@ categories: brewdog html design
 thumbnail: /img/brewdog-email.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, cum, architecto! Accusantium culpa tempora placeat quasi deleniti eum consequatur ratione provident, obcaecati laborum, voluptates porro odit eligendi quis, impedit non.
+Approached by BrewDog, I was asked to design and implement some new marketing email templates as well as bring their existing templates up to date. This was a repeat project after the brewery rebranded in mid-2014.
