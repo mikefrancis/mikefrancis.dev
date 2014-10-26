@@ -181,6 +181,7 @@ img {
 .project--single .project__title {
   color: #fff;
   font-size: 3rem;
+  font-weight: 300;
 }
 
 .project--single .project__thumb {
