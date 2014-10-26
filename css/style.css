@@ -41,9 +41,9 @@ img {
 
 .btn {
   display: inline-block;
-  background-color: #bbb;
+  background-color: #34495e;
   box-shadow: inset 0 -0.25rem 0 rgba(255, 255, 255, 0.25);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   color: #fff;
   font-weight: bold;
   line-height: 3.25rem;
@@ -53,6 +53,10 @@ img {
 
 .btn--primary {
   background-color: #2ecc71;
+}
+
+.content a {
+  color: #34495e;
 }
 
 .container {
@@ -79,6 +83,10 @@ img {
 .footer  {
   padding: 3rem 0;
   text-align: center;
+}
+
+.footer a {
+  border-bottom: solid 1px;
 }
 
 .header__thumb {
@@ -144,20 +152,12 @@ img {
     text-align: center;
   }
 
-    .project img {
+    .project__thumb {
       display: block;
+      margin-bottom: 1.5rem;
     }
 
-    .project > a:after {
-      background-color: rgba(0, 0, 0, 0.5);
-      bottom: 0;
-      content: '';
-      left: 0;
-      position: absolute;
-      right: 0;
-      transition: all 400ms;
-      top: 0;
-    }
+    
 
     .project:hover > a:after,
     .project:hover .project__overlay {
@@ -174,10 +174,12 @@ img {
     }
 
     .project__title {
+      color: #34495e;
       font-weight: bold;
     }
 
 .project--single .project__title {
+  color: #fff;
   font-size: 3rem;
 }
 
@@ -204,17 +206,22 @@ img {
 
 .nav {
   list-style: none;
+  margin-left: 0;
   margin-bottom: 0.75rem;
 }
 
   .nav > li {
+    color: #34495e;
     display: inline-block;
   }
 
-  .nav > li:after {
-    color: #34495e;
+  .nav > li:after {    
     content: '/';
     margin: 0 0.5rem;
+  }
+
+  .nav > li:first-child {
+    margin-left: 0;
   }
 
   .nav > li:last-child:after {
@@ -223,7 +230,6 @@ img {
   }
 
     .nav > li > a {
-      color: #34495e;
       font-weight: bold;
     }
 
