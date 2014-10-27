@@ -3,7 +3,7 @@ layout: post
 title:  "SalesGossip"
 date:   2014-01-01 00:00:00
 categories: html
-thumbnail: /img/sales-gossip.png
+thumbnail: /img/sales-gossip.jpg
 link: http://www.salesgossip.co.uk
 ---
 
