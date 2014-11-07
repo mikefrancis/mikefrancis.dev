@@ -87,6 +87,31 @@ img {
   clear: both;
 }
 
+.row {
+  margin: 0 -1.5rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    margin: 0;
+  }
+}
+
+  .column {
+    float: left;
+    padding: 0 0.75rem;
+    width: 33.333%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .column {
+      float: none;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
 .header,
 .footer  {
   padding: 3rem 0;
@@ -129,30 +154,11 @@ img {
   text-align: center;
 }
 
-.row {
-  margin: 0 -1.5rem;
-  overflow: hidden;
+.section--intro .section__title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
 }
-
-@media screen and (max-width: 768px) {
-  .row {
-    margin: 0;
-  }
-}
-
-  .column {
-    float: left;
-    padding: 0 0.75rem;
-    width: 33.333%;
-  }
-
-  @media screen and (max-width: 768px) {
-    .column {
-      float: none;
-      padding: 0;
-      width: 100%;
-    }
-  }
   
   .project {
     margin-bottom: 1.5rem;
@@ -183,12 +189,6 @@ img {
       color: $primary;
       font-weight: bold;
     }
-
-.section--intro .section__title {
-  color: #fff;
-  font-size: 3rem;
-  font-weight: 300;
-}
 
 .project--single .project__thumb {
   margin: 0 auto -50%;
