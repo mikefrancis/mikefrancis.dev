@@ -2,7 +2,7 @@
 layout: post
 title:  "Micky Parsons"
 date:   2014-01-01 00:00:00
-tags: [Front-end Development, Wordpress]
+tags: [Front-end Development, WordPress]
 thumbnail: /img/micky-parsons-thumb.jpg
 featured: /img/micky-parsons.jpg
 ---
