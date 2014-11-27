@@ -2,7 +2,7 @@
 layout: post
 title:  "Hop Propaganda"
 date:   2014-01-01 00:00:00
-tags: [Design, HTML]
+tags: [Design, Email Template Development]
 thumbnail: /img/brewdog-email-thumb.jpg
 featured: /img/brewdog-email.jpg
 ---
