@@ -2,7 +2,7 @@
 layout: post
 title:  "SalesGossip"
 date:   2014-01-01 00:00:00
-tags: [HTML, CSS, JavaScript, Grunt]
+tags: [Front-end Development]
 thumbnail: /img/sales-gossip-thumb.jpg
 featured: /img/sales-gossip.jpg
 link: http://www.salesgossip.co.uk
