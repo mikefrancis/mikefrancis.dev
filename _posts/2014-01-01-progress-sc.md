@@ -2,7 +2,7 @@
 layout: post
 title:  "Progress SC"
 date:   2014-01-01 00:00:00
-tags: [WordPress, PHP, HTML, CSS, JavaScript, Grunt]
+tags: [Front-end Development, WordPress]
 thumbnail: /img/progress-sc-thumb.jpg
 featured: /img/progress-sc.jpg
 ---
