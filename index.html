@@ -2,32 +2,15 @@
 layout: default
 ---
 
-<main class="main" role="main">
-  <section class="section section--intro">
-    <div class="container">
-      <h1 class="section__title">Howdo.</h1>
-      <p>I'm Mike and I'm a full-stack developer and UI designer based in London, UK.</p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <header class="section__header">
-        <h2 class="section__title">Work</h2>
-        <p class="section__description">Here's a small selection of my work, if you'd like to see more just let me know.</p>
-      </header>
-      <div class="row">
-        {% for post in site.posts %}
-        <div class="column">
-          <article class="project">
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-              <img class="project__thumb" src="{{ post.thumbnail }}" alt="{{ post.title }}" width="306" height="191">
-              <h3 class="project__title">{{ post.title }}</h3>
-               <p>{{ post.tags | join: ' / ' }}</p>
-            </a>
-          </article>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-</main>
+  <main class="main">
+    <dl>
+      <dt>Projects I've worked on</dt>
+      <dd>
+        <ul>
+          {% for post in site.posts %}
+          <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </dd>
+    </dl>
+  </main>
