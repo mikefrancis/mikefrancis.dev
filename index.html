@@ -10,7 +10,7 @@ layout: default
           {% for post in site.posts %}
             <li>
               {% if page.link %}
-                <a href="{{ post.link }}">{{ post.title }}</a></li>
+                <a href="{{ post.link }}">{{ post.title }}</a>
               {% else %}
                 {{ post.title }}
               {% endif %}
