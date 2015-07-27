@@ -8,7 +8,13 @@ layout: default
       <dd>
         <ul>
           {% for post in site.posts %}
-          <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+            <li>
+              {% if page.link %}
+                <a href="{{ post.link }}">{{ post.title }}</a></li>
+              {% else %}
+                {{ post.title }}
+              {% endif %}
+            </li>
           {% endfor %}
         </ul>
       </dd>
