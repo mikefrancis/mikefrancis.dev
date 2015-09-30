@@ -10,3 +10,4 @@ github_username:  mikefrancis
 
 # Build settings
 markdown: kramdown
++permalink: /post/:title
