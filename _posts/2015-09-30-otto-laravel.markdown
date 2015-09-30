@@ -11,18 +11,16 @@ Being a PHP developer I naturally wanted to see how easy it would be to get a La
 
 You first want to head to the Otto site, download the binary and follow the installation instructions. Once installed you should be able to run `otto` in a terminal and see the following:
 
-```
-usage: otto [--version] [--help] <command> [<args>]
+    usage: otto [--version] [--help] <command> [<args>]
 
-Available commands are:
-    build      Build the deployable artifact for the app
-    compile    Prepares your project for being run.
-    deploy     Deploy the application
-    dev        Start and manage a development environment
-    infra      Builds the infrastructure for the Appfile
-    status     Status of the stages of this application
-    version    Prints the Otto version
-```
+    Available commands are:
+        build      Build the deployable artifact for the app
+        compile    Prepares your project for being run.
+        deploy     Deploy the application
+        dev        Start and manage a development environment
+        infra      Builds the infrastructure for the Appfile
+        status     Status of the stages of this application
+        version    Prints the Otto version
 
 Now Otto is installed, create a new Laravel app by running `laravel new otto-laravel-project` (you'll need the [Laravel installer composer package](http://laravel.com/docs/4.2#install-laravel) installed globally to do this). Then dive into your project using `cd otto-laravel-project` and open the project in your favourite text editor.
 
