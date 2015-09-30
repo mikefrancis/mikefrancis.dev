@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Otto & Laravel"
+title:  "Getting started with Otto & Laravel"
 date:   2015-09-30 10:00:00
 categories: otto laravel php
 ---
