@@ -7,7 +7,7 @@ categories: otto laravel php
 
 Yesterday morning I discovered [Otto](https://ottoproject.io) by HashiCorp. Billed as the successor to HashiCorp's popular Virtual Machine management software [Vagrant](http://vagrantup.com), it looks to further minimise the differences between local and production environment by wrapping your application (and it's dependencies) up into a container.
 
-Being a PHP developer I naturally wanted to see how easy it would be to get a Laravel app up and running locally. [Otto has a nice little example of setting up a Sintra (Ruby) site](https://ottoproject.io/intro/getting-started/install.html), so I'd suggest doing that first to get a feel for the basic Otto commands.
+Being a PHP developer I naturally wanted to see how easy it would be to get a Laravel app up and running locally. [Otto has a nice little example of setting up a Sinatra (Ruby) site](https://ottoproject.io/intro/getting-started/install.html), so I'd suggest doing that first to get a feel for the basic Otto commands.
 
 To get started head to the [Otto](https://ottoproject.io) site, download the binary and follow the installation instructions.
 
@@ -57,6 +57,6 @@ Once this has completed you can run `otto dev` to spin up a quick Virtual Machin
 
 You can now ssh into the VM by doing `otto dev ssh`, which will take you straight into your project root. From there you can either use `php -S 0.0.0.0:5000` to start a webserver or `php artisan serve --host=0.0.0.0 --port=5000` if you prefer using artisan. From here you can also run all your artisan/composer commands, or unit tests - anything that requires being inside the server.
 
-Now you should be able to head to `172.16.1.180:5000` and see the Laravel 5 welcome screen. If that isn't your IP address or you ever forget it, you can always run `otto dev address` to remind you. Neat, huh?
+Now you should be able to head to `http://172.16.1.180:5000` in a browser and see the Laravel 5 welcome screen. If that isn't your IP address or you ever forget it, you can always run `otto dev address` to remind you. Neat, huh?
 
 I've really enjoyed playing around with Otto and while technologies such as Docker and Vagrant will always offer a more powerful solution, I think Otto is great if you're simply just wanting to get something off the ground quickly.
