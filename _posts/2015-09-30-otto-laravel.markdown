@@ -37,7 +37,7 @@ We then need to create an `Appfile`. This is what will tell Otto what sort of in
 
 Then run `otto compile` to build your infrastructure locally. At the time of writing, you need the `Appfile` as Otto can't tell the application is PHP and instead defaults to Node, which of course isn't right - this will probably be fixed fairly soon though.
 
-Once this has completed you can run `otto dev` to spin up a quick Virtual Machine for viewing. This might take a while if it's your first time running otto, but this is just a one-time cost so don't worry! 30 seconds or so later you'll see something like:
+Once this has completed you can run `otto dev` to spin up a quick Virtual Machine for viewing. It might take a while to download the machine image if it's your first time running Otto, but this is just a one-time thing so don't worry! 30 seconds or so later you'll see:
 
     ==> Development environment successfully created!
         IP address: 172.16.1.180
@@ -55,8 +55,8 @@ Once this has completed you can run `otto dev` to spin up a quick Virtual Machin
         For example, if you start your app with 'php -S 0.0.0.0:5000', then you can
         access it using the above IP at port 5000.
 
-You can now ssh into the VM by doing `otto dev ssh`, which will take you straight into your project root. From there you can either use `php -S 0.0.0.0:5000` to start a webserver or `php artisan serve --host=0.0.0.0 --port=5000` if you prefer using artisan. From here you can also run all your artisan/composer commands, or unit tests - anything that requires being inside the server.
+You can now ssh into the VM by doing `otto dev ssh`, which will take you straight into your project root - handy! From there you can either use `php -S 0.0.0.0:5000` to start a webserver or `php artisan serve --host=0.0.0.0 --port=5000` if you prefer using artisan. From here you can also run all your artisan/composer commands, or unit tests - anything that requires being inside the server.
 
-Now you should be able to head to `http://172.16.1.180:5000` in a browser and see the Laravel 5 welcome screen. If that isn't your IP address or you ever forget it, you can always run `otto dev address` to remind you. Neat, huh?
+Now you should be able to head to `http://172.16.1.180:5000` in a browser and see the Laravel 5 welcome screen. If that isn't your app's IP address or you ever forget it, you can always run `otto dev address` to remind you. Neat, huh?
 
 I've really enjoyed playing around with Otto and while technologies such as Docker and Vagrant will always offer a more powerful solution, I think Otto is great if you're simply just wanting to get something off the ground quickly.
