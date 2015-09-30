@@ -28,34 +28,30 @@ Now Otto is installed, create a new Laravel app by running `laravel new otto-lar
 
 We then need to create an `Appfile`. This is what will tell Otto what sort of infrastructure we require and of course is extremely configurable. Add the following:
 
-```
-application {
-    name = "otto-laravel-project"
-    type = "php"
-}
-```
+    application {
+        name = "otto-laravel-project"
+        type = "php"
+    }
 
 Then run `otto compile` to build your infrastructure locally. At the time of writing, you need the `Appfile` as Otto can't tell the application is PHP and instead defaults to Node, which of course isn't right - this will probably be fixed fairly soon though.
 
 Once this has completed you can run `otto dev` to spin up a quick Virtual Machine for viewing. This might take a while if it's your first time running otto, but this is just a one-time cost so don't worry! This might take 30 seconds or so if not, so just sit tight and once finished you'll see something like:
 
-```
-==> Development environment successfully created!
-    IP address: 172.16.1.180
+    ==> Development environment successfully created!
+        IP address: 172.16.1.180
 
-    A development environment has been created for writing a PHP app.
+        A development environment has been created for writing a PHP app.
 
-    Edit files locally on your machine, the file changes will be synced
-    to the development environment automatically.
+        Edit files locally on your machine, the file changes will be synced
+        to the development environment automatically.
 
-    To run and view your application, run 'otto dev ssh' to enter the
-    development environment. You'll be placed directly into the working
-    directory where you can run "composer", "php", etc.
+        To run and view your application, run 'otto dev ssh' to enter the
+        development environment. You'll be placed directly into the working
+        directory where you can run "composer", "php", etc.
 
-    You can access the environment from this machine using the IP address above.
-    For example, if you start your app with 'php -S 0.0.0.0:5000', then you can
-    access it using the above IP at port 5000.
-```
+        You can access the environment from this machine using the IP address above.
+        For example, if you start your app with 'php -S 0.0.0.0:5000', then you can
+        access it using the above IP at port 5000.
 
 You can now ssh into the VM by doing `otto dev ssh`, which will take you straight into your project root. From there you can either use `php -S 0.0.0.0:5000` to start a webserver or `php artisan serve --host=0.0.0.0 --port=5000` if you prefer using artisan. From here you can also run all your artisan/composer commands, or unit tests - anything that requires being inside the server.
 
