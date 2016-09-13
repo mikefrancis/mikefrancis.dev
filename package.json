@@ -1,0 +1,23 @@
+{
+  "name": "mikefrancis.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --server --files='index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikefrancis/mikefrancis.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikefrancis/mikefrancis.github.io/issues"
+  },
+  "homepage": "https://github.com/mikefrancis/mikefrancis.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.15.0"
+  }
+}
