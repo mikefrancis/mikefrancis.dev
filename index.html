@@ -1,23 +1,67 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mike Francis</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Designer &amp; Full-Stack Developer based in London, UK.">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.3.1/css/tachyons.min.css"/>
+    <style media="screen">
+        body {
+            /*font-family: 'Redacted' !important;*/
+        }
+    </style>
+</head>
+<body class="near-black sans-serif">
+    <div class="mw7 pa4">
+        <header class="mb5">
+            <h1 class="f1 lh-title ma0 mb2">Mike Francis</h1>
+            <p class="f4 ma0">Designer/Full-Stack Developer</p>
+        </header>
+        <main>
+            <article>
+                <section class="mb5">
+                    <p class="lh-copy">Currently working at <a class="link b blue" href="https://pod-point.com">POD Point</a>, an electric car charging network based in London. I currently
+                    ship APIs and web-apps written in Laravel/Lumen, as well as cross-platform apps written in React Native.</p>
 
-<div class="home">
+                    <p class="lh-copy">I'm also the co-founder/CTO of <a class="link b blue" href="https://fortsort.com">FortSort</a>, a property search management tool which aims to make
+                    house-hunting a little easier.</p>
 
-  <h1 class="page-heading">Posts</h1>
+                    <p class="lh-copy">Quite simply, I ❤️ designing and building products. If you've got an idea you'd like to discuss, please
+                    <a class="link b blue" href="mailto:mikeffrancis@gmail.com">get in touch</a>.</p>
+                </section>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <section class="mb5">
+                    <h2 class="f6 ttu tracked">Speaking</h2>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+                    <ul class="list pa0 lh-copy">
+                        <li>Forefront Leeds, August 2016</li>
+                        <li>The Digital Barn, February 2012</li>
+                    </ul>
+                </section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+                <section class="mb5">
+                    <h2 class="f6 ttu tracked">Writing</h2>
 
-</div>
+                    <ul class="list pa0 lh-copy">
+                        <li><a class="link b blue" href="https://medium.com/@mikeeeeeeey/i-built-a-thing-once-and-people-liked-it-3267cedd510e#.pbt3brpmr">I built a thing once and people liked it</a>, May 2016</li>
+                        <li><a class="link b blue" href="https://medium.com/@mikeeeeeeey/multiple-laravel-homestead-boxes-side-by-side-487c4caeb29d#.xddivfkvs">Multiple Laravel Homestead boxes side-by-side</a>, March 2016</li>
+                        <li><a class="link b blue" href="https://medium.com/@mikeeeeeeey/update-default-bus-binding-in-lumen-5-2-71c7b37e4a7#.dd1zsuty8">Update default Bus binding in Lumen 5.2</a>, January 2016</li>
+                        <li><a class="link b blue" href="https://medium.com/@mikeeeeeeey/getting-started-with-laravel-otto-ea1dcb84137a#.emxwv048u">Getting started with Laravel &amp; Otto</a>, October 2015</li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+        <footer class="bt b--light-gray">
+            <ul class="list pa0 lh-copy">
+                <li class="dib"><a class="link b blue" href="https://github.com/mikefrancis">GitHub</a></li>
+                <li class="dib ml2"><a class="link b blue" href="https://twitter.com/_mikefrancis">Twitter</a></li>
+                <li class="dib ml2"><a class="link b blue" href="https://dribbble.com/mikefrancis">Dribbble</a></li>
+                <li class="dib ml2"><a class="link b blue" href="https://linkedin.com">LinkedIn</a></li>
+                <li class="dib ml2"><a class="link b blue" href="mailto:mikeffrancis@gmail.com">Email</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
