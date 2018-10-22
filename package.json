@@ -1,23 +1,29 @@
 {
   "name": "mikefrancis.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "My personal website.",
   "main": "index.js",
   "scripts": {
-    "dev": "browser-sync start --server --files='index.html'"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikefrancis/mikefrancis.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mike Francis <mikeffrancis@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mikefrancis/mikefrancis.github.io/issues"
   },
   "homepage": "https://github.com/mikefrancis/mikefrancis.github.io#readme",
-  "devDependencies": {
-    "browser-sync": "^2.15.0"
+  "devDependencies": {},
+  "dependencies": {
+    "next": "^7.0.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }
