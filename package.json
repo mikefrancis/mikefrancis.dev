@@ -1,7 +1,7 @@
 {
   "name": "mikefrancis.github.io",
   "version": "1.0.0",
-  "description": "My personal website.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -13,17 +13,22 @@
     "url": "git+https://github.com/mikefrancis/mikefrancis.github.io.git"
   },
   "keywords": [],
-  "author": "Mike Francis <mikeffrancis@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mikefrancis/mikefrancis.github.io/issues"
   },
   "homepage": "https://github.com/mikefrancis/mikefrancis.github.io#readme",
-  "devDependencies": {},
   "dependencies": {
-    "next": "^7.0.2",
+    "@zeit/next-css": "^1.0.1",
+    "next": "latest",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "babel-plugin-styled-components": "^1.8.0",
+    "tailwindcss": "^0.6.6"
   }
 }
