@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Head from 'next/head';
 import Modal from './../components/Modal';
 import Ticker from './../components/Ticker';
 
@@ -47,6 +48,9 @@ class App extends Component {
 
         return (
             <Fragment>
+                <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                </Head>
                 <header className="bg-white relative z-10 pt-4 md:pt-8">
                     <div className="container mx-auto px-2 flex">
                         <div className="flex-1">
