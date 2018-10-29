@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Head from 'next/head';
 import Modal from './../components/Modal';
 import Ticker from './../components/Ticker';
 
@@ -25,8 +24,10 @@ class App extends Component {
 
     render() {
         const AboutModalButton = () => (
-            <span className="block py-2 px-4 font-bold text-grey-dark hover:text-grey-darkest tracking-wide uppercase no-underline">
-                About
+            <span className="inline-block py-2 px-4">
+                <span className="block font-bold text-grey-darkest pb-1 border-b-2 border-transparent hover:border-grey-darkest tracking-wide uppercase no-underline">
+                    About
+                </span>
             </span>
         );
 
@@ -48,16 +49,11 @@ class App extends Component {
 
         return (
             <Fragment>
-                <Head>
-                    <title>Mike Francis</title>
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta name="description" content="UI Designer and Software Developer based in London UK." />
-                </Head>
                 <header className="bg-white relative z-10 pt-4 md:pt-8">
                     <div className="container mx-auto px-2 flex">
                         <div className="flex-1">
-                            <a className="block py-2 px-4 text-grey-darkest font-bold tracking-wide uppercase no-underline" href="/">
-                                <span className="border-b-2 border-black pb-1">
+                            <a className="inline-block py-2 px-4 text-grey-darkest font-bold tracking-wide uppercase no-underline" href="/">
+                                <span className="border-b-2 border-grey-darkest pb-1">
                                     Mike
                                 </span> Francis
                             </a>
@@ -65,12 +61,10 @@ class App extends Component {
 
                         <ul className="list-reset flex">
                             <li>
-                                <span>
-                                    <Modal
-                                        button={ <AboutModalButton /> }
-                                        content={ <AboutModalContent /> }
-                                    />
-                                </span>
+                                <Modal
+                                    button={ <AboutModalButton /> }
+                                    content={ <AboutModalContent /> }
+                                />
                             </li>
                         </ul>
                     </div>
@@ -112,8 +106,7 @@ class App extends Component {
 
                             <ul className="justify-center list-reset pb-8 flex">
                                 <li className="mx-3">
-                                    <a className="block" href="https://github.com/mikefrancis">
-                                        <span className="hidden">GitHub</span>
+                                    <a className="block" href="https://github.com/mikefrancis" title="GitHub">
                                         <svg className="text-grey hover:text-grey-dark" width="24" height="24" viewBox="0 0 1792 1792"
                                              xmlns="https://www.w3.org/2000/svg">
                                             <path fill="currentcolor"
@@ -122,8 +115,7 @@ class App extends Component {
                                     </a>
                                 </li>
                                 <li className="mx-3">
-                                    <a className="block" href="https://twitter.com/_mikefrancis">
-                                        <span className="hidden">Twitter</span>
+                                    <a className="block" href="https://twitter.com/_mikefrancis" title="Twitter">
                                         <svg className="text-grey hover:text-grey-dark" width="24" height="24" viewBox="0 0 1792 1792"
                                              xmlns="https://www.w3.org/2000/svg">
                                             <path fill="currentcolor"
@@ -132,8 +124,7 @@ class App extends Component {
                                     </a>
                                 </li>
                                 <li className="mx-3">
-                                    <a className="block" href="https://dribbble.com/mikefrancis">
-                                        <span className="hidden">Dribbble</span>
+                                    <a className="block" href="https://dribbble.com/mikefrancis" title="Dribbble">
                                         <svg className="text-grey hover:text-grey-dark" width="24" height="24" viewBox="0 0 1792 1792"
                                              xmlns="https://www.w3.org/2000/svg">
                                             <path fill="currentcolor"
@@ -142,8 +133,7 @@ class App extends Component {
                                     </a>
                                 </li>
                                 <li className="mx-3">
-                                    <a className="block" href="https://www.linkedin.com/in/mike-francis-77a65511">
-                                        <span className="hidden">LinkedIn</span>
+                                    <a className="block" href="https://www.linkedin.com/in/mike-francis-77a65511" title="LinkedIn">
                                         <svg className="text-grey hover:text-grey-dark" width="24" height="24" viewBox="0 0 1792 1792"
                                              xmlns="https://www.w3.org/2000/svg">
                                             <path fill="currentcolor"
@@ -152,8 +142,7 @@ class App extends Component {
                                     </a>
                                 </li>
                                 <li className="mx-3">
-                                    <a className="block" href="mailto:mikeffrancis@gmail.com">
-                                        <span className="hidden">Email</span>
+                                    <a className="block" href="mailto:mikeffrancis@gmail.com" title="Email">
                                         <svg className="text-grey hover:text-grey-dark" width="24" height="24" viewBox="0 0 1792 1792"
                                              xmlns="https://www.w3.org/2000/svg">
                                             <path fill="currentcolor"
