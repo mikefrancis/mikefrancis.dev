@@ -1,23 +1,33 @@
 {
   "name": "mikefrancis.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^9.3.1",
+    "postcss-cli": "^6.0.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-scripts": "2.1.0",
+    "tailwindcss": "^0.6.6"
+  },
   "scripts": {
-    "dev": "browser-sync start --server --files='index.html'"
+    "build:css": "postcss src/style.postcss.css -o src/style.css",
+    "watch:css": "postcss src/style.postcss.css -o src/style.css -w",
+    "start": "npm run watch:css & react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mikefrancis/mikefrancis.github.io.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mikefrancis/mikefrancis.github.io/issues"
-  },
-  "homepage": "https://github.com/mikefrancis/mikefrancis.github.io#readme",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
-    "browser-sync": "^2.15.0"
+    "prop-types": "^15.6.2"
   }
 }
