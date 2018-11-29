@@ -8,14 +8,6 @@
     "build": "next build",
     "start": "next start"
   },
-  "scripts": {
-    "build:css": "postcss src/style.postcss.css -o src/style.css",
-    "watch:css": "postcss src/style.postcss.css -o src/style.css -w",
-    "start": "npm run watch:css & react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
