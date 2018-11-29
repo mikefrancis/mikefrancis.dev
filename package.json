@@ -1,33 +1,25 @@
 {
   "name": "mikefrancis.github.io",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "autoprefixer": "^9.3.1",
-    "postcss-cli": "^6.0.1",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-scripts": "2.1.0",
-    "tailwindcss": "^0.6.6"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build:css": "postcss src/style.postcss.css -o src/style.css",
-    "watch:css": "postcss src/style.postcss.css -o src/style.css -w",
-    "start": "npm run watch:css & react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "homepage": "https://github.com/mikefrancis/mikefrancis.github.io#readme",
+  "dependencies": {
+    "next": "latest",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^4.1.1"
+  },
   "devDependencies": {
-    "prop-types": "^15.6.2"
+    "babel-plugin-styled-components": "^1.9.0"
   }
 }
