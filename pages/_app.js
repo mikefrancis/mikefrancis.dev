@@ -14,7 +14,7 @@ const theme = {
     fontFamilyBase: '"Montserrat", sans-serif',
     fontFamilyAlternate: '"Playfair Display", serif',
     width: {
-        sm: '768px',
+        sm: 768,
     },
 };
 

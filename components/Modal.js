@@ -25,7 +25,7 @@ const StyledModal = styled.div`
     overflow-y: auto;
     padding: 4rem 2rem;
 
-    @media (min-width: ${props => props.theme.width.sm}) {
+    @media (min-width: ${props => props.theme.width.sm}px) {
         padding: 4rem;
     }
 `;
@@ -58,7 +58,7 @@ const StyledModalWindow = styled.div`
     max-width: 50rem;
     text-align: center;
 
-    @media (min-width: ${props => props.theme.width.sm}) {
+    @media (min-width: ${props => props.theme.width.sm}px) {
         padding: 4rem;
     }
 `;

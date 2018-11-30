@@ -8,6 +8,7 @@ const StyledTicker = styled.div`
 
     .inner {
         position: absolute;
+        width: 100%;
     }
 
     .item {

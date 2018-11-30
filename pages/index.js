@@ -17,7 +17,7 @@ const StyledMain = styled.main`
         padding: 2rem;
         text-align: center;
 
-        @media (min-width: ${props => props.theme.width.sm}) {
+        @media (min-width: ${props => props.theme.width.sm}px) {
             padding: 4rem;
         }
 
@@ -37,7 +37,7 @@ const StyledMain = styled.main`
 const StyledHero = styled.section`
     text-align: center;
 
-    @media (min-width: ${props => props.theme.width.sm}) {
+    @media (min-width: ${props => props.theme.width.sm}px) {
         padding: 4rem 0;
         text-align: left;
     }
@@ -50,7 +50,7 @@ const StyledHero = styled.section`
         font-size: 2rem;
         margin: 0 0 4rem;
 
-        @media (min-width: ${props => props.theme.width.sm}) {
+        @media (min-width: ${props => props.theme.width.sm}px) {
             font-size: 4rem;
         }
     }
@@ -84,67 +84,45 @@ const AboutModalContent = () => (
     </Fragment>
 );
 
-class App extends Component {
+const App = () => {
+    const siteTitle = 'Mike Francis';
 
-    constructor(props) {
-        super(props);
+    return (
+        <Fragment>
+            <Header siteTitle={ siteTitle } />
 
-        this.state = {
-            footerHeight: 0,
-        };
-    }
-
-    componentDidMount() {
-        if (window.innerWidth >= 768) { // omg this is awful
-            this.setState({
-                footerHeight: document.querySelector('footer').clientHeight,
-            });
-        }
-    }
-
-    render() {
-        const siteTitle = 'Mike Francis';
-
-        return (
-            <Fragment>
-                <Header siteTitle={ siteTitle } />
-
-                <StyledMain
-                    style={ { marginBottom: `${this.state.footerHeight}px` } }
-                >
-                    <StyledHero className="py-16">
-                        <StyledContainer>
-                            <div className="inner">
-                                <h1 className="relative font-bold text-6xl leading-tight mb-16">
-                                    Just your friendly neighbourhood <Ticker items={ ['software developer', 'UI designer', 'ops tinkerer'] } />
-                                </h1>
-
-                                <p className="font-serif leading-normal text-2xl">Currently based in London, UK.</p>
-                            </div>
-                        </StyledContainer>
-                    </StyledHero>
-
+            <StyledMain>
+                <StyledHero className="py-16">
                     <StyledContainer>
-                        <article className="bg-blue hover:bg-blue-dark text-white container mx-auto p-8 md:p-16 text-center rounded">
-                            <h2 className="text-3xl mb-8">I Am The Seed Tree</h2>
-                            <p className="font-serif text-xl mb-8 leading-normal">Marketing website built for the amazing people at Nosy Crow.</p>
-                            <p className="mb-8">
-                                <img src="https://placehold.it/800x300" alt="I Am The Seed Tree" />
-                            </p>
+                        <div className="inner">
+                            <h1 className="relative font-bold text-6xl leading-tight mb-16">
+                                Just your friendly neighbourhood <Ticker items={ ['software developer', 'UI designer', 'ops tinkerer'] } />
+                            </h1>
 
-                            {/* <Modal
-                                button={ <AboutModalButton /> }
-                                content={ <AboutModalContent /> }
-                            /> */}
-                        </article>
+                            <p className="font-serif leading-normal text-2xl">Currently based in London, UK.</p>
+                        </div>
                     </StyledContainer>
-                </StyledMain>
+                </StyledHero>
 
-                <Footer ref={ this.footerRef } siteTitle={ siteTitle } />
-            </Fragment>
-        );
-    }
+                <StyledContainer>
+                    <article className="bg-blue hover:bg-blue-dark text-white container mx-auto p-8 md:p-16 text-center rounded">
+                        <h2 className="text-3xl mb-8">I Am The Seed Tree</h2>
+                        <p className="font-serif text-xl mb-8 leading-normal">Marketing website built for the amazing people at Nosy Crow.</p>
+                        <p className="mb-8">
+                            <img src="https://placehold.it/800x300" alt="I Am The Seed Tree" />
+                        </p>
 
-}
+                        {/* <Modal
+                            button={ <AboutModalButton /> }
+                            content={ <AboutModalContent /> }
+                        /> */}
+                    </article>
+                </StyledContainer>
+            </StyledMain>
+
+            <Footer siteTitle={ siteTitle } />
+        </Fragment>
+    );
+};
 
 export default App;
