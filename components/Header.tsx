@@ -1,14 +1,13 @@
-import React, { Fragment } from "react";
+import React, { Fragment, ReactNode } from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import Modal from "./Modal";
 import StyledLink from "./styled/Link";
 import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
 
-const AboutModalButton = () => <StyledLink>About</StyledLink>;
+const AboutModalButton = (): ReactNode => <StyledLink>About</StyledLink>;
 
-const AboutModalContent = () => (
+const AboutModalContent = (): ReactNode => (
   <Fragment>
     <h2 className="mb-8">Hello!</h2>
     <p className="mb-4 leading-normal">
@@ -63,11 +62,15 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = ({ siteTitle }) => (
+interface HeaderProps {
+  siteTitle: string;
+}
+
+const Header = (props: HeaderProps): ReactNode => (
   <StyledHeader>
     <StyledContainer className="container">
       <div className="logo">
-        <StyledLink className="bar">{siteTitle}</StyledLink>
+        <StyledLink className="bar">{props.siteTitle}</StyledLink>
       </div>
 
       <StyledFlatList>
@@ -81,13 +84,5 @@ const Header = ({ siteTitle }) => (
     </StyledContainer>
   </StyledHeader>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string.isRequired
-};
-
-Header.defaultProps = {
-  siteTitle: ""
-};
 
 export default Header;

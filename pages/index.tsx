@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import Header from "./../components/Header";
 import Footer from "./../components/Footer";
@@ -60,38 +60,6 @@ const StyledHero = styled.section`
   }
 `;
 
-const AboutModalButton = () => (
-  <span className="inline-block py-2 px-4">
-    <span className="block font-bold text-white pb-1 border-b-2 border-transparent hover:border-white tracking-wide uppercase">
-      View
-    </span>
-  </span>
-);
-
-const AboutModalContent = () => (
-  <Fragment>
-    <h2>Hello!</h2>
-    <p>
-      I'm a designer/full-stack developer currently working at Pod Point, an
-      electric car charging network based in London. We ship APIs and web-apps
-      written in Laravel/Lumen, as well as cross-platform apps written in React
-      Native.
-    </p>
-    <p>
-      I'm also the co-founder/CTO of FortSort, a property search management tool
-      which aims to make house-hunting a little easier.
-    </p>
-    <p>
-      Put simply, I{" "}
-      <span role="img" aria-label="love">
-        ❤️
-      </span>{" "}
-      designing and building products. If you've got an idea you'd like to
-      discuss, please get in touch.
-    </p>
-  </Fragment>
-);
-
 const App = () => {
   const siteTitle = "Mike Francis";
 
@@ -106,6 +74,9 @@ const App = () => {
               <h1 className="relative font-bold text-6xl leading-tight mb-16">
                 Just your friendly neighbourhood{" "}
                 <Ticker
+                  easing="ease-out"
+                  delay={2000}
+                  speed={400}
                   items={["software developer", "UI designer", "ops tinkerer"]}
                 />
               </h1>

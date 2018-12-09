@@ -1,6 +1,5 @@
-import React, { Component, Fragment, createRef } from "react";
+import React, { Component, Fragment, createRef, ReactNode } from "react";
 import { createPortal } from "react-dom";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const KEY_CODE_ESCAPE = 27;
@@ -63,8 +62,20 @@ const StyledModalWindow = styled.div`
   }
 `;
 
-class Modal extends Component {
-  constructor(props) {
+interface ModalProps {
+  button: ReactNode;
+  content: ReactNode;
+}
+
+interface ModalState {
+  isOpen: boolean;
+}
+
+class Modal extends Component<ModalProps, ModalState> {
+  private overlayRef: any;
+  private modalRef: any;
+
+  constructor(props: ModalProps) {
     super(props);
 
     this.state = {
@@ -172,15 +183,5 @@ class Modal extends Component {
     );
   }
 }
-
-Modal.propTypes = {
-  button: PropTypes.node.isRequired,
-  content: PropTypes.node.isRequired
-};
-
-Modal.defaultProps = {
-  button: null,
-  content: null
-};
 
 export default Modal;

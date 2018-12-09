@@ -1,6 +1,5 @@
-import React, { Component, createRef } from "react";
+import * as React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
 const StyledTicker = styled.div`
   position: relative;
@@ -17,12 +16,28 @@ const StyledTicker = styled.div`
   }
 `;
 
-class Ticker extends Component {
-  constructor(props) {
+interface TickerProps {
+  easing: string;
+  items: React.ReactNode[];
+  delay: number;
+  speed: number;
+}
+
+interface TicketState {
+  current: number;
+  height: number;
+  top: number;
+  total: number;
+}
+
+class Ticker extends React.Component<TickerProps, TicketState> {
+  private itemRefs: any[];
+
+  constructor(props: TickerProps) {
     super(props);
 
     this.itemRefs = [];
-    props.items.map(() => this.itemRefs.push(createRef()));
+    props.items.map(() => this.itemRefs.push(React.createRef()));
 
     this.state = {
       current: 0,
@@ -32,7 +47,7 @@ class Ticker extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     const { delay, items } = this.props;
 
     const height = this.itemRefs[0].current.clientHeight;
@@ -45,10 +60,11 @@ class Ticker extends Component {
       const { current } = this.state;
 
       if (current === items.length - 1) {
-        return this.setState({
+        this.setState({
           current: 0,
           top: 0
         });
+        return;
       }
 
       this.setState(prevState => ({
@@ -58,7 +74,7 @@ class Ticker extends Component {
     }, delay);
   }
 
-  render() {
+  render(): React.ReactNode {
     const { height, top } = this.state;
 
     const { easing, items, speed } = this.props;
@@ -81,19 +97,5 @@ class Ticker extends Component {
     );
   }
 }
-
-Ticker.propTypes = {
-  easing: PropTypes.string,
-  items: PropTypes.array.isRequired,
-  delay: PropTypes.number,
-  speed: PropTypes.number
-};
-
-Ticker.defaultProps = {
-  easing: "ease-out",
-  delay: 2500,
-  items: [],
-  speed: 400
-};
 
 export default Ticker;

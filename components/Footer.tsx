@@ -1,5 +1,4 @@
 import React, { Component, createRef } from "react";
-import PropTypes from "prop-types";
 import styled, { withTheme } from "styled-components";
 import StyledFlatList from "./styled/FlatList";
 import StyledContainer from "./styled/Container";
@@ -68,12 +67,24 @@ const StyledFooter = styled.footer`
   }
 `;
 
-class Footer extends Component {
-  constructor(props) {
+interface FooterProps {
+  siteTitle: string;
+  height: number;
+  theme: any;
+}
+
+interface FooterState {
+  height: 0;
+}
+
+class Footer extends Component<FooterProps, FooterState> {
+  private footerRef: any;
+
+  constructor(props: FooterProps) {
     super(props);
 
     this.state = {
-      footerHeight: 0
+      height: 0
     };
 
     this.footerRef = createRef();
@@ -82,17 +93,17 @@ class Footer extends Component {
   componentDidMount() {
     if (window.innerWidth >= this.props.theme.width.sm) {
       this.setState({
-        footerHeight: this.footerRef.current.clientHeight
+        height: this.footerRef.current.clientHeight
       });
     }
   }
 
   render() {
     const { siteTitle } = this.props;
-    const { footerHeight } = this.state;
+    const { height } = this.state;
 
     return (
-      <div style={{ marginTop: `${footerHeight}px` }}>
+      <div style={{ marginTop: `${height}px` }}>
         <StyledFooter ref={this.footerRef}>
           <StyledContainer>
             <div className="top">
@@ -193,13 +204,5 @@ class Footer extends Component {
     );
   }
 }
-
-Footer.propTypes = {
-  siteTitle: PropTypes.string.isRequired
-};
-
-Footer.defaultProps = {
-  siteTitle: ""
-};
 
 export default withTheme(Footer);
