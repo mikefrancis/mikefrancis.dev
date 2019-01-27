@@ -1,6 +1,6 @@
-import React, { Component, Fragment, createRef, ReactNode } from "react";
-import { createPortal } from "react-dom";
-import styled from "styled-components";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import styled from "./../theme";
 
 const KEY_CODE_ESCAPE = 27;
 
@@ -24,7 +24,7 @@ const StyledModal = styled.div`
   overflow-y: auto;
   padding: 4rem 2rem;
 
-  @media (min-width: ${props => props.theme.width.sm}px) {
+  @media (min-width: ${(props) => props.theme.width.sm}px) {
     padding: 4rem;
   }
 `;
@@ -32,7 +32,7 @@ const StyledModal = styled.div`
 const StyledModalClose = styled.button`
   background-color: transparent;
   border: 0;
-  color: ${props => props.theme.grey};
+  color: ${(props) => props.theme.grey};
   display: flex;
   padding: 1.5rem;
   position: absolute;
@@ -48,6 +48,12 @@ const StyledModalClose = styled.button`
   }
 `;
 
+const StyledModalOpen = styled.button`
+  background-color: transparent;
+  border: 0;
+  font: inherit;
+`;
+
 const StyledModalWindow = styled.div`
   background-color: white;
   border-radius: 0.25rem;
@@ -57,67 +63,69 @@ const StyledModalWindow = styled.div`
   max-width: 50rem;
   text-align: center;
 
-  @media (min-width: ${props => props.theme.width.sm}px) {
+  @media (min-width: ${(props) => props.theme.width.sm}px) {
     padding: 4rem;
   }
 `;
 
-interface ModalProps {
-  button: ReactNode;
-  content: ReactNode;
+interface IModalProps {
+  button: React.ReactNode;
+  content: React.ReactNode;
 }
 
-interface ModalState {
+interface IModalState {
   isOpen: boolean;
 }
 
-class Modal extends Component<ModalProps, ModalState> {
-  private overlayRef: any;
-  private modalRef: any;
+class Modal extends React.Component<IModalProps, IModalState> {
+  private overlayRef: React.RefObject<HTMLDivElement>;
+  private modalRef: React.RefObject<HTMLDivElement>;
 
-  constructor(props: ModalProps) {
+  constructor(props: IModalProps) {
     super(props);
 
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
 
-    this.overlayRef = createRef();
-    this.modalRef = createRef();
+    this.overlayRef = React.createRef();
+    this.modalRef = React.createRef();
 
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
     this.toggleModalVisibility = this.toggleModalVisibility.bind(this);
   }
 
-  componentDidMount() {
+  public componentDidMount() {
     if (this.state.isOpen) {
       this.toggleFixed();
     }
 
     this.toggleModalVisibility();
 
-    window.addEventListener("keyup", event => {
+    window.addEventListener("keyup", (event) => {
       if (event.keyCode === KEY_CODE_ESCAPE && this.state.isOpen) {
         this.handleClose();
       }
     });
   }
 
-  handleOpen() {
+  public handleOpen = () => {
     this.setState({ isOpen: true }, () => {
       this.toggleFixed();
       this.toggleModalVisibility();
     });
   }
 
-  handleClose() {
+  public handleClose = () => {
     this.setState({ isOpen: false }, () => {
       this.toggleFixed();
     });
   }
 
-  toggleModalVisibility() {
+  public toggleModalVisibility = () => {
+    if (!this.overlayRef.current || !this.modalRef.current) {
+      return;
+    }
+
     if (this.state.isOpen) {
       this.overlayRef.current.style.visibility = "visible";
       this.modalRef.current.style.visibility = "visible";
@@ -127,19 +135,20 @@ class Modal extends Component<ModalProps, ModalState> {
     }
   }
 
-  toggleFixed() {
+  public toggleFixed() {
     document.body.style.overflow = this.state.isOpen ? "hidden" : "auto";
   }
 
-  render() {
+  public render() {
     const { isOpen } = this.state;
 
     if (!process.browser) {
       return null;
     }
 
-    const modalContent = createPortal(
-      <Fragment>
+    /* tslint:disable:max-line-length */
+    const modalContent = ReactDOM.createPortal(
+      <>
         <StyledModalOvelay
           ref={this.overlayRef}
           style={{ opacity: isOpen ? 100 : 0 }}
@@ -170,16 +179,19 @@ class Modal extends Component<ModalProps, ModalState> {
             {this.props.content}
           </StyledModalWindow>
         </StyledModal>
-      </Fragment>,
-      document.body
+      </>,
+      document.body,
     );
+    /* tslint:enable:max-line-length */
 
     return (
-      <Fragment>
-        <button onClick={this.handleOpen}>{this.props.button}</button>
+      <>
+        <StyledModalOpen onClick={this.handleOpen}>
+          {this.props.button}
+        </StyledModalOpen>
 
         {modalContent}
-      </Fragment>
+      </>
     );
   }
 }

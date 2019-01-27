@@ -1,22 +1,24 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
-import Header from "./../components/Header";
+import * as React from "react";
 import Footer from "./../components/Footer";
-import Ticker from "./../components/Ticker";
+import Header from "./../components/Header";
 import StyledContainer from "./../components/styled/Container";
+import Ticker from "./../components/Ticker";
+import styled from "./../theme";
 
 const StyledMain = styled.main`
-  background-color: white;
+  background-color: ${(props) => props.theme.backgroundColour};
+  color: ${(props) => props.theme.colour};
   padding: 4rem 0;
+  transition: all 300ms;
 
   article {
-    background-color: ${props => props.theme.blue};
+    background-color: ${(props) => props.theme.blue};
     border-radius: 0.25rem;
     color: white;
     padding: 2rem;
     text-align: center;
 
-    @media (min-width: ${props => props.theme.width.sm}px) {
+    @media (min-width: ${(props) => props.theme.width.sm}px) {
       padding: 4rem;
     }
 
@@ -26,7 +28,7 @@ const StyledMain = styled.main`
     }
 
     p {
-      font-family: ${props => props.theme.fontFamilyAlternate};
+      font-family: ${(props) => props.theme.fontFamilyAlternate};
       font-size: 1.25rem;
       margin: 0 0 2rem;
     }
@@ -36,7 +38,7 @@ const StyledMain = styled.main`
 const StyledHero = styled.section`
   text-align: center;
 
-  @media (min-width: ${props => props.theme.width.sm}px) {
+  @media (min-width: ${(props) => props.theme.width.sm}px) {
     padding: 4rem 0;
     text-align: left;
   }
@@ -49,23 +51,27 @@ const StyledHero = styled.section`
     font-size: 2rem;
     margin: 0 0 4rem;
 
-    @media (min-width: ${props => props.theme.width.sm}px) {
+    @media (min-width: ${(props) => props.theme.width.sm}px) {
       font-size: 4rem;
     }
   }
 
   p {
-    font-family: ${props => props.theme.fontFamilyAlternate};
+    font-family: ${(props) => props.theme.fontFamilyAlternate};
     font-size: 1.5rem;
   }
 `;
 
-const App = () => {
+const App: React.FC = (props: any) => {
   const siteTitle = "Mike Francis";
 
   return (
-    <Fragment>
-      <Header siteTitle={siteTitle} />
+    <>
+      <Header
+        changeTheme={props.changeTheme}
+        themeName={props.themeName}
+        siteTitle={siteTitle}
+      />
 
       <StyledMain>
         <StyledHero className="py-16">
@@ -105,7 +111,7 @@ const App = () => {
       </StyledMain>
 
       <Footer siteTitle={siteTitle} />
-    </Fragment>
+    </>
   );
 };
 

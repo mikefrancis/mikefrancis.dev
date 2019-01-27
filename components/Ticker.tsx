@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "./../theme";
 
 const StyledTicker = styled.div`
   position: relative;
@@ -11,49 +11,52 @@ const StyledTicker = styled.div`
   }
 
   .item {
-    color: ${props => props.theme.blue};
+    color: ${(props) => props.theme.blue};
     display: block;
   }
 `;
 
-interface TickerProps {
+interface ITickerProps {
   easing: string;
   items: React.ReactNode[];
   delay: number;
   speed: number;
 }
 
-interface TicketState {
+interface ITickerState {
   current: number;
   height: number;
   top: number;
   total: number;
 }
 
-class Ticker extends React.Component<TickerProps, TicketState> {
-  private itemRefs: any[];
+class Ticker extends React.Component<ITickerProps, ITickerState> {
+  private itemRefs: Array<React.RefObject<HTMLSpanElement>> = [];
 
-  constructor(props: TickerProps) {
+  constructor(props: ITickerProps) {
     super(props);
 
-    this.itemRefs = [];
     props.items.map(() => this.itemRefs.push(React.createRef()));
 
     this.state = {
       current: 0,
       height: 0,
       top: 0,
-      total: props.items.length
+      total: props.items.length,
     };
   }
 
-  componentDidMount(): void {
+  public componentDidMount() {
     const { delay, items } = this.props;
+
+    if (!this.itemRefs[0].current) {
+      return;
+    }
 
     const height = this.itemRefs[0].current.clientHeight;
 
     this.setState({
-      height
+      height,
     });
 
     setInterval(() => {
@@ -62,26 +65,26 @@ class Ticker extends React.Component<TickerProps, TicketState> {
       if (current === items.length - 1) {
         this.setState({
           current: 0,
-          top: 0
+          top: 0,
         });
         return;
       }
 
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
+        current: prevState.current + 1,
         top: prevState.top - prevState.height,
-        current: prevState.current + 1
       }));
     }, delay);
   }
 
-  render(): React.ReactNode {
+  public render() {
     const { height, top } = this.state;
 
     const { easing, items, speed } = this.props;
 
     const sliderStyle = {
       transform: `translateY(${top}px)`,
-      transition: `transform ${easing} ${speed}ms`
+      transition: `transform ${easing} ${speed}ms`,
     };
 
     return (

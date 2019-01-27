@@ -1,28 +1,37 @@
-import App, { Container } from "next/app";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import App, { Container, NextAppContext } from "next/app";
 import Head from "next/head";
-import React from "react";
+import * as React from "react";
+import { createGlobalStyle, IThemeInterface, ThemeProvider } from "../theme";
 
-const theme = {
+const baseTheme = {
   black: "#3d4852",
   blue: "#3490dc",
-  greyLighter: "#F1F5F8",
-  greyLight: "#DAE1E7",
+  fontFamilyAlternate: '"Playfair Display", serif',
+  fontFamilyBase: '"Montserrat", sans-serif',
   grey: "#B8C2CC",
   greyDark: "#8795A1",
   greyDarker: "#606F7B",
-  fontFamilyBase: '"Montserrat", sans-serif',
-  fontFamilyAlternate: '"Playfair Display", serif',
+  greyLight: "#DAE1E7",
+  greyLighter: "#F1F5F8",
   width: {
-    sm: 768
-  }
+    sm: 768,
+  },
 };
+
+const lightTheme: IThemeInterface = Object.assign({}, baseTheme, {
+  backgroundColour: "#fff",
+  colour: "#3d4852",
+});
+
+const darkTheme: IThemeInterface = Object.assign({}, baseTheme, {
+  backgroundColour: "#3d4852",
+  colour: "#fff",
+});
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        color: ${theme.black};
         box-sizing: border-box;
-        font-family: ${theme.fontFamilyBase};
+        font-family: ${baseTheme.fontFamilyBase};
         line-height: 1.5;
     }
 
@@ -44,8 +53,8 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-export default class MyApp extends App<AppProps> {
-  static async getInitialProps({ Component, router, ctx }) {
+export default class MyApp extends App {
+  public static async getInitialProps({ Component, ctx }: NextAppContext) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -55,7 +64,17 @@ export default class MyApp extends App<AppProps> {
     return { pageProps };
   }
 
-  render() {
+  public state = {
+    theme: "light",
+  };
+
+  public changeTheme = () => {
+    this.setState({
+      theme: this.state.theme === "dark" ? "light" : "dark",
+    });
+  }
+
+  public render() {
     const { Component, pageProps } = this.props;
 
     return (
@@ -73,8 +92,14 @@ export default class MyApp extends App<AppProps> {
             href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display"
           />
         </Head>
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
+        <ThemeProvider
+          theme={this.state.theme === "light" ? lightTheme : darkTheme}
+        >
+          <Component
+            {...pageProps}
+            themeName={this.state.theme}
+            changeTheme={this.changeTheme}
+          />
         </ThemeProvider>
       </Container>
     );

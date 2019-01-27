@@ -1,14 +1,21 @@
-import React, { Fragment, ReactNode } from "react";
-import styled from "styled-components";
+import * as React from "react";
+import styled from "./../theme";
 import Modal from "./Modal";
-import StyledLink from "./styled/Link";
 import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
+import StyledLink from "./styled/Link";
+import Switch from "./Switch";
 
-const AboutModalButton = (): ReactNode => <StyledLink>About</StyledLink>;
+const ModalStyledLink = styled(StyledLink)`
+  color: ${(props) => props.theme.colour};
+`;
 
-const AboutModalContent = (): ReactNode => (
-  <Fragment>
+const AboutModalButton: React.FC = () => (
+  <ModalStyledLink>About</ModalStyledLink>
+);
+
+const AboutModalContent: React.FC = () => (
+  <>
     <h2 className="mb-8">Hello!</h2>
     <p className="mb-4 leading-normal">
       I'm a designer/full-stack developer currently working at Pod Point, an
@@ -28,12 +35,14 @@ const AboutModalContent = (): ReactNode => (
       designing and building products. If you've got an idea you'd like to
       discuss, please get in touch.
     </p>
-  </Fragment>
+  </>
 );
 
 const StyledHeader = styled.header`
-  background-color: white;
+  background-color: ${(props) => props.theme.backgroundColour};
+  color: ${(props) => props.theme.colour};
   padding-top: 2rem;
+  transition: all 300ms;
 
   .container {
     display: flex;
@@ -44,7 +53,7 @@ const StyledHeader = styled.header`
     position: relative;
 
     .bar:after {
-      background-color: ${props => props.theme.greyDarker};
+      background-color: ${(props) => props.theme.colour};
       content: "";
       left: 0;
       position: absolute;
@@ -54,19 +63,15 @@ const StyledHeader = styled.header`
       width: 45px;
     }
   }
-
-  button {
-    background-color: transparent;
-    border: 0;
-    font: inherit;
-  }
 `;
 
-interface HeaderProps {
+interface IHeaderProps {
+  changeTheme: () => void;
+  themeName: string;
   siteTitle: string;
 }
 
-const Header = (props: HeaderProps): ReactNode => (
+const Header: React.FC<IHeaderProps> = (props) => (
   <StyledHeader>
     <StyledContainer className="container">
       <div className="logo">
@@ -78,6 +83,12 @@ const Header = (props: HeaderProps): ReactNode => (
           <Modal
             button={<AboutModalButton />}
             content={<AboutModalContent />}
+          />
+        </li>
+        <li>
+          <Switch
+            isChecked={props.themeName === "dark"}
+            onChange={props.changeTheme}
           />
         </li>
       </StyledFlatList>

@@ -1,15 +1,15 @@
-import React, { Component, createRef } from "react";
-import styled, { withTheme } from "styled-components";
-import StyledFlatList from "./styled/FlatList";
+import * as React from "react";
+import styled, { withTheme } from "./../theme";
 import StyledContainer from "./styled/Container";
+import StyledFlatList from "./styled/FlatList";
 
 const StyledFooter = styled.footer`
-  background-color: ${props => props.theme.greyLighter};
+  background-color: ${(props) => props.theme.greyLighter};
   bottom: 0;
   padding: 4rem 0 2rem;
-  color: ${props => props.theme.greyDarker};
+  color: ${(props) => props.theme.greyDarker};
 
-  @media (min-width: ${props => props.theme.width.sm}px) {
+  @media (min-width: ${(props) => props.theme.width.sm}px) {
     padding-top: 8rem;
     position: fixed;
     width: 100%;
@@ -20,22 +20,22 @@ const StyledFooter = styled.footer`
     text-align: center;
 
     .notice {
-      font-family: ${props => props.theme.fontFamilyAlternate};
+      font-family: ${(props) => props.theme.fontFamilyAlternate};
       font-size: 1.5rem;
       margin: 0 0 2rem;
 
-      @media (min-width: ${props => props.theme.width.sm}px) {
+      @media (min-width: ${(props) => props.theme.width.sm}px) {
         margin-bottom: 4rem;
       }
     }
 
     .thanks {
-      color: ${props => props.theme.blue};
+      color: ${(props) => props.theme.blue};
       font-size: 3rem;
       font-weight: bold;
       margin: 0 0 4rem;
 
-      @media (min-width: ${props => props.theme.width.sm}px) {
+      @media (min-width: ${(props) => props.theme.width.sm}px) {
         font-size: 4rem;
         margin-bottom: 8rem;
       }
@@ -43,11 +43,11 @@ const StyledFooter = styled.footer`
   }
 
   .bottom {
-    border-top: solid 1px ${props => props.theme.greyLight};
+    border-top: solid 1px ${(props) => props.theme.greyLight};
     padding: 4rem 0 2rem;
     text-align: center;
 
-    @media (min-width: ${props => props.theme.width.sm}px) {
+    @media (min-width: ${(props) => props.theme.width.sm}px) {
       display: flex;
       text-align: left;
     }
@@ -58,50 +58,53 @@ const StyledFooter = styled.footer`
     }
 
     svg {
-      color: ${props => props.theme.grey};
+      color: ${(props) => props.theme.grey};
 
       &:hover {
-        color: ${props => props.theme.greyDark};
+        color: ${(props) => props.theme.greyDark};
       }
     }
   }
 `;
 
-interface FooterProps {
+interface IFooterProps {
   siteTitle: string;
-  height: number;
   theme: any;
 }
 
-interface FooterState {
-  height: 0;
+interface IFooterState {
+  height: number;
 }
 
-class Footer extends Component<FooterProps, FooterState> {
-  private footerRef: any;
+class Footer extends React.PureComponent<IFooterProps, IFooterState> {
+  private footerRef: React.RefObject<HTMLElement>;
 
-  constructor(props: FooterProps) {
+  constructor(props: IFooterProps) {
     super(props);
 
     this.state = {
-      height: 0
+      height: 0,
     };
 
-    this.footerRef = createRef();
+    this.footerRef = React.createRef();
   }
 
-  componentDidMount() {
-    if (window.innerWidth >= this.props.theme.width.sm) {
+  public componentDidMount() {
+    if (
+      window.innerWidth >= this.props.theme.width.sm &&
+      this.footerRef.current
+    ) {
       this.setState({
-        height: this.footerRef.current.clientHeight
+        height: this.footerRef.current.clientHeight,
       });
     }
   }
 
-  render() {
+  public render() {
     const { siteTitle } = this.props;
     const { height } = this.state;
 
+    /* tslint:disable:max-line-length */
     return (
       <div style={{ marginTop: `${height}px` }}>
         <StyledFooter ref={this.footerRef}>
@@ -116,7 +119,6 @@ class Footer extends Component<FooterProps, FooterState> {
               <div className="copyright">
                 &copy; {siteTitle} {new Date().getFullYear()}
               </div>
-
               <StyledFlatList>
                 <li>
                   <a href="https://github.com/mikefrancis" title="GitHub">
@@ -202,6 +204,7 @@ class Footer extends Component<FooterProps, FooterState> {
         </StyledFooter>
       </div>
     );
+    /* tslint:enable:max-line-length */
   }
 }
 

@@ -11,7 +11,7 @@ const FlatList = styled.ul`
 
   > li:not(:first-child),
   > li:not(:last-child) {
-    margin: 0 0.75rem;
+    margin: 0 1rem;
   }
 `;
 
