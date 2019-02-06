@@ -4,7 +4,7 @@ import styled from "./../theme";
 
 const KEY_CODE_ESCAPE = 27;
 
-const StyledModalOvelay = styled.div`
+const StyledModalOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.75);
   bottom: 0;
   left: 0;
@@ -24,7 +24,7 @@ const StyledModal = styled.div`
   overflow-y: auto;
   padding: 4rem 2rem;
 
-  @media (min-width: ${(props) => props.theme.width.sm}px) {
+  @media (min-width: ${props => props.theme.width.sm}px) {
     padding: 4rem;
   }
 `;
@@ -32,7 +32,7 @@ const StyledModal = styled.div`
 const StyledModalClose = styled.button`
   background-color: transparent;
   border: 0;
-  color: ${(props) => props.theme.grey};
+  color: ${props => props.theme.grey};
   display: flex;
   padding: 1.5rem;
   position: absolute;
@@ -63,7 +63,7 @@ const StyledModalWindow = styled.div`
   max-width: 50rem;
   text-align: center;
 
-  @media (min-width: ${(props) => props.theme.width.sm}px) {
+  @media (min-width: ${props => props.theme.width.sm}px) {
     padding: 4rem;
   }
 `;
@@ -85,7 +85,7 @@ class Modal extends React.Component<IModalProps, IModalState> {
     super(props);
 
     this.state = {
-      isOpen: false,
+      isOpen: false
     };
 
     this.overlayRef = React.createRef();
@@ -101,7 +101,7 @@ class Modal extends React.Component<IModalProps, IModalState> {
 
     this.toggleModalVisibility();
 
-    window.addEventListener("keyup", (event) => {
+    window.addEventListener("keyup", event => {
       if (event.keyCode === KEY_CODE_ESCAPE && this.state.isOpen) {
         this.handleClose();
       }
@@ -113,13 +113,13 @@ class Modal extends React.Component<IModalProps, IModalState> {
       this.toggleFixed();
       this.toggleModalVisibility();
     });
-  }
+  };
 
   public handleClose = () => {
     this.setState({ isOpen: false }, () => {
       this.toggleFixed();
     });
-  }
+  };
 
   public toggleModalVisibility = () => {
     if (!this.overlayRef.current || !this.modalRef.current) {
@@ -133,7 +133,7 @@ class Modal extends React.Component<IModalProps, IModalState> {
       this.overlayRef.current.style.visibility = "hidden";
       this.modalRef.current.style.visibility = "hidden";
     }
-  }
+  };
 
   public toggleFixed() {
     document.body.style.overflow = this.state.isOpen ? "hidden" : "auto";
@@ -142,14 +142,10 @@ class Modal extends React.Component<IModalProps, IModalState> {
   public render() {
     const { isOpen } = this.state;
 
-    if (!process.browser) {
-      return null;
-    }
-
     /* tslint:disable:max-line-length */
     const modalContent = ReactDOM.createPortal(
       <>
-        <StyledModalOvelay
+        <StyledModalOverlay
           ref={this.overlayRef}
           style={{ opacity: isOpen ? 100 : 0 }}
           onTransitionEnd={this.toggleModalVisibility}
@@ -180,7 +176,7 @@ class Modal extends React.Component<IModalProps, IModalState> {
           </StyledModalWindow>
         </StyledModal>
       </>,
-      document.body,
+      document.body
     );
     /* tslint:enable:max-line-length */
 

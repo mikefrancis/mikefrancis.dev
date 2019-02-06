@@ -1,24 +1,24 @@
 import * as React from "react";
-import Footer from "./../components/Footer";
-import Header from "./../components/Header";
-import StyledContainer from "./../components/styled/Container";
-import Ticker from "./../components/Ticker";
-import styled from "./../theme";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import StyledContainer from "./components/styled/Container";
+import Ticker from "./components/Ticker";
+import styled, { GlobalStyle } from "./theme";
 
 const StyledMain = styled.main`
-  background-color: ${(props) => props.theme.backgroundColour};
-  color: ${(props) => props.theme.colour};
+  background-color: ${props => props.theme.backgroundColour};
+  color: ${props => props.theme.colour};
   padding: 4rem 0;
   transition: all 300ms;
 
   article {
-    background-color: ${(props) => props.theme.blue};
+    background-color: ${props => props.theme.blue};
     border-radius: 0.25rem;
     color: white;
     padding: 2rem;
     text-align: center;
 
-    @media (min-width: ${(props) => props.theme.width.sm}px) {
+    @media (min-width: ${props => props.theme.width.sm}px) {
       padding: 4rem;
     }
 
@@ -28,7 +28,7 @@ const StyledMain = styled.main`
     }
 
     p {
-      font-family: ${(props) => props.theme.fontFamilyAlternate};
+      font-family: ${props => props.theme.fontFamilyAlternate};
       font-size: 1.25rem;
       margin: 0 0 2rem;
     }
@@ -38,7 +38,7 @@ const StyledMain = styled.main`
 const StyledHero = styled.section`
   text-align: center;
 
-  @media (min-width: ${(props) => props.theme.width.sm}px) {
+  @media (min-width: ${props => props.theme.width.sm}px) {
     padding: 4rem 0;
     text-align: left;
   }
@@ -51,34 +51,31 @@ const StyledHero = styled.section`
     font-size: 2rem;
     margin: 0 0 4rem;
 
-    @media (min-width: ${(props) => props.theme.width.sm}px) {
+    @media (min-width: ${props => props.theme.width.sm}px) {
       font-size: 4rem;
     }
   }
 
   p {
-    font-family: ${(props) => props.theme.fontFamilyAlternate};
+    font-family: ${props => props.theme.fontFamilyAlternate};
     font-size: 1.5rem;
   }
 `;
 
-const App: React.FC = (props: any) => {
+const App: React.FC = props => {
   const siteTitle = "Mike Francis";
 
   return (
     <>
-      <Header
-        changeTheme={props.changeTheme}
-        themeName={props.themeName}
-        siteTitle={siteTitle}
-      />
+      <GlobalStyle />
+      <Header siteTitle={siteTitle} />
 
       <StyledMain>
         <StyledHero className="py-16">
           <StyledContainer>
             <div className="inner">
               <h1 className="relative font-bold text-6xl leading-tight mb-16">
-                Just your friendly neighbourhood{" "}
+                Just your friendly neighborhood{" "}
                 <Ticker
                   easing="ease-out"
                   delay={2000}
