@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "./../theme";
+import styled, { ThemeContext } from "./../theme";
 import Modal from "./Modal";
 import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
@@ -7,7 +7,7 @@ import StyledLink from "./styled/Link";
 import Switch from "./Switch";
 
 const ModalStyledLink = styled(StyledLink)`
-  color: ${(props) => props.theme.colour};
+  color: ${props => props.theme.colour};
 `;
 
 const AboutModalButton: React.FC = () => (
@@ -39,8 +39,8 @@ const AboutModalContent: React.FC = () => (
 );
 
 const StyledHeader = styled.header`
-  background-color: ${(props) => props.theme.backgroundColour};
-  color: ${(props) => props.theme.colour};
+  background-color: ${props => props.theme.backgroundColour};
+  color: ${props => props.theme.colour};
   padding-top: 2rem;
   transition: all 300ms;
 
@@ -53,7 +53,7 @@ const StyledHeader = styled.header`
     position: relative;
 
     .bar:after {
-      background-color: ${(props) => props.theme.colour};
+      background-color: ${props => props.theme.colour};
       content: "";
       left: 0;
       position: absolute;
@@ -66,34 +66,33 @@ const StyledHeader = styled.header`
 `;
 
 interface IHeaderProps {
-  changeTheme: () => void;
-  themeName: string;
   siteTitle: string;
 }
 
-const Header: React.FC<IHeaderProps> = (props) => (
-  <StyledHeader>
-    <StyledContainer className="container">
-      <div className="logo">
-        <StyledLink className="bar">{props.siteTitle}</StyledLink>
-      </div>
+const Header: React.FC<IHeaderProps> = props => (
+  <ThemeContext.Consumer>
+    {({ themeName, toggleTheme }) => (
+      <StyledHeader>
+        <StyledContainer className="container">
+          <div className="logo">
+            <StyledLink className="bar">{props.siteTitle}</StyledLink>
+          </div>
 
-      <StyledFlatList>
-        <li>
-          <Modal
-            button={<AboutModalButton />}
-            content={<AboutModalContent />}
-          />
-        </li>
-        <li>
-          <Switch
-            isChecked={props.themeName === "dark"}
-            onChange={props.changeTheme}
-          />
-        </li>
-      </StyledFlatList>
-    </StyledContainer>
-  </StyledHeader>
+          <StyledFlatList>
+            <li>
+              <Modal
+                button={<AboutModalButton />}
+                content={<AboutModalContent />}
+              />
+            </li>
+            <li>
+              <Switch isChecked={themeName === "dark"} onChange={toggleTheme} />
+            </li>
+          </StyledFlatList>
+        </StyledContainer>
+      </StyledHeader>
+    )}
+  </ThemeContext.Consumer>
 );
 
 export default Header;

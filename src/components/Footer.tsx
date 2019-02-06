@@ -1,15 +1,15 @@
 import * as React from "react";
-import styled, { withTheme } from "./../theme";
+import styled, { withTheme, IThemeInterface } from "./../theme";
 import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
 
 const StyledFooter = styled.footer`
-  background-color: ${(props) => props.theme.greyLighter};
+  background-color: ${props => props.theme.greyLighter};
   bottom: 0;
   padding: 4rem 0 2rem;
-  color: ${(props) => props.theme.greyDarker};
+  color: ${props => props.theme.greyDarker};
 
-  @media (min-width: ${(props) => props.theme.width.sm}px) {
+  @media (min-width: ${props => props.theme.width.sm}px) {
     padding-top: 8rem;
     position: fixed;
     width: 100%;
@@ -20,22 +20,22 @@ const StyledFooter = styled.footer`
     text-align: center;
 
     .notice {
-      font-family: ${(props) => props.theme.fontFamilyAlternate};
+      font-family: ${props => props.theme.fontFamilyAlternate};
       font-size: 1.5rem;
       margin: 0 0 2rem;
 
-      @media (min-width: ${(props) => props.theme.width.sm}px) {
+      @media (min-width: ${props => props.theme.width.sm}px) {
         margin-bottom: 4rem;
       }
     }
 
     .thanks {
-      color: ${(props) => props.theme.blue};
+      color: ${props => props.theme.blue};
       font-size: 3rem;
       font-weight: bold;
       margin: 0 0 4rem;
 
-      @media (min-width: ${(props) => props.theme.width.sm}px) {
+      @media (min-width: ${props => props.theme.width.sm}px) {
         font-size: 4rem;
         margin-bottom: 8rem;
       }
@@ -43,11 +43,11 @@ const StyledFooter = styled.footer`
   }
 
   .bottom {
-    border-top: solid 1px ${(props) => props.theme.greyLight};
+    border-top: solid 1px ${props => props.theme.greyLight};
     padding: 4rem 0 2rem;
     text-align: center;
 
-    @media (min-width: ${(props) => props.theme.width.sm}px) {
+    @media (min-width: ${props => props.theme.width.sm}px) {
       display: flex;
       text-align: left;
     }
@@ -58,10 +58,10 @@ const StyledFooter = styled.footer`
     }
 
     svg {
-      color: ${(props) => props.theme.grey};
+      color: ${props => props.theme.grey};
 
       &:hover {
-        color: ${(props) => props.theme.greyDark};
+        color: ${props => props.theme.greyDark};
       }
     }
   }
@@ -69,7 +69,7 @@ const StyledFooter = styled.footer`
 
 interface IFooterProps {
   siteTitle: string;
-  theme: any;
+  theme: IThemeInterface;
 }
 
 interface IFooterState {
@@ -83,7 +83,7 @@ class Footer extends React.PureComponent<IFooterProps, IFooterState> {
     super(props);
 
     this.state = {
-      height: 0,
+      height: 0
     };
 
     this.footerRef = React.createRef();
@@ -95,7 +95,7 @@ class Footer extends React.PureComponent<IFooterProps, IFooterState> {
       this.footerRef.current
     ) {
       this.setState({
-        height: this.footerRef.current.clientHeight,
+        height: this.footerRef.current.clientHeight
       });
     }
   }
