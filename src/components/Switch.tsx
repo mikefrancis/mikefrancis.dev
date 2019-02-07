@@ -26,6 +26,8 @@ const StyledButton = styled.button`
     border-radius: 0.8rem;
     display: inline-block;
     height: 0.8rem;
+    overflow: hidden;
+    text-indent: -9999px;
     width: 0.8rem;
     transform: translateX(
       ${(props: IProps) => (props.isChecked ? css`100%` : css`-100%`)}
@@ -37,7 +39,7 @@ const Switch: React.FC<IProps> = ({ isChecked, onChange }) => (
   <>
     <StyledInput checked={isChecked} type="checkbox" onChange={onChange} />
     <StyledButton onChange={() => {}} isChecked={isChecked} onClick={onChange}>
-      <span />
+      <span>Toggle</span>
     </StyledButton>
   </>
 );
