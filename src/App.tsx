@@ -71,10 +71,10 @@ const App: React.FC = props => {
       <Header siteTitle={siteTitle} />
 
       <StyledMain>
-        <StyledHero className="py-16">
+        <StyledHero>
           <StyledContainer>
             <div className="inner">
-              <h1 className="relative font-bold text-6xl leading-tight mb-16">
+              <h1>
                 Just your friendly neighborhood{" "}
                 <Ticker
                   easing="ease-out"
@@ -84,20 +84,16 @@ const App: React.FC = props => {
                 />
               </h1>
 
-              <p className="font-serif leading-normal text-2xl">
-                Currently based in London, UK.
-              </p>
+              <p>Currently based in London, UK.</p>
             </div>
           </StyledContainer>
         </StyledHero>
 
         <StyledContainer>
-          <article className="bg-blue hover:bg-blue-dark text-white container mx-auto p-8 md:p-16 text-center rounded">
-            <h2 className="text-3xl mb-8">I Am The Seed Tree</h2>
-            <p className="font-serif text-xl mb-8 leading-normal">
-              Marketing website built for the amazing people at Nosy Crow.
-            </p>
-            <p className="mb-8">
+          <article>
+            <h2>I Am The Seed Tree</h2>
+            <p>Marketing website built for the amazing people at Nosy Crow.</p>
+            <p>
               <img
                 src="https://placehold.it/800x300"
                 alt="I Am The Seed Tree"
