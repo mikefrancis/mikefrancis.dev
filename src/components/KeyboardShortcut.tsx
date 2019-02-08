@@ -5,18 +5,18 @@ interface IKeyboardShortcutProps {
   onKeyDown: () => void;
 }
 
-class KeyboardShortcut extends React.Component<IKeyboardShortcutProps> {
-  componentDidMount() {
+const KeyboardShortcut: React.FC<IKeyboardShortcutProps> = ({
+  keyCode,
+  onKeyDown
+}) => {
+  React.useEffect(() => {
     window.addEventListener("keydown", (event: KeyboardEvent) => {
-      if (event.keyCode === this.props.keyCode) {
-        this.props.onKeyDown();
+      if (event.keyCode === keyCode) {
+        onKeyDown();
       }
     });
-  }
-
-  render() {
-    return null;
-  }
-}
+  });
+  return null;
+};
 
 export default KeyboardShortcut;
