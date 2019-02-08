@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import styled from "./../theme";
+import KeyboardShortcut from "./KeyboardShortcut";
 
 const KEY_CODE_ESCAPE = 27;
 
@@ -100,12 +101,6 @@ class Modal extends React.Component<IModalProps, IModalState> {
     }
 
     this.toggleModalVisibility();
-
-    window.addEventListener("keyup", event => {
-      if (event.keyCode === KEY_CODE_ESCAPE && this.state.isOpen) {
-        this.handleClose();
-      }
-    });
   }
 
   public handleOpen = () => {
@@ -182,6 +177,10 @@ class Modal extends React.Component<IModalProps, IModalState> {
 
     return (
       <>
+        <KeyboardShortcut
+          keyCode={KEY_CODE_ESCAPE}
+          onKeyDown={this.handleClose}
+        />
         <StyledModalOpen onClick={this.handleOpen}>
           {this.props.button}
         </StyledModalOpen>
