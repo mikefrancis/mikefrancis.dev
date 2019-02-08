@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled, { css } from "./../theme";
 
-interface IProps {
+interface Props {
   isChecked: boolean;
   onChange: () => void;
 }
@@ -11,8 +11,7 @@ const StyledInput = styled.input`
 `;
 
 const StyledButton = styled.button`
-  background-color: ${(props: IProps) =>
-    props.isChecked ? "#fff" : "#3d4852"};
+  background-color: ${(props: Props) => (props.isChecked ? "#fff" : "#3d4852")};
   border: 0;
   border-radius: 1.2rem;
   display: inline-block;
@@ -30,12 +29,12 @@ const StyledButton = styled.button`
     text-indent: -9999px;
     width: 0.8rem;
     transform: translateX(
-      ${(props: IProps) => (props.isChecked ? css`100%` : css`-100%`)}
+      ${(props: Props) => (props.isChecked ? css`100%` : css`-100%`)}
     );
   }
 `;
 
-const Switch: React.FC<IProps> = ({ isChecked, onChange }) => (
+const Switch: React.FC<Props> = ({ isChecked, onChange }) => (
   <>
     <StyledInput checked={isChecked} type="checkbox" onChange={onChange} />
     <StyledButton onChange={() => {}} isChecked={isChecked} onClick={onChange}>

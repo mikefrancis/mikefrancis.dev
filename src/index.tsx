@@ -4,12 +4,12 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { ThemeContext, ThemeProvider, themes } from "./theme";
 
-interface IState {
+interface State {
   themeName: string;
   toggleTheme: () => void;
 }
 
-class Root extends React.Component<React.Props<{}>, IState> {
+class Root extends React.Component<React.Props<{}>, State> {
   constructor(props: React.Props<{}>) {
     super(props);
 

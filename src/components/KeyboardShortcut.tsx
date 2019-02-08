@@ -1,14 +1,11 @@
 import * as React from "react";
 
-interface IKeyboardShortcutProps {
+interface Props {
   keyCode: number;
   onKeyDown: () => void;
 }
 
-const KeyboardShortcut: React.FC<IKeyboardShortcutProps> = ({
-  keyCode,
-  onKeyDown
-}) => {
+const KeyboardShortcut: React.FC<Props> = ({ keyCode, onKeyDown }) => {
   React.useEffect(() => {
     window.addEventListener("keydown", (event: KeyboardEvent) => {
       if (event.keyCode === keyCode) {
