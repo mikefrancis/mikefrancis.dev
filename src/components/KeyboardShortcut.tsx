@@ -7,11 +7,17 @@ interface Props {
 
 const KeyboardShortcut: React.FC<Props> = ({ keyCode, onKeyDown }) => {
   React.useEffect(() => {
-    window.addEventListener("keydown", (event: KeyboardEvent) => {
+    const listener = (event: KeyboardEvent) => {
       if (event.keyCode === keyCode) {
         onKeyDown();
       }
-    });
+    };
+
+    window.addEventListener("keydown", listener);
+
+    return function cleanup() {
+      window.removeEventListener("keydown", listener);
+    };
   });
 
   return null;
