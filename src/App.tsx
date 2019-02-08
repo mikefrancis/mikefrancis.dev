@@ -5,6 +5,8 @@ import StyledContainer from "./components/styled/Container";
 import Ticker from "./components/Ticker";
 import styled, { GlobalStyle } from "./theme";
 
+const siteTitle = "Mike Francis";
+
 const StyledMain = styled.main`
   background-color: ${props => props.theme.backgroundColour};
   color: ${props => props.theme.colour};
@@ -62,50 +64,43 @@ const StyledHero = styled.section`
   }
 `;
 
-const App: React.FC = props => {
-  const siteTitle = "Mike Francis";
+const App: React.FC = () => (
+  <>
+    <GlobalStyle />
+    <Header siteTitle={siteTitle} />
 
-  return (
-    <>
-      <GlobalStyle />
-      <Header siteTitle={siteTitle} />
-
-      <StyledMain>
-        <StyledHero>
-          <StyledContainer>
-            <div className="inner">
-              <h1>
-                Just your friendly neighborhood{" "}
-                <Ticker
-                  easing="ease-out"
-                  delay={2000}
-                  speed={400}
-                  items={["software developer", "UI designer", "ops tinkerer"]}
-                />
-              </h1>
-
-              <p>Currently based in London, UK.</p>
-            </div>
-          </StyledContainer>
-        </StyledHero>
-
+    <StyledMain>
+      <StyledHero>
         <StyledContainer>
-          <article>
-            <h2>I Am The Seed Tree</h2>
-            <p>Marketing website built for the amazing people at Nosy Crow.</p>
-            <p>
-              <img
-                src="https://placehold.it/800x300"
-                alt="I Am The Seed Tree"
+          <div className="inner">
+            <h1>
+              Just your friendly neighborhood{" "}
+              <Ticker
+                easing="ease-out"
+                delay={2000}
+                speed={400}
+                items={["software developer", "UI designer", "ops tinkerer"]}
               />
-            </p>
-          </article>
-        </StyledContainer>
-      </StyledMain>
+            </h1>
 
-      <Footer siteTitle={siteTitle} />
-    </>
-  );
-};
+            <p>Currently based in London, UK.</p>
+          </div>
+        </StyledContainer>
+      </StyledHero>
+
+      <StyledContainer>
+        <article>
+          <h2>I Am The Seed Tree</h2>
+          <p>Marketing website built for the amazing people at Nosy Crow.</p>
+          <p>
+            <img src="https://placehold.it/800x300" alt="I Am The Seed Tree" />
+          </p>
+        </article>
+      </StyledContainer>
+    </StyledMain>
+
+    <Footer siteTitle={siteTitle} />
+  </>
+);
 
 export default App;

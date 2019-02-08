@@ -69,20 +69,20 @@ const StyledModalWindow = styled.div`
   }
 `;
 
-interface IModalProps {
+interface Props {
   button: React.ReactNode;
   content: React.ReactNode;
 }
 
-interface IModalState {
+interface State {
   isOpen: boolean;
 }
 
-class Modal extends React.Component<IModalProps, IModalState> {
+class Modal extends React.Component<Props, State> {
   private overlayRef: React.RefObject<HTMLDivElement>;
   private modalRef: React.RefObject<HTMLDivElement>;
 
-  constructor(props: IModalProps) {
+  constructor(props: Props) {
     super(props);
 
     this.state = {

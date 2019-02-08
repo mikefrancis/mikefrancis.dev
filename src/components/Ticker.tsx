@@ -11,29 +11,29 @@ const StyledTicker = styled.div`
   }
 
   .item {
-    color: ${(props) => props.theme.blue};
+    color: ${props => props.theme.blue};
     display: block;
   }
 `;
 
-interface ITickerProps {
+interface Props {
   easing: string;
   items: React.ReactNode[];
   delay: number;
   speed: number;
 }
 
-interface ITickerState {
+interface State {
   current: number;
   height: number;
   top: number;
   total: number;
 }
 
-class Ticker extends React.Component<ITickerProps, ITickerState> {
+class Ticker extends React.Component<Props, State> {
   private itemRefs: Array<React.RefObject<HTMLSpanElement>> = [];
 
-  constructor(props: ITickerProps) {
+  constructor(props: Props) {
     super(props);
 
     props.items.map(() => this.itemRefs.push(React.createRef()));
@@ -42,7 +42,7 @@ class Ticker extends React.Component<ITickerProps, ITickerState> {
       current: 0,
       height: 0,
       top: 0,
-      total: props.items.length,
+      total: props.items.length
     };
   }
 
@@ -56,7 +56,7 @@ class Ticker extends React.Component<ITickerProps, ITickerState> {
     const height = this.itemRefs[0].current.clientHeight;
 
     this.setState({
-      height,
+      height
     });
 
     setInterval(() => {
@@ -65,14 +65,14 @@ class Ticker extends React.Component<ITickerProps, ITickerState> {
       if (current === items.length - 1) {
         this.setState({
           current: 0,
-          top: 0,
+          top: 0
         });
         return;
       }
 
-      this.setState((prevState) => ({
+      this.setState(prevState => ({
         current: prevState.current + 1,
-        top: prevState.top - prevState.height,
+        top: prevState.top - prevState.height
       }));
     }, delay);
   }
@@ -84,7 +84,7 @@ class Ticker extends React.Component<ITickerProps, ITickerState> {
 
     const sliderStyle = {
       transform: `translateY(${top}px)`,
-      transition: `transform ${easing} ${speed}ms`,
+      transition: `transform ${easing} ${speed}ms`
     };
 
     return (

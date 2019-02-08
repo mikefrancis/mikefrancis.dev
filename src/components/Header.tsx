@@ -65,17 +65,17 @@ const StyledHeader = styled.header`
   }
 `;
 
-interface IHeaderProps {
+interface Props {
   siteTitle: string;
 }
 
-const Header: React.FC<IHeaderProps> = props => (
+const Header: React.FC<Props> = ({ siteTitle }) => (
   <ThemeContext.Consumer>
     {({ themeName, toggleTheme }) => (
       <StyledHeader>
         <StyledContainer className="container">
           <div className="logo">
-            <StyledLink className="bar">{props.siteTitle}</StyledLink>
+            <StyledLink className="bar">{siteTitle}</StyledLink>
           </div>
 
           <StyledFlatList>

@@ -13,6 +13,7 @@ const KeyboardShortcut: React.FC<Props> = ({ keyCode, onKeyDown }) => {
       }
     });
   });
+
   return null;
 };
 

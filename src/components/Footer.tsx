@@ -67,19 +67,19 @@ const StyledFooter = styled.footer`
   }
 `;
 
-interface IFooterProps {
+interface Props {
   siteTitle: string;
   theme: IThemeInterface;
 }
 
-interface IFooterState {
+interface State {
   height: number;
 }
 
-class Footer extends React.PureComponent<IFooterProps, IFooterState> {
+class Footer extends React.PureComponent<Props, State> {
   private footerRef: React.RefObject<HTMLElement>;
 
-  constructor(props: IFooterProps) {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
