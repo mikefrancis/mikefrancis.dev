@@ -15,7 +15,7 @@ const KeyboardShortcut: React.FC<Props> = ({ keyCode, onKeyDown }) => {
 
     window.addEventListener("keydown", listener);
 
-    return function cleanup() {
+    return () => {
       window.removeEventListener("keydown", listener);
     };
   });

@@ -18,10 +18,11 @@ const AboutModalContent: React.FC = () => (
   <>
     <h2 className="mb-8">Hello!</h2>
     <p className="mb-4 leading-normal">
-      I'm a designer/full-stack developer currently working at Pod Point, an
-      electric car charging network based in London. We ship APIs and
-      Microservices written in Laravel/Lumen and Node, as well as cross-platform
-      apps and UIs written in React and React Native.
+      I'm a designer/full-stack developer currently working at{" "}
+      <a href="https://www.bulb.co.uk">Bulb</a>, an 100% renewable energy
+      provider based in London. We ship APIs and Microservices written using
+      TypeScript, GraphQL and Node, as well as cross-platform apps and UIs
+      written using React, React Native and Gatsby.
     </p>
     <p className="mb-4 leading-normal">
       I'm also the co-founder/CTO of FortSort, a property search management tool
