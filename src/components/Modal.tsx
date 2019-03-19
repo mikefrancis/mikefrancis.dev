@@ -33,7 +33,7 @@ const StyledModal = styled.div`
 const StyledModalClose = styled.button`
   background-color: transparent;
   border: 0;
-  color: ${props => props.theme.grey};
+  color: ${props => props.theme.colours.grey};
   display: flex;
   padding: 1.5rem;
   position: absolute;

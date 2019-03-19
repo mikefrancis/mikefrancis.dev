@@ -10,10 +10,12 @@ const StyledInput = styled.input`
   display: none;
 `;
 
-const StyledButton = styled.button`
-  background-color: ${(props: Props) => (props.isChecked ? "#fff" : "#3d4852")};
+const StyledButton = styled.button<Props>`
+  background-color: ${props =>
+    props.isChecked ? props.theme.colours.white : props.theme.colours.black};
   border: 0;
   border-radius: 1.2rem;
+  cursor: pointer;
   display: inline-block;
   height: 1.2rem;
   outline: none;
@@ -21,7 +23,7 @@ const StyledButton = styled.button`
   width: 2.8rem;
 
   > span {
-    background-color: ${props => props.theme.backgroundColour};
+    background-color: ${props => props.theme.colours.background};
     border-radius: 0.8rem;
     display: inline-block;
     height: 0.8rem;
@@ -29,7 +31,7 @@ const StyledButton = styled.button`
     text-indent: -9999px;
     width: 0.8rem;
     transform: translateX(
-      ${(props: Props) => (props.isChecked ? css`100%` : css`-100%`)}
+      ${props => (props.isChecked ? css`100%` : css`-100%`)}
     );
   }
 `;

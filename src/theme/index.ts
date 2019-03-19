@@ -3,17 +3,23 @@ import * as styledComponents from "styled-components";
 import { ThemedStyledComponentsModule } from "styled-components";
 
 export interface IThemeInterface {
-  backgroundColour: string;
-  colour: string;
-  black: string;
-  blue: string;
-  greyLighter: string;
-  greyLight: string;
-  grey: string;
-  greyDark: string;
-  greyDarker: string;
-  fontFamilyBase: string;
-  fontFamilyAlternate: string;
+  colours: {
+    primary: string;
+    text: string;
+    background: string;
+    white: string;
+    black: string;
+    greyLighter: string;
+    greyLight: string;
+    grey: string;
+    greyDark: string;
+    greyDarker: string;
+  };
+  fonts: {
+    primary: string;
+    secondary: string;
+    mono: string;
+  };
   width: {
     sm: number;
   };
@@ -29,37 +35,42 @@ const {
 } = styledComponents as ThemedStyledComponentsModule<IThemeInterface>;
 
 const baseTheme = {
-  black: "#3d4852",
-  blue: "#3490dc",
-  fontFamilyAlternate: '"Playfair Display", serif',
-  fontFamilyBase: '"Montserrat", sans-serif',
-  grey: "#B8C2CC",
-  greyDark: "#8795A1",
-  greyDarker: "#606F7B",
-  greyLight: "#DAE1E7",
-  greyLighter: "#F1F5F8",
+  colours: {
+    background: "#FFF",
+    text: "#3d4852",
+    primary: "#3490dc",
+    white: "#fff",
+    black: "#3d4852",
+    grey: "#B8C2CC",
+    greyDark: "#8795A1",
+    greyDarker: "#606F7B",
+    greyLight: "#DAE1E7",
+    greyLighter: "#F1F5F8"
+  },
+  fonts: {
+    primary: '"Montserrat", sans-serif',
+    secondary: '"Playfair Display", serif',
+    mono: "Menlo, Monaco, monospace"
+  },
   width: {
     sm: 768
   }
 };
 
-interface IThemesInterface {
-  [key: string]: IThemeInterface;
-}
-
-export const themes: IThemesInterface = {
-  light: Object.assign({}, baseTheme, {
-    backgroundColour: "#fff",
-    colour: "#3d4852"
-  }) as IThemeInterface,
-  dark: Object.assign({}, baseTheme, {
-    backgroundColour: "#3d4852",
-    colour: "#fff"
-  }) as IThemeInterface
+export const themes: { [key: string]: IThemeInterface } = {
+  light: baseTheme,
+  dark: {
+    ...baseTheme,
+    colours: {
+      ...baseTheme.colours,
+      background: baseTheme.colours.text,
+      text: baseTheme.colours.background
+    }
+  }
 };
 
 const ThemeContext = React.createContext({
-  themeName: "dark",
+  themeName: "light",
   toggleTheme: () => {}
 });
 
@@ -68,8 +79,9 @@ const GlobalStyle = createGlobalStyle`
   
   :root {
       box-sizing: border-box;
-      font-family: ${baseTheme.fontFamilyBase};
-      line-height: 1.5;
+      font-family: ${baseTheme.fonts.primary};
+      font-size: 1rem;
+      line-height: 2rem;
   }
 
   body {
@@ -87,6 +99,29 @@ const GlobalStyle = createGlobalStyle`
 
   img {
       max-width: 100%;
+  }
+
+  p, pre {
+    margin: 0 0 1.5rem;
+  }
+
+  pre, code {
+    color: ${props => props.theme.colours.black};
+    background-color: ${props => props.theme.colours.greyLighter};
+    font-family: ${props => props.theme.fonts.mono};
+  }
+
+  code {
+    padding: 0.25rem 0.5rem;
+  }
+
+  pre {
+    padding: 1.5rem;
+    overflow-x: scroll;
+
+    code {
+      padding: 0;
+    }
   }
 `;
 

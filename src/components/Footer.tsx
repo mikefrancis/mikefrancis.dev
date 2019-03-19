@@ -4,10 +4,10 @@ import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
 
 const StyledFooter = styled.footer`
-  background-color: ${props => props.theme.greyLighter};
+  background-color: ${props => props.theme.colours.greyLighter};
   bottom: 0;
   padding: 4rem 0 2rem;
-  color: ${props => props.theme.greyDarker};
+  color: ${props => props.theme.colours.greyDarker};
 
   @media (min-width: ${props => props.theme.width.sm}px) {
     padding-top: 8rem;
@@ -20,7 +20,7 @@ const StyledFooter = styled.footer`
     text-align: center;
 
     .notice {
-      font-family: ${props => props.theme.fontFamilyAlternate};
+      font-family: ${props => props.theme.fonts.secondary};
       font-size: 1.5rem;
       margin: 0 0 2rem;
 
@@ -30,8 +30,9 @@ const StyledFooter = styled.footer`
     }
 
     .thanks {
-      color: ${props => props.theme.blue};
+      color: ${props => props.theme.colours.primary};
       font-size: 3rem;
+      line-height: 4rem;
       font-weight: bold;
       margin: 0 0 4rem;
 
@@ -43,7 +44,7 @@ const StyledFooter = styled.footer`
   }
 
   .bottom {
-    border-top: solid 1px ${props => props.theme.greyLight};
+    border-top: solid 1px ${props => props.theme.colours.greyLight};
     padding: 4rem 0 2rem;
     text-align: center;
 
@@ -58,10 +59,10 @@ const StyledFooter = styled.footer`
     }
 
     svg {
-      color: ${props => props.theme.grey};
+      color: ${props => props.theme.colours.grey};
 
       &:hover {
-        color: ${props => props.theme.greyDark};
+        color: ${props => props.theme.colours.greyDark};
       }
     }
   }

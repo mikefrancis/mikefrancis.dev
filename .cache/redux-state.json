@@ -1,0 +1,1339 @@
+{
+  "nodes": {
+    "SitePage /dev-404-page/": {
+      "jsonName": "dev-404-page-5f9",
+      "internalComponentName": "ComponentDev404Page",
+      "path": "/dev-404-page/",
+      "component": "/Users/mikefrancis/code/mikefrancis.github.io/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "context": {},
+      "pluginCreator___NODE": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "pluginCreatorId": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/.cache/dev-404-page.js",
+      "id": "SitePage /dev-404-page/",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "26e62cf4c43f4527a35d677cb82628ad",
+        "description": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "id": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "6896ae687bf5130a202ccdea85431986",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "1fc32581-893a-55e8-8927-bcd667e2b700": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "id": "1fc32581-893a-55e8-8927-bcd667e2b700",
+      "name": "load-babel-config",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onPreBootstrap"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "packageJson": {
+        "name": "load-babel-config",
+        "description": "Internal plugin that handles loading Babel configs",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "77a06e254a64d3cbfc07004c4755fa93",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "a5079d69-ba80-53dc-82f9-0f440bd5448c": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "id": "a5079d69-ba80-53dc-82f9-0f440bd5448c",
+      "name": "internal-data-bridge",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "sourceNodes",
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "packageJson": {
+        "name": "internal-data-bridge",
+        "description": "An internal Gatsby plugin which creates data nodes from internal data",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "345737bb9ae0dcda818226dc44705f02",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "f795702c-a3b8-5a88-88ee-5d06019d44fa": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "id": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "name": "prod-404",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "packageJson": {
+        "name": "prod-404",
+        "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "51aac4b0311b4ec2ef040c28fd6323d4",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "84dad27f-1d44-51fc-ac56-4db2e5222995": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "id": "84dad27f-1d44-51fc-ac56-4db2e5222995",
+      "name": "query-runner",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "packageJson": {
+        "name": "query-runner",
+        "description": "Internal plugin for running queries",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "b35dc999f7d4f5065e8212be36a40f72",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "6f4b2fa9-66b5-5205-a03f-140005a2cfe5": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/webpack-theme-component-shadowing",
+      "id": "6f4b2fa9-66b5-5205-a03f-140005a2cfe5",
+      "name": "webpack-theme-component-shadowing",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateWebpackConfig"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby/dist/internal-plugins/webpack-theme-component-shadowing",
+      "packageJson": {
+        "name": "webpack-theme-component-shadowing",
+        "description": "An internal Gatsby plugin which handles configuring webpack to ensure theme components fall back from the user's site to theme modules.",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Chris Biscardi <chris@christopherbiscardi.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "4683d0a1d8cf7c6746c67420964dda8d",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "6baed434-a608-5e80-ba69-fa94fef95ec5": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-plugin-typescript",
+      "id": "6baed434-a608-5e80-ba69-fa94fef95ec5",
+      "name": "gatsby-plugin-typescript",
+      "version": "2.0.11",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "resolvableExtensions",
+        "onCreateBabelConfig",
+        "onCreateWebpackConfig"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-plugin-typescript",
+      "packageJson": {
+        "name": "gatsby-plugin-typescript",
+        "description": "Adds TypeScript support to Gatsby",
+        "version": "2.0.11",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "typescript"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/preset-typescript",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-plugin-remove-graphql-queries",
+            "version": "^2.6.2"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "ce559996258f51905e1150efdf6174cb",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "176dadcc-aa26-5c02-a651-88867760143b": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-plugin-styled-components",
+      "id": "176dadcc-aa26-5c02-a651-88867760143b",
+      "name": "gatsby-plugin-styled-components",
+      "version": "3.0.7",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateBabelConfig"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "wrapRootElement",
+        "onRenderBody"
+      ],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-plugin-styled-components",
+      "packageJson": {
+        "name": "gatsby-plugin-styled-components",
+        "description": "Gatsby plugin to add support for styled components",
+        "version": "3.0.7",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "styled-components"
+        ],
+        "author": "Guten Ye <ywzhaifei@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.2.0"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "babel-plugin-styled-components",
+            "version": ">1.5.0"
+          },
+          {
+            "name": "gatsby",
+            "version": "^2.0.32"
+          },
+          {
+            "name": "styled-components",
+            "version": ">=2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "4a5742798b05ac8c07149e534aa7eca6",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "f3cdde3b-6dc3-53dd-9792-2921c3f8b184": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-source-filesystem",
+      "id": "f3cdde3b-6dc3-53dd-9792-2921c3f8b184",
+      "name": "gatsby-source-filesystem",
+      "version": "2.0.27",
+      "pluginOptions": {
+        "plugins": [],
+        "path": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts",
+        "name": "markdown-pages"
+      },
+      "nodeAPIs": [
+        "sourceNodes",
+        "setFieldsOnGraphQLNodeType"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-source-filesystem",
+      "packageJson": {
+        "name": "gatsby-source-filesystem",
+        "description": "Gatsby plugin which parses files within a directory for further parsing by other plugins",
+        "version": "2.0.27",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "better-queue",
+            "version": "^3.8.7"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "^2.1.2"
+          },
+          {
+            "name": "file-type",
+            "version": "^10.2.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "got",
+            "version": "^7.1.0"
+          },
+          {
+            "name": "md5-file",
+            "version": "^3.1.1"
+          },
+          {
+            "name": "mime",
+            "version": "^2.2.0"
+          },
+          {
+            "name": "pretty-bytes",
+            "version": "^4.0.2"
+          },
+          {
+            "name": "progress",
+            "version": "^1.1.8"
+          },
+          {
+            "name": "read-chunk",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "valid-url",
+            "version": "^1.0.9"
+          },
+          {
+            "name": "xstate",
+            "version": "^3.1.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "53743d58f1b92825d5297123384e2f29",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "9f28d07a-37b6-51d1-b2d0-5071b57d6dd2": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-transformer-remark",
+      "id": "9f28d07a-37b6-51d1-b2d0-5071b57d6dd2",
+      "name": "gatsby-transformer-remark",
+      "version": "2.3.4",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateNode",
+        "setFieldsOnGraphQLNodeType"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-transformer-remark",
+      "packageJson": {
+        "name": "gatsby-transformer-remark",
+        "description": "Gatsby transformer plugin for Markdown using the Remark library and ecosystem",
+        "version": "2.3.4",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "markdown",
+          "remark"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "gray-matter",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "hast-util-raw",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "hast-util-to-html",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "mdast-util-to-hast",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "mdast-util-to-string",
+            "version": "^1.0.5"
+          },
+          {
+            "name": "mdast-util-toc",
+            "version": "^2.0.1"
+          },
+          {
+            "name": "remark",
+            "version": "^9.0.0"
+          },
+          {
+            "name": "remark-parse",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "remark-retext",
+            "version": "^3.1.0"
+          },
+          {
+            "name": "remark-stringify",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "retext-english",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "sanitize-html",
+            "version": "^1.18.2"
+          },
+          {
+            "name": "underscore.string",
+            "version": "^3.3.5"
+          },
+          {
+            "name": "unified",
+            "version": "^6.1.5"
+          },
+          {
+            "name": "unist-util-remove-position",
+            "version": "^1.1.2"
+          },
+          {
+            "name": "unist-util-select",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.3.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.88"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "733f7d056d8c594dd37f68c4fb23a58a",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "1943ff2f-9c0c-558d-8d0c-006603e8106a": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-plugin-react-helmet",
+      "id": "1943ff2f-9c0c-558d-8d0c-006603e8106a",
+      "name": "gatsby-plugin-react-helmet",
+      "version": "3.0.10",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-plugin-react-helmet",
+      "packageJson": {
+        "name": "gatsby-plugin-react-helmet",
+        "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
+        "version": "3.0.10",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "favicon",
+          "react-helmet",
+          "seo",
+          "document",
+          "head",
+          "title",
+          "meta",
+          "link",
+          "script",
+          "base",
+          "noscript",
+          "style"
+        ],
+        "author": "Kyle Mathews <matthews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          },
+          {
+            "name": "react-helmet",
+            "version": "^5.1.3"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "63ad40b9c9a1169652b8bb0a0ac4d1d0",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "7374ebf2-d961-52ee-92a2-c25e7cb387a9": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io",
+      "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "name": "default-site-plugin",
+      "version": "00f4d1b7e552f32e48d9bb4e19a9bbcf",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPages"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io",
+      "packageJson": {
+        "name": "mikefrancis.github.io",
+        "version": "0.1.0",
+        "dependencies": [
+          {
+            "name": "@types/jest",
+            "version": "24.0.0"
+          },
+          {
+            "name": "@types/node",
+            "version": "10.12.21"
+          },
+          {
+            "name": "@types/react",
+            "version": "16.8.2"
+          },
+          {
+            "name": "@types/react-dom",
+            "version": "16.8.0"
+          },
+          {
+            "name": "@types/react-helmet",
+            "version": "^5.0.8"
+          },
+          {
+            "name": "@types/styled-components",
+            "version": "^4.1.8"
+          },
+          {
+            "name": "gatsby",
+            "version": "^2.1.33"
+          },
+          {
+            "name": "gatsby-plugin-react-helmet",
+            "version": "^3.0.10"
+          },
+          {
+            "name": "gatsby-plugin-styled-components",
+            "version": "^3.0.7"
+          },
+          {
+            "name": "gatsby-plugin-typescript",
+            "version": "^2.0.11"
+          },
+          {
+            "name": "gatsby-source-filesystem",
+            "version": "^2.0.27"
+          },
+          {
+            "name": "gatsby-transformer-remark",
+            "version": "^2.3.4"
+          },
+          {
+            "name": "react",
+            "version": "^16.8.0"
+          },
+          {
+            "name": "react-dom",
+            "version": "^16.8.0"
+          },
+          {
+            "name": "react-helmet",
+            "version": "^5.2.0"
+          },
+          {
+            "name": "styled-components",
+            "version": "^4.1.3"
+          },
+          {
+            "name": "typescript",
+            "version": "3.3.1"
+          }
+        ],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "e435e1dd8d92d307f70763562e8e6a84",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "6be15efa-e7c2-50bc-966f-cc87d54439ef": {
+      "resolve": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-plugin-page-creator",
+      "id": "6be15efa-e7c2-50bc-966f-cc87d54439ef",
+      "name": "gatsby-plugin-page-creator",
+      "version": "2.0.10",
+      "pluginOptions": {
+        "plugins": [],
+        "path": "/Users/mikefrancis/code/mikefrancis.github.io/src/pages",
+        "pathCheck": false
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/mikefrancis/code/mikefrancis.github.io/node_modules/gatsby-plugin-page-creator",
+      "packageJson": {
+        "name": "gatsby-plugin-page-creator",
+        "description": "Gatsby plugin that automatically creates pages from React components in specified directories",
+        "version": "2.0.10",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "^2.1.2"
+          },
+          {
+            "name": "fs-exists-cached",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "glob",
+            "version": "^7.1.1"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "micromatch",
+            "version": "^3.1.10"
+          },
+          {
+            "name": "parse-filepath",
+            "version": "^1.0.1"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "980cdad2cc74ae3d87d50a6fba0eb872",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Site": {
+      "siteMetadata": {
+        "title": "Mike Francis",
+        "description": "Software Engineer & UI Designer based in London, UK"
+      },
+      "port": "8000",
+      "host": "localhost",
+      "pathPrefix": "",
+      "polyfill": true,
+      "buildTime": "2019-03-19T12:22:59.784Z",
+      "id": "Site",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "c23e2788147ce871f5634b4a6e4e4e22",
+        "type": "Site",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "1a9fd2ab-7407-5877-b093-39b30c54524a": {
+      "id": "1a9fd2ab-7407-5877-b093-39b30c54524a",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "cc6a2222a7fcb3ec95ca20fb90485ae6",
+        "type": "Directory",
+        "description": "Directory \"src/posts\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "markdown-pages",
+      "absolutePath": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts",
+      "relativePath": "",
+      "extension": "",
+      "size": 160,
+      "prettySize": "160 B",
+      "modifiedTime": "2019-03-18T21:26:35.674Z",
+      "accessTime": "2019-03-19T12:23:02.872Z",
+      "changeTime": "2019-03-18T21:26:35.674Z",
+      "birthTime": "2019-03-16T08:52:05.435Z",
+      "root": "/",
+      "dir": "/Users/mikefrancis/code/mikefrancis.github.io/src",
+      "base": "posts",
+      "ext": "",
+      "name": "posts",
+      "relativeDirectory": "..",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 5,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3955988,
+      "blocks": 0,
+      "atimeMs": 1552998182872.4492,
+      "mtimeMs": 1552944395673.6553,
+      "ctimeMs": 1552944395673.6553,
+      "birthtimeMs": 1552726325435.481,
+      "atime": "2019-03-19T12:23:02.872Z",
+      "mtime": "2019-03-18T21:26:35.674Z",
+      "ctime": "2019-03-18T21:26:35.674Z",
+      "birthtime": "2019-03-16T08:52:05.435Z"
+    },
+    "4510b8b9-3780-584b-aa0b-affa7053e448": {
+      "id": "4510b8b9-3780-584b-aa0b-affa7053e448",
+      "children": [
+        "848299e7-f176-5c86-9f39-d74bfe8ac19e"
+      ],
+      "parent": null,
+      "internal": {
+        "contentDigest": "3ac24fe50f3356cbd99fac9696d3472e",
+        "type": "File",
+        "mediaType": "text/markdown",
+        "description": "File \"src/posts/create-react-app-tailwind-css.md\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "markdown-pages",
+      "absolutePath": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts/create-react-app-tailwind-css.md",
+      "relativePath": "create-react-app-tailwind-css.md",
+      "extension": "md",
+      "size": 4247,
+      "prettySize": "4.25 kB",
+      "modifiedTime": "2019-03-19T09:08:15.668Z",
+      "accessTime": "2019-03-19T11:07:51.151Z",
+      "changeTime": "2019-03-19T09:08:15.668Z",
+      "birthTime": "2019-03-16T08:52:05.436Z",
+      "root": "/",
+      "dir": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts",
+      "base": "create-react-app-tailwind-css.md",
+      "ext": ".md",
+      "name": "create-react-app-tailwind-css",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 3955989,
+      "blocks": 16,
+      "atimeMs": 1552993671151.495,
+      "mtimeMs": 1552986495668.1448,
+      "ctimeMs": 1552986495668.1448,
+      "birthtimeMs": 1552726325435.6462,
+      "atime": "2019-03-19T11:07:51.151Z",
+      "mtime": "2019-03-19T09:08:15.668Z",
+      "ctime": "2019-03-19T09:08:15.668Z",
+      "birthtime": "2019-03-16T08:52:05.436Z"
+    },
+    "6dd356fb-9cec-504d-b321-ed61b148a95e": {
+      "id": "6dd356fb-9cec-504d-b321-ed61b148a95e",
+      "children": [
+        "01b454ac-4f27-532b-8ced-f947c0d2c41d"
+      ],
+      "parent": null,
+      "internal": {
+        "contentDigest": "c6f761624d45f013d5090806d8ea5186",
+        "type": "File",
+        "mediaType": "text/markdown",
+        "description": "File \"src/posts/next-js-tailwind-css.md\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "markdown-pages",
+      "absolutePath": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts/next-js-tailwind-css.md",
+      "relativePath": "next-js-tailwind-css.md",
+      "extension": "md",
+      "size": 2714,
+      "prettySize": "2.71 kB",
+      "modifiedTime": "2019-03-19T09:09:26.652Z",
+      "accessTime": "2019-03-19T11:07:51.152Z",
+      "changeTime": "2019-03-19T09:09:26.652Z",
+      "birthTime": "2019-03-18T21:11:13.491Z",
+      "root": "/",
+      "dir": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts",
+      "base": "next-js-tailwind-css.md",
+      "ext": ".md",
+      "name": "next-js-tailwind-css",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 4067205,
+      "blocks": 8,
+      "atimeMs": 1552993671151.5195,
+      "mtimeMs": 1552986566651.8296,
+      "ctimeMs": 1552986566651.8296,
+      "birthtimeMs": 1552943473491.4446,
+      "atime": "2019-03-19T11:07:51.152Z",
+      "mtime": "2019-03-19T09:09:26.652Z",
+      "ctime": "2019-03-19T09:09:26.652Z",
+      "birthtime": "2019-03-18T21:11:13.491Z"
+    },
+    "13d136f3-5df0-5228-a7d9-4fbf13327c76": {
+      "id": "13d136f3-5df0-5228-a7d9-4fbf13327c76",
+      "children": [
+        "87c7190b-ad93-5e38-8a6c-aca87cd907a2"
+      ],
+      "parent": null,
+      "internal": {
+        "contentDigest": "41bc5f5d7b33e8a1815d2a4c5a007880",
+        "type": "File",
+        "mediaType": "text/markdown",
+        "description": "File \"src/posts/secure-headers-for-laravel.md\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "markdown-pages",
+      "absolutePath": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts/secure-headers-for-laravel.md",
+      "relativePath": "secure-headers-for-laravel.md",
+      "extension": "md",
+      "size": 1917,
+      "prettySize": "1.92 kB",
+      "modifiedTime": "2019-03-19T09:08:51.342Z",
+      "accessTime": "2019-03-19T11:07:51.152Z",
+      "changeTime": "2019-03-19T09:08:51.342Z",
+      "birthTime": "2019-03-18T21:26:35.674Z",
+      "root": "/",
+      "dir": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts",
+      "base": "secure-headers-for-laravel.md",
+      "ext": ".md",
+      "name": "secure-headers-for-laravel",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 4067941,
+      "blocks": 8,
+      "atimeMs": 1552993671151.5432,
+      "mtimeMs": 1552986531341.7856,
+      "ctimeMs": 1552986531341.7856,
+      "birthtimeMs": 1552944395673.6343,
+      "atime": "2019-03-19T11:07:51.152Z",
+      "mtime": "2019-03-19T09:08:51.342Z",
+      "ctime": "2019-03-19T09:08:51.342Z",
+      "birthtime": "2019-03-18T21:26:35.674Z"
+    },
+    "848299e7-f176-5c86-9f39-d74bfe8ac19e": {
+      "id": "848299e7-f176-5c86-9f39-d74bfe8ac19e",
+      "children": [],
+      "parent": "4510b8b9-3780-584b-aa0b-affa7053e448",
+      "internal": {
+        "content": "\nWhen [Tailwind CSS](https://tailwindcss.com) dropped I was eager to have a play as I loved the look of the syntax. The perfect opportunity arose while over the holidays when I thought my personal site could use a revamp.\n\nI used the fantastic [create-react-app](https://github.com/facebookincubator/create-react-app) (CRA) to start a new React project and skip lots of tedious and confusing boilerplate:\n\n```bash\ncreate-react-app myproject\ncd myproject\n```\n\nCRA is set up for using vanilla CSS out of the box and although there is an [official guide on using the Sass preprocessor](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc), I wanted to switch to use [PostCSS](http://postcss.org) as Tailwind exports directives for this.\n\nAfter some Googling, I found that most people wanting to use PostCSS with CRA were having to “eject” CRA in order to edit the underlying [Webpack](https://webpack.js.org) configuration, which deals with all the necessary loaders for different filetypes (such as CSS).\n\nEjecting seemed a bit of a drastic measure given that I had only just started this project, so after a bit of trial and error bodging together different solutions, I got it working. Here’s how!\n\nFirstly, if you haven’t done already, you want to install the necessary Node modules in your project to achieve this:\n\n```\nnpm install --save-dev tailwindcss autoprefixer postcss-cli\n```\n\n**N.B:** you don’t _have_ to install `autoprefixer` but we use it below and the Tailwind docs advise using it with PostCSS, so who am I to argue!\n\nThen initialise Tailwind with a new configuration file in the root of your project. I like to add the `.config` suffix to these files, so I know what they are for:\n\n```\nnpx tailwind init tailwind.config.js\n```\n\nYou’ll need to do the same for PostCSS so we can use it to transform the Tailwind directives into pure CSS — again, in the root of your project, create a file called `postcss.config.js` and add this code (taken straight from the [Tailwind docs](https://tailwindcss.com/docs/installation#webpack)):\n\n```javascript\nconst tailwindcss = require(\"tailwindcss\");\n\nmodule.exports = {\n  plugins: [tailwindcss(\"./tailwind.config.js\"), require(\"autoprefixer\")]\n};\n```\n\nNearly there! Now we need to set up our CSS “entry point”. You can do this wherever you like but here’s how I do it (if you change these paths, you will need to change them in the `package.json` scripts further down this article). Create `src/styles/index.css` and paste in the following:\n\n```css\n@tailwind preflight;\n@tailwind utilities;\n\n/* Your custom CSS here */\n```\n\n## Hooking it all together\n\nNow all that is left is to edit the scripts in `package.json`  —  we still use the default CRA commands, but amend `start` and `build`, while adding `watch:css` and `build:css`:\n\n```json\n{\n  \"scripts\": {\n    \"build:css\": \"postcss src/styles/index.css -o src/index.css\",\n    \"watch:css\": \"postcss src/styles/index.css -o src/index.css -w\",\n    \"start\": \"npm run watch:css & react-scripts start\",\n    \"build\": \"npm run build:css && react-scripts build\",\n    \"test\": \"react-scripts test --env=jsdom\",\n    \"eject\": \"react-scripts eject\"\n  }\n}\n```\n\n(Notice the single `&` on the `start` script  —  we’re telling bash to run the `npm run watch:css` command in the background, while our original `react-scripts start` runs as normal.)\n\nIf you now run `npm run start` you should see `src/index.css` generated, containing the Tailwind CSS reset and utility classes, and your custom CSS below. Furthermore, if you edit the `src/styles/index.css` this should watch for changes and reload your app. Woo!\n\nTo make use of this file, just make sure that in your src/index.js you have:\n\n```javascript\nimport \"index.css\";\n```\n\nAnd you are good to go.\n\n## Next steps\n\nAs detailed in the Tailwind docs, now we have PostCSS processing set up, we can take advantage of the many PostCSS plugins available!\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "6b5e2a9314bfaa8efafd52fb9a4a8610",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "create-react-app & Tailwind CSS",
+        "path": "/blog/create-react-app-tailwind-css",
+        "date": "2018-01-01",
+        "description": "Learn how to use the popular React boilerplate app with the utility-driven Tailwind CSS framework"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\nWhen [Tailwind CSS](https://tailwindcss.com) dropped I was eager to have a play as I loved the look of the syntax. The perfect opportunity arose while over the holidays when I thought my personal site could use a revamp.\n\nI used the fantastic [create-react-app](https://github.com/facebookincubator/create-react-app) (CRA) to start a new React project and skip lots of tedious and confusing boilerplate:\n\n```bash\ncreate-react-app myproject\ncd myproject\n```\n\nCRA is set up for using vanilla CSS out of the box and although there is an [official guide on using the Sass preprocessor](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc), I wanted to switch to use [PostCSS](http://postcss.org) as Tailwind exports directives for this.\n\nAfter some Googling, I found that most people wanting to use PostCSS with CRA were having to “eject” CRA in order to edit the underlying [Webpack](https://webpack.js.org) configuration, which deals with all the necessary loaders for different filetypes (such as CSS).\n\nEjecting seemed a bit of a drastic measure given that I had only just started this project, so after a bit of trial and error bodging together different solutions, I got it working. Here’s how!\n\nFirstly, if you haven’t done already, you want to install the necessary Node modules in your project to achieve this:\n\n```\nnpm install --save-dev tailwindcss autoprefixer postcss-cli\n```\n\n**N.B:** you don’t _have_ to install `autoprefixer` but we use it below and the Tailwind docs advise using it with PostCSS, so who am I to argue!\n\nThen initialise Tailwind with a new configuration file in the root of your project. I like to add the `.config` suffix to these files, so I know what they are for:\n\n```\nnpx tailwind init tailwind.config.js\n```\n\nYou’ll need to do the same for PostCSS so we can use it to transform the Tailwind directives into pure CSS — again, in the root of your project, create a file called `postcss.config.js` and add this code (taken straight from the [Tailwind docs](https://tailwindcss.com/docs/installation#webpack)):\n\n```javascript\nconst tailwindcss = require(\"tailwindcss\");\n\nmodule.exports = {\n  plugins: [tailwindcss(\"./tailwind.config.js\"), require(\"autoprefixer\")]\n};\n```\n\nNearly there! Now we need to set up our CSS “entry point”. You can do this wherever you like but here’s how I do it (if you change these paths, you will need to change them in the `package.json` scripts further down this article). Create `src/styles/index.css` and paste in the following:\n\n```css\n@tailwind preflight;\n@tailwind utilities;\n\n/* Your custom CSS here */\n```\n\n## Hooking it all together\n\nNow all that is left is to edit the scripts in `package.json`  —  we still use the default CRA commands, but amend `start` and `build`, while adding `watch:css` and `build:css`:\n\n```json\n{\n  \"scripts\": {\n    \"build:css\": \"postcss src/styles/index.css -o src/index.css\",\n    \"watch:css\": \"postcss src/styles/index.css -o src/index.css -w\",\n    \"start\": \"npm run watch:css & react-scripts start\",\n    \"build\": \"npm run build:css && react-scripts build\",\n    \"test\": \"react-scripts test --env=jsdom\",\n    \"eject\": \"react-scripts eject\"\n  }\n}\n```\n\n(Notice the single `&` on the `start` script  —  we’re telling bash to run the `npm run watch:css` command in the background, while our original `react-scripts start` runs as normal.)\n\nIf you now run `npm run start` you should see `src/index.css` generated, containing the Tailwind CSS reset and utility classes, and your custom CSS below. Furthermore, if you edit the `src/styles/index.css` this should watch for changes and reload your app. Woo!\n\nTo make use of this file, just make sure that in your src/index.js you have:\n\n```javascript\nimport \"index.css\";\n```\n\nAnd you are good to go.\n\n## Next steps\n\nAs detailed in the Tailwind docs, now we have PostCSS processing set up, we can take advantage of the many PostCSS plugins available!\n",
+      "fileAbsolutePath": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts/create-react-app-tailwind-css.md"
+    },
+    "01b454ac-4f27-532b-8ced-f947c0d2c41d": {
+      "id": "01b454ac-4f27-532b-8ced-f947c0d2c41d",
+      "children": [],
+      "parent": "6dd356fb-9cec-504d-b321-ed61b148a95e",
+      "internal": {
+        "content": "\nFollowing on from [my previous post regarding setting up the popular Create React App and Tailwind](https://medium.com/@mikeeeeeeey/create-react-app-tailwind-css-feat-postcss-631d9e33ba8c), I’ve been playing around with next.js made by the amazing people over at [Zeit](https://zeit.co). I’m still on my Atomic CSS tip for rapid building of UIs, so naturally the first thing I wanted to do was hook up my favourite CSS Toolkit.\n\n**N.B:** This isn’t a post about whether to use Create React App or next.js, or which is better  —  different tools for different jobs. With that out of the way, let’s get to hooking them up.\n\nFirstly, install next.js by following the [installation instructions](https://nextjs.org/docs). Then we just need to install a few extra dependencies for Tailwind:\n\n```bash\nnpm install @zeit/next-css tailwindcss autoprefixer\n```\n\nThen initialise Tailwind with a new configuration file in the root of your project. I like to add the `.config` suffix to these files, so I know what they are for:\n\n```bash\nnpx tailwind init tailwind.config.js\n```\n\nYou’ll need to do the same for PostCSS so we can use it to transform the Tailwind directives into pure CSS — again, in the root of your project, create a file called `postcss.config.js` and add this code (taken straight from the [Tailwind docs](https://tailwindcss.com/docs/installation#webpack)):\n\n```javascript\nconst tailwindcss = require(\"tailwindcss\");\n\nmodule.exports = {\n  plugins: [tailwindcss(\"./tailwind.config.js\"), require(\"autoprefixer\")]\n};\n```\n\nNearly there! Now we need to set up our CSS “entry point”. Create `style.css` and paste in the following:\n\n```css\n@tailwind preflight;\n@tailwind utilities;\n\n/* Your custom CSS here */\n```\n\nWe now just need to tell next.js that we want to add a CSS pipeline. This is done by creating `next.config.js` as detailed in the [example repo](https://github.com/zeit/next-plugins/tree/master/packages/next-css):\n\n```javascript\nconst withCSS = require(\"@zeit/next-css\");\n\nmodule.exports = withCSS();\n```\n\nFinally to make use of this file, just make sure that in your `pages/index.js` you have:\n\n```javascript\nimport \"../style.css\";\n```\n\nAnd you are good to go.\n\nIf you now run `npm run dev` and visit your site, you will see a CSS file being added in the document’s head containing the generated Tailwind CSS 🎉\n\n## Next steps\n\nAs detailed in the Tailwind docs, now we have PostCSS processing set up, we can take advantage of the many PostCSS plugins available!\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "abe84caa5014dec1f0d8aaecb5a2fa37",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "next.js & Tailwind CSS",
+        "path": "/blog/next-js-tailwind-css",
+        "date": "2018-10-27",
+        "description": "Learn how to use the popular SSR React framework with the utility-driven Tailwind CSS framework"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\nFollowing on from [my previous post regarding setting up the popular Create React App and Tailwind](https://medium.com/@mikeeeeeeey/create-react-app-tailwind-css-feat-postcss-631d9e33ba8c), I’ve been playing around with next.js made by the amazing people over at [Zeit](https://zeit.co). I’m still on my Atomic CSS tip for rapid building of UIs, so naturally the first thing I wanted to do was hook up my favourite CSS Toolkit.\n\n**N.B:** This isn’t a post about whether to use Create React App or next.js, or which is better  —  different tools for different jobs. With that out of the way, let’s get to hooking them up.\n\nFirstly, install next.js by following the [installation instructions](https://nextjs.org/docs). Then we just need to install a few extra dependencies for Tailwind:\n\n```bash\nnpm install @zeit/next-css tailwindcss autoprefixer\n```\n\nThen initialise Tailwind with a new configuration file in the root of your project. I like to add the `.config` suffix to these files, so I know what they are for:\n\n```bash\nnpx tailwind init tailwind.config.js\n```\n\nYou’ll need to do the same for PostCSS so we can use it to transform the Tailwind directives into pure CSS — again, in the root of your project, create a file called `postcss.config.js` and add this code (taken straight from the [Tailwind docs](https://tailwindcss.com/docs/installation#webpack)):\n\n```javascript\nconst tailwindcss = require(\"tailwindcss\");\n\nmodule.exports = {\n  plugins: [tailwindcss(\"./tailwind.config.js\"), require(\"autoprefixer\")]\n};\n```\n\nNearly there! Now we need to set up our CSS “entry point”. Create `style.css` and paste in the following:\n\n```css\n@tailwind preflight;\n@tailwind utilities;\n\n/* Your custom CSS here */\n```\n\nWe now just need to tell next.js that we want to add a CSS pipeline. This is done by creating `next.config.js` as detailed in the [example repo](https://github.com/zeit/next-plugins/tree/master/packages/next-css):\n\n```javascript\nconst withCSS = require(\"@zeit/next-css\");\n\nmodule.exports = withCSS();\n```\n\nFinally to make use of this file, just make sure that in your `pages/index.js` you have:\n\n```javascript\nimport \"../style.css\";\n```\n\nAnd you are good to go.\n\nIf you now run `npm run dev` and visit your site, you will see a CSS file being added in the document’s head containing the generated Tailwind CSS 🎉\n\n## Next steps\n\nAs detailed in the Tailwind docs, now we have PostCSS processing set up, we can take advantage of the many PostCSS plugins available!\n",
+      "fileAbsolutePath": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts/next-js-tailwind-css.md"
+    },
+    "87c7190b-ad93-5e38-8a6c-aca87cd907a2": {
+      "id": "87c7190b-ad93-5e38-8a6c-aca87cd907a2",
+      "children": [],
+      "parent": "13d136f3-5df0-5228-a7d9-4fbf13327c76",
+      "internal": {
+        "content": "\nAfter playing with [Aidan Wood’s amazing SecureHeaders library](https://github.com/aidantwoods/SecureHeaders), found on [/r/PHP](https://reddit.com/r/PHP), in a project, I looked for a Laravel port of this package only to find one didn’t exist  —  so I made one!\n\n[https://github.com/mikefrancis/laravel-secureheaders](https://github.com/mikefrancis/laravel-secureheaders)\n\nAidan’s package aims to harden the security around HTTP headers, and with the following tiny bit of code:\n\n```php\n$headers = new SecureHeaders();\n$headers->apply();\n```\n\nCan take a standard Laravel install from grade `F` to grade `B` on [SecurityHeaders.io](https://securityheaders.io), which is amazing.\n\nWith a little bit of configuration around Content Security Policy you can get a grade `A` . Here’s a brand new Laravel install where I have only required the package, added the service provider and registered the middleware:\n\n[http://laravel-secureheaders-demo.herokuapp.com](http://laravel-secureheaders-demo.herokuapp.com)\n\nAnd here’s the grade `A` on SecurityHeaders.io:\n\n[https://securityheaders.io/?q=http://laravel-secureheaders-demo.herokuapp.com](https://securityheaders.io/?q=http://laravel-secureheaders-demo.herokuapp.com)\n\nI’m still working on an issue with Cookies and the Symfony Response which the Laravel Responses are based on, but I’m confident this should bump up that grade even more.\n\nPlease feel free to [give it a try](https://github.com/mikefrancis/laravel-secureheaders) and let me know any feedback. Also bear in mind that this will unfortunately only be for Laravel 5.4+ projects due to the underlying version of `symfony/http-foundation` which the various Laravel framework requires.\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "4df3207c650cb9cd561eed9edfc64683",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Secure Headers for Laravel",
+        "path": "/blog/secure-headers-for-laravel",
+        "date": "2018-06-20",
+        "description": "Presenting laravel-secureheaders, a Secure Headers wrapper for the Laravel framework"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\nAfter playing with [Aidan Wood’s amazing SecureHeaders library](https://github.com/aidantwoods/SecureHeaders), found on [/r/PHP](https://reddit.com/r/PHP), in a project, I looked for a Laravel port of this package only to find one didn’t exist  —  so I made one!\n\n[https://github.com/mikefrancis/laravel-secureheaders](https://github.com/mikefrancis/laravel-secureheaders)\n\nAidan’s package aims to harden the security around HTTP headers, and with the following tiny bit of code:\n\n```php\n$headers = new SecureHeaders();\n$headers->apply();\n```\n\nCan take a standard Laravel install from grade `F` to grade `B` on [SecurityHeaders.io](https://securityheaders.io), which is amazing.\n\nWith a little bit of configuration around Content Security Policy you can get a grade `A` . Here’s a brand new Laravel install where I have only required the package, added the service provider and registered the middleware:\n\n[http://laravel-secureheaders-demo.herokuapp.com](http://laravel-secureheaders-demo.herokuapp.com)\n\nAnd here’s the grade `A` on SecurityHeaders.io:\n\n[https://securityheaders.io/?q=http://laravel-secureheaders-demo.herokuapp.com](https://securityheaders.io/?q=http://laravel-secureheaders-demo.herokuapp.com)\n\nI’m still working on an issue with Cookies and the Symfony Response which the Laravel Responses are based on, but I’m confident this should bump up that grade even more.\n\nPlease feel free to [give it a try](https://github.com/mikefrancis/laravel-secureheaders) and let me know any feedback. Also bear in mind that this will unfortunately only be for Laravel 5.4+ projects due to the underlying version of `symfony/http-foundation` which the various Laravel framework requires.\n",
+      "fileAbsolutePath": "/Users/mikefrancis/code/mikefrancis.github.io/src/posts/secure-headers-for-laravel.md"
+    },
+    "SitePage /blog/next-js-tailwind-css": {
+      "jsonName": "blog-next-js-tailwind-css-4e9",
+      "internalComponentName": "ComponentBlogNextJsTailwindCss",
+      "path": "/blog/next-js-tailwind-css",
+      "component": "/Users/mikefrancis/code/mikefrancis.github.io/src/components/layouts/Post.tsx",
+      "componentChunkName": "component---src-components-layouts-post-tsx",
+      "context": {},
+      "pluginCreator___NODE": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "pluginCreatorId": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/src/components/layouts/Post.tsx",
+      "id": "SitePage /blog/next-js-tailwind-css",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "0f4cf8e98041081269f2ac44a8c707a1",
+        "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /blog/secure-headers-for-laravel": {
+      "jsonName": "blog-secure-headers-for-laravel-ebd",
+      "internalComponentName": "ComponentBlogSecureHeadersForLaravel",
+      "path": "/blog/secure-headers-for-laravel",
+      "component": "/Users/mikefrancis/code/mikefrancis.github.io/src/components/layouts/Post.tsx",
+      "componentChunkName": "component---src-components-layouts-post-tsx",
+      "context": {},
+      "pluginCreator___NODE": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "pluginCreatorId": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/src/components/layouts/Post.tsx",
+      "id": "SitePage /blog/secure-headers-for-laravel",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "83162558aab8ff585b37ffc94a3b196a",
+        "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /blog/create-react-app-tailwind-css": {
+      "jsonName": "blog-create-react-app-tailwind-css-334",
+      "internalComponentName": "ComponentBlogCreateReactAppTailwindCss",
+      "path": "/blog/create-react-app-tailwind-css",
+      "component": "/Users/mikefrancis/code/mikefrancis.github.io/src/components/layouts/Post.tsx",
+      "componentChunkName": "component---src-components-layouts-post-tsx",
+      "context": {},
+      "pluginCreator___NODE": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "pluginCreatorId": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/src/components/layouts/Post.tsx",
+      "id": "SitePage /blog/create-react-app-tailwind-css",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "b7111743b67e9861873406b48a1ca4a9",
+        "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "jsonName": "index",
+      "internalComponentName": "ComponentIndex",
+      "path": "/",
+      "component": "/Users/mikefrancis/code/mikefrancis.github.io/src/pages/index.tsx",
+      "componentChunkName": "component---src-pages-index-tsx",
+      "context": {},
+      "pluginCreator___NODE": "6be15efa-e7c2-50bc-966f-cc87d54439ef",
+      "pluginCreatorId": "6be15efa-e7c2-50bc-966f-cc87d54439ef",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/src/pages/index.tsx",
+      "id": "SitePage /",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "7de35000e144605d9c5f9d43d91fe41d",
+        "description": "6be15efa-e7c2-50bc-966f-cc87d54439ef",
+        "owner": "internal-data-bridge"
+      }
+    }
+  },
+  "status": {
+    "plugins": {},
+    "PLUGINS_HASH": "f9de1df0bdd0807f1aa854a51359b502"
+  },
+  "componentDataDependencies": {
+    "nodes": {
+      "Site": [
+        "sq--src-components-seo-tsx"
+      ],
+      "01b454ac-4f27-532b-8ced-f947c0d2c41d": [
+        "/blog/next-js-tailwind-css"
+      ],
+      "87c7190b-ad93-5e38-8a6c-aca87cd907a2": [
+        "/blog/secure-headers-for-laravel"
+      ],
+      "848299e7-f176-5c86-9f39-d74bfe8ac19e": [
+        "/blog/create-react-app-tailwind-css"
+      ]
+    },
+    "connections": {
+      "MarkdownRemark": [
+        null,
+        null
+      ]
+    }
+  },
+  "jsonDataPaths": {
+    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
+    "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "blog-create-ract-app-tailwind-css-a6f": "975/path---blog-create-ract-app-tailwind-css-a-6-f-1f6-YgV6PMucCfm5UqFLltIiArHr58",
+    "blog-create-react-app-tailwind-css-334": "182/path---blog-create-react-app-tailwind-css-334-3c2-gqnIynQRIEvvsRyA6WMpb5k",
+    "blog-next-js-tailwind-css-4e9": "484/path---blog-next-js-tailwind-css-4-e-9-6d5-ZhpB7iqCz3nmENzJ4fnhkat0",
+    "blog-secure-headers-for-laravel-ebd": "154/path---blog-secure-headers-for-laravel-ebd-374-OKdeGcFMC5kKLF8osNfy9PGm0E",
+    "sq--src-components-seo-tsx": 301168561
+  },
+  "components": {
+    "/Users/mikefrancis/code/mikefrancis.github.io/src/components/layouts/Post.tsx": {
+      "query": "query usersMikefrancisCodeMikefrancisGithubIoSrcComponentsLayoutsPostTsx1049215411(\n  $path: String!\n) {\n  markdownRemark(frontmatter: {path: {eq: $path}}) {\n    html\n    wordCount {\n      words\n    }\n    frontmatter {\n      date(formatString: \"MMMM DD, YYYY\")\n      path\n      title\n      description\n    }\n  }\n}\n",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/src/components/layouts/Post.tsx"
+    },
+    "/Users/mikefrancis/code/mikefrancis.github.io/.cache/dev-404-page.js": {
+      "query": "",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/.cache/dev-404-page.js"
+    },
+    "/Users/mikefrancis/code/mikefrancis.github.io/src/pages/index.tsx": {
+      "query": "",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/src/pages/index.tsx"
+    }
+  },
+  "staticQueryComponents": {
+    "sq--src-components-seo-tsx": {
+      "name": "SEOQuery",
+      "componentPath": "/Users/mikefrancis/code/mikefrancis.github.io/src/components/SEO.tsx",
+      "id": "sq--src-components-seo-tsx",
+      "jsonName": "sq--src-components-seo-tsx",
+      "query": "query SEOQuery {\n  site {\n    siteMetadata {\n      title\n      description\n    }\n  }\n}\n",
+      "hash": 301168561
+    }
+  }
+}
