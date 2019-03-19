@@ -8,8 +8,6 @@ import styled, {
   themes
 } from "./../../theme";
 
-const siteTitle = "Mike Francis";
-
 const StyledMain = styled.main`
   background-color: ${props => props.theme.colours.background};
   color: ${props => props.theme.colours.text};
@@ -71,11 +69,11 @@ class Layout extends React.Component<Props, State> {
         <ThemeProvider theme={themes[this.state.themeName]}>
           <>
             <GlobalStyle />
-            <Header siteTitle={siteTitle} />
+            <Header />
 
             <StyledMain>{this.props.children}</StyledMain>
 
-            <Footer siteTitle={siteTitle} />
+            <Footer />
           </>
         </ThemeProvider>
       </ThemeContext.Provider>

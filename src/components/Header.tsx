@@ -1,11 +1,13 @@
 import * as React from "react";
+import { Link, useStaticQuery } from "gatsby";
+
 import styled, { ThemeContext } from "./../theme";
 import Modal from "./Modal";
 import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
 import StyledLink from "./styled/Link";
 import Switch from "./Switch";
-import { Link } from "gatsby";
+import { query } from "./SEO";
 
 const ModalStyledLink = styled(StyledLink)`
   color: ${props => props.theme.colours.text};
@@ -67,36 +69,39 @@ const StyledHeader = styled.header`
   }
 `;
 
-interface Props {
-  siteTitle: string;
-}
+const Header = () => {
+  const { site } = useStaticQuery(query);
 
-const Header: React.FC<Props> = ({ siteTitle }) => (
-  <ThemeContext.Consumer>
-    {({ themeName, toggleTheme }) => (
-      <StyledHeader>
-        <StyledContainer className="container">
-          <div className="logo">
-            <StyledLink className="bar">
-              <Link to="/">{siteTitle}</Link>
-            </StyledLink>
-          </div>
+  return (
+    <ThemeContext.Consumer>
+      {({ themeName, toggleTheme }) => (
+        <StyledHeader>
+          <StyledContainer className="container">
+            <div className="logo">
+              <StyledLink className="bar">
+                <Link to="/">{site.siteMetadata.title}</Link>
+              </StyledLink>
+            </div>
 
-          <StyledFlatList>
-            <li>
-              <Modal
-                button={<AboutModalButton />}
-                content={<AboutModalContent />}
-              />
-            </li>
-            <li>
-              <Switch isChecked={themeName === "dark"} onChange={toggleTheme} />
-            </li>
-          </StyledFlatList>
-        </StyledContainer>
-      </StyledHeader>
-    )}
-  </ThemeContext.Consumer>
-);
+            <StyledFlatList>
+              <li>
+                <Modal
+                  button={<AboutModalButton />}
+                  content={<AboutModalContent />}
+                />
+              </li>
+              <li>
+                <Switch
+                  isChecked={themeName === "dark"}
+                  onChange={toggleTheme}
+                />
+              </li>
+            </StyledFlatList>
+          </StyledContainer>
+        </StyledHeader>
+      )}
+    </ThemeContext.Consumer>
+  );
+};
 
 export default Header;

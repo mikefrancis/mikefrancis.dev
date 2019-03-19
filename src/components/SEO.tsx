@@ -7,7 +7,7 @@ interface Props {
   description?: string;
 }
 
-const query = graphql`
+export const query = graphql`
   query SEOQuery {
     site {
       siteMetadata {

@@ -1,7 +1,10 @@
 import * as React from "react";
+import { StaticQuery } from "gatsby";
+
 import styled, { withTheme, IThemeInterface } from "./../theme";
 import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
+import { query } from "./SEO";
 
 const StyledFooter = styled.footer`
   background-color: ${props => props.theme.colours.greyLighter};
@@ -69,7 +72,6 @@ const StyledFooter = styled.footer`
 `;
 
 interface Props {
-  siteTitle: string;
   theme: IThemeInterface;
 }
 
@@ -102,7 +104,6 @@ class Footer extends React.PureComponent<Props, State> {
   }
 
   public render() {
-    const { siteTitle } = this.props;
     const { height } = this.state;
 
     /* tslint:disable:max-line-length */
@@ -118,7 +119,14 @@ class Footer extends React.PureComponent<Props, State> {
 
             <div className="bottom border-t pt-16 md:flex text-center md:text-left">
               <div className="copyright">
-                &copy; {siteTitle} {new Date().getFullYear()}
+                <StaticQuery query={query}>
+                  {({ site }) => (
+                    <>
+                      &copy; {site.siteMetadata.title}{" "}
+                      {new Date().getFullYear()}
+                    </>
+                  )}
+                </StaticQuery>
               </div>
               <StyledFlatList>
                 <li>
