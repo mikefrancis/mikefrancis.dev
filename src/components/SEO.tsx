@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const query = graphql`
-  query SEOQuery {
+  query SiteMetaDataQuery {
     site {
       siteMetadata {
         title
@@ -18,17 +18,17 @@ export const query = graphql`
   }
 `;
 
-const SEO: React.FC<Props> = () => {
+const SEO: React.FC<Props> = ({ title, description }) => {
   const { site } = useStaticQuery(query);
 
   return (
     <Helmet
       htmlAttributes={{ lang: "en" }}
-      title={site.siteMetadata.title}
+      title={title || site.siteMetadata.title}
       meta={[
         {
           name: "description",
-          content: site.siteMetadata.description
+          content: description || site.siteMetadata.description
         }
       ]}
     />

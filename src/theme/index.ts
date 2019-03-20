@@ -27,8 +27,8 @@ export interface IThemeInterface {
 
 const {
   default: styled,
-  css,
   createGlobalStyle,
+  css,
   keyframes,
   ThemeProvider,
   withTheme
@@ -56,23 +56,6 @@ const baseTheme = {
     sm: 768
   }
 };
-
-export const themes: { [key: string]: IThemeInterface } = {
-  light: baseTheme,
-  dark: {
-    ...baseTheme,
-    colours: {
-      ...baseTheme.colours,
-      background: baseTheme.colours.text,
-      text: baseTheme.colours.background
-    }
-  }
-};
-
-const ThemeContext = React.createContext({
-  themeName: "light",
-  toggleTheme: () => {}
-});
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display');
@@ -106,9 +89,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   pre, code {
-    color: ${props => props.theme.colours.black};
-    background-color: ${props => props.theme.colours.greyLighter};
-    font-family: ${props => props.theme.fonts.mono};
+    color: ${props => baseTheme.colours.black};
+    background-color: ${props => baseTheme.colours.greyLighter};
+    font-family: ${props => baseTheme.fonts.mono};
   }
 
   code {
@@ -125,5 +108,22 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export { css, GlobalStyle, keyframes, ThemeProvider, withTheme, ThemeContext };
+export const themes: { [key: string]: IThemeInterface } = {
+  light: baseTheme,
+  dark: {
+    ...baseTheme,
+    colours: {
+      ...baseTheme.colours,
+      background: baseTheme.colours.text,
+      text: baseTheme.colours.background
+    }
+  }
+};
+
+const ThemeContext = React.createContext({
+  themeName: "light",
+  toggleTheme: () => {}
+});
+
+export { GlobalStyle, css, keyframes, ThemeProvider, withTheme, ThemeContext };
 export default styled;

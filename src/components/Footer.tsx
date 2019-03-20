@@ -1,10 +1,9 @@
 import * as React from "react";
-import { StaticQuery } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 
 import styled, { withTheme, IThemeInterface } from "./../theme";
 import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
-import { query } from "./SEO";
 
 const StyledFooter = styled.footer`
   background-color: ${props => props.theme.colours.greyLighter};
@@ -78,6 +77,17 @@ interface Props {
 interface State {
   height: number;
 }
+
+export const query = graphql`
+  query FooterQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
 
 class Footer extends React.PureComponent<Props, State> {
   private footerRef: React.RefObject<HTMLElement>;

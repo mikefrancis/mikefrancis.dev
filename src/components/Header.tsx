@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useStaticQuery } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
 import styled, { ThemeContext } from "./../theme";
 import Modal from "./Modal";
@@ -7,7 +7,6 @@ import StyledContainer from "./styled/Container";
 import StyledFlatList from "./styled/FlatList";
 import StyledLink from "./styled/Link";
 import Switch from "./Switch";
-import { query } from "./SEO";
 
 const ModalStyledLink = styled(StyledLink)`
   color: ${props => props.theme.colours.text};
@@ -69,6 +68,17 @@ const StyledHeader = styled.header`
   }
 `;
 
+export const query = graphql`
+  query HeaderQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
+
 const Header = () => {
   const { site } = useStaticQuery(query);
 
@@ -89,6 +99,11 @@ const Header = () => {
                   button={<AboutModalButton />}
                   content={<AboutModalContent />}
                 />
+              </li>
+              <li>
+                <StyledLink>
+                  <Link to="/blog">Blog</Link>
+                </StyledLink>
               </li>
               <li>
                 <Switch

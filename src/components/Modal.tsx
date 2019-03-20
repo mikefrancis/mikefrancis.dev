@@ -137,6 +137,10 @@ class Modal extends React.Component<Props, State> {
   public render() {
     const { isOpen } = this.state;
 
+    if (typeof document === "undefined") {
+      return null;
+    }
+
     /* tslint:disable:max-line-length */
     const modalContent = ReactDOM.createPortal(
       <>
