@@ -3,10 +3,13 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 
 import styled, { ThemeContext } from "./../theme";
 import Modal from "./Modal";
-import StyledContainer from "./styled/Container";
+import Container from "./styled/Container";
+import KeyboardShortcut from "./KeyboardShortcut";
 import StyledFlatList from "./styled/FlatList";
 import StyledLink from "./styled/Link";
 import Switch from "./Switch";
+
+const KEY_CODE_T = 84;
 
 const ModalStyledLink = styled(StyledLink)`
   color: ${props => props.theme.colours.text};
@@ -98,7 +101,7 @@ const Header = () => {
     <ThemeContext.Consumer>
       {({ themeName, toggleTheme }) => (
         <StyledHeader>
-          <StyledContainer className="container">
+          <Container className="container">
             <div className="logo">
               <StyledLink className="bar">
                 <Link to="/">{site.siteMetadata.title}</Link>
@@ -122,9 +125,13 @@ const Header = () => {
                   isChecked={themeName === "dark"}
                   onChange={toggleTheme}
                 />
+                <KeyboardShortcut
+                  keyCode={KEY_CODE_T}
+                  onKeyDown={toggleTheme}
+                />
               </li>
             </StyledFlatList>
-          </StyledContainer>
+          </Container>
         </StyledHeader>
       )}
     </ThemeContext.Consumer>
