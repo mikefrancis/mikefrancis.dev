@@ -48,12 +48,20 @@ const StyledHeader = styled.header`
   transition: all 300ms;
 
   .container {
-    display: flex;
+    @media (min-width: ${props => props.theme.width.sm}px) {
+      display: flex;
+    }
   }
 
   .logo {
     flex: 1;
     position: relative;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @media (min-width: ${props => props.theme.width.sm}px) {
+      text-align: initial;
+    }
 
     .bar:after {
       background-color: ${props => props.theme.colours.text};
@@ -65,6 +73,10 @@ const StyledHeader = styled.header`
       top: 100%;
       width: 45px;
     }
+  }
+
+  ul {
+    text-align: center;
   }
 `;
 

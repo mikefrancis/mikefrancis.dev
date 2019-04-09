@@ -1,8 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { Link } from "gatsby";
 
 import Layout from "../components/layouts/Default";
+import Article from "../components/Article";
 import SEO from "../components/SEO";
 import Container from "../components/styled/Container";
 
@@ -26,16 +26,16 @@ interface Props {
 
 const Blog: React.FC<Props> = ({ data }) => (
   <>
-    <SEO />
+    <SEO title="Blog" />
     <Layout>
       <Container>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <article key={node.id}>
-            <h3>
-              <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
-            </h3>
-            {node.frontmatter.description}
-          </article>
+          <Article
+            link={node.frontmatter.slug}
+            title={node.frontmatter.title}
+            summary={node.frontmatter.description}
+            key={node.id}
+          />
         ))}
       </Container>
     </Layout>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import StyledContainer from "./../components/styled/Container";
 import SEO from "../components/SEO";
+import Article from "../components/Article";
 import Ticker from "../components/Ticker";
 import Layout from "../components/layouts/Default";
 
@@ -34,29 +35,6 @@ const StyledHero = styled.section`
   }
 `;
 
-const Project = styled.article`
-  background-color: ${props => props.theme.colours.primary};
-  border-radius: 0.25rem;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-
-  @media (min-width: ${props => props.theme.width.sm}px) {
-    padding: 4rem;
-  }
-
-  h2 {
-    font-size: 1.875rem;
-    margin: 0 0 2rem;
-  }
-
-  p {
-    font-family: ${props => props.theme.fonts.secondary};
-    font-size: 1.25rem;
-    margin: 0 0 2rem;
-  }
-`;
-
 const Index = () => (
   <>
     <SEO />
@@ -80,13 +58,7 @@ const Index = () => (
       </StyledHero>
 
       <StyledContainer>
-        <Project>
-          <h2>I Am The Seed Tree</h2>
-          <p>Marketing website built for the amazing people at Nosy Crow.</p>
-          <p>
-            <img src="https://placehold.it/800x300" alt="I Am The Seed Tree" />
-          </p>
-        </Project>
+        <Article title="I Am The Seed Tree" summary="Marketing website built for the amazing people at Nosy Crow." image="https://placehold.it/800x300" />
       </StyledContainer>
     </Layout>
   </>

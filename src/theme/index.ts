@@ -89,9 +89,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   pre, code {
-    color: ${props => baseTheme.colours.black};
-    background-color: ${props => baseTheme.colours.greyLighter};
-    font-family: ${props => baseTheme.fonts.mono};
+    color: ${baseTheme.colours.black};
+    background-color: ${baseTheme.colours.greyLighter};
+    font-family: ${baseTheme.fonts.mono};
   }
 
   code {
