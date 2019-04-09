@@ -6,13 +6,6 @@ import Layout from "./Default";
 import Container from "../styled/Container";
 import SEO from "../SEO";
 
-const getReadingTime = (words: number) => {
-  const minutes = words / 150;
-  const wholeMinutes = Math.round(minutes);
-
-  return wholeMinutes;
-};
-
 const PostHeader = styled.div`
   max-width: 40rem;
 
@@ -58,17 +51,14 @@ interface Props {
         date: string;
       };
       html: string;
-      wordCount: {
-        words: number;
-      };
+      timeToRead: number;
     };
   };
 }
 
-const Template: React.FC<Props> = ({ data }) => {
-  const { markdownRemark } = data;
-  const { frontmatter, html, wordCount } = markdownRemark;
-  const readingTime = getReadingTime(wordCount.words);
+const Template: React.FC<Props> = props => {
+  const { markdownRemark } = props.data;
+  const { frontmatter, html, timeToRead } = markdownRemark;
 
   return (
     <>
@@ -81,7 +71,7 @@ const Template: React.FC<Props> = ({ data }) => {
           <Row>
             <PostMetaColumn>
               <p>{frontmatter.date}</p>
-              <p>{`${readingTime} minutes reading time`}</p>
+              <p>{`${timeToRead} minutes reading time`}</p>
             </PostMetaColumn>
             <Column>
               <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -93,16 +83,14 @@ const Template: React.FC<Props> = ({ data }) => {
   );
 };
 
-export const pageQuery = graphql`
+export const query = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(frontmatter: { slug: { eq: $path } }) {
       html
-      wordCount {
-        words
-      }
+      timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
+        slug
         title
         description
       }
