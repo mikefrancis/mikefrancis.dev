@@ -1,6 +1,6 @@
 ---
 title: "Secure Headers for Laravel"
-slug: "/secure-headers-for-laravel"
+slug: "/blog/secure-headers-for-laravel"
 date: "2018-06-20"
 description: "Presenting laravel-secureheaders, a Secure Headers wrapper for the Laravel framework"
 ---

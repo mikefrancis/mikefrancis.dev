@@ -1,6 +1,6 @@
 ---
 title: "create-react-app & Tailwind CSS"
-slug: "/create-react-app-tailwind-css"
+slug: "/blog/create-react-app-tailwind-css"
 date: "2018-01-01"
 description: "Learn how to use the popular React boilerplate app with the utility-driven Tailwind CSS framework"
 ---

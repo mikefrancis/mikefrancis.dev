@@ -4,18 +4,8 @@ import styled from "styled-components";
 
 import Layout from "./Default";
 import Container from "../styled/Container";
+import Hero from "../styled/Hero";
 import SEO from "../SEO";
-
-const PostHeader = styled.div`
-  max-width: 40rem;
-
-  h1 {
-    @media (min-width: ${props => props.theme.width.sm}px) {
-      font-size: 4rem;
-      line-height: 5rem;
-    }
-  }
-`;
 
 const Row = styled.div`
   @media (min-width: ${props => props.theme.width.sm}px) {
@@ -33,12 +23,27 @@ const Column = styled.div`
 const PostMetaColumn = styled(Column)`
   margin-bottom: 1.5rem;
 
+  .inner {
+    position: sticky;
+    top: 0;
+  }
+
   p {
     margin-bottom: 0;
   }
 
   @media (min-width: ${props => props.theme.width.sm}px) {
     width: 50rem;
+  }
+`;
+
+const ContentColumn = styled(Column)`
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.75;
+    }
   }
 `;
 
@@ -64,18 +69,24 @@ const Template: React.FC<Props> = props => {
     <>
       <SEO title={frontmatter.title} description={frontmatter.description} />
       <Layout>
+        <Hero>
+          <Container>
+            <div className="inner">
+              <h1>{frontmatter.title}</h1>
+            </div>
+          </Container>
+        </Hero>
         <Container>
-          <PostHeader>
-            <h1>{frontmatter.title}</h1>
-          </PostHeader>
           <Row>
             <PostMetaColumn>
-              <p>{frontmatter.date}</p>
-              <p>{`${timeToRead} minutes reading time`}</p>
+              <div className="inner">
+                <p>{frontmatter.date}</p>
+                <p>{`${timeToRead} minutes reading time`}</p>
+              </div>
             </PostMetaColumn>
-            <Column>
+            <ContentColumn>
               <div dangerouslySetInnerHTML={{ __html: html }} />
-            </Column>
+            </ContentColumn>
           </Row>
         </Container>
       </Layout>
