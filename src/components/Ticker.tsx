@@ -11,7 +11,7 @@ const StyledTicker = styled.div`
   }
 
   .item {
-    color: ${props => props.theme.blue};
+    color: ${props => props.theme.colours.primary};
     display: block;
   }
 `;

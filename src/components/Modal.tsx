@@ -33,7 +33,7 @@ const StyledModal = styled.div`
 const StyledModalClose = styled.button`
   background-color: transparent;
   border: 0;
-  color: ${props => props.theme.grey};
+  color: ${props => props.theme.colours.grey};
   display: flex;
   padding: 1.5rem;
   position: absolute;
@@ -136,6 +136,10 @@ class Modal extends React.Component<Props, State> {
 
   public render() {
     const { isOpen } = this.state;
+
+    if (typeof document === "undefined") {
+      return null;
+    }
 
     /* tslint:disable:max-line-length */
     const modalContent = ReactDOM.createPortal(

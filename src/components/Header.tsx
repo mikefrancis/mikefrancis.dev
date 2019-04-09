@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Link, useStaticQuery, graphql } from "gatsby";
+
 import styled, { ThemeContext } from "./../theme";
 import Modal from "./Modal";
 import StyledContainer from "./styled/Container";
@@ -7,7 +9,7 @@ import StyledLink from "./styled/Link";
 import Switch from "./Switch";
 
 const ModalStyledLink = styled(StyledLink)`
-  color: ${props => props.theme.colour};
+  color: ${props => props.theme.colours.text};
 `;
 
 const AboutModalButton: React.FC = () => (
@@ -40,9 +42,9 @@ const AboutModalContent: React.FC = () => (
 );
 
 const StyledHeader = styled.header`
-  background-color: ${props => props.theme.backgroundColour};
-  color: ${props => props.theme.colour};
-  padding-top: 2rem;
+  background-color: ${props => props.theme.colours.background};
+  color: ${props => props.theme.colours.text};
+  padding-top: 1.5rem;
   transition: all 300ms;
 
   .container {
@@ -54,7 +56,7 @@ const StyledHeader = styled.header`
     position: relative;
 
     .bar:after {
-      background-color: ${props => props.theme.colour};
+      background-color: ${props => props.theme.colours.text};
       content: "";
       left: 0;
       position: absolute;
@@ -66,34 +68,55 @@ const StyledHeader = styled.header`
   }
 `;
 
-interface Props {
-  siteTitle: string;
-}
+export const query = graphql`
+  query HeaderQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
 
-const Header: React.FC<Props> = ({ siteTitle }) => (
-  <ThemeContext.Consumer>
-    {({ themeName, toggleTheme }) => (
-      <StyledHeader>
-        <StyledContainer className="container">
-          <div className="logo">
-            <StyledLink className="bar">{siteTitle}</StyledLink>
-          </div>
+const Header = () => {
+  const { site } = useStaticQuery(query);
 
-          <StyledFlatList>
-            <li>
-              <Modal
-                button={<AboutModalButton />}
-                content={<AboutModalContent />}
-              />
-            </li>
-            <li>
-              <Switch isChecked={themeName === "dark"} onChange={toggleTheme} />
-            </li>
-          </StyledFlatList>
-        </StyledContainer>
-      </StyledHeader>
-    )}
-  </ThemeContext.Consumer>
-);
+  return (
+    <ThemeContext.Consumer>
+      {({ themeName, toggleTheme }) => (
+        <StyledHeader>
+          <StyledContainer className="container">
+            <div className="logo">
+              <StyledLink className="bar">
+                <Link to="/">{site.siteMetadata.title}</Link>
+              </StyledLink>
+            </div>
+
+            <StyledFlatList>
+              <li>
+                <Modal
+                  button={<AboutModalButton />}
+                  content={<AboutModalContent />}
+                />
+              </li>
+              <li>
+                <StyledLink>
+                  <Link to="/blog">Blog</Link>
+                </StyledLink>
+              </li>
+              <li>
+                <Switch
+                  isChecked={themeName === "dark"}
+                  onChange={toggleTheme}
+                />
+              </li>
+            </StyledFlatList>
+          </StyledContainer>
+        </StyledHeader>
+      )}
+    </ThemeContext.Consumer>
+  );
+};
 
 export default Header;
