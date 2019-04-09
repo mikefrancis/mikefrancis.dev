@@ -1,5 +1,4 @@
 import * as React from "react";
-import styled from "styled-components";
 
 import Hero from "./../components/styled/Hero";
 import Container from "./../components/styled/Container";
@@ -13,21 +12,17 @@ const Index = () => (
     <SEO />
     <Layout>
       <Hero>
-        <Container>
-          <div className="inner">
-            <h1>
-              Just your friendly neighbourhood{" "}
-              <Ticker
-                easing="ease-out"
-                delay={2000}
-                speed={400}
-                items={["software engineer", "UI designer", "ops tinkerer"]}
-              />
-            </h1>
+        <h1>
+          Just your friendly neighbourhood{" "}
+          <Ticker
+            easing="ease-out"
+            delay={2000}
+            speed={400}
+            items={["software engineer", "UI designer", "ops tinkerer"]}
+          />
+        </h1>
 
-            <p>Currently based in London, UK.</p>
-          </div>
-        </Container>
+        <p>Currently based in London, UK.</p>
       </Hero>
 
       <Container>

@@ -1,21 +1,32 @@
 import * as React from "react";
-import styled from "styled-components";
 
 import StyledContainer from "./../components/styled/Container";
-import StyledHero from "./../components/styled/Hero";
+import Hero from "./../components/styled/Hero";
 import SEO from "../components/SEO";
 import Layout from "../components/layouts/Default";
+import styled from "../theme";
+
+const Button = styled.a`
+  background-color: ${props => props.theme.colours.primary};
+  border-radius: 0.25rem;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+`;
 
 const Index = () => (
   <>
     <SEO />
     <Layout>
-      <StyledHero>
+      <Hero>
         <StyledContainer>
           <h1>Page not found</h1>
-          <p>Well, this is embarrassing. Not sure how this has happened.</p>
+          <p>Well, this is embarrassing.</p>
+          <p>
+            <Button href="/">← Back to home</Button>
+          </p>
         </StyledContainer>
-      </StyledHero>
+      </Hero>
     </Layout>
   </>
 );

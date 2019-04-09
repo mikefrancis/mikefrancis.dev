@@ -10,22 +10,26 @@ import SEO from "../SEO";
 const Row = styled.div`
   @media (min-width: ${props => props.theme.width.sm}px) {
     display: flex;
-    margin: 0 -1.5rem;
+    margin: -2rem -2rem 0;
   }
 `;
 
 const Column = styled.div`
   @media (min-width: ${props => props.theme.width.sm}px) {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
 `;
 
 const PostMetaColumn = styled(Column)`
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
   .inner {
     position: sticky;
     top: 0;
+
+    @media (min-width: ${props => props.theme.width.sm}px) {
+      padding-top: 2rem;
+    }
   }
 
   p {
@@ -38,6 +42,10 @@ const PostMetaColumn = styled(Column)`
 `;
 
 const ContentColumn = styled(Column)`
+  @media (min-width: ${props => props.theme.width.sm}px) {
+    padding-top: 2rem;
+  }
+
   a {
     text-decoration: underline;
 
@@ -70,18 +78,15 @@ const Template: React.FC<Props> = props => {
       <SEO title={frontmatter.title} description={frontmatter.description} />
       <Layout>
         <Hero>
-          <Container>
-            <div className="inner">
-              <h1>{frontmatter.title}</h1>
-            </div>
-          </Container>
+          <h1>{frontmatter.title}</h1>
+          <p>{frontmatter.description}</p>
         </Hero>
         <Container>
           <Row>
             <PostMetaColumn>
               <div className="inner">
-                <p>{frontmatter.date}</p>
-                <p>{`${timeToRead} minutes reading time`}</p>
+                <p>🗓 {frontmatter.date}</p>
+                <p>👀 {`${timeToRead} minutes`}</p>
               </div>
             </PostMetaColumn>
             <ContentColumn>
@@ -100,7 +105,7 @@ export const query = graphql`
       html
       timeToRead
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM D, YYYY")
         slug
         title
         description

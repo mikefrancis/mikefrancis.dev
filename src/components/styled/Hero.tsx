@@ -1,8 +1,10 @@
 import * as React from "react";
 
 import styled from "../../theme";
+import Container from "../styled/Container";
 
 const StyledHero = styled.section`
+  overflow: hidden;
   text-align: center;
 
   @media (min-width: ${props => props.theme.width.sm}px) {
@@ -16,7 +18,7 @@ const StyledHero = styled.section`
 
   h1 {
     font-size: 2rem;
-    margin: 0 0 4rem;
+    margin: 0 0 2rem;
 
     @media (min-width: ${props => props.theme.width.sm}px) {
       font-size: 4rem;
@@ -25,9 +27,21 @@ const StyledHero = styled.section`
   }
 
   p {
-    font-family: ${props => props.theme.fonts.secondary};
-    font-size: 1.5rem;
+    margin: 0 0 2rem;
+
+    &:first-of-type {
+      font-family: ${props => props.theme.fonts.secondary};
+      font-size: 1.5rem;
+    }
   }
 `;
 
-export default StyledHero;
+const Hero: React.FC = ({ children }) => (
+  <StyledHero>
+    <Container>
+      <div class="inner">{children}</div>
+    </Container>
+  </StyledHero>
+);
+
+export default Hero;
