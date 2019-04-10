@@ -39,7 +39,7 @@ const StyledHero = styled.section`
 const Hero: React.FC = ({ children }) => (
   <StyledHero>
     <Container>
-      <div class="inner">{children}</div>
+      <div className="inner">{children}</div>
     </Container>
   </StyledHero>
 );

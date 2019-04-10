@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layouts/Default";
 import Article from "../components/Article";
 import SEO from "../components/SEO";
+import Pagination from "../components/Pagination";
 import Container from "../components/styled/Container";
 
 interface Props {
@@ -22,9 +23,15 @@ interface Props {
       }[];
     };
   };
+  pageContext: {
+    current: number;
+    skip: number;
+    limit: number;
+    total: number;
+  };
 }
 
-const Blog: React.FC<Props> = ({ data }) => (
+const Blog: React.FC<Props> = ({ data, pageContext }) => (
   <>
     <SEO title="Blog" />
     <Layout>
@@ -37,14 +44,19 @@ const Blog: React.FC<Props> = ({ data }) => (
             key={node.id}
           />
         ))}
+        <Pagination current={pageContext.current} total={pageContext.total} />
       </Container>
     </Layout>
   </>
 );
 
 export const query = graphql`
-  query Posts {
-    allMarkdownRemark {
+  query Posts($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
       edges {
         node {
           id

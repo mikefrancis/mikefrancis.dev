@@ -2,17 +2,9 @@ import * as React from "react";
 
 import StyledContainer from "./../components/styled/Container";
 import Hero from "./../components/styled/Hero";
+import Button from "../components/styled/Button";
 import SEO from "../components/SEO";
 import Layout from "../components/layouts/Default";
-import styled from "../theme";
-
-const Button = styled.a`
-  background-color: ${props => props.theme.colours.primary};
-  border-radius: 0.25rem;
-  color: white;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-`;
 
 const Index = () => (
   <>
