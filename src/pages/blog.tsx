@@ -13,9 +13,11 @@ interface Props {
       edges: {
         node: {
           id: string;
+          fields: {
+            slug: string;
+          };
           frontmatter: {
             title: string;
-            slug: string;
             description: string;
             date: string;
           };
@@ -38,7 +40,7 @@ const Blog: React.FC<Props> = ({ data, pageContext }) => (
       <Container>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Article
-            link={node.frontmatter.slug}
+            link={node.fields.slug}
             title={node.frontmatter.title}
             summary={node.frontmatter.description}
             key={node.id}
@@ -60,8 +62,10 @@ export const query = graphql`
       edges {
         node {
           id
-          frontmatter {
+          fields {
             slug
+          }
+          frontmatter {
             title
             description
             date

@@ -1,6 +1,5 @@
 ---
 title: "Getting started with Laravel & Otto"
-slug: "/blog/getting-started-with-laravel-otto"
 date: "2015-10-23"
 description: "Learn how to spin up a Laravel site using HashiCorp's new Otto platform"
 ---

@@ -1,6 +1,5 @@
 ---
 title: "I Built A Thing Once and People Liked It"
-slug: "/blog/i-built-a-thing-once-and-people-liked-it"
 date: "2016-05-13"
 description: "How to deal with the fallout of building a semi-successful product"
 ---

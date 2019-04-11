@@ -1,6 +1,5 @@
 ---
 title: "Multiple Laravel Homestead boxes side-by-side"
-slug: "/blog/multiple-laravel-homestead-boxes-side-by-side"
 date: "2016-03-18"
 description: "How to develop/test on different versions of PHP using Laravel's Homestead"
 ---

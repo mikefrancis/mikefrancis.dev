@@ -1,6 +1,5 @@
 ---
 title: "Update default Bus binding in Lumen 5.2"
-slug: "/blog/update-default-bus-binding-in-lumen-5-2"
 date: "2018-01-01"
 description: "Detailed steps on how to override the default Bus in Laravel's Lumen 5.2"
 ---

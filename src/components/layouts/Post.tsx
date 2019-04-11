@@ -69,8 +69,8 @@ interface Props {
   };
 }
 
-const Template: React.FC<Props> = props => {
-  const { markdownRemark } = props.data;
+const Template: React.FC<Props> = ({ data }) => {
+  const { markdownRemark } = data;
   const { frontmatter, html, timeToRead } = markdownRemark;
 
   return (
@@ -101,12 +101,11 @@ const Template: React.FC<Props> = props => {
 
 export const query = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $path } }) {
       html
       timeToRead
       frontmatter {
         date(formatString: "MMMM D, YYYY")
-        slug
         title
         description
       }
