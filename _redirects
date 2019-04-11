@@ -2,6 +2,7 @@
 
 # Redirect domain aliases to primary domain
 https://mikefrancis.me/* https://mikefrancis.dev/:splat 301!
+https://www.mikefrancis.me/* https://mikefrancis.dev/:splat 301!
 https://www.mikefrancis.dev/* https://mikefrancis.dev/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
