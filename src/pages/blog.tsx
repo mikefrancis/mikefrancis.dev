@@ -51,7 +51,7 @@ const Blog: React.FC<Props> = ({ data, pageContext }) => (
 );
 
 export const query = graphql`
-  query Posts($skip: Int!, $limit: Int!) {
+  query Posts($skip: Int, $limit: Int) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit

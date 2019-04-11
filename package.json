@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop"
+    "dev": "gatsby develop"
   },
   "eslintConfig": {
     "extends": "react-app"
