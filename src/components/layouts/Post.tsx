@@ -23,6 +23,10 @@ const Column = styled.div`
 const PostMetaColumn = styled(Column)`
   margin-bottom: 2rem;
 
+  @media (min-width: ${props => props.theme.width.sm}px) {
+    flex: 0 0 16rem;
+  }
+
   .inner {
     position: sticky;
     top: 0;
@@ -35,15 +39,16 @@ const PostMetaColumn = styled(Column)`
   p {
     margin-bottom: 0;
   }
-
-  @media (min-width: ${props => props.theme.width.sm}px) {
-    width: 50rem;
-  }
 `;
 
 const ContentColumn = styled(Column)`
   @media (min-width: ${props => props.theme.width.sm}px) {
-    padding-top: 2rem;
+    padding: 2rem 0;
+  }
+
+  pre code {
+    display: block;
+    width: 1px;
   }
 
   a {

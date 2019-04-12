@@ -61,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display');
   
   :root {
-      box-sizing: border-box;
       font-family: ${baseTheme.fonts.primary};
       font-size: 1rem;
       line-height: 2rem;
@@ -72,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *, *:before, *:after {
-      box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   a {
@@ -85,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p, pre {
-    margin: 0 0 1.5rem;
+    margin: 0 0 2rem;
   }
 
   pre, code {
@@ -99,8 +98,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   pre {
-    padding: 1.5rem;
+    padding: 1rem;
     overflow-x: scroll;
+    width: 100%;
 
     code {
       padding: 0;

@@ -4,9 +4,7 @@ date: "2016-05-13"
 description: "How to deal with the fallout of building a semi-successful product"
 ---
 
-I helped build some [Free and Open Source Software](https://github.com/benchmarkstudios/slackbox) which had a brief moment in the sun. It’s no NPM or Composer, but it was trending on GitHub’s JavaScript repositories for a day or so, and managed to generate a bit of buzz on [ProductHunt](https://www.producthunt.com/tech/slackbox-2) and [TheNextWeb](http://thenextweb.com/dd/2015/06/23/a-new-way-to-control-spotify-through-slack-integration/#gref). Also dem stars! Everything should be measured in stars. You can have some just for making it to the end of this first paragraph.
-
-✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+I helped build some [Free and Open Source Software](https://github.com/benchmarkstudios/slackbox) which had a brief moment in the sun. It’s no NPM or Composer, but it was trending on GitHub’s JavaScript repositories for a day or so, and managed to generate a bit of buzz on [ProductHunt](https://www.producthunt.com/tech/slackbox-2) and [TheNextWeb](http://thenextweb.com/dd/2015/06/23/a-new-way-to-control-spotify-through-slack-integration/#gref). Also dem stars! Everything should be measured in stars. You can have some just for making it to the end of this first paragraph. ✨
 
 As amazing as this was to me personally, I very quickly began to learn what it meant to be a maintainer on a (briefly popular) open-source project so I thought I’d share my limited experience just in case it happens to you.
 
