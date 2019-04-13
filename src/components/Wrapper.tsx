@@ -14,17 +14,29 @@ class Wrapper extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
 
+    this.state = {
+      themeName: "light",
+      toggleTheme: this.toggleTheme
+    };
+  }
+
+  componentDidMount() {
+    setInterval(this.checkAppearance, 1000);
+
+    this.checkAppearance();
+  }
+
+  checkAppearance = () => {
     const themeName =
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light";
 
-    this.state = {
-      themeName,
-      toggleTheme: this.toggleTheme
-    };
-  }
+    this.setState({
+      themeName
+    });
+  };
 
   toggleTheme = () => {
     this.setState(state => ({
