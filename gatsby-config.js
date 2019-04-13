@@ -15,6 +15,14 @@ module.exports = {
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-portal"
+    "gatsby-plugin-portal",
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-138287170-1",
+        anonymize: true,
+        respectDNT: true
+      }
+    }
   ]
 };
