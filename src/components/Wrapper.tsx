@@ -11,6 +11,8 @@ interface State {
 }
 
 class Wrapper extends React.Component<Props, State> {
+  static appearanceInterval: NodeJS.Timeout;
+
   constructor(props: Props) {
     super(props);
 
@@ -21,9 +23,13 @@ class Wrapper extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    setInterval(this.checkAppearance, 1000);
+    Wrapper.appearanceInterval = setInterval(this.checkAppearance, 1000);
 
     this.checkAppearance();
+  }
+
+  componentWillUnmount() {
+    clearInterval(Wrapper.appearanceInterval);
   }
 
   checkAppearance = () => {
@@ -39,6 +45,8 @@ class Wrapper extends React.Component<Props, State> {
   };
 
   toggleTheme = () => {
+    clearInterval(Wrapper.appearanceInterval);
+
     this.setState(state => ({
       themeName: state.themeName === "dark" ? "light" : "dark"
     }));
