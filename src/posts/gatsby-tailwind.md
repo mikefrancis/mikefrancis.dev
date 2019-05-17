@@ -6,12 +6,12 @@ description: "Learn how to use the popular React framework with Tailwind CSS"
 
 Back again with another TailwindCSS + _X_ guide!
 
-This time it's [Gatby](https://www.gatsbyjs.org/)'s turn. Gatsby is a open-source framework for creating server rendered websites/apps. I'm a huge fan of Gatsby, so much so you are reading this
+This time it's [Gatsby](https://www.gatsbyjs.org/)'s turn. Gatsby is a open-source framework for creating server rendered websites/apps. I'm a huge fan of Gatsby, so much so you are reading this
 article on a site built using it!
 
 Again, this not a comparison to Next.js, create-react-app or anything else - so now that's out of the way, let's get to work hooking these two up.
 
-First start by creating a new Gatsby project if you don't already have one. I've taken the instructions from their site here:
+First start by creating a new Gatsby project if you don't already have one. I've taken the instructions from their [Quick start guide](https://www.gatsbyjs.org/docs/quick-start/):
 
 ```bash
 npm install -g gatsby-cli
@@ -28,17 +28,17 @@ npm install --save tailwindcss autoprefixer gatsby-plugin-postcss
 **N.B:** you don’t _have_ to install `autoprefixer` but we use it below and the Tailwind docs advise using it with PostCSS, so who am I to argue!
 
 Then, rather than creating any custom scripts, we can hook into the Gatsby plugin system. As TailwindCSS exports PostCSS directives, we can use it as a PostCSS plugin, so we need to tell Gatsby which
-PostCSS plugins we would like to use.
+PostCSS plugins we would like to use. Open up `gatsby-config.js` and add the following plugin and options:
 
-```
+```javascript
 module.exports = {
   //...
   plugins: [
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
-      },
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
+      }
     }
   ]
   //...
