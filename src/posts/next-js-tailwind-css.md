@@ -33,7 +33,10 @@ module.exports = {
 Nearly there! Now we need to set up our CSS “entry point”. Create `style.css` and paste in the following:
 
 ```css
-@tailwind preflight;
+@tailwind base;
+
+@tailwind components;
+
 @tailwind utilities;
 
 /* Your custom CSS here */

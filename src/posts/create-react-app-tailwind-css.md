@@ -46,7 +46,10 @@ module.exports = {
 Nearly there! Now we need to set up our CSS “entry point”. You can do this wherever you like but here’s how I do it (if you change these paths, you will need to change them in the `package.json` scripts further down this article). Create `src/styles/index.css` and paste in the following:
 
 ```css
-@tailwind preflight;
+@tailwind base;
+
+@tailwind components;
+
 @tailwind utilities;
 
 /* Your custom CSS here */
@@ -73,7 +76,7 @@ Now all that is left is to edit the scripts in `package.json`  —  we still
 
 If you now run `npm run start` you should see `src/index.css` generated, containing the Tailwind CSS reset and utility classes, and your custom CSS below. Furthermore, if you edit the `src/styles/index.css` this should watch for changes and reload your app. Woo!
 
-To make use of this file, just make sure that in your src/index.js you have:
+To make use of this file, just make sure that in `src/index.js` you have:
 
 ```javascript
 import "index.css";
