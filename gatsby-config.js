@@ -5,17 +5,21 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-typescript",
-    "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/posts`,
+        path: `${__dirname}/posts`,
         name: "markdown-pages"
       }
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-portal",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

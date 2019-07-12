@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans&display=swap");
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.wysiwyg p,
+.wysiwyg pre {
+  @apply mb-8;
+}
+
+.wysiwyg pre,
+.wysiwyg code {
+  @apply text-black;
+  @apply bg-white;
+  @apply font-mono;
+}
+
+.wysiwyg code {
+  padding: 0.25rem 0.5rem;
+}
+
+.wysiwyg pre {
+  @apply p-4;
+  @apply overflow-x-scroll;
+  @apply w-full;
+}
+
+.wysiwyg pre code {
+  @apply p-0;
+}
