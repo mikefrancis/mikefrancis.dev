@@ -6,8 +6,12 @@
 
 @tailwind utilities;
 
-.app {
+.transition {
   transition: all 400ms;
+}
+
+.translate-x {
+  transform: translate(200%);
 }
 
 .wysiwyg h2,

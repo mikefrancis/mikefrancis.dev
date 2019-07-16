@@ -5,13 +5,12 @@ export const THEME_LIGHT = "light";
 export const THEME_DARK = "dark";
 
 export const ThemeContext = React.createContext({
-  theme: "light",
+  theme: THEME_LIGHT,
   toggleTheme: () => {}
 });
 
 const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = React.useState(THEME_LIGHT);
-
   const toggleTheme = () =>
     setTheme(theme => (theme === THEME_DARK ? THEME_LIGHT : THEME_DARK));
 

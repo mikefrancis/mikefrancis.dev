@@ -19,7 +19,7 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <div
-      className={`app font-sans min-h-screen ${
+      className={`transition font-sans min-h-screen ${
         theme === THEME_DARK ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
@@ -34,16 +34,16 @@ const Layout: React.FC = ({ children }) => {
           </div>
           <button
             onClick={toggleTheme}
-            className={`border-4 h-4 w-8 rounded-full ${
+            className={`transition border-4 h-4 w-8 rounded-full ${
               theme === THEME_DARK
                 ? "bg-white border-white"
                 : "bg-black border-black"
             }`}
           >
             <span
-              className={`rounded-full block w-2 h-2 ${
-                theme === "dark"
-                  ? "bg-black border-black float-right"
+              className={`transition rounded-full block w-2 h-2 ${
+                theme === THEME_DARK
+                  ? "bg-black border-black translate-x"
                   : "bg-white border-white"
               }`}
             />
