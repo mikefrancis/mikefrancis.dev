@@ -1,55 +1,18 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 
-import Layout from "../components/layouts/Default";
-import Article from "../components/Article";
-import SEO from "../components/SEO";
-import Pagination from "../components/Pagination";
-import Container from "../components/styled/Container";
+import { GraphQLResponse, AllMarkdownQuery, Post } from "./../types";
+import Layout from "../components/Layout";
+import PostGrid from "../components/PostGrid";
 
-interface Props {
-  data: {
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          id: string;
-          fields: {
-            slug: string;
-          };
-          frontmatter: {
-            title: string;
-            description: string;
-            date: string;
-          };
-        };
-      }[];
-    };
-  };
-  pageContext: {
-    current: number;
-    skip: number;
-    limit: number;
-    total: number;
-  };
-}
+const Blog: React.FC<GraphQLResponse<AllMarkdownQuery<Post>>> = ({ data }) => (
+  <Layout>
+    <div className="max-w-5xl">
+      <h1 className="text-4xl mb-32">Blog Archive</h1>
 
-const Blog: React.FC<Props> = ({ data, pageContext }) => (
-  <>
-    <SEO title="Blog" />
-    <Layout>
-      <Container>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Article
-            link={node.fields.slug}
-            title={node.frontmatter.title}
-            summary={node.frontmatter.description}
-            key={node.id}
-          />
-        ))}
-        <Pagination current={pageContext.current} total={pageContext.total} />
-      </Container>
-    </Layout>
-  </>
+      <PostGrid posts={data.allMarkdownRemark.edges} />
+    </div>
+  </Layout>
 );
 
 export const query = graphql`

@@ -1,6 +1,8 @@
 import * as React from "react";
-import Wrapper from "./src/components/Wrapper";
+
+import ThemeProvider from "./src/components/ThemeProvider";
+import "prismjs/themes/prism-solarizedlight.css";
 
 export const wrapRootElement = ({ element }) => {
-  return <Wrapper>{element}</Wrapper>;
+  return <ThemeProvider>{element}</ThemeProvider>;
 };

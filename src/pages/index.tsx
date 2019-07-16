@@ -1,39 +1,56 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 
-import Hero from "./../components/styled/Hero";
-import Container from "./../components/styled/Container";
+import { GraphQLResponse, AllMarkdownQuery, Post, SiteQuery } from "../types";
+import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Article from "../components/Article";
-import Ticker from "../components/Ticker";
-import Layout from "../components/layouts/Default";
+import PostGrid from "../components/PostGrid";
 
-const Index = () => (
+const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
+  data
+}) => (
   <>
     <SEO />
     <Layout>
-      <Hero>
-        <h1>
-          Just your friendly neighbourhood{" "}
-          <Ticker
-            easing="ease-out"
-            delay={2000}
-            speed={400}
-            items={["software engineer", "UI designer", "ops tinkerer"]}
-          />
-        </h1>
+      <div className="max-w-5xl">
+        <div className="mb-32 max-w-2xl">
+          <h1 className="text-4xl">{data.site.siteMetadata.description}</h1>
+        </div>
 
-        <p>Currently based in London, UK.</p>
-      </Hero>
-
-      <Container>
-        <Article
-          title="I Am The Seed Tree"
-          summary="Marketing website built for the amazing people at Nosy Crow."
-          image="https://placehold.it/800x300"
-        />
-      </Container>
+        <h2 className="mb-8 uppercase text-sm tracking-widest">Latest Posts</h2>
+        <PostGrid posts={data.allMarkdownRemark.edges} />
+      </div>
     </Layout>
   </>
 );
+
+export const query = graphql`
+  query Index {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+            date(formatString: "MMMM D, YYYY")
+          }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
 
 export default Index;

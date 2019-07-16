@@ -1,26 +1,17 @@
 import * as React from "react";
 
-import StyledContainer from "./../components/styled/Container";
-import Hero from "./../components/styled/Hero";
-import Button from "../components/styled/Button";
-import SEO from "../components/SEO";
-import Layout from "../components/layouts/Default";
+import Layout from "../components/Layout";
 
 const Index = () => (
-  <>
-    <SEO />
-    <Layout>
-      <Hero>
-        <StyledContainer>
-          <h1>Page not found</h1>
-          <p>Well, this is embarrassing.</p>
-          <p>
-            <Button href="/">← Back to home</Button>
-          </p>
-        </StyledContainer>
-      </Hero>
-    </Layout>
-  </>
+  <Layout>
+    <div className="max-w-3xl">
+      <div className="mb-8">
+        <h1 className="text-4xl mb-8">Page not found</h1>
+
+        <p>Well this is embarrasing.</p>
+      </div>
+    </div>
+  </Layout>
 );
 
 export default Index;
