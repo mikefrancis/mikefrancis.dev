@@ -1,9 +1,11 @@
 import * as React from "react";
-
-import "../index.css";
 import { Link, useStaticQuery, graphql } from "gatsby";
 
+import { ThemeContext, THEME_DARK } from "./ThemeProvider";
+import "../index.css";
+
 const Layout: React.FC = ({ children }) => {
+  const { theme, toggleTheme } = React.useContext(ThemeContext);
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -16,25 +18,47 @@ const Layout: React.FC = ({ children }) => {
   `);
 
   return (
-    <div className="bg-black font-sans text-white min-h-screen">
+    <div
+      className={`app font-sans min-h-screen ${
+        theme === THEME_DARK ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <header className="p-8 md:py-16 md:px-32">
-        <div className="max-w-5xl md:flex">
+        <div className="max-w-5xl flex">
           <div className="flex-1">
             <Link to="/">
-              <span className="uppercase tracking-widest">
+              <span className="uppercase text-sm tracking-widest">
                 {site.siteMetadata.title}
               </span>
             </Link>
           </div>
+          <button
+            onClick={toggleTheme}
+            className={`border-4 h-4 w-8 rounded-full ${
+              theme === THEME_DARK
+                ? "bg-white border-white"
+                : "bg-black border-black"
+            }`}
+          >
+            <span
+              className={`rounded-full block w-2 h-2 ${
+                theme === "dark"
+                  ? "bg-black border-black float-right"
+                  : "bg-white border-white"
+              }`}
+            />
+          </button>
         </div>
       </header>
       <main className="p-8 md:pt-32 md:px-32 md:pb-16">{children}</main>
       <footer className="p-8 md:py-16 md:px-32">
-        <div className="max-w-5xl md:flex">
-          <div className="flex-1">
-            &copy; {site.siteMetadata.title} {new Date().getFullYear()}
+        <div className="max-w-5xl md:flex items-center">
+          <div className="flex-1 text-sm tracking-widest text-center md:text-left">
+            &copy;{" "}
+            <span className="uppercase mx-2">{site.siteMetadata.title}</span>{" "}
+            {new Date().getFullYear()}
           </div>
-          <nav className="flex -mx-4">
+          <nav className="flex justify-center -mx-4 mt-8 md:mt-0">
             <a className="mx-3" href="/" title="GitHub">
               <svg
                 width="24"

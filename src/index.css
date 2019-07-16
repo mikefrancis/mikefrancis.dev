@@ -1,10 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap");
 
 @tailwind base;
 
 @tailwind components;
 
 @tailwind utilities;
+
+.app {
+  transition: all 400ms;
+}
+
+.wysiwyg h2,
+.wysiwyg h3 {
+  @apply text-xl;
+  @apply mb-8;
+}
 
 .wysiwyg p,
 .wysiwyg pre {
@@ -13,13 +23,13 @@
 
 .wysiwyg pre,
 .wysiwyg code {
-  @apply text-black;
-  @apply bg-white;
-  @apply font-mono;
+  @apply rounded;
+  @apply bg-gray-800;
 }
 
 .wysiwyg code {
-  padding: 0.25rem 0.5rem;
+  @apply text-sm;
+  @apply p-1;
 }
 
 .wysiwyg pre {
@@ -29,5 +39,7 @@
 }
 
 .wysiwyg pre code {
+  @apply bg-transparent;
   @apply p-0;
+  @apply rounded-none;
 }

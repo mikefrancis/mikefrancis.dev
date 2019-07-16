@@ -13,6 +13,7 @@ export interface Post {
     description: string;
     date: string;
   };
+  timeToRead: number;
 }
 
 export interface GraphQLResponse<T> {

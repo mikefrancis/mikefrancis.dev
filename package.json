@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@assortment/darkmodejs": "^1.0.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0"
@@ -19,8 +20,10 @@
     "gatsby-plugin-postcss": "^2.1.0",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-typescript": "^2.0.11",
+    "gatsby-remark-prismjs": "^3.3.3",
     "gatsby-source-filesystem": "^2.0.27",
     "gatsby-transformer-remark": "^2.3.4",
+    "prismjs": "^1.16.0",
     "tailwindcss": "^1.0.4",
     "typescript": "3.3.1"
   },
