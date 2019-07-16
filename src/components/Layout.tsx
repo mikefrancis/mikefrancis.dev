@@ -33,6 +33,7 @@ const Layout: React.FC = ({ children }) => {
             </Link>
           </div>
           <button
+            title="Toggle theme"
             onClick={toggleTheme}
             className={`transition border-4 h-4 w-8 rounded-full ${
               theme === THEME_DARK

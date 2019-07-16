@@ -13,8 +13,8 @@ const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
     <SEO />
     <Layout>
       <div className="max-w-5xl">
-        <div className="mb-32 max-w-2xl">
-          <h1 className="text-3xl md:text-4xl">
+        <div className="mb-16 md:mb-32 max-w-2xl">
+          <h1 className="text-3xl md:text-4xl mb-0">
             {data.site.siteMetadata.description}
           </h1>
         </div>
