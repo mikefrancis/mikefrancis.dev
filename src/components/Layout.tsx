@@ -52,8 +52,8 @@ const Layout: React.FC = ({ children }) => {
           </button>
         </div>
       </header>
-      <main className="p-8 md:pt-32 md:px-32 md:pb-16">{children}</main>
-      <footer className="p-8 md:py-16 md:px-32">
+      <main className="p-8 pb-0 md:pt-32 md:px-32 md:pb-16">{children}</main>
+      <footer className="p-8 pt-0 md:py-16 md:px-32">
         <div className="max-w-5xl md:flex items-center">
           <div className="flex-1 text-sm tracking-widest text-center md:text-left">
             &copy;{" "}
