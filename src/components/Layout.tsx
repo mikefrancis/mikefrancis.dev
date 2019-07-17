@@ -21,7 +21,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <div
       className={`transition font-sans min-h-screen ${
-        theme === THEME_DARK ? "bg-black text-white" : "bg-white text-black"
+        theme === THEME_DARK ? "bg-gray-800 text-white" : "bg-white text-black"
       }`}
     >
       <header className="p-8 md:py-16 md:px-32">
@@ -39,13 +39,13 @@ const Layout: React.FC = ({ children }) => {
             className={`transition border-4 h-4 w-8 rounded-full ${
               theme === THEME_DARK
                 ? "bg-white border-white"
-                : "bg-black border-black"
+                : "bg-gray-800 border-gray-800"
             }`}
           >
             <span
               className={`transition rounded-full block w-2 h-2 ${
                 theme === THEME_DARK
-                  ? "bg-black border-black translate-x"
+                  ? "bg-gray-800 border-gray-800 translate-x"
                   : "bg-white border-white"
               }`}
             />
