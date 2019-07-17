@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 
 import { ThemeContext, THEME_DARK } from "./ThemeProvider";
+import "typeface-work-sans";
 import "../index.css";
 
 const Layout: React.FC = ({ children }) => {
