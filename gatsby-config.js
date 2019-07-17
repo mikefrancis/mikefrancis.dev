@@ -1,3 +1,11 @@
+// postcss.config.js
+const purgecss = require("@fullhuman/postcss-purgecss")({
+  content: ["./src/**/*.tsx"],
+
+  // Include any special characters you're using in this regular expression
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+});
+
 module.exports = {
   siteMetadata: {
     title: "Mike Francis",
@@ -9,7 +17,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("autoprefixer"),
+          ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
+        ]
       }
     },
     {
