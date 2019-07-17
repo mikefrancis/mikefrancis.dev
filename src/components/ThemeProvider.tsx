@@ -15,7 +15,15 @@ const ThemeProvider: React.FC = ({ children }) => {
     setTheme(theme => (theme === THEME_DARK ? THEME_LIGHT : THEME_DARK));
 
   React.useEffect(() => {
-    const dmjs = darkmodejs({ onChange: toggleTheme });
+    const dmjs = darkmodejs({
+      onChange: (currentTheme: string) => {
+        if (currentTheme === "no-support" || theme === currentTheme) {
+          return;
+        }
+
+        toggleTheme();
+      }
+    });
 
     return () => {
       dmjs.removeListeners();
