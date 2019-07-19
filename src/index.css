@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+body {
+  margin: 0;
+}
+
 .transition {
   transition: all 400ms;
 }
