@@ -16,6 +16,7 @@ body {
   transform: translate(200%);
 }
 
+/* purgecss start ignore */
 .wysiwyg h2,
 .wysiwyg h3 {
   @apply text-xl;
@@ -53,3 +54,4 @@ body {
   @apply p-0;
   @apply rounded-none;
 }
+/* purgecss end ignore */
