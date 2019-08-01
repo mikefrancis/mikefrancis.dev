@@ -4,7 +4,7 @@ date: "2019-07-12"
 description: "With the release of Next.js v9, API routes are easier than ever."
 ---
 
-I'm a huge fan of [Next.js](https://nextjs.org), it's my go-to framework if I'm building a web application these days - I tend to leave Gatsby for blogs and heavily content driven sites, and create-react-app for more single page-y
+I'm a huge fan of [Next.js](https://nextjs.org), it's my go-to framework if I'm building a web application these days - I tend to leave Gatsby for blogs and heavily content-driven sites, and create-react-app for more single page-y
 applications. When v9 dropped the other day, I was reading through the [blog post](https://nextjs.org/blog/next-9) and immediately wanted to see if I could hack something together using the new API routes feature.
 
 If you're not familiar with Next.js one of it's advantages over other frameworks is the minimal approach to configuration. All you need is a `./pages/index.js` file, containing:
@@ -130,7 +130,7 @@ export default App;
 This is a fairly standard React Function Component. The juicy bit is when we hook into Next.js' `getInitialProps` method. This is fired by the main Next.js application component, which wraps all
 components in our application. It's great for things like data fetching, where you want to do some pre-fetching before a component is rendered or indeed given props. We need this!
 
-We hook into this and use the `axios` library, a wrapper around Promises, to request our newly created GraphQL endpoint. We supply the raw GraphQL as the body using the `query` field, then once we
+We hook into this and use the `axios` library, a wrapper around `fetch`, to request our newly created GraphQL endpoint. We supply the raw GraphQL as the body using the `query` field, then once we
 get a response, destructure that into the props which this method will return - so anything that is returned will end up as a `prop` in the main component. We don't deal with errors or anything like
 that, so it's something to think about if you were to take this further.
 
