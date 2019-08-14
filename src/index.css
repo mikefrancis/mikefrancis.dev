@@ -17,6 +17,15 @@ body {
 }
 
 /* purgecss start ignore */
+.wysiwyg a {
+  @apply border-b;
+  @apply border-white;
+}
+
+.wysiwyg a:hover {
+  @apply opacity-75;
+}
+
 .wysiwyg h2,
 .wysiwyg h3 {
   @apply text-xl;
