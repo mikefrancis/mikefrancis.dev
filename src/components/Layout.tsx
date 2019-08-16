@@ -61,7 +61,11 @@ const Layout: React.FC = ({ children }) => {
             {new Date().getFullYear()}
           </div>
           <nav className="flex justify-center -mx-4 mt-8 md:mt-0">
-            <a className="mx-3" href="/" title="GitHub">
+            <a
+              className="mx-3"
+              href="https://github.com/mikefrancis"
+              title="GitHub"
+            >
               <svg
                 width="24"
                 height="24"
@@ -74,7 +78,11 @@ const Layout: React.FC = ({ children }) => {
                 />
               </svg>
             </a>
-            <a className="mx-3" href="/" title="Twitter">
+            <a
+              className="mx-3"
+              href="https://twitter.com/_mikefrancis"
+              title="Twitter"
+            >
               <svg
                 width="24"
                 height="24"
@@ -87,7 +95,11 @@ const Layout: React.FC = ({ children }) => {
                 />
               </svg>
             </a>
-            <a className="mx-3" href="/" title="Dribbble">
+            <a
+              className="mx-3"
+              href="https://dribbble.com/mikefrancis"
+              title="Dribbble"
+            >
               <svg
                 width="24"
                 height="24"
@@ -100,7 +112,11 @@ const Layout: React.FC = ({ children }) => {
                 />
               </svg>
             </a>
-            <a className="mx-3" href="/" title="LinkedIn">
+            <a
+              className="mx-3"
+              href="https://www.linkedin.com/in/mike-francis-77a65511/"
+              title="LinkedIn"
+            >
               <svg
                 width="24"
                 height="24"
@@ -113,7 +129,11 @@ const Layout: React.FC = ({ children }) => {
                 />
               </svg>
             </a>
-            <a className="mx-3" href="/" title="Mail">
+            <a
+              className="mx-3"
+              href="mailto:mikeffrancis@gmail.com"
+              title="Mail"
+            >
               <svg
                 width="24"
                 height="24"
