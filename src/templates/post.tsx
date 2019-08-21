@@ -31,7 +31,7 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>>> = ({ data }) => {
                 {data.markdownRemark.frontmatter.date}
               </span>
               <span className="px-4 uppercase">
-                {data.markdownRemark.timeToRead} minutes
+                {data.markdownRemark.timeToRead} {data.markdownRemark.timeToRead === 1 ? 'minute' : 'minutes'}
               </span>
             </div>
 
