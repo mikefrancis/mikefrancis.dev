@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import { GraphQLResponse, MarkdownQuery, Post } from "../types";
 import Layout from "../components/Layout";
@@ -31,7 +31,8 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>>> = ({ data }) => {
                 {data.markdownRemark.frontmatter.date}
               </span>
               <span className="px-4 uppercase">
-                {data.markdownRemark.timeToRead} {data.markdownRemark.timeToRead === 1 ? 'minute' : 'minutes'}
+                {data.markdownRemark.timeToRead}{" "}
+                {data.markdownRemark.timeToRead === 1 ? "minute" : "minutes"}
               </span>
             </div>
 
@@ -45,6 +46,10 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>>> = ({ data }) => {
             dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
           />
         </article>
+
+        <p className={theme === THEME_DARK ? "text-gray-500" : "text-gray-700"}>
+          <Link to="/blog">← Back to the archive</Link>
+        </p>
       </Layout>
     </>
   );
