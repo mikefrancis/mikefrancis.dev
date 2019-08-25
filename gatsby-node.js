@@ -1,5 +1,4 @@
 const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -8,12 +7,10 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allContentfulBlogPost {
         edges {
           node {
-            fields {
-              slug
-            }
+            slug
           }
         }
       }
@@ -24,7 +21,7 @@ exports.createPages = async ({ actions, graphql }) => {
     return Promise.reject(result.errors);
   }
 
-  const posts = result.data.allMarkdownRemark.edges;
+  const posts = result.data.allContentfulBlogPost.edges;
   const postsPerPage = 6;
   const numPages = Math.ceil(posts.length / postsPerPage);
 
@@ -45,28 +42,11 @@ exports.createPages = async ({ actions, graphql }) => {
 
   posts.forEach(({ node }) => {
     createPage({
-      path: node.fields.slug,
+      path: `/blog/${node.slug}`,
       component: blogPostTemplate,
-      context: {}
+      context: {
+        slug: node.slug
+      }
     });
   });
-};
-
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({
-      node,
-      getNode,
-      basePath: "posts",
-      trailingSlash: false
-    });
-
-    createNodeField({
-      node,
-      name: "slug",
-      value: `/blog${slug}`
-    });
-  }
 };

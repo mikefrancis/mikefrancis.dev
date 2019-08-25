@@ -1,4 +1,5 @@
-// postcss.config.js
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "Mike Francis",
@@ -9,10 +10,10 @@ module.exports = {
     "gatsby-plugin-typescript",
     "gatsby-plugin-postcss",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-contentful`,
       options: {
-        path: `${__dirname}/posts`,
-        name: "markdown-pages"
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
     {
