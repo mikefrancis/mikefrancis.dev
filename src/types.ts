@@ -4,16 +4,19 @@ export interface Node<T> {
 
 export interface Post {
   id: string;
-  html: string;
-  fields: {
-    slug: string;
+  slug: string;
+  title: string;
+  description: string;
+  dateCreated: string;
+  excerpt: {
+    excerpt: string;
   };
-  frontmatter: {
-    title: string;
-    description: string;
-    date: string;
+  content: {
+    childMarkdownRemark: {
+      html: string;
+      timeToRead: number;
+    };
   };
-  timeToRead: number;
 }
 
 export interface GraphQLResponse<T> {
@@ -27,13 +30,13 @@ export interface GraphQLResponse<T> {
 }
 
 export interface AllMarkdownQuery<T> {
-  allMarkdownRemark: {
+  allContentfulBlogPost: {
     edges: Node<T>[];
   };
 }
 
 export interface MarkdownQuery<T> {
-  markdownRemark: T;
+  contentfulBlogPost: T;
 }
 
 export interface SiteQuery {

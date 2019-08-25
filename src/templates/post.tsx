@@ -12,15 +12,13 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>>> = ({ data }) => {
   return (
     <>
       <SEO
-        title={data.markdownRemark.frontmatter.title}
-        description={data.markdownRemark.frontmatter.description}
+        title={data.contentfulBlogPost.title}
+        description={data.contentfulBlogPost.excerpt.excerpt}
       />
       <Layout>
         <article className="max-w-3xl">
           <div className="mb-8">
-            <h1 className="text-4xl mb-8">
-              {data.markdownRemark.frontmatter.title}
-            </h1>
+            <h1 className="text-4xl mb-8">{data.contentfulBlogPost.title}</h1>
 
             <div
               className={`flex -mx-4 mb-8 text-sm tracking-widest ${
@@ -28,22 +26,27 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>>> = ({ data }) => {
               }`}
             >
               <span className="px-4 uppercase">
-                {data.markdownRemark.frontmatter.date}
+                {data.contentfulBlogPost.dateCreated}
               </span>
               <span className="px-4 uppercase">
-                {data.markdownRemark.timeToRead}{" "}
-                {data.markdownRemark.timeToRead === 1 ? "minute" : "minutes"}
+                {data.contentfulBlogPost.content.childMarkdownRemark.timeToRead}{" "}
+                {data.contentfulBlogPost.content.childMarkdownRemark
+                  .timeToRead === 1
+                  ? "minute"
+                  : "minutes"}
               </span>
             </div>
 
             <p className="text-2xl font-light">
-              {data.markdownRemark.frontmatter.description}
+              {data.contentfulBlogPost.excerpt.excerpt}
             </p>
           </div>
 
           <div
             className="wysiwyg leading-relaxed mb-16"
-            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            dangerouslySetInnerHTML={{
+              __html: data.contentfulBlogPost.content.childMarkdownRemark.html
+            }}
           />
         </article>
 
@@ -56,14 +59,18 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>>> = ({ data }) => {
 };
 
 export const query = graphql`
-  query($path: String!) {
-    markdownRemark(fields: { slug: { eq: $path } }) {
-      html
-      timeToRead
-      frontmatter {
-        date(formatString: "MMMM D, YYYY")
-        title
-        description
+  query SinglePost($slug: String!) {
+    contentfulBlogPost(slug: { eq: $slug }) {
+      dateCreated(formatString: "MMMM D, YYYY")
+      title
+      excerpt {
+        excerpt
+      }
+      content {
+        childMarkdownRemark {
+          html
+          timeToRead
+        }
       }
     }
   }

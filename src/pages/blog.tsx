@@ -10,29 +10,27 @@ const Blog: React.FC<GraphQLResponse<AllMarkdownQuery<Post>>> = ({ data }) => (
     <div className="max-w-5xl">
       <h1 className="text-4xl mb-32">Blog Archive</h1>
 
-      <PostGrid posts={data.allMarkdownRemark.edges} />
+      <PostGrid posts={data.allContentfulBlogPost.edges} />
     </div>
   </Layout>
 );
 
 export const query = graphql`
   query Posts($skip: Int, $limit: Int) {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+    allContentfulBlogPost(
+      sort: { fields: [createdAt], order: DESC }
       limit: $limit
       skip: $skip
     ) {
       edges {
         node {
           id
-          fields {
-            slug
+          slug
+          title
+          excerpt {
+            excerpt
           }
-          frontmatter {
-            title
-            description
-            date
-          }
+          createdAt(formatString: "MMMM D, YYYY")
         }
       }
     }
