@@ -18,7 +18,7 @@ const Blog: React.FC<GraphQLResponse<AllMarkdownQuery<Post>>> = ({ data }) => (
 export const query = graphql`
   query Posts($skip: Int, $limit: Int) {
     allContentfulBlogPost(
-      sort: { fields: [createdAt], order: DESC }
+      sort: { fields: [dateCreated], order: DESC }
       limit: $limit
       skip: $skip
     ) {
@@ -30,7 +30,7 @@ export const query = graphql`
           excerpt {
             excerpt
           }
-          createdAt(formatString: "MMMM D, YYYY")
+          dateCreated(formatString: "MMMM D, YYYY")
         }
       }
     }
