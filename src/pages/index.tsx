@@ -8,29 +8,23 @@ import PostGrid from "../components/PostGrid";
 
 const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
   data
-}) => {
-  console.log(data);
-
-  return (
-    <>
-      <SEO />
-      <Layout>
-        <div className="max-w-5xl">
-          <div className="mb-8 md:mb-32 max-w-2xl overflow-auto">
-            <h1 className="text-3xl md:text-4xl mb-8">
-              {data.site.siteMetadata.description}
-            </h1>
-          </div>
-
-          <h2 className="mb-8 uppercase text-sm tracking-widest">
-            Latest Posts
-          </h2>
-          <PostGrid posts={data.allContentfulBlogPost.edges} />
+}) => (
+  <>
+    <SEO />
+    <Layout>
+      <div className="max-w-5xl">
+        <div className="mb-8 md:mb-32 max-w-2xl overflow-auto">
+          <h1 className="text-3xl md:text-4xl mb-8">
+            {data.site.siteMetadata.description}
+          </h1>
         </div>
-      </Layout>
-    </>
-  );
-};
+
+        <h2 className="mb-8 uppercase text-sm tracking-widest">Latest Posts</h2>
+        <PostGrid posts={data.allContentfulBlogPost.edges} />
+      </div>
+    </Layout>
+  </>
+);
 
 export const query = graphql`
   query Index {
