@@ -11,6 +11,11 @@ export interface Post {
   excerpt: {
     excerpt: string;
   };
+  featuredImage: {
+    file: {
+      url: string;
+    };
+  };
   content: {
     childMarkdownRemark: {
       html: string;

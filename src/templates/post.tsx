@@ -5,16 +5,29 @@ import { GraphQLResponse, MarkdownQuery, Post } from "../types";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { THEME_DARK, ThemeContext } from "../components/ThemeProvider";
+import { RouterProps } from "@reach/router";
 
-const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>>> = ({ data }) => {
+const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>> & RouterProps> = ({
+  data,
+  location
+}) => {
   const { theme } = React.useContext(ThemeContext);
+  const seoProps: React.ComponentProps<typeof SEO> = {
+    title: data.contentfulBlogPost.title,
+    description: data.contentfulBlogPost.excerpt.excerpt
+  };
+
+  if (location) {
+    seoProps.url = location.href;
+  }
+
+  if (data.contentfulBlogPost.featuredImage) {
+    seoProps.image = data.contentfulBlogPost.featuredImage.file.url;
+  }
 
   return (
     <>
-      <SEO
-        title={data.contentfulBlogPost.title}
-        description={data.contentfulBlogPost.excerpt.excerpt}
-      />
+      <SEO {...seoProps} />
       <Layout>
         <article className="max-w-3xl">
           <div className="mb-8">
@@ -63,6 +76,11 @@ export const query = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       dateCreated(formatString: "MMMM D, YYYY")
       title
+      featuredImage {
+        file {
+          url
+        }
+      }
       excerpt {
         excerpt
       }
