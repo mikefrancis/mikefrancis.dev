@@ -12,15 +12,22 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>> & RouterProps> = ({
   location
 }) => {
   const { theme } = React.useContext(ThemeContext);
+  const seoProps: React.ComponentProps<typeof SEO> = {
+    title: data.contentfulBlogPost.title,
+    description: data.contentfulBlogPost.excerpt.excerpt
+  };
+
+  if (location) {
+    seoProps.url = location.href;
+  }
+
+  if (data.contentfulBlogPost.featuredImage) {
+    seoProps.image = data.contentfulBlogPost.featuredImage.file.url;
+  }
 
   return (
     <>
-      <SEO
-        image={data.contentfulBlogPost.featuredImage.file.url}
-        title={data.contentfulBlogPost.title}
-        description={data.contentfulBlogPost.excerpt.excerpt}
-        url={location && location.href}
-      />
+      <SEO {...seoProps} />
       <Layout>
         <article className="max-w-3xl">
           <div className="mb-8">
