@@ -21,7 +21,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <div
       className={`transition font-sans min-h-screen ${
-        theme === THEME_DARK ? "bg-gray-800 text-white" : "bg-white text-black"
+        theme === THEME_DARK ? "bg-gray-800 text-white theme-dark" : "bg-white text-black theme-light"
       }`}
     >
       <header className="p-8 md:py-16 md:px-32">

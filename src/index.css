@@ -17,8 +17,19 @@ body {
 }
 
 /* purgecss start ignore */
+.wysiwyg blockquote {
+  @apply border-l-4;
+  @apply border-gray-500;
+  @apply ml-0;
+  @apply pl-8;
+}
+
 .wysiwyg a {
   @apply border-b;
+  @apply border-gray-500;
+}
+
+.theme-dark .wysiwyg a {
   @apply border-white;
 }
 
@@ -41,6 +52,11 @@ body {
 .wysiwyg code {
   @apply rounded;
   @apply bg-gray-800;
+}
+
+.theme-dark .wysiwyg pre,
+.theme-dark .wysiwyg code {
+  @apply bg-gray-500;
 }
 
 .wysiwyg code {
