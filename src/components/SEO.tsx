@@ -1,13 +1,6 @@
-import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import Helmet from "react-helmet";
-
-interface Props {
-  image?: string;
-  title?: string;
-  description?: string;
-  url?: string;
-}
+import { graphql, useStaticQuery } from 'gatsby';
+import * as React from 'react';
+import Helmet from 'react-helmet';
 
 export const query = graphql`
   query SEOQuery {
@@ -20,36 +13,43 @@ export const query = graphql`
   }
 `;
 
-const SEO: React.FC<Props> = ({ title, description, image, url }) => {
+interface Props {
+  image?: string;
+  title?: string;
+  description?: string;
+  url?: string;
+}
+
+const SEO: React.FC<Props> = ({ title, description, image, url }: Props) => {
   const { site } = useStaticQuery(query);
   const meta = [
     {
-      name: "og:title",
+      name: 'og:title',
       content: title || site.siteMetadata.title
     },
     {
-      name: "description",
+      name: 'description',
       content: description || site.siteMetadata.description
     }
   ];
 
   if (url) {
     meta.push({
-      name: "og:url",
+      name: 'og:url',
       content: url
     });
   }
 
   if (image) {
     meta.push({
-      name: "og:image",
+      name: 'og:image',
       content: image
     });
   }
 
   return (
     <Helmet
-      htmlAttributes={{ lang: "en" }}
+      htmlAttributes={{ lang: 'en' }}
       title={title || site.siteMetadata.title}
       meta={meta}
     />

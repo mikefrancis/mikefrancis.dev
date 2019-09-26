@@ -1,11 +1,15 @@
-import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import * as React from 'react';
+import 'typeface-work-sans';
 
-import { ThemeContext, THEME_DARK } from "./ThemeProvider";
-import "typeface-work-sans";
-import "../index.css";
+import { ThemeContext, THEME_DARK } from './ThemeProvider';
+import '../index.css';
 
-const Layout: React.FC = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<Props> = ({ children }: Props) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
   const { site } = useStaticQuery(graphql`
     query {
@@ -21,7 +25,9 @@ const Layout: React.FC = ({ children }) => {
   return (
     <div
       className={`transition font-sans min-h-screen ${
-        theme === THEME_DARK ? "bg-gray-800 text-white theme-dark" : "bg-white text-black theme-light"
+        theme === THEME_DARK
+          ? 'bg-gray-800 text-white theme-dark'
+          : 'bg-white text-black theme-light'
       }`}
     >
       <header className="p-8 md:py-16 md:px-32">
@@ -38,15 +44,15 @@ const Layout: React.FC = ({ children }) => {
             onClick={toggleTheme}
             className={`transition border-4 h-4 w-8 rounded-full ${
               theme === THEME_DARK
-                ? "bg-white border-white"
-                : "bg-gray-800 border-gray-800"
+                ? 'bg-white border-white'
+                : 'bg-gray-800 border-gray-800'
             }`}
           >
             <span
               className={`transition rounded-full block w-2 h-2 ${
                 theme === THEME_DARK
-                  ? "bg-gray-800 border-gray-800 translate-x"
-                  : "bg-white border-white"
+                  ? 'bg-gray-800 border-gray-800 translate-x'
+                  : 'bg-white border-white'
               }`}
             />
           </button>
@@ -56,8 +62,8 @@ const Layout: React.FC = ({ children }) => {
       <footer className="p-8 pt-0 md:py-16 md:px-32">
         <div className="max-w-5xl md:flex items-center">
           <div className="flex-1 text-sm tracking-widest text-center md:text-left">
-            &copy;{" "}
-            <span className="uppercase mx-2">{site.siteMetadata.title}</span>{" "}
+            &copy;{' '}
+            <span className="uppercase mx-2">{site.siteMetadata.title}</span>{' '}
             {new Date().getFullYear()}
           </div>
           <nav className="flex justify-center -mx-4 mt-8 md:mt-0">
