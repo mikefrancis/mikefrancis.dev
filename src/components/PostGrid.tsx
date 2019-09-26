@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-import { Post } from "../types";
-import { ThemeContext, THEME_DARK } from "./ThemeProvider";
+import { Post } from '../types';
+import { ThemeContext, THEME_DARK } from './ThemeProvider';
 
 interface Props {
   posts: {
@@ -10,7 +10,7 @@ interface Props {
   }[];
 }
 
-const PostGrid: React.FC<Props> = ({ posts }) => {
+const PostGrid: React.FC<Props> = ({ posts }: Props) => {
   const { theme } = React.useContext(ThemeContext);
 
   return (
@@ -23,7 +23,7 @@ const PostGrid: React.FC<Props> = ({ posts }) => {
             </h3>
             <p
               className={`mb-3 uppercase text-xs tracking-widest ${
-                theme === THEME_DARK ? "text-gray-500" : "text-gray-700"
+                theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
               }`}
             >
               {node.dateCreated}

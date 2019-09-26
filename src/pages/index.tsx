@@ -1,14 +1,14 @@
-import * as React from "react";
-import { graphql } from "gatsby";
+import * as React from 'react';
+import { graphql } from 'gatsby';
 
-import { GraphQLResponse, AllMarkdownQuery, Post, SiteQuery } from "../types";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import PostGrid from "../components/PostGrid";
+import { GraphQLResponse, AllMarkdownQuery, Post, SiteQuery } from '../types';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import PostGrid from '../components/PostGrid';
 
 const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
   data
-}) => (
+}: GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>) => (
   <>
     <SEO />
     <Layout>

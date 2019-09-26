@@ -1,11 +1,13 @@
-import * as React from "react";
-import { graphql } from "gatsby";
+import * as React from 'react';
+import { graphql } from 'gatsby';
 
-import { GraphQLResponse, AllMarkdownQuery, Post } from "./../types";
-import Layout from "../components/Layout";
-import PostGrid from "../components/PostGrid";
+import { GraphQLResponse, AllMarkdownQuery, Post } from './../types';
+import Layout from '../components/Layout';
+import PostGrid from '../components/PostGrid';
 
-const Blog: React.FC<GraphQLResponse<AllMarkdownQuery<Post>>> = ({ data }) => (
+const Blog: React.FC<GraphQLResponse<AllMarkdownQuery<Post>>> = ({
+  data
+}: GraphQLResponse<AllMarkdownQuery<Post>>) => (
   <Layout>
     <div className="max-w-5xl">
       <h1 className="text-4xl mb-32">Blog Archive</h1>
