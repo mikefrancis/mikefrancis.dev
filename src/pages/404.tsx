@@ -1,17 +1,21 @@
-import * as React from "react";
+import * as React from 'react';
 
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
-const Index = () => (
-  <Layout>
-    <div className="max-w-3xl">
-      <div className="mb-8">
-        <h1 className="text-4xl mb-8">Page not found</h1>
+const PageNotFound: React.FC = () => (
+  <>
+    <SEO title="Page not found" />
+    <Layout>
+      <div className="max-w-3xl">
+        <div className="mb-8">
+          <h1 className="text-4xl mb-8">Page not found</h1>
 
-        <p>Well this is embarrasing.</p>
+          <p>Well this is embarrasing.</p>
+        </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
+  </>
 );
 
-export default Index;
+export default PageNotFound;
