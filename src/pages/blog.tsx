@@ -4,17 +4,21 @@ import { graphql } from 'gatsby';
 import { GraphQLResponse, AllMarkdownQuery, Post } from './../types';
 import Layout from '../components/Layout';
 import PostGrid from '../components/PostGrid';
+import SEO from '../components/SEO';
 
 const Blog: React.FC<GraphQLResponse<AllMarkdownQuery<Post>>> = ({
   data
 }: GraphQLResponse<AllMarkdownQuery<Post>>) => (
-  <Layout>
-    <div className="max-w-5xl">
-      <h1 className="text-4xl mb-32">Blog Archive</h1>
+  <>
+    <SEO title="Blog Archive" />
+    <Layout>
+      <div className="max-w-5xl">
+        <h1 className="text-4xl mb-32">Blog Archive</h1>
 
-      <PostGrid posts={data.allContentfulBlogPost.edges} />
-    </div>
-  </Layout>
+        <PostGrid posts={data.allContentfulBlogPost.edges} />
+      </div>
+    </Layout>
+  </>
 );
 
 export const query = graphql`
