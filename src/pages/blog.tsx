@@ -5,15 +5,21 @@ import { GraphQLResponse, AllMarkdownQuery, Post } from './../types';
 import Layout from '../components/Layout';
 import PostGrid from '../components/PostGrid';
 import SEO from '../components/SEO';
+import Pagination from '../components/Pagintation';
 
 const Blog: React.FC<GraphQLResponse<AllMarkdownQuery<Post>>> = ({
-  data
+  data,
+  pageContext
 }: GraphQLResponse<AllMarkdownQuery<Post>>) => (
   <>
     <SEO title="Blog Archive" />
     <Layout>
       <div className="max-w-5xl">
         <h1 className="text-4xl mb-32">Blog Archive</h1>
+
+        {pageContext && pageContext.current && pageContext.total && (
+          <Pagination current={pageContext.current} total={pageContext.total} />
+        )}
 
         <PostGrid posts={data.allContentfulBlogPost.edges} />
       </div>

@@ -1,4 +1,5 @@
-const path = require("path");
+// eslint-disable-next-line
+const path = require('path');
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -30,7 +31,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
     createPage({
       path: i === 0 ? `/blog` : `/blog/page/${realPage}`,
-      component: path.resolve("./src/pages/blog.tsx"),
+      component: path.resolve('./src/pages/blog.tsx'),
       context: {
         current: realPage,
         total: numPages,
