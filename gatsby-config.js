@@ -1,14 +1,14 @@
-require("dotenv").config();
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: "Mike Francis",
+    title: 'Mike Francis',
     description:
-      "Software Engineer & UI Designer based in London, UK. Currently building and scaling a modern, renewable energy provider at Bulb."
+      'Software Engineer & UI Designer based in London, UK. Currently building and scaling a modern, renewable energy provider at Bulb.'
   },
   plugins: [
-    "gatsby-plugin-typescript",
-    "gatsby-plugin-postcss",
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -26,6 +26,6 @@ module.exports = {
         ]
       }
     },
-    "gatsby-plugin-react-helmet"
+    'gatsby-plugin-react-helmet'
   ]
 };
