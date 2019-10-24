@@ -1,10 +1,16 @@
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ["Work Sans", "sans-serif"],
-      mono: ["Fira Code", "monospace"]
+      sans: ['Work Sans', 'sans-serif'],
+      mono: ['Fira Code', 'monospace']
     },
-    extend: {}
+    extend: {
+      screens: {
+        'print': {
+          'raw': 'print'
+        }
+      }
+    }
   },
   variants: {},
   plugins: []

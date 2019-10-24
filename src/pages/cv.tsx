@@ -18,9 +18,10 @@ const CV = () => (
         }
       `}
       </style>
+      <title>Mike Francis CV</title>
     </Helmet>
-    <div className="font-sans text-black flex">
-      <div className="flex-1 pr-16">
+    <div className="font-sans text-black md:flex print:flex max-w-5xl">
+      <div className="flex-1 md:pr-16 print:pr-16">
         <header className="mb-8">
           <h1 className="text-4xl mb-4 uppercase tracking-widest">
             Mike Francis
@@ -129,7 +130,7 @@ const CV = () => (
               </p>
             </article>
           </section>
-          <section>
+          <section className="mb-8">
             <h2 className="text-2xl mb-4">Education</h2>
             <article className="mb-4">
               <h3 className="font-bold">
@@ -146,7 +147,7 @@ const CV = () => (
           </section>
         </main>
       </div>
-      <footer className="pt-16 px-8">
+      <footer className="md:pt-16 print:pt-16">
         <dl>
           <dt className="font-bold">Telephone</dt>
           <dd className="mb-4">+44 (0) 7853 123 424</dd>
