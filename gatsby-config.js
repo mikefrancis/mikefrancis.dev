@@ -10,22 +10,28 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`
+            resolve: 'gatsby-remark-prismjs'
           }
         ]
       }
     },
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-celiac',
+      options: {
+        token: process.env.CELIAC_TOKEN
+      }
+    }
   ]
 };
