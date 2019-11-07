@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@assortment/darkmodejs": "^1.1.0",
-    "gatsby-plugin-celiac": "git+ssh://git@github.com:mikefrancis/gatsby-plugin-celiac.git",
+    "gatsby-plugin-celiac": "git+https://github.com/mikefrancis/gatsby-plugin-celiac.git",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",

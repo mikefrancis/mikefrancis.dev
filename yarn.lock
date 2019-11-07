@@ -5314,9 +5314,9 @@ gatsby-link@^2.0.16:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-"gatsby-plugin-celiac@git+ssh://git@github.com:mikefrancis/gatsby-plugin-celiac.git":
+"gatsby-plugin-celiac@git+https://github.com/mikefrancis/gatsby-plugin-celiac.git":
   version "0.1.0"
-  resolved "git+ssh://git@github.com:mikefrancis/gatsby-plugin-celiac.git#6c1ca894b7dd2ce496eed1e9f03c669908e665b9"
+  resolved "git+https://github.com/mikefrancis/gatsby-plugin-celiac.git#625ef4d6e2a5a6f4db2726f1b1f775a6967e0a55"
   dependencies:
     fetch "^1.1.0"
 
