@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-strata',
       options: {
-        token: process.env.STRATA_TOKEN
+        token: process.env.STRATA_KEY
       }
     }
   ]
