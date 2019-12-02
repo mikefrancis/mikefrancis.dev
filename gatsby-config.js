@@ -28,9 +28,9 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-celiac',
+      resolve: 'gatsby-plugin-strata',
       options: {
-        token: process.env.CELIAC_TOKEN
+        token: process.env.STRATA_TOKEN
       }
     }
   ]
