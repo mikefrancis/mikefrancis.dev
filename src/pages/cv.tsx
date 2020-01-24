@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-const CV = () => (
+const CV: React.FC = () => (
   <>
     <Helmet>
       <style media="screen">
@@ -27,7 +27,8 @@ const CV = () => (
             Mike Francis
           </h1>
           <p className="text-lg">
-            Speaker at ForeFront Leeds 2016 and The Digital Barn 2012.
+            Speaker at Work In The Web 2020, ForeFront Leeds 2016 and The
+            Digital Barn 2012.
             <br />
             Member of{' '}
             <a href="https://twitter.com/SummitAwesome">@SummitAwesome</a>.
@@ -94,9 +95,7 @@ const CV = () => (
               </p>
             </article>
             <article className="mb-4">
-              <h3 className="font-bold">
-                Senior Developer - Manifest (now Ilk)
-              </h3>
+              <h3 className="font-bold">Lead Developer - Manifest (now Ilk)</h3>
               <h4 className="text-gray-700 mb-4">
                 Leeds, UK • June 2008 - September 2013
               </h4>
