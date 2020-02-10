@@ -34,14 +34,19 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>> & RouterProps> = ({
             <h1 className="text-4xl mb-8">{data.contentfulBlogPost.title}</h1>
 
             <div
-              className={`flex -mx-4 mb-8 text-sm tracking-widest ${
+              className={`md:flex md:-mx-4 mb-8 text-sm tracking-widest ${
                 theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
               }`}
             >
-              <span className="px-4 uppercase">
+              <span className="block md:px-4 uppercase">
                 {data.contentfulBlogPost.dateCreated}
               </span>
-              <span className="px-4 uppercase">
+              <span className="block md:px-4 uppercase">
+                {data.contentfulBlogPost.updatedAt !==
+                  data.contentfulBlogPost.dateCreated &&
+                  `(Updated ${data.contentfulBlogPost.updatedAt})`}
+              </span>
+              <span className="block md:px-4 uppercase">
                 {data.contentfulBlogPost.content.childMarkdownRemark.timeToRead}{' '}
                 {data.contentfulBlogPost.content.childMarkdownRemark
                   .timeToRead === 1
@@ -75,6 +80,7 @@ export const query = graphql`
   query SinglePost($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       dateCreated(formatString: "MMMM D, YYYY")
+      updatedAt(formatString: "MMMM D, YYYY")
       title
       featuredImage {
         file {

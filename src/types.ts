@@ -8,6 +8,7 @@ export interface Post {
   title: string;
   description: string;
   dateCreated: string;
+  updatedAt: string;
   excerpt: {
     excerpt: string;
   };
