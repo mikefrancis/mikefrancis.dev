@@ -44,7 +44,10 @@ body {
 }
 
 .wysiwyg p,
-.wysiwyg pre {
+.wysiwyg pre,
+.wysiwyg ul,
+.wysiwyg ol {
+  @apply leading-relaxed;
   @apply mb-8;
 }
 
@@ -52,6 +55,19 @@ body {
 .wysiwyg code {
   @apply rounded;
   @apply bg-gray-800;
+}
+
+.wysiwyg ul,
+.wysiwyg ol {
+  @apply pl-8;
+}
+
+.wysiwyg ul {
+  @apply list-disc;
+}
+
+.wysiwyg ol {
+  @apply list-decimal;
 }
 
 .theme-dark .wysiwyg pre,

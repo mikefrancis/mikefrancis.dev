@@ -56,7 +56,7 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>> & RouterProps> = ({
           </div>
 
           <div
-            className="wysiwyg leading-relaxed mb-16"
+            className="wysiwyg mb-16"
             dangerouslySetInnerHTML={{
               __html: data.contentfulBlogPost.content.childMarkdownRemark.html
             }}
