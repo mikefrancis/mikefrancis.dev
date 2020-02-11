@@ -17,8 +17,8 @@ const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
       <SEO />
       <Layout>
         <div className="max-w-5xl">
-          <div className="mb-8 md:mb-32 max-w-2xl overflow-auto">
-            <h1 className="text-3xl md:text-4xl mb-8">
+          <div className="max-w-2xl">
+            <h1 className="text-3xl md:text-4xl mb-16 md:mb-32">
               {data.site.siteMetadata.description}
             </h1>
           </div>
@@ -28,7 +28,9 @@ const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
           </h2>
           <PostGrid posts={data.allContentfulBlogPost.edges} />
           <p
-            className={theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'}
+            className={`mb-8 ${
+              theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
+            }`}
           >
             <Link to="/blog">More from the archive →</Link>
           </p>

@@ -13,7 +13,7 @@ const Blog: React.FC<GraphQLResponse<AllMarkdownQuery<Post>>> = ({
     <SEO title="Blog Archive" />
     <Layout>
       <div className="max-w-5xl">
-        <h1 className="text-4xl mb-32">Blog Archive</h1>
+        <h1 className="text-4xl mb-16 md:mb-32">Blog Archive</h1>
 
         <PostGrid posts={data.allContentfulBlogPost.edges} />
       </div>

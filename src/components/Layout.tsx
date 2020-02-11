@@ -1,9 +1,7 @@
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import * as React from 'react';
-import 'typeface-work-sans';
 
 import { ThemeContext, THEME_DARK } from './ThemeProvider';
-import '../index.css';
 
 interface Props {
   children: React.ReactNode;
@@ -30,7 +28,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
           : 'bg-white text-black theme-light'
       }`}
     >
-      <header className="p-8 md:py-16 md:px-32">
+      <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">
         <div className="max-w-5xl flex">
           <div className="flex-1">
             <Link to="/">
@@ -58,8 +56,8 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
           </button>
         </div>
       </header>
-      <main className="p-8 pb-0 md:pt-32 md:px-32 md:pb-16">{children}</main>
-      <footer className="p-8 pt-0 md:py-16 md:px-32">
+      <main className="px-8 pb-8 md:px-32 md:pb-16">{children}</main>
+      <footer className="px-8 pb-8 md:px-32 md:pb-16">
         <div className="max-w-5xl md:flex items-center">
           <div className="flex-1 text-sm tracking-widest text-center md:text-left">
             &copy;{' '}

@@ -34,19 +34,19 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>> & RouterProps> = ({
             <h1 className="text-4xl mb-8">{data.contentfulBlogPost.title}</h1>
 
             <div
-              className={`md:flex md:-mx-4 mb-8 text-sm tracking-widest ${
+              className={`flex mb-8 md:mb-16 text-sm tracking-widest ${
                 theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
               }`}
             >
-              <span className="block md:px-4 uppercase">
+              <span className="block uppercase">
                 {data.contentfulBlogPost.dateCreated}
-              </span>
-              <span className="block md:px-4 uppercase">
                 {data.contentfulBlogPost.updatedAt !==
-                  data.contentfulBlogPost.dateCreated &&
-                  `(Updated ${data.contentfulBlogPost.updatedAt})`}
+                  data.contentfulBlogPost.dateCreated && (
+                  <span className="ml-2">(Updated)</span>
+                )}
               </span>
-              <span className="block md:px-4 uppercase">
+
+              <span className="pl-8 block uppercase">
                 {data.contentfulBlogPost.content.childMarkdownRemark.timeToRead}{' '}
                 {data.contentfulBlogPost.content.childMarkdownRemark
                   .timeToRead === 1
@@ -55,7 +55,7 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>> & RouterProps> = ({
               </span>
             </div>
 
-            <p className="text-2xl font-light">
+            <p className="text-2xl font-light md:mb-16">
               {data.contentfulBlogPost.excerpt.excerpt}
             </p>
           </div>
@@ -68,7 +68,11 @@ const Page: React.FC<GraphQLResponse<MarkdownQuery<Post>> & RouterProps> = ({
           />
         </article>
 
-        <p className={theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'}>
+        <p
+          className={`mb-8 ${
+            theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
+          }`}
+        >
           <Link to="/blog">← Back to the archive</Link>
         </p>
       </Layout>
