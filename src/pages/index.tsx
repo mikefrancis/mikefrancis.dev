@@ -1,15 +1,19 @@
-import * as React from 'react';
-import { graphql, Link } from 'gatsby';
+import React from 'react';
+import { NextPage } from 'next';
 
-import { GraphQLResponse, AllMarkdownQuery, Post, SiteQuery } from '../types';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostGrid from '../components/PostGrid';
 import { ThemeContext, THEME_DARK } from '../components/ThemeProvider';
+import Link from 'next/link';
+import client, { transformContentfulItem, ContentfulFields } from '../client';
+import { Post } from '../types';
 
-const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
-  data
-}: GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>) => {
+interface Props {
+  posts: Post[];
+}
+
+const Index: NextPage<Props> = ({ posts }) => {
   const { theme } = React.useContext(ThemeContext);
 
   return (
@@ -19,20 +23,27 @@ const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
         <div className="max-w-5xl">
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-4xl mb-16 md:mb-32">
-              {data.site.siteMetadata.description}
+              Software Engineer & UI Designer based in London, UK. Currently
+              building and scaling a modern, renewable energy provider at{' '}
+              <a className="hover:underline" href="https://bulb.co.uk">
+                Bulb
+              </a>
+              .
             </h1>
           </div>
 
           <h2 className="mb-8 uppercase text-sm tracking-widest">
             Latest Posts
           </h2>
-          <PostGrid posts={data.allContentfulBlogPost.edges} />
+          <PostGrid posts={posts} />
           <p
             className={`mb-8 ${
               theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
             }`}
           >
-            <Link to="/blog">More from the archive →</Link>
+            <Link href="/blog">
+              <a>More from the archive →</a>
+            </Link>
           </p>
         </div>
       </Layout>
@@ -40,31 +51,20 @@ const Index: React.FC<GraphQLResponse<AllMarkdownQuery<Post> & SiteQuery>> = ({
   );
 };
 
-export const query = graphql`
-  query Index {
-    allContentfulBlogPost(
-      sort: { order: DESC, fields: [dateCreated] }
-      limit: 3
-    ) {
-      edges {
-        node {
-          id
-          slug
-          title
-          excerpt {
-            excerpt
-          }
-          dateCreated(formatString: "MMMM D, YYYY")
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;
+export async function getStaticProps() {
+  const { items } = await client.getEntries<ContentfulFields>({
+    limit: 3,
+    content_type: 'post',
+    order: '-fields.dateCreated',
+  });
+
+  const posts = await Promise.all(items.map(transformContentfulItem));
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 export default Index;

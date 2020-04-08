@@ -2,16 +2,16 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Work Sans', 'sans-serif'],
-      mono: ['Fira Code', 'monospace']
+      mono: ['Jetbrains Mono', 'Fira Code', 'monospace'],
     },
     extend: {
       screens: {
-        'print': {
-          'raw': 'print'
-        }
-      }
-    }
+        print: {
+          raw: 'print',
+        },
+      },
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 };

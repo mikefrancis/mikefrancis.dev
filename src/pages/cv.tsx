@@ -1,9 +1,9 @@
-import * as React from 'react';
-import Helmet from 'react-helmet';
+import React from 'react';
+import Head from 'next/head';
 
 const CV: React.FC = () => (
   <>
-    <Helmet>
+    <Head>
       <style media="screen">
         {`
         body {
@@ -19,7 +19,7 @@ const CV: React.FC = () => (
       `}
       </style>
       <title>Mike Francis CV</title>
-    </Helmet>
+    </Head>
     <div className="font-sans text-black md:flex print:flex max-w-5xl">
       <div className="flex-1 md:pr-16 print:pr-16">
         <header className="mb-8">
@@ -45,8 +45,8 @@ const CV: React.FC = () => (
                 Webpack)
               </li>
               <li>
-                HTML5/CSS3 (Sass/LESS, OOCSS, SMACSS, BEM, Atomic CSS),
-                CSS-in-JS
+                HTML5/CSS3 (Sass/LESS, OOCSS, SMACSS, BEM, Atomic CSS,
+                CSS-in-JS)
               </li>
               <li>Agile Methodologies (Scrum/Kanban)</li>
               <li>Docker/Kubernetes, Vagrant, Chef, AWS, GCP, Heroku</li>
