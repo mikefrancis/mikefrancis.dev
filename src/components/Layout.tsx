@@ -1,28 +1,16 @@
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import * as React from 'react';
+import React from 'react';
+import Link from 'next/link';
 
 import { ThemeContext, THEME_DARK } from './ThemeProvider';
+import config from '../config';
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<Props> = ({ children }: Props) => {
+const Layout: React.FC = ({ children }) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
-  const { site } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `);
+  const { site } = config;
 
   return (
     <div
-      className={`transition font-sans min-h-screen ${
+      className={`transition font-sans min-h-screen antialiased ${
         theme === THEME_DARK
           ? 'bg-gray-800 text-white theme-dark'
           : 'bg-white text-black theme-light'
@@ -31,7 +19,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
       <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">
         <div className="max-w-5xl flex">
           <div className="flex-1">
-            <Link to="/">
+            <Link href="/">
               <span className="uppercase text-sm tracking-widest">
                 {site.siteMetadata.title}
               </span>

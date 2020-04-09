@@ -1,17 +1,7 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import * as React from 'react';
-import Helmet from 'react-helmet';
+import React from 'react';
+import Head from 'next/head';
 
-export const query = graphql`
-  query SEOQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;
+import config from '../config';
 
 interface Props {
   image?: string;
@@ -20,39 +10,40 @@ interface Props {
   url?: string;
 }
 
-const SEO: React.FC<Props> = ({ title, description, image, url }: Props) => {
-  const { site } = useStaticQuery(query);
+const SEO: React.FC<Props> = ({ title, description, image, url }) => {
+  const { site } = config;
   const meta = [
     {
       name: 'og:title',
-      content: title || site.siteMetadata.title
+      content: title || site.siteMetadata.title,
     },
     {
       name: 'description',
-      content: description || site.siteMetadata.description
-    }
+      content: description,
+    },
   ];
 
   if (url) {
     meta.push({
       name: 'og:url',
-      content: url
+      content: url,
     });
   }
 
   if (image) {
     meta.push({
       name: 'og:image',
-      content: image
+      content: image,
     });
   }
 
   return (
-    <Helmet
-      htmlAttributes={{ lang: 'en' }}
-      title={title || site.siteMetadata.title}
-      meta={meta}
-    />
+    <Head>
+      <title>{title || site.siteMetadata.title}</title>
+      {meta.map((metaItem, i) => (
+        <meta key={`meta-item-${i}`} {...metaItem} />
+      ))}
+    </Head>
   );
 };
 

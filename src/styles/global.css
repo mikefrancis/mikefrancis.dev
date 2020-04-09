@@ -1,0 +1,133 @@
+/* purgecss start ignore */
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@tailwind base;
+
+/**
+  * This injects Tailwind's component classes and any component classes
+  * registered by plugins.
+  */
+@tailwind components;
+
+/* purgecss end ignore */
+
+/**
+  * This injects Tailwind's utility classes and any utility classes registered
+  * by plugins.
+  */
+@tailwind utilities;
+
+/**
+  * Use this directive to control where Tailwind injects the responsive
+  * variations of each utility.
+  *
+  * If omitted, Tailwind will append these classes to the very end of
+  * your stylesheet by default.
+  */
+@tailwind screens;
+
+body {
+  margin: 0;
+}
+
+.transition {
+  transition: all 400ms;
+}
+
+.translate-x {
+  transform: translate(200%);
+}
+
+/* purgecss start ignore */
+.wysiwyg {
+  blockquote {
+    @apply border-l-4;
+    @apply border-gray-500;
+    @apply ml-0;
+    @apply pl-8;
+  }
+
+  a {
+    @apply border-b;
+    @apply border-gray-500;
+  }
+
+  a {
+    @apply border-white;
+  }
+
+  a:hover {
+    @apply opacity-75;
+  }
+
+  h2,
+  h3 {
+    @apply text-xl;
+    @apply mb-8;
+  }
+
+  p,
+  pre,
+  ul,
+  ol {
+    @apply leading-relaxed;
+    @apply mb-8;
+  }
+
+  pre,
+  code {
+    @apply rounded;
+    @apply bg-gray-800;
+    @apply text-white;
+  }
+
+  ul,
+  ol {
+    @apply pl-8;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  code {
+    @apply text-sm;
+    @apply p-1;
+  }
+
+  pre {
+    @apply p-4;
+    @apply overflow-x-scroll;
+    @apply w-full;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+
+  pre code {
+    @apply bg-transparent;
+    @apply p-0;
+    @apply rounded-none;
+  }
+}
+
+.theme-dark .wysiwyg {
+  a {
+    @apply border-white;
+  }
+
+  pre,
+  code {
+    @apply bg-gray-400;
+    @apply text-black;
+  }
+}
+/* purgecss end ignore */

@@ -1,5 +1,5 @@
 import darkmodejs from '@assortment/darkmodejs';
-import * as React from 'react';
+import React from 'react';
 
 export const THEME_LIGHT = 'light';
 export const THEME_DARK = 'dark';
@@ -7,7 +7,7 @@ const KEYCODE_T = 116;
 
 export const ThemeContext = React.createContext({
   theme: THEME_LIGHT,
-  toggleTheme: () => {}
+  toggleTheme: () => {},
 });
 
 const useKeyboard = (keyCode: number, onKeyPress: Function): void => {
@@ -46,7 +46,7 @@ const ThemeProvider: React.FC<Props> = ({ children }: Props) => {
         }
 
         toggleTheme();
-      }
+      },
     });
 
     return (): void => {
