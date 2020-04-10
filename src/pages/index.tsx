@@ -1,11 +1,11 @@
 import React from 'react';
 import { NextPage } from 'next';
+import Link from 'next/link';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostGrid from '../components/PostGrid';
 import { ThemeContext, THEME_DARK } from '../components/ThemeProvider';
-import Link from 'next/link';
 import client, { transformContentfulItem, ContentfulFields } from '../client';
 import { Post } from '../types';
 
@@ -18,7 +18,10 @@ const Index: NextPage<Props> = ({ posts }) => {
 
   return (
     <>
-      <SEO />
+      <SEO
+        title="Mike Francis"
+        description="Software Engineer & UI Designer based in London, UK."
+      />
       <Layout>
         <div className="max-w-5xl">
           <div className="max-w-2xl">

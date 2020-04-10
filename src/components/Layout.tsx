@@ -2,11 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 import { ThemeContext, THEME_DARK } from './ThemeProvider';
-import config from '../config';
 
 const Layout: React.FC = ({ children }) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
-  const { site } = config;
 
   return (
     <div
@@ -21,7 +19,7 @@ const Layout: React.FC = ({ children }) => {
           <div className="flex-1">
             <Link href="/">
               <span className="uppercase text-sm tracking-widest">
-                {site.siteMetadata.title}
+                Mike Francis
               </span>
             </Link>
           </div>
@@ -48,9 +46,7 @@ const Layout: React.FC = ({ children }) => {
       <footer className="px-8 pb-8 md:px-32 md:pb-16">
         <div className="max-w-5xl md:flex items-center">
           <div className="flex-1 text-sm tracking-widest text-center md:text-left">
-            &copy;{' '}
-            <span className="uppercase mx-2">{site.siteMetadata.title}</span>{' '}
-            {new Date().getFullYear()}
+            &copy; {new Date().getFullYear()}
           </div>
           <nav className="flex justify-center -mx-4 mt-8 md:mt-0">
             <a
