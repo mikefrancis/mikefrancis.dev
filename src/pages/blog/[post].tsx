@@ -77,7 +77,9 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
             theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
           }`}
         >
-          <Link href="/blog">← Back to the archive</Link>
+          <Link href="/blog">
+            <a>← Back to the archive</a>
+          </Link>
         </p>
       </Layout>
     </>

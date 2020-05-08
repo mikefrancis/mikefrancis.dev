@@ -18,7 +18,9 @@ const PostGrid: React.FC<Props> = ({ posts }) => {
         <div key={post.id} className="md:w-1/3 md:px-8 mb-8 md:mb-16">
           <article>
             <h3 className="text-2xl mb-3">
-              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+              <Link href={`/blog/${post.slug}`}>
+                <a>{post.title}</a>
+              </Link>
             </h3>
             <p
               className={`mb-3 uppercase text-xs tracking-widest ${

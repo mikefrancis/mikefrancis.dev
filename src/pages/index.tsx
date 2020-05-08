@@ -44,7 +44,9 @@ const Index: NextPage<Props> = ({ posts }) => {
               theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
             }`}
           >
-            <Link href="/blog">More from the archive →</Link>
+            <Link href="/blog">
+              <a>More from the archive →</a>
+            </Link>
           </p>
         </div>
       </Layout>

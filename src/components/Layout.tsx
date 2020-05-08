@@ -34,9 +34,7 @@ const Layout: React.FC = ({ children }) => {
         <div className="max-w-5xl flex">
           <div className="flex-1">
             <Link href="/">
-              <span className="uppercase text-sm tracking-widest">
-                Mike Francis
-              </span>
+              <a className="uppercase text-sm tracking-widest">Mike Francis</a>
             </Link>
           </div>
           <button
