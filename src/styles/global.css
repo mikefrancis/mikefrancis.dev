@@ -47,16 +47,15 @@ body {
     @apply border-l-4;
     @apply border-gray-500;
     @apply ml-0;
-    @apply pl-8;
+    @apply pl-4;
+    @apply text-2xl;
+    @apply font-light;
+    @apply italic;
   }
 
   a {
     @apply border-b;
     @apply border-gray-500;
-  }
-
-  a {
-    @apply border-white;
   }
 
   a:hover {

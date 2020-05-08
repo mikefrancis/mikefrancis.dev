@@ -46,7 +46,7 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
               }`}
             >
               <span className="block uppercase">
-                {dayjs(post.dateCreated).format('MMMM D, YYYY')}
+                {dayjs(post.dateCreated).format('MMMM YYYY')}
                 {post.updatedAt !== post.dateCreated && (
                   <span className="ml-2">(Updated)</span>
                 )}
@@ -77,9 +77,7 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
             theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
           }`}
         >
-          <Link href="/blog">
-            <a>← Back to the archive</a>
-          </Link>
+          <Link href="/blog">← Back to the archive</Link>
         </p>
       </Layout>
     </>

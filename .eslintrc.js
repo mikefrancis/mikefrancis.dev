@@ -1,23 +1,17 @@
 module.exports = {
-  env: {
-    browser: true,
-    jasmine: true,
-    jest: true
-  },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    'react-app',
+    'plugin:jsx-a11y/recommended',
+    'plugin:import/typescript',
   ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['react', '@typescript-eslint', 'prettier'],
-  rules: {},
-  settings: {
-    react: {
-      pragma: 'React',
-      version: 'detect'
-    }
-  }
+  rules: {
+    'import/order': [
+      'error',
+      {
+        groups: [['builtin', 'external', 'internal']],
+        'newlines-between': 'always-and-inside-groups',
+      },
+    ],
+    'import/prefer-default-export': 'off',
+  },
 };

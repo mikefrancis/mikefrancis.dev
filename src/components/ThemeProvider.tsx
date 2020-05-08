@@ -52,7 +52,7 @@ const ThemeProvider: React.FC<Props> = ({ children }: Props) => {
     return (): void => {
       dmjs.removeListeners();
     };
-  }, []);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
