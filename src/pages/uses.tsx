@@ -53,88 +53,136 @@ const Page: NextPage = () => {
               <p>Here's some of the extensions I have enabled:</p>
               <ul className="grid grid-cols-2 unstyled">
                 <li>
-                  <a href="http://something">advanced-new-file</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=advanced-new-file">
+                    advanced-new-file
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">Auto Rename Tag</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=Auto Rename Tag">
+                    Auto Rename Tag
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">Code Spell Checker</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=Code Spell Checker">
+                    Code Spell Checker
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">Debugger for Chrome</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=Debugger for Chrome">
+                    Debugger for Chrome
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">Docker</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=Docker">
+                    Docker
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">DotENV</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=DotENV">
+                    DotENV
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">EditorConfig for VS Code</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=EditorConfig for VS Code">
+                    EditorConfig for VS Code
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">
+                  <a href="https://marketplace.visualstudio.com/search?term=ES7 React/Redux/GraphQL/React-Native snippets">
                     ES7 React/Redux/GraphQL/React-Native snippets
                   </a>
                 </li>
                 <li>
-                  <a href="http://something">ESLint</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=ESLint">
+                    ESLint
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">File Utils</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=File Utils">
+                    File Utils
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">GitLens</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=GitLens">
+                    GitLens
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">GraphQL for VSCode</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=GraphQL for VSCode">
+                    GraphQL for VSCode
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">hadolint</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=hadolint">
+                    hadolint
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">npm Intellisense</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=npm Intellisense">
+                    npm Intellisense
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">PostCSS syntax</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=PostCSS syntax">
+                    PostCSS syntax
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">Prettier</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=Prettier">
+                    Prettier
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">Sublime Text Keymap</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=Sublime Text Keymap">
+                    Sublime Text Keymap
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">Terraform</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=Terraform">
+                    Terraform
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">TODO Highlight</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=TODO Highlight">
+                    TODO Highlight
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">vscode-styled-components</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=vscode-styled-components">
+                    vscode-styled-components
+                  </a>
                 </li>
                 <li>
-                  <a href="http://something">YAML</a>
+                  <a href="https://marketplace.visualstudio.com/search?term=YAML">
+                    YAML
+                  </a>
                 </li>
               </ul>
 
               <h2>Terminal</h2>
               <p>
-                I use <a href="http://something">iTerm2</a> with the{' '}
-                <a href="http://something">ohmyzsh</a> shell. I use a
+                I use <a href="https://www.iterm2.com">iTerm2</a> with the{' '}
+                <a href="https://ohmyz.sh">ohmyzsh</a> shell. I use a
                 system-wide summon key for iTerm which is the section sign key (
                 <code>§</code>). This was a great tip I picked up from{' '}
-                <a href="http://something">Jeffrey Way</a> - I found I wasn't
-                using that key for anything so it made sense to map it to
-                something I'd use all the time.
+                <a href="https://twitter.com/jeffrey_way">Jeffrey Way</a> - I
+                found I wasn't using that key for anything so it made sense to
+                map it to something I'd use all the time.
               </p>
               <p>
-                I use the <a href="http://something">agnoster</a> shell theme -
-                as I mainly use Git via the command line I find it's use of
-                glyphs as visual indicators really useful. Also I use{' '}
-                <a href="http://something">tailwind</a> as the colour scheme and{' '}
-                <a href="http://something">JetBrains Mono</a> as the font.
+                I use the{' '}
+                <a href="https://github.com/agnoster/agnoster-zsh-theme">
+                  agnoster
+                </a>{' '}
+                shell theme - as I mainly use Git via the command line I find
+                it's use of glyphs as visual indicators really useful. Also I
+                use{' '}
+                <a href="https://gist.github.com/stidges/352d18a724258e93f13bc48d4168d16b">
+                  tailwind
+                </a>{' '}
+                as the colour scheme and{' '}
+                <a href="https://www.jetbrains.com/lp/mono">JetBrains Mono</a>{' '}
+                as the font.
               </p>
               <p>
                 I keep my dotfiles on{' '}
@@ -147,30 +195,42 @@ const Page: NextPage = () => {
               <p>
                 I try to install all of these using Homebrew, and as such they
                 should all listed in my{' '}
-                <a href="http://something">dotfile's Brewfile</a>.
+                <a href="https://github.com/mikefrancis/dotfiles/blob/master/Brewfile">
+                  dotfile's Brewfile
+                </a>
+                .
               </p>
 
               <h2>Hardware</h2>
               <p>
-                I'm currently using a <a href="http://something">MacBook Pro</a>{' '}
+                I'm currently using a{' '}
+                <a href="https://www.apple.com/macbook-pro-13">MacBook Pro</a>{' '}
                 (13-inch, 2018). I'm not a fan of wider laptops as I like to be
                 able to stash my laptop into my bag for a long train journey or
                 trip to a coffee shop.
               </p>
               <p>
                 When I'm at my desk I use a{' '}
-                <a href="http://something">Magic Keyboard</a> and{' '}
-                <a href="http://something">Trackpad</a>. I mainly use the
-                keyboard as it's the same size and layout as my laptop keyboard.
-                I switched from a mouse to a trackpad for the same reason and
-                found using a trackpad a bit less movement for my wrist on a
-                long day.
+                <a href="https://www.apple.com/uk/shop/product/MLA22B/A/magic-keyboard-british-english">
+                  Magic Keyboard
+                </a>{' '}
+                and{' '}
+                <a href="https://www.apple.com/uk/shop/product/MJ2R2Z/A/magic-trackpad-2-silver">
+                  Trackpad
+                </a>
+                . I mainly use the keyboard as it's the same size and layout as
+                my laptop keyboard. I switched from a mouse to a trackpad for
+                the same reason and found using a trackpad a bit less movement
+                for my wrist on a long day.
               </p>
               <p>
-                I use an <a href="http://something">iPhone X</a> for
+                I use an <a href="https://www.apple.com/iphone">iPhone X</a> for
                 communication and taking pictures, and listen to music, podcasts
                 and audio books using a pair of{' '}
-                <a href="http://something">Bose QC-35s</a>.
+                <a href="https://www.bose.co.uk/en_gb/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html">
+                  Bose QC-35s
+                </a>
+                .
               </p>
 
               <h2>Task management</h2>
@@ -186,15 +246,15 @@ const Page: NextPage = () => {
                 in favour of the following.
               </p>
               <p>
-                I'm an <a href="http://something">Alfred</a> user, and have
-                purchased the powerpack, so I use a workflow to post the
+                I'm an <a href="https://www.alfredapp.com">Alfred</a> user, and
+                have purchased the powerpack, so I use a workflow to post the
                 following format:
               </p>
               <pre>
                 <code>trello *summary of the task*</code>
               </pre>
               <p>
-                To a personal kanban <a href="http://something">Trello</a>{' '}
+                To a personal kanban <a href="https://trello.com">Trello</a>{' '}
                 board. I only view the Trello board when I need to, or at the
                 start/end of each day, and it has a butler set up which archives
                 anything in "Done" each week.
