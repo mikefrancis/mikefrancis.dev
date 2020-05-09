@@ -1,6 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import Document, { Head, Main, NextScript } from 'next/document';
+import React from 'react';
 
 class InlineStylesHead extends Head {
   getCssLinks() {

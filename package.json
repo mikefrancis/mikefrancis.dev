@@ -6,6 +6,7 @@
     "@assortment/darkmodejs": "^1.1.0",
     "contentful": "^7.14.2",
     "dayjs": "^1.8.23",
+    "eslint-config-react-app": "^5.2.1",
     "next": "^9.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -17,11 +18,18 @@
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "@types/node": "10.12.21",
     "@types/react": "^16.9.32",
-    "@typescript-eslint/eslint-plugin": "^2.3.1",
-    "@typescript-eslint/parser": "^2.3.1",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
     "autoprefixer": "^9.6.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.2",
     "postcss-nested": "^4.2.1",
@@ -38,7 +46,8 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "src/**/*.{js,jsx,ts,tsx,json,scss,md}": [
+      "yarn lint",
       "prettier --write"
     ]
   },
@@ -47,7 +56,7 @@
     "dev": "next dev",
     "export": "next export",
     "start": "next start",
-    "lint": "eslint './src/**.*.{ts,tsx}'"
+    "lint": "eslint --cache 'src/**/*.{ts,tsx,js,jsx}'"
   },
   "browserslist": [
     ">0.2%",

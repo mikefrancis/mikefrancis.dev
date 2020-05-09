@@ -10,9 +10,9 @@ export const ThemeContext = React.createContext({
   toggleTheme: () => {},
 });
 
-const useKeyboard = (keyCode: number, onKeyPress: Function): void => {
+const useKeyboard = (keyCode: number, onKeyPress: Function) => {
   React.useEffect(() => {
-    const listener = (event: KeyboardEvent): void => {
+    const listener = (event: KeyboardEvent) => {
       if (event.keyCode === keyCode) {
         onKeyPress();
       }
@@ -20,19 +20,15 @@ const useKeyboard = (keyCode: number, onKeyPress: Function): void => {
 
     window.addEventListener('keypress', listener);
 
-    return (): void => {
+    return () => {
       window.removeEventListener('keypress', listener);
     };
   });
 };
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const ThemeProvider: React.FC<Props> = ({ children }: Props) => {
+const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = React.useState(THEME_LIGHT);
-  const toggleTheme = (): void => {
+  const toggleTheme = () => {
     setTheme(theme => (theme === THEME_DARK ? THEME_LIGHT : THEME_DARK));
   };
 
@@ -40,19 +36,24 @@ const ThemeProvider: React.FC<Props> = ({ children }: Props) => {
 
   React.useEffect(() => {
     const dmjs = darkmodejs({
-      onChange: (currentTheme: string) => {
-        if (currentTheme === 'no-support' || theme === currentTheme) {
-          return;
+      onChange: activeTheme => {
+        switch (activeTheme) {
+          case THEME_LIGHT:
+            setTheme(THEME_LIGHT);
+            break;
+          case THEME_DARK:
+            setTheme(THEME_DARK);
+            break;
+          default:
+            return;
         }
-
-        toggleTheme();
       },
     });
 
-    return (): void => {
+    return () => {
       dmjs.removeListeners();
     };
-  }, []);
+  }, [setTheme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

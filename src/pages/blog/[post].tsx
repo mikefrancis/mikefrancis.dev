@@ -46,7 +46,7 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
               }`}
             >
               <span className="block uppercase">
-                {dayjs(post.dateCreated).format('MMMM D, YYYY')}
+                {dayjs(post.dateCreated).format('MMMM YYYY')}
                 {post.updatedAt !== post.dateCreated && (
                   <span className="ml-2">(Updated)</span>
                 )}

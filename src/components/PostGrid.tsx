@@ -27,7 +27,7 @@ const PostGrid: React.FC<Props> = ({ posts }) => {
                 theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
               }`}
             >
-              {dayjs(post.dateCreated).format('MMMM D, YYYY')}
+              {dayjs(post.dateCreated).format('MMMM YYYY')}
             </p>
             <p className="text-sm">{post.excerpt}</p>
           </article>
