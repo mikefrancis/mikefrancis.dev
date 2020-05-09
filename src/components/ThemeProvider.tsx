@@ -20,7 +20,7 @@ const useKeyboard = (keyCode: number, onKeyPress: Function) => {
 
     window.addEventListener('keypress', listener);
 
-    return (): void => {
+    return () => {
       window.removeEventListener('keypress', listener);
     };
   });
@@ -36,19 +36,24 @@ const ThemeProvider: React.FC = ({ children }) => {
 
   React.useEffect(() => {
     const dmjs = darkmodejs({
-      onChange: (currentTheme: string) => {
-        if (currentTheme === 'no-support') {
-          return;
+      onChange: activeTheme => {
+        switch (activeTheme) {
+          case THEME_LIGHT:
+            setTheme(THEME_LIGHT);
+            break;
+          case THEME_DARK:
+            setTheme(THEME_DARK);
+            break;
+          default:
+            return;
         }
-
-        toggleTheme();
       },
     });
 
     return () => {
       dmjs.removeListeners();
     };
-  }, []);
+  }, [setTheme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
