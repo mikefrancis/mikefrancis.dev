@@ -6,7 +6,13 @@ export interface Post {
   dateCreated: string;
   updatedAt: string;
   excerpt: string;
-  featuredImage: string;
+  featuredImage: {
+    fields: {
+      file: {
+        url: string;
+      };
+    };
+  };
   content: string;
   timeToRead: number;
 }
