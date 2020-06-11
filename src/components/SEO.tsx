@@ -18,6 +18,14 @@ const SEO: React.FC<Props> = ({ title, description, image, url }) => {
       name: 'description',
       content: description,
     },
+    {
+      name: 'twitter:site',
+      content: '@mikefrancis',
+    },
+    {
+      name: 'twitter:creator',
+      content: '@mikefrancis',
+    },
   ];
 
   if (url) {
@@ -28,10 +36,16 @@ const SEO: React.FC<Props> = ({ title, description, image, url }) => {
   }
 
   if (image) {
-    meta.push({
-      name: 'og:image',
-      content: image,
-    });
+    meta.push(
+      {
+        name: 'og:image',
+        content: image,
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    );
   }
 
   return (
