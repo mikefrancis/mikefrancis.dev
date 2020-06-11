@@ -20,11 +20,11 @@ const SEO: React.FC<Props> = ({ title, description, image, url }) => {
     },
     {
       name: 'twitter:site',
-      content: '@mikefrancis',
+      content: '@_mikefrancis',
     },
     {
       name: 'twitter:creator',
-      content: '@mikefrancis',
+      content: '@_mikefrancis',
     },
   ];
 

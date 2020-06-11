@@ -29,7 +29,7 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
   }
 
   if (post.featuredImage) {
-    seoProps.image = post.featuredImage;
+    seoProps.image = `https://${post.featuredImage.fields.file.url}`;
   }
 
   return (
