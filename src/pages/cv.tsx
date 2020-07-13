@@ -58,14 +58,14 @@ const CV: React.FC = () => (
             <h2 className="text-2xl mb-4">Professional Employment</h2>
             <article className="mb-4">
               <h3 className="font-bold">
-                Senior Software Engineer/Interim Tech Lead - Bulb
+                Senior Software Engineer Technical Lead - Bulb
               </h3>
               <h4 className="text-gray-700 mb-4">
                 London, UK • December 2018 - Present
               </h4>
               <p>
-                Designing, building and measuring services, applications and
-                automations in a cross-functional team to help serve members in
+                Bootstrapping teams to design, build and measure services, applications and
+                automations cross-functionally to help serve members in
                 the best and most efficient way.
               </p>
             </article>
