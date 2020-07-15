@@ -147,7 +147,7 @@ const CV: React.FC = () => (
         </main>
       </div>
       <footer className="md:pt-16 print:pt-16">
-        <dl>
+        <dl className="mb-10">
           <dt className="font-bold">Telephone</dt>
           <dd className="mb-4">+44 (0) 7853 123 424</dd>
           <dt className="font-bold">Email/Skype</dt>
@@ -173,6 +173,14 @@ const CV: React.FC = () => (
             </a>
           </dd>
         </dl>
+        <h2 className="text-2xl mb-4">FOSS Contributions</h2>
+        <ul>
+          <li>Laravel</li>
+          <li>Symfony</li>
+          <li>create-react-app</li>
+          <li>Next.js</li>
+          <li>Bootstrap</li>
+        </ul>
       </footer>
     </div>
   </>
