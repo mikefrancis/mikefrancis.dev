@@ -27,23 +27,21 @@ const CV: React.FC = () => (
             Mike Francis
           </h1>
           <p className="text-lg">
-            Speaker at Work In The Web 2020, ForeFront Leeds 2016 and The
-            Digital Barn 2012.
-            <br />
-            Member of{' '}
-            <a href="https://twitter.com/SummitAwesome">@SummitAwesome</a>.
-            Featured on <a href="https://cssdeck.com">cssdeck.com</a>
+            Software Engineer & UI Designer based in London, UK. Tasked with
+            bootstrapping and leading teams to deliver fast prototypes and
+            scalable solutions, while mentoring and running sprints along the
+            way.
           </p>
         </header>
         <main>
           <section className="mb-8">
-            <h2 className="text-2xl mb-4">Selected skills</h2>
+            <h2 className="text-2xl mb-4">Selected Skills</h2>
             <ul className="list-disc px-8">
-              <li>PHP 7+ (Composer, Symfony, Laravel, PHPUnit, PSRs)</li>
               <li>
-                JavaScript/Node (TypeScript, React [Native], Redux, Mocha, Koa,
-                Webpack)
+                JavaScript/Node.js (TypeScript, React [Native], Redux, Mocha,
+                Koa, Webpack)
               </li>
+              <li>PHP 7+ (Composer, Symfony, Laravel, PHPUnit, PSRs)</li>
               <li>
                 HTML5/CSS3 (Sass/LESS, OOCSS, SMACSS, BEM, Atomic CSS,
                 CSS-in-JS)
@@ -57,16 +55,14 @@ const CV: React.FC = () => (
           <section className="mb-8">
             <h2 className="text-2xl mb-4">Professional Employment</h2>
             <article className="mb-4">
-              <h3 className="font-bold">
-                Senior Software Engineer Technical Lead - Bulb
-              </h3>
+              <h3 className="font-bold">Technical Lead - Bulb</h3>
               <h4 className="text-gray-700 mb-4">
                 London, UK • December 2018 - Present
               </h4>
               <p>
-                Bootstrapping teams to design, build and measure services, applications and
-                automations cross-functionally to help serve members in
-                the best and most efficient way.
+                Bootstrapping, developing and managing engineering teams across
+                the organisation including customer service tooling, operations
+                and vulnerable customer services.
               </p>
             </article>
             <article className="mb-4">
@@ -95,7 +91,7 @@ const CV: React.FC = () => (
               </p>
             </article>
             <article className="mb-4">
-              <h3 className="font-bold">Lead Developer - Manifest (now Ilk)</h3>
+              <h3 className="font-bold">Lead Developer - ilk</h3>
               <h4 className="text-gray-700 mb-4">
                 Leeds, UK • June 2008 - September 2013
               </h4>
@@ -173,6 +169,14 @@ const CV: React.FC = () => (
             </a>
           </dd>
         </dl>
+        <section className="mb-8">
+          <h2 className="text-2xl mb-4">Speaking</h2>
+          <ul className="list-disc px-8">
+            <li>Work In The Web 2020</li>
+            <li>ForeFront 2016</li>
+            <li>The Digital Barn 2012</li>
+          </ul>
+        </section>
         <h2 className="text-2xl mb-4">FOSS Contributions</h2>
         <ul>
           <li>Laravel</li>
