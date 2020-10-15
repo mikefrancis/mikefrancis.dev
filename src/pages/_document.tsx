@@ -3,16 +3,18 @@ import { join } from 'path';
 import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
 
+type DocumentFiles = {
+  sharedFiles: string[];
+  pageFiles: string[];
+  allFiles: string[];
+};
+
 class InlineStylesHead extends Head {
-  getCssLinks() {
-    return this.__getInlineStyles();
-  }
+  getCssLinks({ allFiles }: DocumentFiles) {
+    const { assetPrefix } = this.context;
+    if (!allFiles || allFiles.length === 0) return null;
 
-  __getInlineStyles() {
-    const { assetPrefix, files } = this.context._documentProps;
-    if (!files || files.length === 0) return null;
-
-    return files
+    return allFiles
       .filter(file => /\.css$/.test(file))
       .map(file => (
         <style

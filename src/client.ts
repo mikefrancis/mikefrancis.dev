@@ -1,8 +1,5 @@
 import * as contentful from 'contentful';
-import remark from 'remark';
-
-// omg why no types
-const remarkHtml = require('remark-html');
+import micromark from 'micromark';
 
 export interface ContentfulFields {
   slug: string;
@@ -30,22 +27,8 @@ export const transformContentfulItem = async (
 ) => ({
   ...item.fields,
   id: item.sys.id,
-  content: await parseMarkdown(item.fields.content),
+  content: micromark(item.fields.content),
   timeToRead: timeToRead(item.fields.content),
 });
-
-export const parseMarkdown = (rawString: string) => {
-  return new Promise((resolve, reject) => {
-    remark()
-      .use(remarkHtml)
-      .process(rawString, (err, file) => {
-        if (err) {
-          reject(err);
-        }
-
-        resolve(file.contents);
-      });
-  });
-};
 
 export default client;
