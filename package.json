@@ -36,9 +36,6 @@
     "tailwindcss": "^1.0.4",
     "typescript": "3.3.1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
