@@ -6,22 +6,6 @@ import { ThemeContext, THEME_DARK } from './ThemeProvider';
 const Layout: React.FC = ({ children }) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
 
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/@mikefrancis/strata.js';
-    script.async = true;
-    script.onload = () => {
-      (window as any).Strata.init(process.env.STRATA_KEY);
-      (window as any).Strata.page();
-    };
-
-    document.body.append(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <div
       className={`transition font-sans min-h-screen antialiased ${
