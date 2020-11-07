@@ -64,7 +64,8 @@ body {
 
   h2,
   h3 {
-    @apply text-xl;
+    @apply text-3xl;
+    @apply font-extrabold;
     @apply mb-8;
   }
 
@@ -72,7 +73,7 @@ body {
   pre,
   ul,
   ol {
-    @apply leading-relaxed;
+    @apply leading-9;
     @apply mb-8;
   }
 
@@ -102,9 +103,10 @@ body {
   }
 
   pre {
-    @apply p-4;
+    @apply p-3;
     @apply overflow-x-scroll;
     @apply w-full;
+    @apply leading-none;
   }
 
   img {

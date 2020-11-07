@@ -23,19 +23,24 @@ const Index: NextPage<Props> = ({ posts }) => {
         description="Software Engineer & UI Designer based in London, UK."
       />
       <Layout>
-        <div className="max-w-5xl">
-          <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-4xl mb-16 md:mb-32">
-              Software Engineer & UI Designer based in London, UK. Currently
-              building and scaling a modern, renewable energy provider at{' '}
+        <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mb-20 md:mb-40">
+            <h1 className="text-3xl md:text-5xl block font-extrabold leading-normal mb-5">
+              Software Engineer & UI Designer
+              <br />
+              based in London, UK.
+            </h1>{' '}
+            <p className="text-2xl">
+              Currently building and scaling a modern, renewable energy provider
+              at{' '}
               <a className="hover:underline" href="https://bulb.co.uk">
                 Bulb
               </a>
               .
-            </h1>
+            </p>
           </div>
 
-          <h2 className="mb-8 uppercase text-sm tracking-widest">
+          <h2 className="mb-8 uppercase font-bold text-sm tracking-widest">
             Latest Posts
           </h2>
           <PostGrid posts={posts} />

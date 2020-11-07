@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ['Work Sans', 'sans-serif'],
+      // sans: ['Inter', 'sans-serif'],
       mono: ['Jetbrains Mono', 'Fira Code', 'monospace'],
     },
     extend: {

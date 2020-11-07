@@ -1,6 +1,5 @@
 import { AppPropsType } from 'next/dist/next-server/lib/utils';
 import React from 'react';
-import 'typeface-work-sans';
 
 import ThemeProvider from '../components/ThemeProvider';
 import '../styles/global.css';

@@ -8,17 +8,19 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <div
-      className={`transition font-sans min-h-screen antialiased ${
+      className={`transition text-xl font-sans min-h-screen antialiased ${
         theme === THEME_DARK
-          ? 'bg-gray-800 text-white theme-dark'
+          ? 'bg-gray-900 text-white theme-dark'
           : 'bg-white text-black theme-light'
       }`}
     >
       <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">
-        <div className="max-w-5xl flex">
+        <div className="max-w-5xl mx-auto flex">
           <div className="flex-1">
             <Link href="/">
-              <a className="uppercase text-sm tracking-widest">Mike Francis</a>
+              <a className="uppercase font-bold text-sm tracking-widest">
+                Mike Francis
+              </a>
             </Link>
           </div>
           <button
@@ -42,17 +44,18 @@ const Layout: React.FC = ({ children }) => {
       </header>
       <main className="px-8 pb-8 md:px-32 md:pb-16">{children}</main>
       <footer className="px-8 pb-8 md:px-32 md:pb-16">
-        <div className="max-w-5xl md:flex items-center">
+        <div className="max-w-5xl mx-auto md:flex items-center">
           <div className="flex-1 text-sm tracking-widest text-center md:text-left">
             &copy; {new Date().getFullYear()}
           </div>
           <nav className="flex justify-center -mx-4 mt-8 md:mt-0">
             <a
-              className="mx-3"
+              className="mx-3 opacity-100 hover:opacity-50"
               href="https://github.com/mikefrancis"
               title="GitHub"
             >
               <svg
+                className="fill-current"
                 width="24"
                 height="24"
                 viewBox="0 0 1792 1792"
@@ -65,11 +68,12 @@ const Layout: React.FC = ({ children }) => {
               </svg>
             </a>
             <a
-              className="mx-3"
+              className="mx-3 opacity-100 hover:opacity-50"
               href="https://twitter.com/_mikefrancis"
               title="Twitter"
             >
               <svg
+                className="fill-current"
                 width="24"
                 height="24"
                 viewBox="0 0 1792 1792"
@@ -82,11 +86,12 @@ const Layout: React.FC = ({ children }) => {
               </svg>
             </a>
             <a
-              className="mx-3"
+              className="mx-3 opacity-100 hover:opacity-50"
               href="https://dribbble.com/mikefrancis"
               title="Dribbble"
             >
               <svg
+                className="fill-current"
                 width="24"
                 height="24"
                 viewBox="0 0 1792 1792"
@@ -99,11 +104,12 @@ const Layout: React.FC = ({ children }) => {
               </svg>
             </a>
             <a
-              className="mx-3"
+              className="mx-3 opacity-100 hover:opacity-50"
               href="https://www.linkedin.com/in/mike-francis-77a65511/"
               title="LinkedIn"
             >
               <svg
+                className="fill-current"
                 width="24"
                 height="24"
                 viewBox="0 0 1792 1792"
@@ -116,11 +122,12 @@ const Layout: React.FC = ({ children }) => {
               </svg>
             </a>
             <a
-              className="mx-3"
+              className="mx-3 opacity-100 hover:opacity-50"
               href="mailto:mikeffrancis@gmail.com"
               title="Mail"
             >
               <svg
+                className="fill-current"
                 width="24"
                 height="24"
                 viewBox="0 0 1792 1792"

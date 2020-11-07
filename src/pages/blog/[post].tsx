@@ -36,23 +36,29 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
     <>
       <SEO {...seoProps} />
       <Layout>
-        <article className="max-w-3xl">
-          <div className="mb-8">
-            <h1 className="text-4xl mb-8">{post.title}</h1>
+        <article className="mx-auto max-w-3xl">
+          <div className="mb-8 text-center">
+            <h1 className="text-5xl font-extrabold mb-5">{post.title}</h1>
 
             <div
-              className={`flex mb-8 md:mb-16 text-sm tracking-widest ${
+              className={`flex justify-center mb-5 md:mb-20 text-base ${
                 theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
               }`}
             >
-              <span className="block uppercase">
+              <span aria-label="Writing date">
                 {dayjs(post.dateCreated).format('MMMM YYYY')}
                 {post.updatedAt !== post.dateCreated && (
-                  <span className="ml-2">(Updated)</span>
+                  <span
+                    className={`ml-2 text-xs rounded uppercase font-bold px-2 py-1 bg-gray-500 ${
+                      theme === THEME_DARK ? 'text-black' : 'text-white'
+                    }`}
+                  >
+                    Updated
+                  </span>
                 )}
               </span>
 
-              <span className="pl-16 block uppercase">
+              <span className="pl-10" aria-label="Reading time">
                 {post.timeToRead === 0
                   ? 'less than a minute'
                   : `${post.timeToRead} ${
@@ -60,8 +66,6 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
                     }`}
               </span>
             </div>
-
-            <p className="text-2xl font-light md:mb-8">{post.excerpt}</p>
           </div>
 
           <div
@@ -70,17 +74,17 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
               __html: post.content,
             }}
           />
-        </article>
 
-        <p
-          className={`mb-8 ${
-            theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
-          }`}
-        >
-          <Link href="/blog">
-            <a>← Back to the archive</a>
-          </Link>
-        </p>
+          <p
+            className={`mb-8 text-base ${
+              theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
+            }`}
+          >
+            <Link href="/blog">
+              <a>← Back to the archive</a>
+            </Link>
+          </p>
+        </article>
       </Layout>
     </>
   );
