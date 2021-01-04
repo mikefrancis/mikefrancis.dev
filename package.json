@@ -8,6 +8,7 @@
     "dayjs": "^1.8.23",
     "micromark": "^2.10.1",
     "next": "^10.0.0",
+    "preact": "^10.5.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "typeface-work-sans": "^0.0.72"
