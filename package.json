@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@assortment/darkmodejs": "^1.1.0",
-    "contentful": "^7.14.2",
+    "contentful": "^8.1.7",
     "dayjs": "^1.8.23",
     "micromark": "^2.10.1",
     "next": "^10.0.0",
