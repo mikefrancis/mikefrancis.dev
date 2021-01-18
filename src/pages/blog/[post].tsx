@@ -7,7 +7,6 @@ import { WithRouterProps } from 'next/dist/client/with-router';
 import { Post } from '../../types';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
-import { THEME_DARK, ThemeContext } from '../../components/ThemeProvider';
 import client, {
   transformContentfulItem,
   ContentfulFields,
@@ -18,7 +17,6 @@ interface Props {
 }
 
 const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
-  const { theme } = React.useContext(ThemeContext);
   const seoProps: React.ComponentProps<typeof SEO> = {
     title: post.title,
     description: post.excerpt,
@@ -40,11 +38,7 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
           <div className="mb-8">
             <h1 className="text-4xl mb-8">{post.title}</h1>
 
-            <div
-              className={`flex mb-8 md:mb-16 text-sm tracking-widest ${
-                theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
-              }`}
-            >
+            <div className="flex mb-8 md:mb-16 text-sm tracking-widest text-gray-600 dark:text-gray-400">
               <span className="block uppercase">
                 {dayjs(post.dateCreated).format('MMMM YYYY')}
                 {post.updatedAt !== post.dateCreated && (
@@ -72,11 +66,7 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
           />
         </article>
 
-        <p
-          className={`mb-8 ${
-            theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
-          }`}
-        >
+        <p className="mb-8 text-gray-600 dark:text-gray-400">
           <Link href="/blog">
             <a>← Back to the archive</a>
           </Link>

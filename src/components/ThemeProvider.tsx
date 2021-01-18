@@ -1,4 +1,3 @@
-import darkmodejs from '@assortment/darkmodejs';
 import React from 'react';
 
 export const THEME_LIGHT = 'light';
@@ -33,27 +32,6 @@ const ThemeProvider: React.FC = ({ children }) => {
   };
 
   useKeyboard(KEYCODE_T, toggleTheme);
-
-  React.useEffect(() => {
-    const dmjs = darkmodejs({
-      onChange: activeTheme => {
-        switch (activeTheme) {
-          case THEME_LIGHT:
-            setTheme(THEME_LIGHT);
-            break;
-          case THEME_DARK:
-            setTheme(THEME_DARK);
-            break;
-          default:
-            return;
-        }
-      },
-    });
-
-    return () => {
-      dmjs.removeListeners();
-    };
-  }, [setTheme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
