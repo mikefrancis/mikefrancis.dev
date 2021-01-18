@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Head, Main, NextScript, Html } from 'next/document';
 import React from 'react';
 
 type DocumentFiles = {
@@ -32,13 +32,13 @@ class InlineStylesHead extends Head {
 export default class CustomDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <InlineStylesHead />
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

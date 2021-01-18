@@ -3,15 +3,12 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 
 import { Post } from '../types';
-import { ThemeContext, THEME_DARK } from './ThemeProvider';
 
 interface Props {
   posts: Post[];
 }
 
 const PostGrid: React.FC<Props> = ({ posts }) => {
-  const { theme } = React.useContext(ThemeContext);
-
   return (
     <div className="md:flex md:flex-wrap md:-mx-8">
       {posts.map(post => (
@@ -22,11 +19,7 @@ const PostGrid: React.FC<Props> = ({ posts }) => {
                 <a>{post.title}</a>
               </Link>
             </h3>
-            <p
-              className={`mb-3 uppercase text-xs tracking-widest ${
-                theme === THEME_DARK ? 'text-gray-500' : 'text-gray-700'
-              }`}
-            >
+            <p className="mb-3 uppercase text-xs tracking-widest text-gray-600 dark:text-gray-400">
               {dayjs(post.dateCreated).format('MMMM YYYY')}
             </p>
             <p className="text-sm">{post.excerpt}</p>

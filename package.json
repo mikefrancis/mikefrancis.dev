@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@assortment/darkmodejs": "^1.1.0",
     "contentful": "^8.1.7",
     "dayjs": "^1.8.23",
     "micromark": "^2.10.1",
     "next": "^10.0.0",
     "preact": "^10.5.9",
+    "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "typeface-work-sans": "^0.0.72"
@@ -19,7 +19,7 @@
     "@types/react": "^16.9.53",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^10.2.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-react": "^1.1.7",
@@ -32,9 +32,10 @@
     "eslint-plugin-react-hooks": "^4.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.2",
+    "postcss": "^8.2.4",
     "postcss-nested": "^4.2.1",
     "prettier": "^1.18.2",
-    "tailwindcss": "^1.0.4",
+    "tailwindcss": "^2.0.2",
     "typescript": "^4.0.3"
   },
   "husky": {
