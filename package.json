@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@panelbear/panelbear-js": "^1.2.0",
     "contentful": "^8.1.7",
     "dayjs": "^1.8.23",
     "micromark": "^2.10.1",
