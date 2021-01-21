@@ -119,6 +119,7 @@ body {
   }
 }
 
+/* purgecss start ignore */
 code[class*='language-'],
 pre[class*='language-'] {
   text-align: left;
@@ -233,3 +234,4 @@ pre[class*='language-'] {
 .token.entity {
   cursor: help;
 }
+/* purgecss end ignore */
