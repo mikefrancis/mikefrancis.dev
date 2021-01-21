@@ -22,4 +22,5 @@ module.exports = {
     },
   },
   plugins: [],
+  purge: ['./src/**/*.tsx'],
 };

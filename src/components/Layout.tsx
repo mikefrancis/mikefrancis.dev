@@ -1,5 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
+import Prism from 'prismjs';
 
 import { ThemeContext, THEME_DARK } from './ThemeProvider';
 import { usePanelbear } from './usePanelbear';
@@ -8,6 +9,10 @@ const Layout: React.FC = ({ children }) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
 
   usePanelbear();
+
+  React.useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
     <div
