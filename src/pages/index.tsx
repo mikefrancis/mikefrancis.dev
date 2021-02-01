@@ -21,10 +21,11 @@ const Index: NextPage<Props> = ({ posts }) => {
       />
       <Layout>
         <div className="max-w-5xl">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <h1 className="text-3xl md:text-headline mb-16 md:mb-32">
-              Software Engineer & UI Designer based in London, UK. Currently
-              building and scaling a modern, renewable energy provider at{' '}
+              Technical Leader, Software Engineer & UI Designer based in London, UK.
+              <br />
+              Currently building and scaling a modern, renewable energy provider at{' '}
               <a className="hover:underline" href="https://bulb.co.uk">
                 Bulb
               </a>
