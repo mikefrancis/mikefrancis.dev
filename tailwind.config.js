@@ -1,5 +1,6 @@
 module.exports = {
   darkMode: 'class',
+  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
       sans: ['Work Sans', 'sans-serif'],
