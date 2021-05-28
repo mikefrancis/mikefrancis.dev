@@ -129,7 +129,7 @@ const CV: React.FC = () => {
                         Senior Software Engineer
                       </h4>
                       <p className="text-gray-700 text-sm">
-                        June 2015 - December 2018
+                        June 2015 - November 2018
                       </p>
                     </div>
                     <p>
