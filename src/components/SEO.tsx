@@ -16,8 +16,16 @@ const SEO: React.FC<Props> = ({ title, description, image, url }) => {
       content: title,
     },
     {
+      name: 'twitter:title',
+      content: title,
+    },
+    {
       name: 'description',
       property: 'og:description',
+      content: description,
+    },
+    {
+      name: 'twitter:description',
       content: description,
     },
     {
@@ -47,6 +55,10 @@ const SEO: React.FC<Props> = ({ title, description, image, url }) => {
       {
         name: 'image',
         property: 'og:image',
+        content: image,
+      },
+      {
+        name: 'twitter:image',
         content: image,
       },
       {
