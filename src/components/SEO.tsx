@@ -11,15 +11,13 @@ interface Props {
 const SEO: React.FC<Props> = ({ title, description, image, url }) => {
   const meta = [
     {
-      name: 'og:title',
+      name: 'title',
+      property: 'og:title',
       content: title,
     },
     {
       name: 'description',
-      content: description,
-    },
-    {
-      name: 'og:description',
+      property: 'og:description',
       content: description,
     },
     {
@@ -30,11 +28,16 @@ const SEO: React.FC<Props> = ({ title, description, image, url }) => {
       name: 'twitter:creator',
       content: '@_mikefrancis',
     },
+    {
+      name: 'author',
+      content: 'Mike Francis',
+    },
   ];
 
   if (url) {
     meta.push({
-      name: 'og:url',
+      name: 'url',
+      property: 'og:url',
       content: url,
     });
   }
@@ -42,7 +45,8 @@ const SEO: React.FC<Props> = ({ title, description, image, url }) => {
   if (image) {
     meta.push(
       {
-        name: 'og:image',
+        name: 'image',
+        property: 'og:image',
         content: image,
       },
       {

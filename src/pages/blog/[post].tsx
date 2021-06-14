@@ -23,7 +23,7 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
   };
 
   if (router && typeof window !== 'undefined') {
-    seoProps.url = `${window.location.origin}/${router.pathname}`;
+    seoProps.url = window.location.hostname;
   }
 
   if (post.featuredImage) {
