@@ -27,7 +27,7 @@ const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
   }
 
   if (post.featuredImage) {
-    seoProps.image = `https://${post.featuredImage.fields.file.url}`;
+    seoProps.image = `https:${post.featuredImage.fields.file.url}`;
   }
 
   return (
@@ -80,7 +80,7 @@ export async function getStaticPaths() {
     order: '-fields.dateCreated',
   });
 
-  const paths = items.map(item => ({
+  const paths = items.map((item) => ({
     params: {
       post: item.fields.slug,
     },
