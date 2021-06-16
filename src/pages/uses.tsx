@@ -50,7 +50,7 @@ const Page: NextPage = () => {
                 <a href="https://www.jetbrains.com/lp/mono">JetBrains Mono</a>{' '}
                 font.
               </p>
-              <p>Here's some of the extensions I have enabled:</p>
+              <p>Here&apos;s some of the extensions I have enabled:</p>
               <ul className="unstyled md:grid md:grid-cols-2">
                 <li>
                   <a href="https://marketplace.visualstudio.com/search?term=advanced-new-file">
@@ -166,8 +166,8 @@ const Page: NextPage = () => {
                 system-wide summon key for iTerm which is the section sign key (
                 <code>§</code>). This was a great tip I picked up from{' '}
                 <a href="https://twitter.com/jeffrey_way">Jeffrey Way</a> - I
-                found I wasn't using that key for anything so it made sense to
-                map it to something I'd use all the time.
+                found I wasn&apos;t using that key for anything so it made sense
+                to map it to something I&apos;d use all the time.
               </p>
               <p>
                 I use the{' '}
@@ -175,8 +175,8 @@ const Page: NextPage = () => {
                   agnoster
                 </a>{' '}
                 shell theme - as I mainly use Git via the command line I find
-                it's use of glyphs as visual indicators really useful. Also I
-                use{' '}
+                it&apos;s use of glyphs as visual indicators really useful. Also
+                I use{' '}
                 <a href="https://gist.github.com/stidges/352d18a724258e93f13bc48d4168d16b">
                   tailwind
                 </a>{' '}
@@ -196,21 +196,21 @@ const Page: NextPage = () => {
                 I try to install all of these using Homebrew, and as such they
                 should all listed in my{' '}
                 <a href="https://github.com/mikefrancis/dotfiles/blob/master/Brewfile">
-                  dotfile's Brewfile
+                  dotfile&apos;s Brewfile
                 </a>
                 .
               </p>
 
               <h2>Hardware</h2>
               <p>
-                I'm currently using a{' '}
+                I&apos;m currently using a{' '}
                 <a href="https://www.apple.com/macbook-pro-13">MacBook Pro</a>{' '}
-                (13-inch, 2018). I'm not a fan of wider laptops as I like to be
-                able to stash my laptop into my bag for a long train journey or
-                trip to a coffee shop.
+                (13-inch, 2018). I&apos;m not a fan of wider laptops as I like
+                to be able to stash my laptop into my bag for a long train
+                journey or trip to a coffee shop.
               </p>
               <p>
-                When I'm at my desk I use a{' '}
+                When I&apos;m at my desk I use a{' '}
                 <a href="https://www.apple.com/uk/shop/product/MLA22B/A/magic-keyboard-british-english">
                   Magic Keyboard
                 </a>{' '}
@@ -218,10 +218,10 @@ const Page: NextPage = () => {
                 <a href="https://www.apple.com/uk/shop/product/MJ2R2Z/A/magic-trackpad-2-silver">
                   Trackpad
                 </a>
-                . I mainly use the keyboard as it's the same size and layout as
-                my laptop keyboard. I switched from a mouse to a trackpad for
-                the same reason and found using a trackpad a bit less movement
-                for my wrist on a long day.
+                . I mainly use the keyboard as it&apos;s the same size and
+                layout as my laptop keyboard. I switched from a mouse to a
+                trackpad for the same reason and found using a trackpad a bit
+                less movement for my wrist on a long day.
               </p>
               <p>
                 I use an <a href="https://www.apple.com/iphone">iPhone X</a> for
@@ -235,20 +235,21 @@ const Page: NextPage = () => {
 
               <h2>Task management</h2>
               <p>
-                I've been struggling to find a workflow which doesn't involve me
-                learning a new piece of software. I'd like to think my
-                requirements for arbitrary task management are very minimal and
-                unstructured, so up until recently post-it notes have sufficed.
+                I&apos;ve been struggling to find a workflow which doesn&apos;t
+                involve me learning a new piece of software. I&apos;d like to
+                think my requirements for arbitrary task management are very
+                minimal and unstructured, so up until recently post-it notes
+                have sufficed.
               </p>
               <p>
-                However I don't always have them to hand and it's not a
-                sustainable way to keep track of tasks so I've ditched that idea
-                in favour of the following.
+                However I don&apos;t always have them to hand and it&apos;s not
+                a sustainable way to keep track of tasks so I&apos;ve ditched
+                that idea in favour of the following.
               </p>
               <p>
-                I'm an <a href="https://www.alfredapp.com">Alfred</a> user, and
-                have purchased the powerpack, so I use a workflow to post the
-                following format:
+                I&apos;m an <a href="https://www.alfredapp.com">Alfred</a> user,
+                and have purchased the powerpack, so I use a workflow to post
+                the following format:
               </p>
               <pre>
                 <code>trello *summary of the task*</code>
@@ -257,12 +258,12 @@ const Page: NextPage = () => {
                 To a personal kanban <a href="https://trello.com">Trello</a>{' '}
                 board. I only view the Trello board when I need to, or at the
                 start/end of each day, and it has a butler set up which archives
-                anything in "Done" each week.
+                anything in &quot;Done&quot; each week.
               </p>
               <p>
-                It's not perfect but I find this "fire <s>and forget</s>" way of
-                creating tasks very non-intrusive and I can access this backlog
-                from anywhere.
+                It&apos;s not perfect but I find this &quot;fire{' '}
+                <s>and forget</s>&quot; way of creating tasks very non-intrusive
+                and I can access this backlog from anywhere.
               </p>
             </div>
           </div>
