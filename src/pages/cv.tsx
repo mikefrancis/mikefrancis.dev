@@ -89,10 +89,10 @@ const CV: React.FC = () => {
                     <p>
                       Research, design and implementation of technical
                       solutions. Guiding the quality, correctness, security and
-                      observability of systems, services and data in my team's
-                      business domain. Mentoring and coaching of software
-                      engineers and acting as a DRI for technology related
-                      projects driving continuous improvement.
+                      observability of systems, services and data in my
+                      team&apos;s business domain. Mentoring and coaching of
+                      software engineers and acting as a DRI for technology
+                      related projects driving continuous improvement.
                     </p>
                   </article>
                   <article className="mb-4">
