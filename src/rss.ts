@@ -10,7 +10,7 @@ async function generateRssItem(post: Post) {
       <guid>${BLOG_URL}/blog/${post.slug}</guid>
       <title>${post.title}</title>
       <description>${post.excerpt}</description>
-      <link>${BLOG_URL}/posts/${post.slug}</link>
+      <link>${BLOG_URL}/blog/${post.slug}</link>
       <pubDate>${new Date(post.dateCreated).toUTCString()}</pubDate>
       <content:encoded><![CDATA[${content}]]></content:encoded>
     </item>
