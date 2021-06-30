@@ -28,4 +28,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   res.setHeader('Content-Type', 'text/xml');
   res.write(rss);
   res.end();
+
+  return {
+    props: {},
+  };
 }
