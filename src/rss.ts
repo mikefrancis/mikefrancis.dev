@@ -1,10 +1,8 @@
-import { ContentfulFields } from './client';
 import { Post } from './types';
 
 const BLOG_URL = 'http://mikefrancis.dev';
 
 async function generateRssItem(post: Post) {
-  // const content = await markdownToHtml(post.content || '');
   const content = post.content;
 
   return `
