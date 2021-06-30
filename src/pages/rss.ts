@@ -17,7 +17,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   }
 
   const { items } = await client.getEntries<ContentfulFields>({
-    limit: 3,
     content_type: 'post',
     order: '-fields.dateCreated',
   });
