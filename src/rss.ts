@@ -7,6 +7,7 @@ async function generateRssItem(post: Post) {
 
   return `
     <item>
+      <author>Mike Francis</author>
       <guid>${BLOG_URL}/blog/${post.slug}</guid>
       <title>${post.title}</title>
       <description>${post.excerpt}</description>
