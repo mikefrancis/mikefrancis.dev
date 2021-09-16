@@ -1,30 +1,34 @@
 import dayjs from 'dayjs';
 import React from 'react';
 import Link from 'next/link';
-import { withRouter } from 'next/router';
-import { WithRouterProps } from 'next/dist/client/with-router';
+import { useRouter } from 'next/router';
+import { GetStaticPropsContext } from 'next';
 
 import { Post } from '../../types';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import client, {
-  transformContentfulItem,
   ContentfulFields,
+  getPreviewPostBySlug,
+  getPostBySlug,
 } from '../../client';
 
 interface Props {
   post: Post;
 }
 
-const Page: React.FC<Props & WithRouterProps> = ({ post, router }) => {
+const Page: React.FC<Props> = ({ post }) => {
+  const router = useRouter();
+
+  if (!router.isReady) {
+    return null;
+  }
+
   const seoProps: React.ComponentProps<typeof SEO> = {
     title: post.title,
     description: post.excerpt,
+    url: window.location.href,
   };
-
-  if (router && typeof window !== 'undefined') {
-    seoProps.url = window.location.href;
-  }
 
   if (post.featuredImage) {
     seoProps.image = `https:${post.featuredImage.fields.file.url}`;
@@ -92,14 +96,14 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(context: any) {
-  const { post: slug } = context.params;
-  const { items } = await client.getEntries<ContentfulFields>({
-    content_type: 'post',
-    'fields.slug': slug,
-  });
+type Params = {
+  post: string;
+};
 
-  const post = await transformContentfulItem(items[0]);
+export async function getStaticProps(context: GetStaticPropsContext<Params>) {
+  const { post: slug } = context.params as Params;
+  const getterFn = context.preview ? getPreviewPostBySlug : getPostBySlug;
+  const post = await getterFn(slug);
 
   return {
     props: {
@@ -108,4 +112,4 @@ export async function getStaticProps(context: any) {
   };
 }
 
-export default withRouter(Page);
+export default Page;
