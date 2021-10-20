@@ -7,11 +7,11 @@ import { GetStaticPropsContext } from 'next';
 import { Post } from '../../types';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
-import client, {
-  ContentfulFields,
+import {
   getPreviewPostBySlug,
   getPostBySlug,
-} from '../../client';
+  getPosts,
+} from '../../lib/client';
 
 interface Props {
   post: Post;
@@ -79,14 +79,10 @@ const Page: React.FC<Props> = ({ post }) => {
 };
 
 export async function getStaticPaths() {
-  const { items } = await client.getEntries<ContentfulFields>({
-    content_type: 'post',
-    order: '-fields.dateCreated',
-  });
-
-  const paths = items.map((item) => ({
+  const posts = await getPosts();
+  const paths = posts.map((post) => ({
     params: {
-      post: item.fields.slug,
+      post: post.slug,
     },
   }));
 

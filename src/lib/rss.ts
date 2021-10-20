@@ -1,8 +1,8 @@
-import { Post } from './types';
+import { Post } from '../types';
 
 const BLOG_URL = 'http://mikefrancis.dev';
 
-async function generateRssItem(post: Post) {
+function generateRssItem(post: Post) {
   const content = post.content;
 
   return `
@@ -18,8 +18,8 @@ async function generateRssItem(post: Post) {
   `;
 }
 
-export async function generateRssFeed(posts: Post[]) {
-  const itemsList = await Promise.all(posts.map(generateRssItem));
+export function generateRssFeed(posts: Post[]) {
+  const itemsList = posts.map(generateRssItem);
 
   return `
     <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">

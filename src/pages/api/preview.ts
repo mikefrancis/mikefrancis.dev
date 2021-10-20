@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getPreviewPostBySlug } from '../../client';
+import { getPreviewPostBySlug } from '../../lib/client';
 
 export default async function preview(
   req: NextApiRequest,
@@ -23,6 +23,6 @@ export default async function preview(
   res.setPreviewData({});
 
   // Redirect to the path from the fetched post
-  res.writeHead(307, { Location: `/blog/${post.slug}` })
+  res.writeHead(307, { Location: `/blog/${post.slug}` });
   res.end();
 }

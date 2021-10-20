@@ -1,7 +1,7 @@
 import { GetServerSidePropsContext } from 'next';
 
-import client, { ContentfulFields, transformContentfulItem } from '../client';
-import { generateRssFeed } from '../rss';
+import { getPosts } from '../lib/client';
+import { generateRssFeed } from '../lib/rss';
 
 const Page = () => {
   return null;
@@ -16,13 +16,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     return;
   }
 
-  const { items } = await client.getEntries<ContentfulFields>({
-    content_type: 'post',
-    order: '-fields.dateCreated',
-  });
-
-  const posts = await Promise.all(items.map(transformContentfulItem));
-  const rss = await generateRssFeed(posts as any);
+  const posts = await getPosts();
+  const rss = generateRssFeed(posts as any);
 
   res.setHeader('Content-Type', 'text/xml');
   res.write(rss);

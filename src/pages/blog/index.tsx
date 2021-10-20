@@ -2,10 +2,7 @@ import React from 'react';
 import { NextPage } from 'next';
 
 import { Post } from '../../types';
-import client, {
-  transformContentfulItem,
-  ContentfulFields,
-} from '../../client';
+import { getPosts } from '../../lib/client';
 import Layout from '../../components/Layout';
 import PostGrid from '../../components/PostGrid';
 import SEO from '../../components/SEO';
@@ -28,12 +25,7 @@ const Blog: NextPage<Props> = ({ posts }) => (
 );
 
 export async function getStaticProps() {
-  const { items } = await client.getEntries<ContentfulFields>({
-    content_type: 'post',
-    order: '-fields.dateCreated',
-  });
-
-  const posts = await Promise.all(items.map(transformContentfulItem));
+  const posts = await getPosts();
 
   return {
     props: {

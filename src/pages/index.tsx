@@ -5,7 +5,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostGrid from '../components/PostGrid';
-import client, { transformContentfulItem, ContentfulFields } from '../client';
+import { getPosts } from '../lib/client';
 import { Post } from '../types';
 
 interface Props {
@@ -51,13 +51,9 @@ const Index: NextPage<Props> = ({ posts }) => {
 };
 
 export async function getStaticProps() {
-  const { items } = await client.getEntries<ContentfulFields>({
+  const posts = await getPosts({
     limit: 3,
-    content_type: 'post',
-    order: '-fields.dateCreated',
   });
-
-  const posts = await Promise.all(items.map(transformContentfulItem));
 
   return {
     props: {
