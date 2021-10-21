@@ -1,7 +1,6 @@
 import dayjs from 'dayjs';
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { GetStaticPropsContext } from 'next';
 
 import { Post } from '../../types';
@@ -18,16 +17,10 @@ interface Props {
 }
 
 const Page: React.FC<Props> = ({ post }) => {
-  const router = useRouter();
-
-  if (!router.isReady) {
-    return null;
-  }
-
   const seoProps: React.ComponentProps<typeof SEO> = {
     title: post.title,
     description: post.excerpt,
-    url: window.location.href,
+    url: `https://mikefrancis.dev/blog/${post.slug}`,
   };
 
   if (post.featuredImage) {
