@@ -20,7 +20,7 @@ const Page: React.FC<Props> = ({ post }) => {
   const seoProps: React.ComponentProps<typeof SEO> = {
     title: post.title,
     description: post.excerpt,
-    url: window.location.href,
+    url: `https://mikefrancis.dev/blog/${post.slug}`,
   };
 
   if (post.featuredImage) {
