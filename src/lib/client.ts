@@ -1,5 +1,5 @@
 import * as contentful from 'contentful';
-import micromark from 'micromark';
+import { micromark } from 'micromark';
 
 import { timeToRead } from './utils';
 
