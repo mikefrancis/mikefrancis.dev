@@ -47,6 +47,9 @@ const securityHeaders = [
 ];
 
 module.exports = {
+  i18n: {
+    defaultLocale: 'en',
+  },
   async headers() {
     return [
       {
