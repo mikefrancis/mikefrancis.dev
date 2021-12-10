@@ -28,7 +28,7 @@ const Layout: React.FC = ({ children }) => {
               onClick={toggleTheme}
               className="transition border-4 h-4 w-8 rounded-full bg-gray-800 border-gray-800 dark:bg-white dark:border-white"
             >
-              <span className="transition rounded-full block w-2 h-2 bg-white border-white dark:bg-gray-800 dark:border-gray-800 transform dark:translate-x-4" />
+              <span className="transition rounded-full block w-2 h-2 bg-white border-white dark:bg-gray-800 dark:border-gray-800 dark:translate-x-4" />
             </button>
           </div>
         </header>
