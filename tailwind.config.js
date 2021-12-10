@@ -1,6 +1,6 @@
 module.exports = {
   darkMode: 'class',
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
       sans: ['Work Sans', 'sans-serif'],
@@ -15,11 +15,6 @@ module.exports = {
           raw: 'print',
         },
       },
-    },
-  },
-  variants: {
-    extend: {
-      translate: ['dark'],
     },
   },
   plugins: [],
