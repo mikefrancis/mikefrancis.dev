@@ -1,0 +1,26 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Running pre-commit checks'
+
+# Format code
+echo 'Formatting...'
+npm run prettier
+
+# Lint our code
+echo 'Linting...'
+npm run lint ||
+(
+    echo '❌ Linting failed'
+    false;
+)
+
+# Check our TS compiles
+echo 'Compiling...'
+npm run typecheck ||
+(
+    echo '❌ Typecheck failed'
+    false;
+)
+
+echo '✅ Looks good'

@@ -28,7 +28,7 @@ const useKeyboard = (keyCode: number, onKeyPress: Function) => {
 const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = React.useState(THEME_LIGHT);
   const toggleTheme = () => {
-    setTheme(theme => (theme === THEME_DARK ? THEME_LIGHT : THEME_DARK));
+    setTheme((theme) => (theme === THEME_DARK ? THEME_LIGHT : THEME_DARK));
   };
 
   useKeyboard(KEYCODE_T, toggleTheme);
