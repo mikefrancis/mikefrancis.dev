@@ -26,8 +26,7 @@ const Index: NextPage<Props> = ({ posts }) => {
               Technical Leader, Software Engineer & UI Designer based in London,
               UK.
               <br />
-              Currently building and scaling broadband for good
-              at{' '}
+              Currently building and scaling broadband for good at{' '}
               <a className="hover:underline" href="https://cuckoo.co">
                 Cuckoo
               </a>

@@ -11,7 +11,7 @@ interface Props {
 const PostGrid: React.FC<Props> = ({ posts }) => {
   return (
     <div className="md:flex md:flex-wrap md:-mx-8">
-      {posts.map(post => (
+      {posts.map((post) => (
         <div key={post.id} className="md:w-1/3 md:px-8 mb-8 md:mb-16">
           <article>
             <h3 className="text-2xl mb-3">
