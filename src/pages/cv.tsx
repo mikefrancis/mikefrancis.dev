@@ -72,8 +72,8 @@ const CV: React.FC = () => {
                       </p>
                     </div>
                     <p>
-                      Managing and scaling 2 product engineering teams,
-                      currently consisting of 9 direct reports. Focussing mainly
+                      Managing and scaling 3 product engineering teams,
+                      currently consisting of 12 direct reports. Focussing mainly
                       on career development & coaching, hiring, onboarding,
                       regular feedback, continuous improvement and operational
                       standards.
