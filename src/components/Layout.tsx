@@ -17,7 +17,7 @@ const Layout: React.FC = ({ children }) => {
         <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">
           <div className="max-w-5xl flex">
             <div className="flex-1">
-              <Link href="/">
+              <Link href="/" prefetch={false}>
                 <a className="uppercase text-sm tracking-widest">
                   Mike Francis
                 </a>

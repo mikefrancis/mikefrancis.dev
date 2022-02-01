@@ -1,6 +1,5 @@
 import { AppPropsType } from 'next/dist/shared/lib/utils';
 import React from 'react';
-import 'prismjs';
 import 'typeface-work-sans';
 
 import ThemeProvider from '../components/ThemeProvider';

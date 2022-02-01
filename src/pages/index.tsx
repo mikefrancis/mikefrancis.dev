@@ -39,7 +39,7 @@ const Index: NextPage<Props> = ({ posts }) => {
           </h2>
           <PostGrid posts={posts} />
           <p className="mb-8 text-gray-600 dark:text-gray-400">
-            <Link href="/blog">
+            <Link href="/blog" prefetch={false}>
               <a>More from the archive →</a>
             </Link>
           </p>
