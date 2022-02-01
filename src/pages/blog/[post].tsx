@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import React from 'react';
 import Link from 'next/link';
 import { GetStaticPropsContext } from 'next';
+import 'prismjs';
 
 import { Post } from '../../types';
 import Layout from '../../components/Layout';
