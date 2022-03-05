@@ -223,7 +223,7 @@ const CV: React.FC = () => {
               </article>
               <article>
                 <h3 className="font-bold">
-                  A-levels (B, C, D, E) - Penistone 6th Form
+                  A-levels - Penistone 6th Form
                 </h3>
                 <h4 className="text-gray-700">September 2002 - June 2004</h4>
               </article>
