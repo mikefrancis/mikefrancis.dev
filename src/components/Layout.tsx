@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-import { ThemeContext, THEME_DARK } from './ThemeProvider';
-import { usePanelbear } from './usePanelbear';
+import { ThemeContext, THEME_DARK } from "./ThemeProvider";
+import { usePanelbear } from "./usePanelbear";
 
 const Layout: React.FC = ({ children }) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
@@ -11,7 +11,7 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <div
-      className={`font-sans antialiased ${theme === THEME_DARK ? 'dark' : ''}`}
+      className={`font-sans antialiased ${theme === THEME_DARK ? "dark" : ""}`}
     >
       <div className="min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white">
         <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">
@@ -54,6 +54,20 @@ const Layout: React.FC = ({ children }) => {
                     fill="currentcolor"
                     d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
                   />
+                </svg>
+              </a>
+              <a
+                className="mx-3"
+                href="https://twitter.com/_mikefrancis"
+                title="Mastodon"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z" />
                 </svg>
               </a>
               <a
