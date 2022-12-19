@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
-import { ThemeContext, THEME_DARK } from "./ThemeProvider";
-import { usePanelbear } from "./usePanelbear";
+import { ThemeContext, THEME_DARK } from './ThemeProvider';
+import { usePanelbear } from './usePanelbear';
 
 const Layout: React.FC = ({ children }) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
@@ -11,7 +11,7 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <div
-      className={`font-sans antialiased ${theme === THEME_DARK ? "dark" : ""}`}
+      className={`font-sans antialiased ${theme === THEME_DARK ? 'dark' : ''}`}
     >
       <div className="min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white">
         <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">
@@ -58,7 +58,7 @@ const Layout: React.FC = ({ children }) => {
               </a>
               <a
                 className="mx-3"
-                href="https://twitter.com/_mikefrancis"
+                href="https://home.social/@mikefrancis"
                 title="Mastodon"
               >
                 <svg
