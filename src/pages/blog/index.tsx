@@ -2,7 +2,7 @@ import React from 'react';
 import { NextPage } from 'next';
 
 import { Post } from '../../types';
-import { getPosts } from '../../lib/client';
+import { getPosts } from '../../lib/contentful';
 import Layout from '../../components/Layout';
 import PostGrid from '../../components/PostGrid';
 import SEO from '../../components/SEO';

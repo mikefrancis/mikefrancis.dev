@@ -5,7 +5,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostGrid from '../components/PostGrid';
-import { getPosts } from '../lib/client';
+import { getPosts } from '../lib/contentful';
 import { Post } from '../types';
 
 interface Props {
@@ -26,7 +26,8 @@ const Index: NextPage<Props> = ({ posts }) => {
               Technical Leader, Software Engineer & UI Designer based in London,
               UK.
               <br />
-              Currently building something completely new in the green tech space.
+              Currently building something completely new in the green tech
+              space.
             </h1>
           </div>
 

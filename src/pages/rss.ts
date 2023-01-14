@@ -1,6 +1,6 @@
 import { GetServerSidePropsContext } from 'next';
 
-import { getPosts } from '../lib/client';
+import { getPosts } from '../lib/contentful';
 import { generateRssFeed } from '../lib/rss';
 
 const Page = () => {
