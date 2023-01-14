@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import React, { FormEvent } from 'react';
 import Link from 'next/link';
-import { GetStaticPropsContext } from 'next';
+import { GetStaticPropsContext, NextPage } from 'next';
 import useSWR from 'swr';
 
 import { Post } from '../../types';
@@ -19,7 +19,7 @@ interface Props {
   post: Post;
 }
 
-const Page: React.FC<Props> = ({ post }) => {
+const Page: NextPage<Props> = ({ post }) => {
   const { data, isLoading, mutate } = useSWR(`/api/${post.slug}`, fetcher);
 
   const handleSubmit = async (event: FormEvent) => {
@@ -78,10 +78,8 @@ const Page: React.FC<Props> = ({ post }) => {
           </article>
 
           <div className="mb-8 flex justify-between">
-            <Link href="/blog">
-              <a className="text-gray-600 dark:text-gray-400">
-                ← Back to the archive
-              </a>
+            <Link href="/blog" className="text-gray-600 dark:text-gray-400">
+              ← Back to the archive
             </Link>
             <form
               className="flex items-center text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"

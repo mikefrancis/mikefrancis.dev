@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 export const THEME_LIGHT = 'light';
 export const THEME_DARK = 'dark';
@@ -25,7 +25,11 @@ const useKeyboard = (keyCode: number, onKeyPress: Function) => {
   });
 };
 
-const ThemeProvider: React.FC = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const ThemeProvider = ({ children }: Props) => {
   const [theme, setTheme] = React.useState(THEME_LIGHT);
   const toggleTheme = () => {
     setTheme((theme) => (theme === THEME_DARK ? THEME_LIGHT : THEME_DARK));

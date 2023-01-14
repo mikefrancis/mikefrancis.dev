@@ -1,6 +1,6 @@
 import * as Panelbear from '@panelbear/panelbear-js';
 import { useRouter } from 'next/router';
-import React from 'react';
+import * as React from 'react';
 
 export const usePanelbear = () => {
   const router = useRouter();

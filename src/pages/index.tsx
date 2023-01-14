@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
-import React from 'react';
+import * as React from 'react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -37,7 +37,7 @@ const Index: NextPage<Props> = ({ posts }) => {
           <PostGrid posts={posts} />
           <p className="mb-8 text-gray-600 dark:text-gray-400">
             <Link href="/blog" prefetch={false}>
-              <a>More from the archive →</a>
+              More from the archive →
             </Link>
           </p>
         </div>

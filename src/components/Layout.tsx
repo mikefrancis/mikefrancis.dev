@@ -1,10 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import Link from 'next/link';
 
 import { ThemeContext, THEME_DARK } from './ThemeProvider';
 import { usePanelbear } from './usePanelbear';
 
-const Layout: React.FC = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: Props) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
 
   usePanelbear();
@@ -17,10 +21,12 @@ const Layout: React.FC = ({ children }) => {
         <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">
           <div className="max-w-5xl flex">
             <div className="flex-1">
-              <Link href="/" prefetch={false}>
-                <a className="uppercase text-sm tracking-widest">
-                  Mike Francis
-                </a>
+              <Link
+                href="/"
+                prefetch={false}
+                className="uppercase text-sm tracking-widest"
+              >
+                Mike Francis
               </Link>
             </div>
             <button

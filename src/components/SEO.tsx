@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Head from 'next/head';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   url?: string;
 }
 
-const SEO: React.FC<Props> = ({ title, description, image, url }) => {
+const SEO = ({ title, description, image, url }: Props) => {
   const meta = [
     {
       name: 'title',

@@ -1,6 +1,7 @@
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.panelbear.com;
+  frame-src 'self' vercel.live;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.panelbear.com vercel.live;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src 'none';
