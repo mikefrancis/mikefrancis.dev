@@ -1,9 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import Head from 'next/head';
+import { NextPage } from 'next';
 
 import { usePanelbear } from '../components/usePanelbear';
 
-const CV: React.FC = () => {
+const CV: NextPage = () => {
   usePanelbear();
 
   return (
@@ -73,10 +74,10 @@ const CV: React.FC = () => {
                     </div>
                     <p>
                       Managing and scaling 3 product engineering teams,
-                      currently consisting of 12 direct reports. Focussing mainly
-                      on career development & coaching, hiring, onboarding,
-                      regular feedback, continuous improvement and operational
-                      standards.
+                      currently consisting of 12 direct reports. Focussing
+                      mainly on career development & coaching, hiring,
+                      onboarding, regular feedback, continuous improvement and
+                      operational standards.
                     </p>
                   </article>
                   <article className="mb-4">
@@ -222,9 +223,7 @@ const CV: React.FC = () => {
                 <h4 className="text-gray-700">September 2004 - June 2008</h4>
               </article>
               <article>
-                <h3 className="font-bold">
-                  A-levels - Penistone 6th Form
-                </h3>
+                <h3 className="font-bold">A-levels - Penistone 6th Form</h3>
                 <h4 className="text-gray-700">September 2002 - June 2004</h4>
               </article>
             </section>

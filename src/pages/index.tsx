@@ -1,11 +1,11 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
-import React from 'react';
+import * as React from 'react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import PostGrid from '../components/PostGrid';
-import { getPosts } from '../lib/client';
+import { getPosts } from '../lib/contentful';
 import { Post } from '../types';
 
 interface Props {
@@ -26,7 +26,8 @@ const Index: NextPage<Props> = ({ posts }) => {
               Technical Leader, Software Engineer & UI Designer based in London,
               UK.
               <br />
-              Currently building something completely new in the green tech space.
+              Currently building something completely new in the green tech
+              space.
             </h1>
           </div>
 
@@ -36,7 +37,7 @@ const Index: NextPage<Props> = ({ posts }) => {
           <PostGrid posts={posts} />
           <p className="mb-8 text-gray-600 dark:text-gray-400">
             <Link href="/blog" prefetch={false}>
-              <a>More from the archive →</a>
+              More from the archive →
             </Link>
           </p>
         </div>

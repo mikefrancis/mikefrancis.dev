@@ -1,6 +1,7 @@
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.panelbear.com;
+  frame-src 'self' vercel.live;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.panelbear.com vercel.live;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src 'none';
@@ -63,15 +64,16 @@ module.exports = {
       },
     ];
   },
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
-      });
-    }
+  // Had to disable as preact doesn't want to work with the Star stuff
+  // webpack: (config, { dev, isServer }) => {
+  //   if (!dev && !isServer) {
+  //     Object.assign(config.resolve.alias, {
+  //       react: 'preact/compat',
+  //       'react-dom/test-utils': 'preact/test-utils',
+  //       'react-dom': 'preact/compat',
+  //     });
+  //   }
 
-    return config;
-  },
+  //   return config;
+  // },
 };

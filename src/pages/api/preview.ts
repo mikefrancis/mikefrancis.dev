@@ -1,10 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getPreviewPostBySlug } from '../../lib/client';
+import { getPreviewPostBySlug } from '../../lib/contentful';
 
-export default async function preview(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { token, slug } = req.query;
 
   if (token !== process.env.CONTENTFUL_PREVIEW_SECRET || !slug) {
@@ -26,3 +23,5 @@ export default async function preview(
   res.writeHead(307, { Location: `/blog/${post.slug}` });
   res.end();
 }
+
+export default handler;
