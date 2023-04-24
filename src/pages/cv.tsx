@@ -2,11 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { NextPage } from 'next';
 
-import { usePanelbear } from '../components/usePanelbear';
-
 const CV: NextPage = () => {
-  usePanelbear();
-
   return (
     <>
       <Head>
