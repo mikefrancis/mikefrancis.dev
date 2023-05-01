@@ -1,6 +1,5 @@
+import kv from '@vercel/kv';
 import { NextApiRequest, NextApiResponse } from 'next';
-
-import prisma from '../../lib/prisma';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { query, method } = req;
@@ -13,14 +12,14 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
+  let count = (await kv.get<number>(post)) ?? 0;
+
   // If it's a POST, add a star
   if (method === 'POST') {
+    count++;
+
     try {
-      await prisma.star.create({
-        data: {
-          post,
-        },
-      });
+      await kv.set(post, count);
     } catch (e) {
       console.error('Request error', e);
 
@@ -31,14 +30,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   // If it's a GET (or after a POST), return the total stars
   try {
-    const stars = await prisma.star.count({
-      where: {
-        post,
-      },
-    });
-
     res.json({
-      stars,
+      stars: count,
     });
   } catch (e) {
     console.error('Request error', e);

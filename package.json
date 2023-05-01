@@ -19,13 +19,12 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@prisma/client": "^4.8.1",
     "@vercel/analytics": "^1.0.0",
+    "@vercel/kv": "^0.1.0",
     "contentful": "^9.2.15",
     "dayjs": "^1.11.7",
     "micromark": "^3.1.0",
     "next": "^13.1.2",
-    "preact": "^10.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swr": "^2.0.0",
@@ -40,7 +39,6 @@
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
-    "prisma": "^4.8.1",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.4"
   }
