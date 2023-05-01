@@ -1,7 +1,7 @@
 const ContentSecurityPolicy = `
   default-src 'self';
   frame-src 'self' vercel.live;
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' vercel.live;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' vercel.live vitals.vercel-insights.com;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src 'none';
@@ -64,16 +64,4 @@ module.exports = {
       },
     ];
   },
-  // Had to disable as preact doesn't want to work with the Star stuff
-  // webpack: (config, { dev, isServer }) => {
-  //   if (!dev && !isServer) {
-  //     Object.assign(config.resolve.alias, {
-  //       react: 'preact/compat',
-  //       'react-dom/test-utils': 'preact/test-utils',
-  //       'react-dom': 'preact/compat',
-  //     });
-  //   }
-
-  //   return config;
-  // },
 };
