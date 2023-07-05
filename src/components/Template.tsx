@@ -1,8 +1,11 @@
+'use client';
+
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PropsWithChildren } from 'react';
 
-import { THEME_DARK, useTheme } from './ThemeProvider';
+import { THEME_DARK, useTheme } from '../components/ThemeProvider';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -11,11 +14,7 @@ const inter = Inter({
   weight: ['400', '700', '900'],
 });
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Layout = ({ children }: Props) => {
+export const Template = ({ children }: PropsWithChildren) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -87,5 +86,3 @@ const Layout = ({ children }: Props) => {
     </div>
   );
 };
-
-export default Layout;

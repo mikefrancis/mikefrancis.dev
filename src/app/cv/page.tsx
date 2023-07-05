@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
@@ -9,7 +9,11 @@ const inter = Inter({
   weight: ['400', '700', '900'],
 });
 
-const CV: NextPage = () => {
+export const metadata: Metadata = {
+  title: 'Mike Francis CV',
+};
+
+const Page = () => {
   return (
     <>
       <Head>
@@ -278,4 +282,4 @@ const CV: NextPage = () => {
   );
 };
 
-export default CV;
+export default Page;

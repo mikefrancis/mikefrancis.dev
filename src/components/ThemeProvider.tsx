@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, useContext, useEffect, useState } from 'react';
 
 export const THEME_LIGHT = 'light';
@@ -8,7 +10,7 @@ const ThemeContext = createContext({
   toggleTheme: () => {},
 });
 
-const useKeyboard = (key: string, onKeyPress: Function) => {
+const useKeyboard = (key: string, onKeyPress: () => void) => {
   useEffect(() => {
     const listener = (event: KeyboardEvent) => {
       if (event.key === key) {
