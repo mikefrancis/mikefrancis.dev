@@ -1,6 +1,5 @@
-import * as React from 'react';
-import Head from 'next/head';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 const CV: NextPage = () => {
   return (

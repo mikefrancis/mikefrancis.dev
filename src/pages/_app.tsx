@@ -1,12 +1,11 @@
-import { AppPropsType } from 'next/dist/shared/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
-import * as React from 'react';
-import 'typeface-work-sans';
+import { AppProps } from 'next/app';
 
-import ThemeProvider from '../components/ThemeProvider';
+import { ThemeProvider } from '../components/ThemeProvider';
+
 import '../styles/global.css';
 
-const WrappedApp = ({ Component, pageProps }: AppPropsType) => {
+const WrappedApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider>
       <Component {...pageProps} />

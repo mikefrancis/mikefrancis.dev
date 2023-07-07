@@ -19,23 +19,22 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@vercel/analytics": "^1.0.0",
-    "@vercel/kv": "^0.1.0",
+    "@vercel/analytics": "^1.0.1",
+    "@vercel/kv": "^0.2.2",
     "contentful": "^9.2.15",
     "dayjs": "^1.11.7",
     "micromark": "^3.1.0",
-    "next": "^13.1.2",
+    "next": "^13.4.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "swr": "^2.0.0",
-    "typeface-work-sans": "^1.1.13"
+    "swr": "^2.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.26",
+    "@types/node": "^20.4.0",
+    "@types/react": "^18.2.14",
     "autoprefixer": "^10.4.13",
-    "eslint": "^8.31.0",
-    "eslint-config-next": "^13.1.2",
+    "eslint": "^8.44.0",
+    "eslint-config-next": "^13.4.9",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",

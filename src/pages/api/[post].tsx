@@ -1,4 +1,4 @@
-import kv from '@vercel/kv';
+import { kv } from '@vercel/kv';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {

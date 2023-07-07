@@ -1,10 +1,9 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
-import * as React from 'react';
 
 import Layout from '../components/Layout';
-import SEO from '../components/SEO';
 import PostGrid from '../components/PostGrid';
+import SEO from '../components/SEO';
 import { getPosts } from '../lib/contentful';
 import { Post } from '../types';
 
@@ -22,7 +21,7 @@ const Index: NextPage<Props> = ({ posts }) => {
       <Layout>
         <div className="max-w-5xl">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-headline mb-16 md:mb-32">
+            <h1 className="text-3xl md:text-4xl md:leading-normal mb-16 md:mb-32">
               Technical Leader, Software Engineer & UI Designer based in London,
               UK.
               <br />
