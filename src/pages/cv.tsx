@@ -1,17 +1,17 @@
 import { NextPage } from 'next';
+import { Work_Sans } from 'next/font/google';
 import Head from 'next/head';
+
+const workSans = Work_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-work-sans',
+});
 
 const CV: NextPage = () => {
   return (
     <>
       <Head>
-        <style media="screen">
-          {`
-        body {
-          padding: 2rem;
-        }
-      `}
-        </style>
         <style media="print">
           {`
         :root {
@@ -21,7 +21,9 @@ const CV: NextPage = () => {
         </style>
         <title>Mike Francis CV</title>
       </Head>
-      <div className="font-sans text-black md:flex print:flex max-w-5xl">
+      <div
+        className={`${workSans.variable} font-sans text-black md:flex p-10 print:p-0 print:flex max-w-5xl`}
+      >
         <div className="flex-1 md:pr-16 print:pr-16">
           <header className="mb-8">
             <h1 className="text-4xl mb-4 uppercase tracking-widest">
