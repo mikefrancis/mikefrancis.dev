@@ -1,10 +1,9 @@
 import dayjs from 'dayjs';
-import React, { FormEvent } from 'react';
-import Link from 'next/link';
 import { GetStaticPropsContext, NextPage } from 'next';
+import Link from 'next/link';
+import { FormEvent } from 'react';
 import useSWR from 'swr';
 
-import { Post } from '../../types';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import {
@@ -12,6 +11,7 @@ import {
   getPostBySlug,
   getPosts,
 } from '../../lib/contentful';
+import { Post } from '../../types';
 
 const fetcher = (...args: any) => fetch(args).then((res) => res.json());
 

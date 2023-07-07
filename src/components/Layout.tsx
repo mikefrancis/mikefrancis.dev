@@ -1,18 +1,26 @@
-import * as React from 'react';
+import { Work_Sans } from 'next/font/google';
 import Link from 'next/link';
 
-import { ThemeContext, THEME_DARK } from './ThemeProvider';
+import { THEME_DARK, useTheme } from './ThemeProvider';
+
+const workSans = Work_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-work-sans',
+});
 
 interface Props {
   children: React.ReactNode;
 }
 
 const Layout = ({ children }: Props) => {
-  const { theme, toggleTheme } = React.useContext(ThemeContext);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div
-      className={`font-sans antialiased ${theme === THEME_DARK ? 'dark' : ''}`}
+      className={`${workSans.variable} font-sans antialiased ${
+        theme === THEME_DARK ? 'dark' : ''
+      }`}
     >
       <div className="min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white">
         <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">

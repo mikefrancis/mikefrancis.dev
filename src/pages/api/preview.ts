@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+
 import { getPreviewPostBySlug } from '../../lib/contentful';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
