@@ -23,7 +23,7 @@ const Layout = ({ children }: Props) => {
       }`}
     >
       <div className="min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white">
-        <header className="p-8 pb-16 md:px-32 md:pt-16 md:pb-32">
+        <header className="p-8 pb-16 md:px-16 lg:px-32 lg:pt-16 lg:pb-32">
           <div className="max-w-5xl flex">
             <div className="flex-1">
               <Link
@@ -43,8 +43,8 @@ const Layout = ({ children }: Props) => {
             </button>
           </div>
         </header>
-        <main className="px-8 pb-8 md:px-32 md:pb-16">{children}</main>
-        <footer className="px-8 pb-8 md:px-32 md:pb-16">
+        <main className="px-8 pb-8 md:px-16 lg:px-32 lg:pb-16">{children}</main>
+        <footer className="px-8 pb-8 md:px-16 lg:px-32 lg:pb-16">
           <div className="max-w-5xl md:flex items-center">
             <div className="flex-1 text-sm tracking-widest text-center md:text-left">
               &copy; {new Date().getFullYear()}
