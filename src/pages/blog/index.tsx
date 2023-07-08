@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 
 import Layout from '../../components/Layout';
+import PageTitle from '../../components/PageTitle';
 import PostGrid from '../../components/PostGrid';
 import SEO from '../../components/SEO';
 import { getPosts } from '../../lib/contentful';
@@ -14,9 +15,10 @@ const Blog: NextPage<Props> = ({ posts }) => (
   <>
     <SEO title="Blog Archive" />
     <Layout>
-      <div className="max-w-5xl">
-        <h1 className="text-4xl mb-16 md:mb-32">Blog Archive</h1>
-
+      <div className="space-y-10 lg:space-y-20">
+        <div className="text-center">
+          <PageTitle>Blog Archive</PageTitle>
+        </div>
         <PostGrid posts={posts} />
       </div>
     </Layout>

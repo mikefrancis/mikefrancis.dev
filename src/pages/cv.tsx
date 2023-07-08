@@ -1,11 +1,12 @@
 import { NextPage } from 'next';
-import { Work_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
-const workSans = Work_Sans({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-work-sans',
+  variable: '--font-inter',
+  weight: ['400', '700', '900'],
 });
 
 const CV: NextPage = () => {
@@ -22,7 +23,7 @@ const CV: NextPage = () => {
         <title>Mike Francis CV</title>
       </Head>
       <div
-        className={`${workSans.variable} font-sans text-black md:flex p-10 print:p-0 print:flex max-w-5xl`}
+        className={`${inter.variable} font-sans text-black md:flex p-10 print:p-0 print:flex max-w-5xl`}
       >
         <div className="flex-1 md:pr-16 print:pr-16">
           <header className="mb-8">
