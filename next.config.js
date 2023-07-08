@@ -52,6 +52,9 @@ module.exports = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  images: {
+    domains: ['www.gravatar.com'],
+  },
   async headers() {
     return [
       {

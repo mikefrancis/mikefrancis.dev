@@ -1,12 +1,14 @@
-import { Work_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { THEME_DARK, useTheme } from './ThemeProvider';
 
-const workSans = Work_Sans({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-work-sans',
+  variable: '--font-inter',
+  weight: ['400', '700', '900'],
 });
 
 interface Props {
@@ -18,22 +20,26 @@ const Layout = ({ children }: Props) => {
 
   return (
     <div
-      className={`${workSans.variable} font-sans antialiased ${
+      className={`${inter.variable} font-sans antialiased ${
         theme === THEME_DARK ? 'dark' : ''
       }`}
     >
-      <div className="min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white">
-        <header className="p-8 pb-16 md:px-16 lg:px-32 lg:pt-16 lg:pb-32">
-          <div className="max-w-5xl flex">
-            <div className="flex-1">
-              <Link
-                href="/"
-                prefetch={false}
-                className="uppercase text-sm tracking-widest"
-              >
-                Mike Francis
-              </Link>
-            </div>
+      <div className="min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white py-10 md:py-20 space-y-10 md:space-y-20">
+        <header className="px-5 md:px-10 lg:px-20">
+          <div className="mx-auto max-w-5xl flex items-center justify-between">
+            <Link
+              href="/"
+              prefetch={false}
+              className="uppercase text-sm tracking-widest"
+            >
+              <Image
+                className="rounded-full hover:animate-pulse"
+                src="https://www.gravatar.com/avatar/1399c5690d715fc64f800b26be3b9cee"
+                alt="Mike Francis"
+                width={48}
+                height={48}
+              />
+            </Link>
             <button
               title="Toggle theme (T)"
               onClick={toggleTheme}
@@ -43,18 +49,16 @@ const Layout = ({ children }: Props) => {
             </button>
           </div>
         </header>
-        <main className="px-8 pb-8 md:px-16 lg:px-32 lg:pb-16">{children}</main>
-        <footer className="px-8 pb-8 md:px-16 lg:px-32 lg:pb-16">
-          <div className="max-w-5xl md:flex items-center">
+        <main className="px-5 md:px-10 lg:px-20">
+          <div className="mx-auto max-w-5xl">{children}</div>
+        </main>
+        <footer className="px-5 md:px-10 lg:px-20">
+          <div className="mx-auto max-w-5xl md:flex items-center">
             <div className="flex-1 text-sm tracking-widest text-center md:text-left">
               &copy; {new Date().getFullYear()}
             </div>
-            <nav className="flex justify-center -mx-4 mt-8 md:mt-0">
-              <a
-                className="mx-3"
-                href="https://github.com/mikefrancis"
-                title="GitHub"
-              >
+            <nav className="flex justify-center space-x-5 mt-8 md:mt-0">
+              <a href="https://github.com/mikefrancis" title="GitHub">
                 <svg
                   width="24"
                   height="24"
@@ -67,11 +71,7 @@ const Layout = ({ children }: Props) => {
                   />
                 </svg>
               </a>
-              <a
-                className="mx-3"
-                href="https://home.social/@mikefrancis"
-                title="Mastodon"
-              >
+              <a href="https://home.social/@mikefrancis" title="Mastodon">
                 <svg
                   width="24"
                   height="24"
@@ -84,11 +84,7 @@ const Layout = ({ children }: Props) => {
                   />
                 </svg>
               </a>
-              <a
-                className="mx-3"
-                href="https://twitter.com/_mikefrancis"
-                title="Twitter"
-              >
+              <a href="https://twitter.com/_mikefrancis" title="Twitter">
                 <svg
                   width="24"
                   height="24"
@@ -101,11 +97,7 @@ const Layout = ({ children }: Props) => {
                   />
                 </svg>
               </a>
-              <a
-                className="mx-3"
-                href="https://dribbble.com/mikefrancis"
-                title="Dribbble"
-              >
+              <a href="https://dribbble.com/mikefrancis" title="Dribbble">
                 <svg
                   width="24"
                   height="24"
@@ -119,7 +111,6 @@ const Layout = ({ children }: Props) => {
                 </svg>
               </a>
               <a
-                className="mx-3"
                 href="https://www.linkedin.com/in/mike-francis-77a65511/"
                 title="LinkedIn"
               >
@@ -135,11 +126,7 @@ const Layout = ({ children }: Props) => {
                   />
                 </svg>
               </a>
-              <a
-                className="mx-3"
-                href="mailto:mikeffrancis@gmail.com"
-                title="Mail"
-              >
+              <a href="mailto:mikeffrancis@gmail.com" title="Mail">
                 <svg
                   width="24"
                   height="24"
