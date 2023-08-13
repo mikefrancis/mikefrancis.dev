@@ -1,11 +1,12 @@
 import dayjs from 'dayjs';
 import { Metadata } from 'next';
+import { draftMode } from 'next/headers';
 import Link from 'next/link';
 
 import Button from '../../../components/Button';
 import PageTitle from '../../../components/PageTitle';
 import Stars from '../../../components/Stars';
-import { getPostBySlug } from '../../../lib/contentful';
+import { getPostBySlug, getPreviewPostBySlug } from '../../../lib/contentful';
 
 interface Props {
   params: {
@@ -16,20 +17,23 @@ interface Props {
 export const generateMetadata = async ({
   params: { post: slug },
 }: Props): Promise<Metadata> => {
-  const post = await getPostBySlug(slug);
+  const query = draftMode().isEnabled ? getPreviewPostBySlug : getPostBySlug;
+  const post = await query(slug);
 
   return {
     title: post.title,
     description: post.excerpt,
-    openGraph: {
-      images: [`https:${post.featuredImage.fields.file.url}`],
-    },
+    openGraph: post.featuredImage
+      ? {
+          images: [`https:${post.featuredImage.fields.file.url}`],
+        }
+      : null,
   };
 };
 
 const Page = async ({ params: { post: slug } }: Props) => {
-  // const query = context.preview ? getPreviewPostBySlug : getPostBySlug;
-  const post = await getPostBySlug(slug);
+  const query = draftMode().isEnabled ? getPreviewPostBySlug : getPostBySlug;
+  const post = await query(slug);
 
   return (
     <article className="space-y-10">
