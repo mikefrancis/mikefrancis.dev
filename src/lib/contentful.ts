@@ -4,8 +4,14 @@ import { micromark } from 'micromark';
 import { timeToRead } from './utils';
 
 interface ContentfulFields {
+  title: string;
+  description: string;
+  dateCreated: string;
+  updatedAt: string;
   slug: string;
   content: string;
+  excerpt: string;
+  featuredImage: { fields: { file: { url: string } } };
 }
 
 const client = contentful.createClient({

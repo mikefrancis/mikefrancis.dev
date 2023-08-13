@@ -48,10 +48,6 @@ const securityHeaders = [
 ];
 
 module.exports = {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
   images: {
     domains: ['www.gravatar.com'],
   },

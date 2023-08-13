@@ -1,29 +1,16 @@
-import { Inter } from 'next/font/google';
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { PropsWithChildren } from 'react';
 
-import { THEME_DARK, useTheme } from './ThemeProvider';
+import { THEME_DARK, useTheme } from '../components/ThemeProvider';
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-  weight: ['400', '700', '900'],
-});
-
-interface Props {
-  children: React.ReactNode;
-}
-
-const Layout = ({ children }: Props) => {
+export const Template = ({ children }: PropsWithChildren) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div
-      className={`${inter.variable} font-sans antialiased ${
-        theme === THEME_DARK ? 'dark' : ''
-      }`}
-    >
+    <div className={theme === THEME_DARK ? 'dark' : ''}>
       <div className="min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white py-10 md:py-20 space-y-10 md:space-y-20">
         <header className="px-5 md:px-10 lg:px-20">
           <div className="mx-auto max-w-5xl flex items-center justify-between">
@@ -87,5 +74,3 @@ const Layout = ({ children }: Props) => {
     </div>
   );
 };
-
-export default Layout;
