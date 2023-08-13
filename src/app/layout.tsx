@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { PropsWithChildren } from 'react';
 
 import './global.css';
-import { Template } from '../components/Template';
 import { ThemeProvider } from '../components/ThemeProvider';
 
 const inter = Inter({
@@ -30,9 +29,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             </Link>
           </div>
         )}
-        <ThemeProvider>
-          <Template>{children}</Template>
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

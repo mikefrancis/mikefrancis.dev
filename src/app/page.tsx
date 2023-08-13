@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Button from '../components/Button';
 import PageTitle from '../components/PageTitle';
 import PostGrid from '../components/PostGrid';
+import { Template } from '../components/Template';
 import { getPosts } from '../lib/contentful';
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ const Page = async () => {
   });
 
   return (
-    <div className="">
+    <Template>
       <article className="max-w-4xl mx-auto space-y-5 md:space-y-10 text-center pt-10 pb-20 md:pt-20 md:pb-40">
         <PageTitle>Technical Leader, Software Engineer & UI Designer</PageTitle>
         <p className="text-xl">
@@ -50,7 +51,7 @@ const Page = async () => {
           </Button>
         </p>
       </aside>
-    </div>
+    </Template>
   );
 };
 
