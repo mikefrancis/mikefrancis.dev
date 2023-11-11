@@ -21,7 +21,7 @@
   "dependencies": {
     "@vercel/analytics": "^1.0.1",
     "@vercel/kv": "^0.2.2",
-    "contentful": "^9.2.15",
+    "contentful": "^10.6.7",
     "dayjs": "^1.11.7",
     "micromark": "^3.1.0",
     "next": "^13.4.9",
