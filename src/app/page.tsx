@@ -22,7 +22,7 @@ const Page = async () => {
       <article className="max-w-4xl mx-auto space-y-5 md:space-y-10 text-center pt-10 pb-20 md:pt-20 md:pb-40">
         <PageTitle>Technical Leader, Software Engineer & UI Designer</PageTitle>
         <p className="text-xl">
-          Leading engineering at <a href="https://sunsave.energy">Sunsave</a>, helping make solar more accessible in the UK.
+          Leading engineering at <a class="underline opacity-75 hover:opacity-100" href="https://sunsave.energy">Sunsave</a>, helping make solar more accessible in the UK.
         </p>
       </article>
 
