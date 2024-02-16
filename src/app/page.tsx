@@ -22,11 +22,7 @@ const Page = async () => {
       <article className="max-w-4xl mx-auto space-y-5 md:space-y-10 text-center pt-10 pb-20 md:pt-20 md:pb-40">
         <PageTitle>Technical Leader, Software Engineer & UI Designer</PageTitle>
         <p className="text-xl">
-          Currently building something completely
-          <span className="text-sm font-bold bg-gray-200 dark:bg-gray-900 mx-2 px-2 py-1 rounded inline-block -rotate-6 font-mono uppercase hover:animate-wiggle">
-            new
-          </span>
-          in the green tech space.
+          Leading engineering at <a className="underline opacity-75 hover:opacity-100" href="https://sunsave.energy">Sunsave</a>, helping make solar more accessible in the UK.
         </p>
       </article>
 
