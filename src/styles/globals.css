@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wysiwyg blockquote {
+  @apply border-l-4;
+  @apply border-gray-500;
+  @apply ml-0;
+  @apply pl-4;
+  @apply text-2xl;
+  @apply font-light;
+  @apply italic;
+}
+
+.wysiwyg a {
+  @apply border-b;
+  @apply border-gray-500;
+}
+
+.wysiwyg a:hover {
+  @apply opacity-75;
+}
+
+.wysiwyg h2,
+.wysiwyg h3 {
+  @apply text-2xl;
+  @apply font-semibold;
+  @apply mb-8;
+}
+
+.wysiwyg p,
+.wysiwyg pre,
+.wysiwyg ul,
+.wysiwyg ol {
+  @apply leading-relaxed;
+  @apply mb-8;
+}
+
+.wysiwyg pre,
+.wysiwyg code {
+  @apply transition;
+  @apply bg-gray-100;
+  @apply text-black;
+  @apply rounded;
+}
+
+.wysiwyg ul,
+.wysiwyg ol {
+  @apply pl-8;
+}
+
+.wysiwyg ul {
+  @apply list-disc;
+}
+
+.wysiwyg ol {
+  @apply list-decimal;
+}
+
+.wysiwyg code {
+  @apply text-sm;
+  @apply p-1;
+}
+
+.wysiwyg pre {
+  @apply p-4;
+  @apply overflow-x-scroll;
+  @apply w-full;
+}
+
+.wysiwyg img {
+  @apply max-w-full;
+}
+
+.wysiwyg pre code {
+  @apply bg-transparent;
+  @apply p-0;
+  @apply rounded-none;
+}
+
+.dark .wysiwyg pre,
+.dark .wysiwyg code {
+  @apply bg-gray-900;
+  @apply text-white;
+}
+
+.dark .wysiwyg a {
+  @apply border-white;
+}

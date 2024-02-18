@@ -1,29 +1,21 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# build output
+dist/
+# generated types
+.astro/
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
-/.next
+node_modules/
 
-# testing
-/coverage
-
-# gatsby files
-/.cache
-/public
-/build
-
-# misc
-.DS_Store
-
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
+
+# environment variables
 .env
+.env.production
 
-.now
-.vercel
-
-.eslintcache
+# macOS-specific files
+.DS_Store

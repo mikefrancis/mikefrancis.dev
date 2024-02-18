@@ -1,0 +1,9 @@
+---
+const { as: Element = "button", class: providedProps, ...props } = Astro.props;
+const componentClasses =
+  "group bg-gray-200 text-black hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-700 text-sm rounded-md inline-flex items-center px-4 py-2 font-semibold";
+---
+
+<Element {...props} class:list={[componentClasses, providedProps]}>
+  <slot />
+</Element>
