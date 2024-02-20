@@ -1,0 +1,22 @@
+---
+import type { BlogPost } from "../lib/contentful";
+import dayjs from "dayjs";
+
+const { posts } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+  {
+    posts.map((post: BlogPost) => (
+      <article class="space-y-3">
+        <h3 class="font-semibold">
+          <a href={`/blog/${post.slug}`}>{post.title}</a>
+        </h3>
+        <p class="uppercase text-xs tracking-widest text-gray-600 dark:text-gray-400">
+          {dayjs(post.date).format("MMMM YYYY")}
+        </p>
+        <p class="text-sm">{post.excerpt}</p>
+      </article>
+    ))
+  }
+</div>

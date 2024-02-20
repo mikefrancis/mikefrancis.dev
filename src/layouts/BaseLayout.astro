@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import "@fontsource/geist-sans/400.css";
+import "@fontsource/geist-sans/600.css";
+import "@fontsource/geist-sans/800.css";
+import "../styles/globals.css";
+import ThemeToggle from "../components/ThemeToggle.astro";
+
+const { title, description, image } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {image ? <meta property="og:image" content={`https://${image}`} /> : ""}
+  </head>
+  <body
+    class="antialiased min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white py-10 md:py-20 space-y-10 md:space-y-20"
+  >
+    <header class="px-5 md:px-10 lg:px-20">
+      <div class="mx-auto max-w-5xl flex items-center justify-between">
+        <a href="/" class="uppercase text-sm tracking-widest">
+          <Image
+            class="rounded-full"
+            src="https://www.gravatar.com/avatar/1399c5690d715fc64f800b26be3b9cee?s=96"
+            loading="eager"
+            alt="Mike Francis"
+            width={48}
+            height={48}
+          />
+        </a>
+        <nav class="flex justify-center space-x-2 md:space-x-5 font-semibold">
+          <a
+            class="underline-offset-4 hover:underline"
+            href="https://github.com/mikefrancis"
+          >
+            GitHub
+          </a>
+          <a
+            class="underline-offset-4 hover:underline"
+            href="https://twitter.com/_mikefrancis"
+          >
+            Twitter
+          </a>
+          <a
+            class="underline-offset-4 hover:underline"
+            href="https://dribbble.com/mikefrancis"
+          >
+            Dribbble
+          </a>
+          <a
+            class="underline-offset-4 hover:underline"
+            href="https://www.linkedin.com/in/mike-francis-77a65511/"
+          >
+            LinkedIn
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="px-5 md:px-10 lg:px-20">
+      <div class="mx-auto max-w-5xl">
+        <slot />
+      </div>
+    </main>
+    <footer class="px-5 md:px-10 lg:px-20">
+      <div
+        class="mx-auto max-w-5xl flex items-center justify-center md:justify-between space-x-5"
+      >
+        <p>&copy; {new Date().getFullYear()} Michael Francis</p>
+        <ThemeToggle />
+      </div>
+    </footer>
+  </body>
+</html>

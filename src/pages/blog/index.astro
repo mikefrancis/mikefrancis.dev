@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getBlogPosts } from "../../lib/contentful";
+import PageTitle from "../../components/PageTitle.astro";
+import PostGrid from "../../components/PostGrid.astro";
+
+const posts = await getBlogPosts();
+---
+
+<BaseLayout title="Blog archive">
+  <div class="space-y-10 lg:space-y-20">
+    <div class="text-center">
+      <PageTitle>Blog archive</PageTitle>
+    </div>
+    <PostGrid posts={posts} />
+  </div>
+</BaseLayout>
