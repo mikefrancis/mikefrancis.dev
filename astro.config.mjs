@@ -11,10 +11,5 @@ export default defineConfig({
       enabled: true,
     },
   }),
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    solidJs(),
-  ],
+  integrations: [tailwind(), solidJs()],
 });

@@ -9,7 +9,9 @@ interface Props {
 }
 
 const PostStars = ({ slug }: Props) => {
-  const [data, { refetch }] = createResource(slug, fetchStars);
+  const [data, { refetch }] = createResource(slug, fetchStars, {
+    deferStream: true,
+  });
   const handleSubmit = async (event: any) => {
     event.preventDefault();
 

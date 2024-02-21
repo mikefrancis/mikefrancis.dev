@@ -46,7 +46,10 @@ const { content, title, date, excerpt, timeToRead, slug, featuredImage } =
       </p>
     </div>
 
-    <div class="wysiwyg text-lg mb-16 max-w-3xl mx-auto" set:html={content} />
+    <div
+      class="prose lg:prose-xl dark:prose-invert mb-16 max-w-3xl mx-auto"
+      set:html={content}
+    />
 
     <div class="flex items-center justify-between max-w-3xl mx-auto md:pb-20">
       <Button as="a" href="/blog">
