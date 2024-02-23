@@ -14,7 +14,7 @@ const { title, description, image } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    {image ? <meta property="og:image" content={`https://${image}`} /> : ""}
+    {image ? <meta property="og:image" content={`https:${image}`} /> : ""}
   </head>
   <body
     class="antialiased min-h-screen transition bg-white text-black dark:bg-gray-800 dark:text-white py-10 md:py-20 space-y-10 md:space-y-20"
@@ -24,9 +24,9 @@ const { title, description, image } = Astro.props;
         <a href="/" class="uppercase text-sm tracking-widest">
           <Image
             class="rounded-full"
-            src="https://www.gravatar.com/avatar/1399c5690d715fc64f800b26be3b9cee?s=96"
+            src="/me.jpeg"
             loading="eager"
-            alt="Mike Francis"
+            alt="A picture of me"
             width={48}
             height={48}
           />
