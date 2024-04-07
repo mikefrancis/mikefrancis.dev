@@ -7,7 +7,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Geist Sans", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "2rem",
+          md: "4rem",
+          lg: "8rem",
+        },
       },
     },
   },

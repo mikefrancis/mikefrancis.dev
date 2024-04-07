@@ -5,17 +5,16 @@ import dayjs from "dayjs";
 const { posts } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="">
   {
     posts.map((post: BlogPost) => (
-      <article class="space-y-3">
-        <h3 class="font-semibold">
+      <article class="flex items-center py-4 [&:not(:last-child)]:border-b dark:border-gray-950 space-x-5">
+        <p class="uppercase text-xs tracking-widest text-gray-600 dark:text-gray-400">
+          {dayjs(post.date).format("MMM YYYY")}
+        </p>
+        <h3 class="flex-1 font-semibold truncate">
           <a href={`/blog/${post.slug}`}>{post.title}</a>
         </h3>
-        <p class="uppercase text-xs tracking-widest text-gray-600 dark:text-gray-400">
-          {dayjs(post.date).format("MMMM YYYY")}
-        </p>
-        <p class="text-sm">{post.excerpt}</p>
       </article>
     ))
   }
