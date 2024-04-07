@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 import PageTitle from "../components/PageTitle.astro";
 import PostGrid from "../components/PostGrid.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -12,7 +13,7 @@ const posts = await getBlogPosts({ limit: 3 });
   description="UK based Engineering Lead, Software Engineer & UI Designer."
 >
   <div class="max-w-3xl">
-    <div class="border-b dark:border-gray-950 space-y-10">
+    <div class="border-b dark:border-gray-800 space-y-10">
       <PageTitle>
         Technical Leader<br />& Software Engineer
       </PageTitle>
@@ -79,6 +80,23 @@ const posts = await getBlogPosts({ limit: 3 });
     <aside class="mt-10 space-y-5">
       <h2 class="text-xl font-extrabold">Latest articles</h2>
       <PostGrid posts={posts} />
+      <Button as="a" href="/blog">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width={1.5}
+          stroke="currentColor"
+          class="w-6 h-6 mr-2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+          ></path>
+        </svg>
+        View all
+      </Button>
     </aside>
   </div>
 </BaseLayout>
