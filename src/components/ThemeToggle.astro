@@ -33,7 +33,7 @@ import Button from "./Button.astro";
   </svg>
 </Button>
 
-<script is:inline>
+<script>
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
@@ -50,7 +50,7 @@ import Button from "./Button.astro";
     document.documentElement.classList.add("dark");
   }
 
-  window.localStorage.setItem("theme", theme);
+  window.localStorage.setItem("theme", String(theme));
 
   const handleToggleClick = () => {
     const element = document.documentElement;
@@ -62,5 +62,5 @@ import Button from "./Button.astro";
 
   document
     .getElementById("themeToggle")
-    .addEventListener("click", handleToggleClick);
+    ?.addEventListener("click", handleToggleClick);
 </script>
