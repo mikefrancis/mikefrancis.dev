@@ -45,7 +45,8 @@ export async function getBlogPosts(
   const entries = await contentfulClient.getEntries<ContentfulBlogPost>({
     ...params,
     content_type: "post",
-  });
+    order: "-sys.createdAt",
+  } as any);
 
   const items = entries.items.map((item) => {
     return {
