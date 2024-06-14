@@ -9,14 +9,6 @@ export default {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: "2rem",
-          md: "4rem",
-          lg: "8rem",
-        },
-      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
