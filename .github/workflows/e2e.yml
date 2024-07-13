@@ -19,12 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: check stuff
-        run: |
-          echo CONTENTFUL_SPACE_ID
-          echo $CONTENTFUL_SPACE_ID
-          echo CONTENTFUL_SPACE_ID
-
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
