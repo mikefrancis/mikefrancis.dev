@@ -19,11 +19,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: check stuff
+        run: |
+          echo CONTENTFUL_SPACE_ID
+          echo $CONTENTFUL_SPACE_ID
+          echo CONTENTFUL_SPACE_ID
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
-
         with:
-          browser: "chrome"
+          browser: chrome
           build: npm run build
           start: npm run start
           wait-on: "http://localhost:4321"
