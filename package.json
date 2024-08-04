@@ -17,7 +17,7 @@
     "@astrojs/solid-js": "^4.4.0",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vercel": "^7.7.2",
-    "@fontsource/inter": "^5.0.19",
+    "@fontsource/inter": "^5.0.20",
     "@tailwindcss/typography": "^0.5.13",
     "@vercel/kv": "^2.0.0",
     "astro": "^4.12.2",
