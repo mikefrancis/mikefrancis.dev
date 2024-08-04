@@ -21,7 +21,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "@vercel/kv": "^2.0.0",
     "astro": "^4.12.2",
-    "contentful": "^10.12.15",
+    "contentful": "^10.13.1",
     "dayjs": "^1.11.12",
     "micromark": "^4.0.0",
     "solid-js": "^1.8.19",
