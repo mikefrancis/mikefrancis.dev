@@ -12,7 +12,7 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.2",
+    "@astrojs/check": "^0.9.3",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/solid-js": "^4.4.1",
     "@astrojs/tailwind": "^5.1.0",
@@ -20,15 +20,15 @@
     "@fontsource/inter": "^5.0.20",
     "@tailwindcss/typography": "^0.5.14",
     "@vercel/kv": "^2.0.0",
-    "astro": "^4.13.3",
-    "contentful": "^10.13.2",
+    "astro": "^4.14.2",
+    "contentful": "^10.14.1",
     "dayjs": "^1.11.12",
     "micromark": "^4.0.0",
-    "solid-js": "^1.8.20",
-    "tailwindcss": "^3.4.9",
+    "solid-js": "^1.8.21",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "cypress": "^13.13.2"
+    "cypress": "^13.13.3"
   }
 }
