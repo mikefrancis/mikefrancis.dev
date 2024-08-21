@@ -26,6 +26,25 @@ const { content, title, date, excerpt, timeToRead, slug, featuredImage } =
 ---
 
 <BaseLayout title={title} description={excerpt} image={featuredImage}>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: title,
+      url: `https://www.mikefrancis.dev/blog/${slug}`,
+      description: excerpt,
+      author: {
+        "@type": "Person",
+        name: "Mike Francis",
+        url: "https://www.mikefrancis.dev",
+      },
+      image: featuredImage ? `https:${featuredImage}` : "",
+      datePublished: dayjs(date).format("YYYY-MM-DD"),
+      dateCreated: dayjs(date).format("YYYY-MM-DD"),
+      dateModified: dayjs(date).format("YYYY-MM-DD"),
+    })}
+  />
   <article class="space-y-10">
     <div class="text-center max-w-4xl mx-auto">
       <PageTitle>{title}</PageTitle>
