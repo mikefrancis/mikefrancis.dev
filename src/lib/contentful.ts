@@ -1,10 +1,11 @@
-import contentful, {
+import {
+  createClient,
   type EntryFieldTypes,
   type EntriesQueries,
 } from "contentful";
 import { micromark } from "micromark";
 
-export const contentfulClient = contentful.createClient({
+export const client = createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
   accessToken: import.meta.env.DEV
     ? import.meta.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
@@ -42,7 +43,7 @@ export interface BlogPost {
 export async function getBlogPosts(
   params?: EntriesQueries<ContentfulBlogPost, any>
 ) {
-  const entries = await contentfulClient.getEntries<ContentfulBlogPost>({
+  const entries = await client.getEntries<ContentfulBlogPost>({
     ...params,
     content_type: "post",
     order: "-sys.createdAt",
