@@ -27,6 +27,7 @@ const { content, title, date, excerpt, timeToRead, slug, featuredImage } =
 
 <BaseLayout title={title} description={excerpt} image={featuredImage}>
   <script
+    is:inline
     type="application/ld+json"
     set:html={JSON.stringify({
       "@context": "https://schema.org",
