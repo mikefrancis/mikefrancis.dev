@@ -1,6 +1,6 @@
-import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 import vercel from "@astrojs/vercel";
+import tailwindcss from "@tailwindcss/vite";
 
 export default {
   output: "static",
@@ -9,5 +9,8 @@ export default {
       enabled: true,
     },
   }),
-  integrations: [tailwind(), solidJs()],
+  integrations: [solidJs()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 };
