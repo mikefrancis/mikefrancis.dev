@@ -20,15 +20,15 @@
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.11",
     "@vercel/kv": "^3.0.0",
-    "astro": "^5.12.8",
+    "astro": "^5.12.9",
     "contentful": "^11.7.15",
     "dayjs": "^1.11.13",
     "micromark": "^4.0.2",
-    "solid-js": "^1.9.7",
+    "solid-js": "^1.9.8",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "cypress": "^14.5.3"
+    "cypress": "^14.5.4"
   }
 }
