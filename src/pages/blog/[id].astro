@@ -66,9 +66,9 @@ const { Content } = await render(post);
     </header>
 
     
-    <div class="max-w-3xl mx-auto">
+    {post.data.featuredImage ? <div class="max-w-3xl mx-auto">
       <img class="sepia-50 aspect-2/1 object-cover rounded" src={post.data.featuredImage} alt="" />
-    </div>
+    </div> : null}
 
     <div
       class="prose prose-slate dark:prose-invert mb-20 max-w-3xl mx-auto text-pretty"
