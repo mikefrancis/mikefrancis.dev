@@ -1,20 +1,20 @@
 import rss from "@astrojs/rss";
-import { getBlogPosts } from "../lib/contentful";
 import dayjs from "dayjs";
+import { getCollection } from "astro:content";
 
 export async function GET() {
-  const posts = await getBlogPosts();
+  const posts = await getCollection("blog");
+
   const items = posts.map((post) => ({
-    title: post.title,
-    description: post.excerpt,
-    pubDate: dayjs(post.date).toDate(),
-    link: `/blog/${post.slug}`,
+    title: post.data.title,
+    description: post.data.description,
+    pubDate: dayjs(post.data.createdAt).toDate(),
+    link: `/blog/${post.id}`,
   }));
 
   return rss({
-    stylesheet: "/pretty-feed-v3.xsl",
     title: "Mike Francis' Blog",
-    description: "UK based Engineering Lead, Software Engineer ",
+    description: "UK based Engineering Lead, Software Engineer",
     site: "https://www.mikefrancis.dev",
     items,
   });

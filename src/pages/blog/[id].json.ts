@@ -1,6 +1,5 @@
 import { createClient } from "@vercel/kv";
-import { getBlogPosts } from "../../lib/contentful";
-import { type APIRoute } from "astro";
+import { type APIContext } from "astro";
 
 export const prerender = false;
 
@@ -9,19 +8,9 @@ const kv = createClient({
   token: import.meta.env.KV_REST_API_TOKEN,
 });
 
-export async function getStaticPaths() {
-  const items = await getBlogPosts();
-
-  const posts = items.map((item) => ({
-    params: { slug: item.slug },
-  }));
-
-  return posts;
-}
-
-export const GET: APIRoute = async ({ params }) => {
+export async function GET({ params }: APIContext) {
   try {
-    const slug = params.slug as string;
+    const slug = params.id as string;
     const count = (await kv.get<number>(slug)) ?? 0;
 
     return new Response(
@@ -41,11 +30,12 @@ export const GET: APIRoute = async ({ params }) => {
       status: 500,
     });
   }
-};
+}
 
-export const POST: APIRoute = async ({ params }) => {
+export async function POST({ params }: APIContext) {
+  const slug = params.id as string;
+
   try {
-    const slug = params.slug as string;
     let count = (await kv.get<number>(slug)) ?? 0;
     count++;
 
@@ -69,4 +59,4 @@ export const POST: APIRoute = async ({ params }) => {
       status: 500,
     });
   }
-};
+}

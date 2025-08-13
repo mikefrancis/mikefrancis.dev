@@ -1,0 +1,97 @@
+---
+import { getCollection, render } from 'astro:content';
+import dayjs from "dayjs";
+
+import { calculateTimeToRead } from "../../lib/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import Button from "../../components/Button.astro";
+import PostStars from "../../components/PostStars";
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const timeToRead = calculateTimeToRead(post.body as string);
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.featuredImage}>
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.data.title,
+      url: `https://www.mikefrancis.dev/blog/${post.id}`,
+      description: post.data.description,
+      author: {
+        "@type": "Person",
+        name: "Mike Francis",
+        url: "https://www.mikefrancis.dev",
+      },
+      image: post.data.featuredImage ?? "",
+      datePublished: dayjs(post.data.createdAt).format("YYYY-MM-DD"),
+      dateCreated: dayjs(post.data.createdAt).format("YYYY-MM-DD"),
+      dateModified: dayjs(post.data.createdAt).format("YYYY-MM-DD"),
+    })}
+  />
+  <article class="space-y-10">
+    <header class="space-y-5">
+      <div class="text-center max-w-4xl mx-auto">
+        <PageTitle>{post.data.title}</PageTitle>
+      </div>
+
+      <div
+        class="flex justify-center items-center space-x-10 text-xs tracking-widest text-slate-600 dark:text-slate-400"
+      >
+        <p class="uppercase">
+          {dayjs(post.data.createdAt).format("MMMM YYYY")}
+        </p>
+        <p class="uppercase">
+          {
+            timeToRead === 0
+              ? "less than a minute"
+              : `${timeToRead} ${timeToRead === 1 ? "minute" : "minutes"}`
+          }
+        </p>
+      </div>
+    </header>
+
+    
+    <div class="max-w-3xl mx-auto">
+      <img class="sepia-50 aspect-2/1 object-cover rounded" src={post.data.featuredImage} alt="" />
+    </div>
+
+    <div
+      class="prose prose-slate dark:prose-invert mb-20 max-w-3xl mx-auto text-pretty"
+    >
+      <Content />
+    </div>
+
+    <div class="flex items-center justify-between max-w-3xl mx-auto">
+      <Button as="a" href="/blog">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-5 h-5 mr-2"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z"
+            clip-rule="evenodd"></path>
+        </svg>
+        Back to the archive
+      </Button>
+      <PostStars client:visible slug={post.id} />
+    </div>
+  </article>
+</BaseLayout>

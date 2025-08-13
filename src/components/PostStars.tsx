@@ -1,10 +1,9 @@
 import { createResource } from "solid-js";
 
-const BASE_URL = import.meta.env.DEV ? "http://localhost:4321" : "";
 const getStars = async (slug: string) =>
-  (await fetch(`${BASE_URL}/blog/${slug}.json`)).json();
+  (await fetch(`/blog/${slug}.json`)).json();
 const postStars = (slug: string) =>
-  fetch(`${BASE_URL}/blog/${slug}.json`, {
+  fetch(`/blog/${slug}.json`, {
     method: "POST",
   });
 

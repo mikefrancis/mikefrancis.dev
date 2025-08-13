@@ -1,10 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getBlogPosts } from "../../lib/contentful";
 import PageTitle from "../../components/PageTitle.astro";
 import PostGrid from "../../components/PostGrid.astro";
 
-const posts = await getBlogPosts();
+const rawPosts = await getCollection('blog');
+const posts = rawPosts.sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime());
 ---
 
 <BaseLayout title="Blog archive">
