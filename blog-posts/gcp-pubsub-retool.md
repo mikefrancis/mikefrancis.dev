@@ -19,7 +19,7 @@ Then you're pretty much all set to interact with the Pub/Sub REST API. For examp
 | Field    | Value                                                                                   |
 |----------|-----------------------------------------------------------------------------------------|
 | Method   | `POST`                                                                                    |
-| URL      | `projects/mvp-document-ocr/topics/invoice-created-production:publish`                   |
+| URL      | `projects/{your project ID}/topics/{your topic name}:publish`                   |
 | Headers  | `Content-type: application/json`                                                        |
 | Body (Raw)     | `{"messages": [{"data": {{ btoa(payload) }}}]}`                                                                                     |
 
