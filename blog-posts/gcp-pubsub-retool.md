@@ -18,7 +18,7 @@ Then you're pretty much all set to interact with the Pub/Sub REST API. For examp
 
 | Field    | Value                                                                                   |
 |----------|-----------------------------------------------------------------------------------------|
-| Method   | POST                                                                                    |
+| Method   | `POST`                                                                                    |
 | URL      | `projects/mvp-document-ocr/topics/invoice-created-production:publish`                   |
 | Headers  | `Content-type: application/json`                                                        |
 | Body (Raw)     | `{"messages": [{"data": {{ btoa(payload) }}}]}`                                                                                     |
@@ -37,3 +37,5 @@ await myPubSubQuery.trigger({
   },
 });
 ```
+
+In the **Response** tab of your query, make sure to tick **Show notification on Success** so that your Retool app users know everything worked!
