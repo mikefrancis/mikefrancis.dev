@@ -18,13 +18,13 @@
     "@astrojs/vercel": "^8.2.8",
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.14",
     "@vercel/kv": "^3.0.0",
     "astro": "^5.14.1",
     "dayjs": "^1.11.18",
     "solid-js": "^1.9.9",
     "tailwindcss": "^4.0.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "cypress": "^15.3.0"
