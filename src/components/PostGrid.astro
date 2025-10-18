@@ -7,8 +7,8 @@ const { posts } = Astro.props;
 <div>
   {
     posts.map((post: any) => (
-      <article class="flex items-center py-4 [&:not(:last-child)]:border-b border-slate-200 dark:border-slate-600 space-x-5">
-        <p class="w-20 uppercase text-xs tracking-widest text-slate-600 dark:text-slate-400">
+      <article class="flex items-center py-4 [&:not(:last-child)]:border-b border-zinc-200 dark:border-zinc-600 space-x-5">
+        <p class="w-20 uppercase text-xs tracking-widest text-zinc-600 dark:text-zinc-400">
           {dayjs(post.data.createdAt).format("MMM YYYY")}
         </p>
         <h3 class="flex-1 font-semibold truncate">

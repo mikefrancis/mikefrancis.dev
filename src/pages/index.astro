@@ -1,21 +1,23 @@
 ---
-import { getCollection} from 'astro:content';
+import { getCollection } from "astro:content";
 
 import Button from "../components/Button.astro";
 import PageTitle from "../components/PageTitle.astro";
 import PostGrid from "../components/PostGrid.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-
-const rawPosts = await getCollection('blog');
-const posts = rawPosts.sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime()).slice(0, 3);
+const rawPosts = await getCollection("blog");
+const posts = rawPosts
+  .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
+  .slice(0, 3);
 ---
+
 <BaseLayout
   title="Mike Francis"
   description="UK based Technical Leader, Software Engineer & UI Designer."
 >
   <div class="max-w-3xl">
-    <div class="border-b border-slate-200 dark:border-slate-600 space-y-10">
+    <div class="border-b border-zinc-200 dark:border-zinc-600 space-y-10">
       <PageTitle> Technical Leader & Software Engineer </PageTitle>
       <div class="text-lg text-pretty space-y-2">
         <p>Hello! I'm Mike and I'm an Engineering Leader based in the UK.</p>
