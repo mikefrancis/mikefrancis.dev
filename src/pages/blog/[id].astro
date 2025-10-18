@@ -1,5 +1,5 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, render } from "astro:content";
 import dayjs from "dayjs";
 
 import { calculateTimeToRead } from "../../lib/utils";
@@ -9,7 +9,7 @@ import Button from "../../components/Button.astro";
 import PostStars from "../../components/PostStars";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection("blog");
 
   return posts.map((post) => ({
     params: { id: post.id },
@@ -22,7 +22,11 @@ const timeToRead = calculateTimeToRead(post.body as string);
 const { Content } = await render(post);
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description} image={post.data.featuredImage}>
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.featuredImage}
+>
   <script
     is:inline
     type="application/ld+json"
@@ -50,7 +54,7 @@ const { Content } = await render(post);
       </div>
 
       <div
-        class="flex justify-center items-center space-x-10 text-xs tracking-widest text-slate-600 dark:text-slate-400"
+        class="flex justify-center items-center space-x-10 text-xs tracking-widest text-zinc-600 dark:text-zinc-400"
       >
         <p class="uppercase">
           {dayjs(post.data.createdAt).format("MMMM YYYY")}
@@ -65,13 +69,20 @@ const { Content } = await render(post);
       </div>
     </header>
 
-    
-    {post.data.featuredImage ? <div class="max-w-3xl mx-auto">
-      <img class="sepia-50 aspect-2/1 object-cover rounded" src={post.data.featuredImage} alt="" />
-    </div> : null}
+    {
+      post.data.featuredImage ? (
+        <div class="max-w-3xl mx-auto">
+          <img
+            class="sepia-50 aspect-2/1 object-cover rounded"
+            src={post.data.featuredImage}
+            alt=""
+          />
+        </div>
+      ) : null
+    }
 
     <div
-      class="prose prose-slate dark:prose-invert mb-20 max-w-3xl mx-auto text-pretty"
+      class="prose prose-zinc dark:prose-invert mb-20 max-w-3xl mx-auto text-pretty"
     >
       <Content />
     </div>

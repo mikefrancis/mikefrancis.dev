@@ -15,16 +15,17 @@ const { title, description, image } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     {image ? <meta property="og:image" content={`https:${image}`} /> : ""}
     <link
       rel="alternate"
       type="application/rss+xml"
       title="Your Site's Title"
       href={new URL("https://www.mikefrancis.dev/rss.xml", Astro.site)}
-  />
+    />
   </head>
   <body
-    class="antialiased min-h-screen transition bg-white text-black dark:bg-slate-700 dark:text-white"
+    class="antialiased min-h-screen transition bg-white text-black dark:bg-zinc-700 dark:text-white"
   >
     <div class="max-w-5xl mx-auto px-5 md:px-10 py-20">
       <header class="flex items-center justify-between pb-10">
