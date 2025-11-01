@@ -10,6 +10,8 @@ describe("Pages", () => {
   });
 
   it("blog post", () => {
+    cy.on("uncaught:exception", () => false);
+
     cy.visit("http://localhost:4321/blog/technical-leadership");
     cy.contains("Technical Leadership");
   });

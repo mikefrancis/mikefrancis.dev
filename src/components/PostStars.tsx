@@ -17,7 +17,7 @@ const PostStars = ({ slug }: Props) => {
     deferStream: true,
   });
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: SubmitEvent) => {
     event.preventDefault();
 
     await postStars(slug);
