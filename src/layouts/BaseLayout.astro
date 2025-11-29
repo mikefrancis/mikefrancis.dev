@@ -1,9 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import ThemeToggle from "../components/ThemeToggle.astro";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/800.css";
+import "@fontsource-variable/dm-sans";
 import "../styles/global.css";
 
 const { title, description, image } = Astro.props;
@@ -25,19 +23,30 @@ const { title, description, image } = Astro.props;
     />
   </head>
   <body
-    class="antialiased min-h-screen transition bg-white text-black dark:bg-zinc-700 dark:text-white"
+    class="antialiased min-h-screen transition bg-white text-black dark:bg-zinc-700 dark:text-white font-sans"
   >
     <div class="max-w-5xl mx-auto px-5 md:px-10 py-20">
       <header class="flex items-center justify-between pb-10">
-        <a href="/">
+        <a class="group flex items-center" href="/">
           <Image
-            class="max-w-full rounded-full mr-2"
+            class="max-w-full rounded-full"
             src="/me.jpg"
             loading="eager"
             alt="Me"
             width={48}
             height={48}
           />
+          <span
+            class="transition-opacity opacity-0 group-hover:opacity-100 ml-4 relative bg-zinc-100 px-2 py-1 rounded"
+          >
+            👋
+            <svg
+              class="absolute right-full top-1/2 -translate-y-1/2 size-2 fill-zinc-100"
+              viewBox="0 0 100 100"
+            >
+              <polygon points="0 50, 100 0, 100 100"></polygon>
+            </svg>
+          </span>
         </a>
         <ThemeToggle />
       </header>

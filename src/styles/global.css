@@ -4,5 +4,5 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: "Inter", "sans-serif";
+  --font-sans: "DM Sans Variable", "sans-serif";
 }

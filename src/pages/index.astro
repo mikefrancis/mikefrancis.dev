@@ -18,14 +18,12 @@ const posts = rawPosts
 >
   <div class="max-w-3xl">
     <div class="border-b border-zinc-200 dark:border-zinc-600 space-y-10">
-      <PageTitle> Technical Leader & Software Engineer </PageTitle>
+      <PageTitle>Technical Leader & Software Engineer</PageTitle>
       <div class="text-lg text-pretty space-y-2">
-        <p>Hello! I'm Mike and I'm an Engineering Leader based in the UK.</p>
+        <p>I'm Mike and I'm an Engineering Leader based in the UK.</p>
         <p>
-          I've spent the last 10+ years in green tech/energy; an industry I'm
-          very passionate about. In that time I've worked with founders to
-          create technical functions from scratch, achieve scale and find
-          product market fit.
+          Working with companies and founders, I've created technical functions
+          from scratch, found product market fit and achieved scale.
         </p>
       </div>
       <ul class="flex space-x-5 pb-10">
@@ -66,25 +64,27 @@ const posts = rawPosts
       </ul>
     </div>
     <aside class="mt-10 space-y-5">
-      <h2 class="text-xl font-extrabold">Latest articles</h2>
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-extrabold">Latest articles</h2>
+        <Button as="a" href="/blog">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width={1.5}
+            stroke="currentColor"
+            class="w-6 h-6 mr-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+            ></path>
+          </svg>
+          View all
+        </Button>
+      </div>
       <PostGrid posts={posts} />
-      <Button as="a" href="/blog">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width={1.5}
-          stroke="currentColor"
-          class="w-6 h-6 mr-2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-          ></path>
-        </svg>
-        View all
-      </Button>
     </aside>
   </div>
 </BaseLayout>
