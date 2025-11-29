@@ -53,27 +53,56 @@ const { Content } = await render(post);
         <PageTitle>{post.data.title}</PageTitle>
       </div>
 
-      <div
+      <ul
         class="flex justify-center items-center space-x-10 text-xs tracking-widest text-zinc-600 dark:text-zinc-400"
       >
-        <p class="uppercase">
+        <li class="uppercase flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="size-4 mr-2"
+            aria-label="Published date"
+          >
+            <path
+              d="M5.75 7.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM7.25 8.25A.75.75 0 0 1 8 7.5h2.25a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75ZM5.75 9.5a.75.75 0 0 0 0 1.5H8a.75.75 0 0 0 0-1.5H5.75Z"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              d="M4.75 1a.75.75 0 0 0-.75.75V3a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2V1.75a.75.75 0 0 0-1.5 0V3h-5V1.75A.75.75 0 0 0 4.75 1ZM3.5 7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V7Z"
+              clip-rule="evenodd"></path>
+          </svg>
           {dayjs(post.data.createdAt).format("MMMM YYYY")}
-        </p>
-        <p class="uppercase">
+        </li>
+        <li class="uppercase flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="size-4 mr-2"
+            aria-label="Time to read"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+          </svg>
           {
             timeToRead === 0
               ? "less than a minute"
               : `${timeToRead} ${timeToRead === 1 ? "minute" : "minutes"}`
           }
-        </p>
-      </div>
+        </li>
+      </ul>
     </header>
 
     {
       post.data.featuredImage ? (
         <div class="max-w-3xl mx-auto">
           <img
-            class="sepia-50 aspect-2/1 object-cover rounded"
+            class="sepia-50 aspect-2/1 object-cover rounded-2xl"
             src={post.data.featuredImage}
             alt=""
           />
@@ -82,7 +111,7 @@ const { Content } = await render(post);
     }
 
     <div
-      class="prose prose-zinc dark:prose-invert mb-20 max-w-3xl mx-auto text-pretty"
+      class="prose prose-zinc md:prose-lg dark:prose-invert mb-20 max-w-3xl mx-auto text-pretty"
     >
       <Content />
     </div>
