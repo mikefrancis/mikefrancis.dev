@@ -23,7 +23,7 @@ const { title, description, image } = Astro.props;
     />
   </head>
   <body
-    class="antialiased min-h-screen transition bg-white text-black dark:bg-zinc-700 dark:text-white font-sans"
+    class="antialiased min-h-screen transition bg-zinc-50 text-black dark:bg-zinc-700 dark:text-white font-sans"
   >
     <div class="max-w-5xl mx-auto px-5 md:px-10 py-20">
       <header class="flex items-center justify-between pb-10">
@@ -48,12 +48,12 @@ const { title, description, image } = Astro.props;
             </svg>
           </span>
         </a>
-        <ThemeToggle />
       </header>
       <main>
         <slot />
       </main>
-      <footer class="pt-20">
+      <footer class="pt-20 flex items-center space-x-5">
+        <ThemeToggle />
         <p>All content &copy; {new Date().getFullYear()}.</p>
       </footer>
     </div>
