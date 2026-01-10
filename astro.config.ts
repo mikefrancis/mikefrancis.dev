@@ -16,7 +16,28 @@ export default defineConfig({
   }),
   integrations: [solidJs()],
   experimental: {
-    csp: true,
+    csp: {
+      styleDirective: {
+        resources: ["'self'", "'unsafe-inline'"],
+      },
+      scriptDirective: {
+        resources: [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "vercel.live",
+          "vitals.vercel-insights.com",
+        ],
+      },
+      directives: [
+        "default-src 'self'",
+        "frame-src 'self' vercel.live",
+        "img-src * blob: data:",
+        "media-src 'none'",
+        "connect-src *",
+        "font-src 'self'",
+      ],
+    },
   },
   vite: {
     plugins: [tailwindcss()],
