@@ -16,7 +16,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          browser: chrome
           build: npm run build
           start: npm run start
           wait-on: "http://localhost:4321"
