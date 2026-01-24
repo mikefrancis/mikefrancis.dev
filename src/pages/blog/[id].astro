@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { getCollection, render } from "astro:content";
 import dayjs from "dayjs";
 
@@ -101,10 +102,11 @@ const { Content } = await render(post);
     {
       post.data.featuredImage ? (
         <div class="max-w-3xl mx-auto">
-          <img
+          <Image
             class="sepia-50 aspect-2/1 object-cover rounded-2xl"
             src={post.data.featuredImage}
-            alt=""
+            alt={post.data.title}
+            inferSize={true}
           />
         </div>
       ) : null
