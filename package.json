@@ -27,7 +27,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "cypress": "^15.9.0"
+    "cypress": "^15.10.0"
   },
   "overrides": {
     "path-to-regexp": "^6.3.0"
