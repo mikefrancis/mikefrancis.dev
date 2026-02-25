@@ -33,12 +33,29 @@ By keeping as close as you can to the framework (use their conventions, lean ver
 
 Pick a framework which has detailed upgrade guides, or better still is backwards compatible.
 
-## 3. Common editing experience
+## 3. Make the editing experience common
 
 This is a great place to invest time and will get you payback well into the future.
 
-I've lost count of the amount of times I've seen someone join a new company, submit some code and the files have no new-line endings. While this in itself is not a sin, on the flip side I remember joining companies with strong recommendations on editor setup and not only has this allowed me to push code that is non-controversial, I've actually learned a bunch of stuff too.
+I've lost count of the amount of times I've seen someone join a new company, submit some code and the files have no new-line endings. While this in itself is not a sin, on the flip side I remember joining companies with strong recommendations on editor setup and not only has this allowed me to push code that is non-controversial, I've actually learned a bunch of stuff too. It's also allowed less technical people (e.g. designers who have the impetus to change some front-end code) to operate independently, which has been super impactful.
 
 Basically, remove whatever you can from a code review. Linters, agent skills, code quality tools and git tooling can catch a bunch of issues before they end up wasting another developers's time in code review.
 
 Just make sure it doesn't "get in the way". If I want to push something experimental, I should be allowed to do this safely without my terminal screaming at me.
+
+## 4. Your setup is a product
+
+Has anyone used the acronym SaC (Setup as Code) yet? If your organsation uses common software (IDE, DMBS, HTTP client etc.) then make it easy for people to install the right version of these, preferably early into their role and in a low touch way.
+
+Same goes for programming languages. Pin whatever version of the languages you are using to repositories, use version managers and allow automatic switching as folks move between repositories. These usually integrate really well with CI, so if you update versions in one place, you can also test and deploy with these versions too.
+
+## 5. Avoid Hasty Abstractions
+
+Software developers are great at creating questionable solutions for problems that don't exist yet. I know this because I have done this many times myself, and will continue to well into the future. Sometimes, you've just got to take a very big step back, talk to a Senior and ask, "Do I really need to do this?".
+
+Also there's a time and a place right? If you are making abstractions on artefacts which might change quickly, such as a landing page for marketing, is your abstraction actually going to make it harder to experiment and iterate on at the speed required?
+
+My advice in general is to keep things as flat as you can and just not worry about repetition until either it causes a problem or someone else brings it up. Until then, if it's covered by a test then you shouldn't have anything to lose sleep over, and can in general be a lot more nimble with the work you pick up.
+
+## 6. Define "Done" clearly
+
