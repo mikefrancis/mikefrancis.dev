@@ -27,6 +27,10 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@types/node": "^25.3.3",
     "cypress": "^15.11.0"
+  },
+  "overrides": {
+    "vite": "7.3.1"
   }
 }
