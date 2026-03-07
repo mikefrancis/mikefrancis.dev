@@ -27,7 +27,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/node": "^25.3.3",
+    "@types/node": "^25.3.5",
     "cypress": "^15.11.0"
   },
   "overrides": {
