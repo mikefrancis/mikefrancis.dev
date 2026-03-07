@@ -1,11 +1,11 @@
-import { createClient } from "@vercel/kv";
+import { Redis } from "@upstash/redis";
 import { type APIContext } from "astro";
 
 export const prerender = false;
 
-const kv = createClient({
+const kv = new Redis({
   url: import.meta.env.KV_REST_API_URL,
-  token: import.meta.env.KV_REST_API_TOKEN,
+  token: import.meta.env.KV_REST_API_TOKEN!,
 });
 
 export async function GET({ params }: APIContext) {
@@ -21,7 +21,7 @@ export async function GET({ params }: APIContext) {
         headers: {
           "Content-Type": "application/json",
         },
-      }
+      },
     );
   } catch (e) {
     console.error("Request error", e);
@@ -50,7 +50,7 @@ export async function POST({ params }: APIContext) {
         headers: {
           "Content-Type": "application/json",
         },
-      }
+      },
     );
   } catch (e) {
     console.error("Request error", e);
