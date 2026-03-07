@@ -19,7 +19,7 @@
     "@fontsource-variable/dm-sans": "^5.2.8",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.1",
-    "@vercel/kv": "^3.0.0",
+    "@upstash/redis": "^1.36.3",
     "astro": "^5.18.0",
     "dayjs": "^1.11.19",
     "solid-js": "^1.9.11",
