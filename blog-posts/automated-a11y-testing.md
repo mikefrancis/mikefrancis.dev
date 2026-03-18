@@ -2,7 +2,7 @@
 title: Automated accessibility testing
 createdAt: 2021-10-20
 description: Learn how to use the popular cloud platform Vercel and the Cypress testing framework to automate away accessibility testing.
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/1UX1hh8HjR96bK72A32nVw/ccab9fb7468c95f43ba3e507052997e6/tim-mossholder-oY5mX1aW72A-unsplash.jpg
+featuredImage: https://images.unsplash.com/photo-1633904244276-b57f72c983a6?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 I'm a huge fan of [Cypress](https://www.cypress.io), it's become a core part of my stack over the last few years. If you're not familiar with Cypress, it's an end-to-end testing solution which allows you to write descriptive and behavioural integration tests against your application.

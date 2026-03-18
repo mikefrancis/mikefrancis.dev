@@ -2,7 +2,7 @@
 title: The Ack Pattern
 createdAt: 2023-09-14
 description: A common but key pattern to establish in product/operations/engineering teams
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/3hUrEx3v30TtZFn1HNYKJR/ce8e962a43e2794d8baf2d991b027946/christian-dubovan-gxsRL8B_ZqE-unsplash.jpg
+featuredImage: https://images.unsplash.com/photo-1552862750-746b8f6f7f25?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 In mainly remote organisations, we heavily rely on asynchronous (async) conversation to accomplish our daily tasks. However with using tools such as Slack to communicate async, it can be difficult to convey things like urgency or acknowledgement as you would in real life; a simple “nod” or a thumbs up to say, “I’m on this!”.

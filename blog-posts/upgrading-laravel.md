@@ -2,7 +2,7 @@
 title: Upgrading Laravel
 createdAt: 2024-05-18
 description: Documenting my process of moving through major Laravel upgrades.
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/3doqQ7q9fJaWo8I1oJKbcu/0108d3fb4174c8a330f5f1b4c66180e9/reinis-birznieks-t0mQSkfVCtM-unsplash.jpg
+featuredImage: https://images.unsplash.com/photo-1586864387789-628af9feed72?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 I have a few side projects written using the PHP framework [Laravel](https://laravel.com). If you've not given it a shot, I highly recommend building with it!
@@ -29,18 +29,18 @@ git diff laravel/11.x -- .
 This will show you everything that is different between the two. It's usually quite noisy as it contains everything that has been customised beyond the starter files (controllers, request, models, views etc.) so you can use exclusion patterns to help filter this out:
 
 ```
-git diff laravel/11.x -- . \ 
-  ':(exclude).github' \ 
-  ':(exclude).fly' \ 
-  ':(exclude).styleci.yml' \ 
-  ':(exclude)*.md' \ 
-  ':(exclude)app/Events' \ 
-  ':(exclude)app/Http/Controllers' \ 
-  ':(exclude)app/Http/Middleware' \ 
-  ':(exclude)app/Http/Requests' \ 
-  ':(exclude)app/Jobs' \ 
-  ':(exclude)app/Models' \ 
-  ':(exclude)app/Listeners' \ 
+git diff laravel/11.x -- . \
+  ':(exclude).github' \
+  ':(exclude).fly' \
+  ':(exclude).styleci.yml' \
+  ':(exclude)*.md' \
+  ':(exclude)app/Events' \
+  ':(exclude)app/Http/Controllers' \
+  ':(exclude)app/Http/Middleware' \
+  ':(exclude)app/Http/Requests' \
+  ':(exclude)app/Jobs' \
+  ':(exclude)app/Models' \
+  ':(exclude)app/Listeners' \
   ':(exclude)app/Notifications'
 ```
 
@@ -58,7 +58,7 @@ Or another example might be grabbing all of the updated configuration files if y
 git checkout laravel/11.x config
 ```
 
-(Note: This will __not__ remove any extra configuration files you've created, such as `./config/billing.php`.)
+(Note: This will **not** remove any extra configuration files you've created, such as `./config/billing.php`.)
 
 Once you're done, you can run:
 

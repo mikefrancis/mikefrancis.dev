@@ -2,7 +2,7 @@
 title: Next.js + Preact
 createdAt: 2021-01-04
 description: A step-by-step walkthrough to replace React with Preact for smaller bundle sizes
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/5e1P2CvTzdUs1a5Iyiectr/2812ea196a1c85ff73f52fb4580dff25/mathew-schwartz-sb7RUrRMaC4-unsplash.jpg
+featuredImage: https://images.unsplash.com/photo-1506818144585-74b29c980d4b?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 While perusing Twitter I stumbled across the following video by Lee Robinson:
@@ -19,9 +19,9 @@ Preact is a a much smaller alternative to React with virtually the same API. The
 
 You could go all in with Preact in development too, but by swapping out React at build time means:
 
-* You still get to use the familiar React API and ecosystem in development
-* The change is incremental and easier to remove if you spot a problem
-* Bigger bundles are generally __not__ a problem in development (React itself even has a development mode which is much larger than the production build) and you'll still get the smaller bundle size at the end
+- You still get to use the familiar React API and ecosystem in development
+- The change is incremental and easier to remove if you spot a problem
+- Bigger bundles are generally **not** a problem in development (React itself even has a development mode which is much larger than the production build) and you'll still get the smaller bundle size at the end
 
 Sounds good doesn't it? I gave it a try and this website is now running on Preact 🚀
 
@@ -48,9 +48,9 @@ module.exports = {
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
+        react: "preact/compat",
+        "react-dom/test-utils": "preact/test-utils",
+        "react-dom": "preact/compat",
       });
     }
 

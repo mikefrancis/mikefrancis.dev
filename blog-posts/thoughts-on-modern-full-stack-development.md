@@ -2,10 +2,10 @@
 title: Modern full stack JavaScript
 description: Thoughts about migrating this website from Next.js to Astro, and full stack development in general.
 createdAt: 2024-02-20
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/2rutHCEnbF2kaUh2CTTA35/1069311af5cd75b9f2fcdeae23e06c30/neom-XN6Z9g3DM4A-unsplash.jpg
+featuredImage: https://images.unsplash.com/photo-1682686580452-37f1892ee5e8?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
-I started off writing a post about migrating this website from [Next.js](https://nextjs.org/) to [Astro](https://astro.build/), however the more I thought about *why* I chose to do this, the deeper I wanted to go in explaining this, and address some of the prevalent topics in the area.
+I started off writing a post about migrating this website from [Next.js](https://nextjs.org/) to [Astro](https://astro.build/), however the more I thought about _why_ I chose to do this, the deeper I wanted to go in explaining this, and address some of the prevalent topics in the area.
 
 Like [others](https://blog.cassidoo.co/post/annoyed-at-react/), I've got a bit of React fatigue. Don't get me wrong, I absolutely love React and have used it (and will definitely continue to do so in some capacity) professionally since it's inception. I also class myself as a bit of a Vercel fanboy; I've got [the mug](https://edge-mug.vercel.app/edge) for doing some Open Source contributions, engage with the amazingly talented folks on Twitter whenever I can and went to [their first London meetup](https://twitter.com/vercel/status/1199636345041408000) (back when they were called Zeit).
 
@@ -21,7 +21,7 @@ What I loved about Next.js was: A new page is a new file, bosh. Want to render t
 
 On the React side, I remember the anticipation for hooks, like some crazy end-of-year graduation party. Much like the aftermath of said party, I am waking up fuzzy headed and regretting the amount of kool-aid I had to drink; looking at a barrage of lint warnings and code that arguably is less easy to understand than it's class-based counterparts. Maybe I should write better code? Or maybe it shouldn't be so difficult to use things like `useEffect`? 🤔
 
-All this culminated in needing a bit of a "stack detox", or at least really scrutinising what I was using it to achieve. I will __always__ bet on JavaScript; I’ve been writing it for 20 years and still do now professionally, so it’s a bet that pays off time and again. I just feel like I’ve got to the point where JavaScript (and to an extent React and Next.js) have become my hammer, and every problem that needs solving is a nail.
+All this culminated in needing a bit of a "stack detox", or at least really scrutinising what I was using it to achieve. I will **always** bet on JavaScript; I’ve been writing it for 20 years and still do now professionally, so it’s a bet that pays off time and again. I just feel like I’ve got to the point where JavaScript (and to an extent React and Next.js) have become my hammer, and every problem that needs solving is a nail.
 
 ## Enter Astro
 

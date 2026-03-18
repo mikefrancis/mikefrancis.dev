@@ -2,14 +2,14 @@
 title: Technical Leadership
 createdAt: 2020-06-10
 description: A whistle-stop tour of my interpretation of Technical Leadership, and the advice that got me to where I am today
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/1P5zEjq6fc2UNVjPX8JvCu/5f9bde394ce9d2d49572bfc141fa2ff3/photo-1523875176340-1298db8ee216.jpeg
+featuredImage: https://images.unsplash.com/photo-1458014854819-1a40aa70211c?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 I've been fortunate in my career to have worked with some amazing folks who have each taught me a different aspect about technical leadership and management. Like many before me I try to emulate these people in my own day-to-day and "wear the right hat".
 
 By no means is my learning on technical leadership over (on the contrary, I feel like every month/quarter is a new beginning) but I've hit a point where I want to start documenting these slivers of advice and have something to refer back to. I'd urge anyone to do the same thing.
 
-*This will be a "living" blog post.*
+_This will be a "living" blog post._
 
 You may have arrived at this juncture in your career as:
 
@@ -56,7 +56,7 @@ Project managers are often the busiest people on a team, in terms of the amount 
 
 ## Engineering Management
 
-This is possibly the most alien part of technical leadership to Engineers. As [Camille Fournier](https://twitter.com/skamille) writes in The Managers Path, a lot of the time you'll find a Senior Engineer moving into this role and it's important to acknowledge that you're starting an entirely new career as a *manager*; technical mastery will not really help you in this field as you will need to learn empathy and galvanising people for your cause.
+This is possibly the most alien part of technical leadership to Engineers. As [Camille Fournier](https://twitter.com/skamille) writes in The Managers Path, a lot of the time you'll find a Senior Engineer moving into this role and it's important to acknowledge that you're starting an entirely new career as a _manager_; technical mastery will not really help you in this field as you will need to learn empathy and galvanising people for your cause.
 
 I have very limited experience in this area but I'm on my path. Something I've found useful, which may sound slightly creepy at first, is creating a living document of notes for each person on my team and filling it with feedback which I collect whenever I notice something which deserves praise, shows growth or demonstrates company values - and also for things which could be improved. I find this always gives something to talk about in 1-1s and is great for performance reviews, and is better than digging through scribbled notes or trying to pluck thoughts from the top of my head.
 

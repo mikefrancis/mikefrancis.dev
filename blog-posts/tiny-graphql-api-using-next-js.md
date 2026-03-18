@@ -4,7 +4,7 @@ createdAt: 2019-07-12
 description: With the release of Next.js v9, API routes are easier than ever
 ---
 
-__The [GitHub repository](https://github.com/mikefrancis/nextjs-graphql-api) which accompanies this article has been updated to work with Next.js v10+__
+**The [GitHub repository](https://github.com/mikefrancis/nextjs-graphql-api) which accompanies this article has been updated to work with Next.js v10+**
 
 I'm a huge fan of [Next.js](https://nextjs.org), it's my go-to framework if I'm building a web application these days - I tend to leave Gatsby for blogs and heavily content-driven sites, and create-react-app for more single page-y
 applications. When v9 dropped the other day, I was reading through the [blog post](https://nextjs.org/blog/next-9) and immediately wanted to see if I could hack something together using the new API routes feature.
@@ -29,7 +29,7 @@ and you have a working API endpoint. It was possible to do this in previous vers
 This got me thinking, what if you could use the API routing to expose a GraphQL API? Especially with the advent of the **serverless** paradigm and the return of the monolith, it's becoming increasing
 normal to bundle your API endpoints with the rest of your application. So I set myself the task of exposing a small GraphQL API from some Next.js API routing.
 
-_If you want to skip to the end, here's the finished repo: https://github.com/mikefrancis/nextjs-graphql-api and here's a demo: https://next-graphql-api-mikefrancis.vercel.app
+\_If you want to skip to the end, here's the finished repo: https://github.com/mikefrancis/nextjs-graphql-api and here's a demo: https://next-graphql-api-mikefrancis.vercel.app
 
 ## Development
 
@@ -104,8 +104,6 @@ If successful, the response is returned as a plain JavaScript object. We then ne
 
 So now, if you hit the endpoint in Postman (I am using [Insomnia](http://insomnia.rest) below), you should receive a response. Hooray!
 
-![Example response](//images.ctfassets.net/w1rfv8jievsk/5M3Q41EnpNtwv8SLrqbbgA/816f1284259e2600b67570a06f6eff2a/Screenshot_2019-07-12_at_13.03.52.png)
-
 ### Consuming this data
 
 Back to `./pages/index.js`, we want to use our newly created GraphQL endpoint to populate our UI. Add the following and again we will go through line-by-line:
@@ -116,11 +114,11 @@ import axios from "axios";
 
 const query = `{ hello }`;
 
-const App = props => <h1>The response from the server is: {props.hello}</h1>;
+const App = (props) => <h1>The response from the server is: {props.hello}</h1>;
 
 App.getInitialProps = async () => {
   const response = await axios.post(`http://localhost:3000/api/graphql`, {
-    query
+    query,
   });
 
   return { ...response.data.data };

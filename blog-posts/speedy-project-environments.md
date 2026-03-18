@@ -2,7 +2,7 @@
 title: Quick project environments
 createdAt: 2020-10-15
 description: Do you know your Password Manager can (probably) do a lot more than store passwords?
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/2yNN9I9gOzPcEFl3LWDFQW/864db350b067550ad530e12904266173/photo-1563370961-b01f7e9009e8.jpeg
+featuredImage: https://images.unsplash.com/photo-1683151146729-663ea2037bc0?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 I tend to try to keep as much free-space on my computer as possible. I'm not quite sure why, but if development on a project I'm working on has stalled I'll make sure that source-control is up-to-date and delete the entire folder.
@@ -23,7 +23,7 @@ Once installed, I can use the `bw` to interface with BitWarden. Great! Obviously
 
 ```json
 {
-  "get-env": "bw get item mikefrancis.github.io | jq -r '.notes' > .env" 
+  "get-env": "bw get item mikefrancis.github.io | jq -r '.notes' > .env"
 }
 ```
 
