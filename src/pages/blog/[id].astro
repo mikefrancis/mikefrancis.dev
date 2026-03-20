@@ -134,7 +134,7 @@ const { Content } = await render(post);
         </svg>
         Back to the archive
       </Button>
-      <PostStars client:visible slug={post.id} />
+      <PostStars client:only slug={post.id} />
     </div>
   </article>
 </BaseLayout>
