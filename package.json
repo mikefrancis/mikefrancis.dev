@@ -24,14 +24,14 @@
     "dayjs": "^1.11.20",
     "solid-js": "^1.9.12",
     "tailwindcss": "^4.0.0",
-    "typescript": "^6.0.2"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
     "cypress": "^15.13.0"
   },
   "overrides": {
-    "fast-xml-parser": "5.5.7",
+    "fast-xml-parser": "^5.5.7",
     "path-to-regexp": "^6.3.0"
   }
 }
