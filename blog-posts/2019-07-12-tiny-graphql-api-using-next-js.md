@@ -1,4 +1,5 @@
 ---
+slug: tiny-graphql-api-using-next-js
 title: Building a tiny GraphQL API using Next.js
 createdAt: 2019-07-12
 description: With the release of Next.js v9, API routes are easier than ever

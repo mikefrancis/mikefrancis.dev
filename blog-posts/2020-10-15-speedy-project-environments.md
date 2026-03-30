@@ -1,4 +1,5 @@
 ---
+slug: speedy-project-environments
 title: Quick project environments
 createdAt: 2020-10-15
 description: Do you know your Password Manager can (probably) do a lot more than store passwords?

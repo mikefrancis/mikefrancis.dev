@@ -1,4 +1,5 @@
 ---
+slug: next-js-preact
 title: Next.js + Preact
 createdAt: 2021-01-04
 description: A step-by-step walkthrough to replace React with Preact for smaller bundle sizes

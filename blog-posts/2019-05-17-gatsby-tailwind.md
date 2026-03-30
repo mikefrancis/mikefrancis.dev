@@ -1,4 +1,5 @@
 ---
+slug: gatsby-tailwind
 title: Gatsby & Tailwind CSS
 createdAt: 2019-05-17
 description: Learn how to use the popular React framework with Tailwind CSS

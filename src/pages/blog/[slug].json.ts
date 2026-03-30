@@ -10,7 +10,7 @@ const kv = new Redis({
 
 export async function GET({ params }: APIContext) {
   try {
-    const slug = params.id as string;
+    const slug = params.slug as string;
     const count = (await kv.get<number>(slug)) ?? 0;
 
     return new Response(
@@ -33,7 +33,7 @@ export async function GET({ params }: APIContext) {
 }
 
 export async function POST({ params }: APIContext) {
-  const slug = params.id as string;
+  const slug = params.slug as string;
 
   try {
     let count = (await kv.get<number>(slug)) ?? 0;

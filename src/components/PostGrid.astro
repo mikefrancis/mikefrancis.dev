@@ -12,7 +12,7 @@ const { posts } = Astro.props;
           {dayjs(post.data.createdAt).format("MMM YYYY")}
         </p>
         <h3 class="flex-1 font-semibold truncate">
-          <a href={`/blog/${post.id}`}>{post.data.title}</a>
+          <a href={`/blog/${post.data.slug}`}>{post.data.title}</a>
         </h3>
       </article>
     ))

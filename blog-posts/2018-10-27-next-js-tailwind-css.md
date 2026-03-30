@@ -1,4 +1,5 @@
 ---
+slug: next-js-tailwind-css
 title: next.js & Tailwind CSS
 createdAt: 2018-10-27
 description: Learn how to use the popular SSR React framework with the utility-driven Tailwind CSS framework

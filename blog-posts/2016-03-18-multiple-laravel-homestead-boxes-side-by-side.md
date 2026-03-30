@@ -1,4 +1,5 @@
 ---
+slug: multiple-laravel-homestead-boxes-side-by-side
 title: Multiple Laravel Homestead boxes side-by-side
 createdAt: 2016-03-18
 description: How to develop/test on different versions of PHP using Laravel's Homestead

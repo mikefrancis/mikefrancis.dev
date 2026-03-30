@@ -9,7 +9,7 @@ export async function GET() {
     title: post.data.title,
     description: post.data.description,
     pubDate: dayjs(post.data.createdAt).toDate(),
-    link: `/blog/${post.id}`,
+    link: `/blog/${post.data.slug}`,
   }));
 
   return rss({

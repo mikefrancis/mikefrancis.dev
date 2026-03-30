@@ -1,4 +1,5 @@
 ---
+slug: secure-headers-for-laravel
 title: Secure Headers for Laravel
 createdAt: 2017-07-20
 description: Presenting laravel-secureheaders, a Secure Headers wrapper for the Laravel framework

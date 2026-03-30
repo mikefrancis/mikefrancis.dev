@@ -1,4 +1,5 @@
 ---
+slug: automated-a11y-testing
 title: Automated accessibility testing
 createdAt: 2021-10-20
 description: Learn how to use the popular cloud platform Vercel and the Cypress testing framework to automate away accessibility testing.

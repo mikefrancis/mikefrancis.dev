@@ -1,4 +1,5 @@
 ---
+slug: thoughts-on-modern-full-stack-development
 title: Modern full stack JavaScript
 description: Thoughts about migrating this website from Next.js to Astro, and full stack development in general.
 createdAt: 2024-02-20

@@ -1,4 +1,5 @@
 ---
+slug: technical-leadership
 title: Technical Leadership
 createdAt: 2020-06-10
 description: A whistle-stop tour of my interpretation of Technical Leadership, and the advice that got me to where I am today
