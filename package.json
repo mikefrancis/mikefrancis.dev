@@ -32,6 +32,7 @@
   },
   "overrides": {
     "fast-xml-parser": "^5.5.7",
-    "path-to-regexp": "^6.3.0"
+    "path-to-regexp": "^6.3.0",
+    "yaml": ">=2.8.3"
   }
 }
