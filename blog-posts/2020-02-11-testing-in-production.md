@@ -1,4 +1,5 @@
 ---
+slug: testing-in-production
 title: Testing in Production
 createdAt: 2020-02-11
 description: I've come to learn that I do not fear it, and have come instead to love it

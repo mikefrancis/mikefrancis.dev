@@ -1,4 +1,5 @@
 ---
+slug: engineering-management
 title: Engineering Management
 createdAt: 2021-07-09
 description: Personal reflections after half a year of being an Engineering Manager

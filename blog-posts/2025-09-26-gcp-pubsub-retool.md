@@ -1,4 +1,5 @@
 ---
+slug: gcp-pubsub-retool
 title: Retool to GCP Pub/Sub
 createdAt: 2025-09-26
 description: Publishing messages from Retool to Google Cloud Pub/Sub

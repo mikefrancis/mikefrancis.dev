@@ -1,4 +1,5 @@
 ---
+slug: upgrading-laravel
 title: Upgrading Laravel
 createdAt: 2024-05-18
 description: Documenting my process of moving through major Laravel upgrades.

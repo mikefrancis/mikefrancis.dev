@@ -1,4 +1,5 @@
 ---
+slug: ack-pattern
 title: The Ack Pattern
 createdAt: 2023-09-14
 description: A common but key pattern to establish in product/operations/engineering teams

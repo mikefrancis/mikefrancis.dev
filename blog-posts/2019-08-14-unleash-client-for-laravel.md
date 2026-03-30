@@ -1,4 +1,5 @@
 ---
+slug: unleash-client-for-laravel
 title: Laravel Unleash client
 createdAt: 2019-08-14
 description: Getting started with feature toggles using Unleash - the popular, open-source feature toggle package

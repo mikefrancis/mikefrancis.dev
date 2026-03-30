@@ -1,4 +1,5 @@
 ---
+slug: create-react-app-tailwind-css
 title: create-react-app & Tailwind CSS
 createdAt: 2018-01-01
 description: Learn how to use the popular React boilerplate app with the utility-driven Tailwind CSS framework
