@@ -1,9 +1,9 @@
 ---
 slug: dx-low-hanging-fruit
 title: The Low Hanging Fruit of DX
-createdAt: 2026-02-25
+createdAt: 2026-04-19
 description: A collection of tips from 20 years of coding
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/3doqQ7q9fJaWo8I1oJKbcu/0108d3fb4174c8a330f5f1b4c66180e9/reinis-birznieks-t0mQSkfVCtM-unsplash.jpg
+featuredImage: https://images.unsplash.com/photo-1559318586-af0532d03c8e?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 I've been coding for a while. I don't profess to be the best (very far from it) but having worked at a wide range of companies (young, old, big, small, tech, non-tech, legacy, bleeding edge), I've seen things that work and things that don't.
@@ -20,9 +20,9 @@ I've found these to be quite subjective and (again, like linting or formatting) 
 
 Sorting things A-Z is great because:
 
-* It's completely objective
-* It's easy to know exactly where to insert something (better diffs etc.)
-* It can be automated
+- It's completely objective
+- It's easy to know exactly where to insert something (better diffs etc.)
+- It can be automated
 
 ## 2. Stay close to the framework
 
@@ -66,11 +66,11 @@ When this isn't explicit, engineers end up guessing and then getting surprised i
 
 If your team has a Definition of Done, keep it visible and lightweight. If you don't, start with a simple checklist on tickets and PRs:
 
-* Tests added/updated
-* Documentation updated (if needed)
-* Monitoring/logging considered
-* Rollback plan understood
-* Feature flags added where appropriate
+- Tests added/updated
+- Documentation updated (if needed)
+- Monitoring/logging considered
+- Rollback plan understood
+- Feature flags added where appropriate
 
 It doesn't need to be perfect on day one. Just having a shared baseline removes a lot of repeated conversations and lets people ship with confidence.
 
