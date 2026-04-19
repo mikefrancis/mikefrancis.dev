@@ -3,7 +3,7 @@ slug: dx-low-hanging-fruit
 title: The Low Hanging Fruit of DX
 createdAt: 2026-02-25
 description: A collection of tips from 20 years of coding
-featuredImage: https://images.ctfassets.net/w1rfv8jievsk/3hUrEx3v30TtZFn1HNYKJR/ce8e962a43e2794d8baf2d991b027946/christian-dubovan-gxsRL8B_ZqE-unsplash.jpg
+featuredImage: https://images.ctfassets.net/w1rfv8jievsk/3doqQ7q9fJaWo8I1oJKbcu/0108d3fb4174c8a330f5f1b4c66180e9/reinis-birznieks-t0mQSkfVCtM-unsplash.jpg
 ---
 
 I've been coding for a while. I don't profess to be the best (very far from it) but having worked at a wide range of companies (young, old, big, small, tech, non-tech, legacy, bleeding edge), I've seen things that work and things that don't.
