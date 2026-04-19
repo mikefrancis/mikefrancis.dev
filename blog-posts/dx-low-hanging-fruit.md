@@ -1,4 +1,5 @@
 ---
+slug: dx-low-hanging-fruit
 title: The Low Hanging Fruit of DX
 createdAt: 2026-02-25
 description: A collection of tips from 20 years of coding
