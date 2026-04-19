@@ -1,0 +1,83 @@
+---
+slug: dx-low-hanging-fruit
+title: The Low Hanging Fruit of DX
+createdAt: 2026-04-19
+description: A collection of tips from 20 years of coding
+featuredImage: https://images.unsplash.com/photo-1559318586-af0532d03c8e?q=80&w=768&h=512&auto=format&fit=crop
+---
+
+I've been coding for a while and have worked at a wide range of companies (young, old, big, small, tech, non-tech, legacy, bleeding edge). In that time I've seen techniques that remove a lot of the "noise" from building software and allow engineers to focus on what matters, solving bigger problems.
+
+I am not going to attempt to define Developer Experience (DX) in this post, but I think for now it's the best umbrella I can place all of these tidbits under. If something has made it onto this list it's because it's something that has stopped me in my tracks and genuinely made me question why this is the first time I've put them into practice.
+
+So without further ado:
+
+## 1. Alphabetise whatever you can
+
+Environment variables. Config. CSS. Feature flags. You generally find after a while (like with linting/formatting) people have their own methods of sorting things. A classic example might be CSS, and ordering properties by layout -> appearance -> theme etc.
+
+I've found these to be quite subjective and (again, like linting or formatting) you can unwittingly allow these personal preferences to bleed into code reviews, which is a waste of time.
+
+Sorting things A-Z is great because:
+
+- It's completely objective
+- It's easy to know exactly where to insert something (better diffs etc.)
+- It can be automated
+
+## 2. Stay close to the framework
+
+Everyone hates a gnarly upgrade. I've worked at places with dedicated platform teams who provide you with very finely tuned boilerplate which (I'm told) is supposed to speed things up.
+
+Inevitably, these end up slowing you down in the longer term. Config is spread all over the place, dependencies start to go stale, no-one understands why particular decisions were made.
+
+By keeping as close as you can to the framework (use their conventions, lean very heavily into out-of-the-box) you can avoid as much of this toil as possible.
+
+Pick a framework which has detailed upgrade guides, or better still is backwards compatible.
+
+## 3. Make the editing experience common
+
+This is a great place to invest time and will get you payback well into the future.
+
+I've lost count of the amount of times I've seen someone join a new company, submit some code and the files have no new-line endings. While this in itself is not a sin, on the flip side I remember joining companies with strong recommendations on editor setup and not only has this allowed me to push code that is non-controversial, I've actually learned a bunch of stuff too. It's also allowed less technical people (e.g. designers who have the impetus to change some front-end code) to operate independently, which has been super impactful.
+
+Basically, remove whatever you can from a code review. Linters, agent skills, code quality tools and git tooling can catch a bunch of issues before they end up wasting another developer's time in code review.
+
+Just make sure it doesn't "get in the way". If I want to push something experimental, I should be allowed to do this safely without my terminal screaming at me.
+
+## 4. Your setup is a product
+
+Setup as Code. If your organisation uses common software (IDE, DBMS, HTTP client etc.) then make it easy for people to install the right version of these, preferably early into their role and in a low touch way.
+
+Same goes for programming languages. Pin whatever version of the languages you are using to repositories, use version managers and allow automatic switching as folks move between repositories. These usually integrate really well with CI, so if you update versions in one place, you can also test and deploy with these versions too.
+
+## 5. Avoid Hasty Abstractions
+
+Software developers are great at creating questionable solutions for problems that don't exist yet. I know this because I have done this many times myself, and will continue to well into the future. Sometimes, you've just got to take a very big step back, talk to a Senior and ask, "Do I really need to do this?".
+
+Also there's a time and a place right? If you are making abstractions on artefacts which might change quickly, such as a landing page for marketing, is your abstraction actually going to make it harder to experiment and iterate on at the speed required?
+
+My advice in general is to keep things as flat as you can and just not worry about repetition until either it causes a problem or someone else brings it up. Until then, if it's covered by a test then you shouldn't have anything to lose sleep over, and can in general be a lot more nimble with the work you pick up.
+
+## 6. Define "Done" clearly
+
+One of the easiest ways to improve DX is removing ambiguity. "Done" can mean wildly different things depending on who you ask: coded, tested, reviewed, deployed, monitored, documented, etc.
+
+When this isn't explicit, engineers end up guessing and then getting surprised in code review or at release time. That's friction that compounds quickly.
+
+If your team has a Definition of Done, keep it visible and lightweight. If you don't, start with a simple checklist on tickets and PRs:
+
+- Tests added/updated
+- Documentation updated (if needed)
+- Monitoring/logging considered
+- Rollback plan understood
+- Feature flags added where appropriate
+
+It doesn't need to be perfect on day one. Just having a shared baseline removes a lot of repeated conversations and lets people ship with confidence.
+
+## Conclusion
+
+None of these ideas are revolutionary, and that's kind of the point. DX improvements are often "boring" things done consistently over time.
+
+Pick one of these and give it a proper go for a sprint. If it helps, keep it. If it doesn't, bin it and move on. Keep the feedback loop tight and treat your developer workflows like a product you're actively maintaining.
+
+The low hanging fruit is usually right in front of us, we just need to decide to pick it.
