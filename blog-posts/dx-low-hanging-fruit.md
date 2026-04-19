@@ -27,7 +27,7 @@ Sorting things A-Z is great because:
 
 Everyone hates a gnarly upgrade. I've worked at places with dedicated platform teams who provide you with very finely tuned starting templates which (I'm told) are supposed to speed things up.
 
-Inevitably, these end up slowing you down in the longer term. Config is spread allover the place, dependencies start to go stale, no-one understands why particular decisions were made.
+Inevitably, these end up slowing you down in the longer term. Config is spread all over the place, dependencies start to go stale, no-one understands why particular decisions were made.
 
 By keeping as close as you can to the framework (use their conventions, lean very heavily into out-of-the-box) you can avoid as much of this toil as possible.
 
@@ -39,13 +39,13 @@ This is a great place to invest time and will get you payback well into the futu
 
 I've lost count of the amount of times I've seen someone join a new company, submit some code and the files have no new-line endings. While this in itself is not a sin, on the flip side I remember joining companies with strong recommendations on editor setup and not only has this allowed me to push code that is non-controversial, I've actually learned a bunch of stuff too. It's also allowed less technical people (e.g. designers who have the impetus to change some front-end code) to operate independently, which has been super impactful.
 
-Basically, remove whatever you can from a code review. Linters, agent skills, code quality tools and git tooling can catch a bunch of issues before they end up wasting another developers's time in code review.
+Basically, remove whatever you can from a code review. Linters, agent skills, code quality tools and git tooling can catch a bunch of issues before they end up wasting another developer's time in code review.
 
 Just make sure it doesn't "get in the way". If I want to push something experimental, I should be allowed to do this safely without my terminal screaming at me.
 
 ## 4. Your setup is a product
 
-Has anyone used the acronym SaC (Setup as Code) yet? If your organsation uses common software (IDE, DMBS, HTTP client etc.) then make it easy for people to install the right version of these, preferably early into their role and in a low touch way.
+Has anyone used the acronym SaC (Setup as Code) yet? If your organisation uses common software (IDE, DBMS, HTTP client etc.) then make it easy for people to install the right version of these, preferably early into their role and in a low touch way.
 
 Same goes for programming languages. Pin whatever version of the languages you are using to repositories, use version managers and allow automatic switching as folks move between repositories. These usually integrate really well with CI, so if you update versions in one place, you can also test and deploy with these versions too.
 
@@ -59,3 +59,24 @@ My advice in general is to keep things as flat as you can and just not worry abo
 
 ## 6. Define "Done" clearly
 
+One of the easiest ways to improve DX is removing ambiguity. "Done" can mean wildly different things depending on who you ask: coded, tested, reviewed, deployed, monitored, documented, etc.
+
+When this isn't explicit, engineers end up guessing and then getting surprised in code review or at release time. That's friction that compounds quickly.
+
+If your team has a Definition of Done, keep it visible and lightweight. If you don't, start with a simple checklist on tickets and PRs:
+
+* Tests added/updated
+* Documentation updated (if needed)
+* Monitoring/logging considered
+* Rollback plan understood
+* Feature flags added where appropriate
+
+It doesn't need to be perfect on day one. Just having a shared baseline removes a lot of repeated conversations and lets people ship with confidence.
+
+## Conclusion
+
+None of these ideas are particularly revolutionary, and that's kind of the point. DX improvements are often "boring" things done consistently over time.
+
+Pick one of these and give it a proper go for a sprint. If it helps, keep it. If it doesn't, bin it and move on. Keep the feedback loop tight and treat your developer workflows like a product you're actively maintaining.
+
+The low hanging fruit is usually right in front of us, we just need to decide to pick it.
