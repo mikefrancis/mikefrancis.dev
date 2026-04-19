@@ -20,7 +20,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
     "@upstash/redis": "^1.37.0",
-    "astro": "^6.1.8",
+    "astro": "^6.1.3",
     "dayjs": "^1.11.20",
     "solid-js": "^1.9.12",
     "tailwindcss": "^4.0.0",
