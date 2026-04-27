@@ -15,22 +15,20 @@
     "@astrojs/check": "^0.9.8",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/solid-js": "^6.0.1",
-    "@astrojs/vercel": "^10.0.4",
+    "@astrojs/vercel": "^10.0.5",
     "@fontsource-variable/dm-sans": "^5.2.8",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.2.2",
+    "@tailwindcss/vite": "^4.2.4",
     "@types/node": "^25.6.0",
     "@upstash/redis": "^1.37.0",
-    "astro": "^6.1.8",
-    "cypress": "^15.14.0",
+    "astro": "^6.1.9",
+    "cypress": "^15.14.1",
     "dayjs": "^1.11.20",
     "solid-js": "^1.9.12",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "fast-xml-parser": "^5.7.1",
-    "path-to-regexp": "^6.3.0",
-    "yaml": ">=2.8.3"
+    "path-to-regexp": "^6.3.0"
   }
 }
