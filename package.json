@@ -26,11 +26,9 @@
     "dayjs": "^1.11.20",
     "solid-js": "^1.9.12",
     "tailwindcss": "^4.0.0",
-    "typescript": "^6.0.3"
+    "typescript": "^5.9.3"
   },
   "overrides": {
-    "fast-xml-parser": "^5.7.1",
-    "path-to-regexp": "^6.3.0",
-    "yaml": ">=2.8.3"
+    "path-to-regexp": "^6.3.0"
   }
 }
