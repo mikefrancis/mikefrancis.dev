@@ -3,7 +3,8 @@ slug: technical-leadership
 title: Technical Leadership
 createdAt: 2020-06-10
 description: A whistle-stop tour of my interpretation of Technical Leadership, and the advice that got me to where I am today
-featuredImage: https://images.unsplash.com/photo-1458014854819-1a40aa70211c?q=80&w=768&h=512&auto=format&fit=crop
+featuredImage:
+  url: https://images.unsplash.com/photo-1458014854819-1a40aa70211c?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 I've been fortunate in my career to have worked with some amazing folks who have each taught me a different aspect about technical leadership and management. Like many before me I try to emulate these people in my own day-to-day and "wear the right hat".

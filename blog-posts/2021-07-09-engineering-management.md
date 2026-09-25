@@ -3,7 +3,8 @@ slug: engineering-management
 title: Engineering Management
 createdAt: 2021-07-09
 description: Personal reflections after half a year of being an Engineering Manager
-featuredImage: https://images.unsplash.com/photo-1494797262163-102fae527c62?q=80&w=768&h=512&auto=format&fit=crop
+featuredImage:
+  url: https://images.unsplash.com/photo-1494797262163-102fae527c62?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 Since January 2021 I've moved from being an Individual Contributor (IC) to an Engineering Manager (EM). As a Technical Lead I'd had a lot of exposure to EM concepts so it's been a fairly gradual transition but I feel like after 6 months in the role, it's time to do a bit of introspection about what the role means to me.

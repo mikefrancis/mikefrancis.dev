@@ -3,7 +3,8 @@ slug: dx-low-hanging-fruit
 title: The Low Hanging Fruit of DX
 createdAt: 2026-04-19
 description: A collection of tips from 20 years of coding
-featuredImage: https://images.unsplash.com/photo-1559318586-af0532d03c8e?q=80&w=768&h=512&auto=format&fit=crop
+featuredImage:
+  url: https://images.unsplash.com/photo-1559318586-af0532d03c8e?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 I've been coding for a while and have worked at a wide range of companies (young, old, big, small, tech, non-tech, legacy, bleeding edge). In that time I've seen techniques that remove a lot of the "noise" from building software and allow engineers to focus on what matters, solving bigger problems.

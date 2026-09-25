@@ -3,7 +3,10 @@ slug: upgrading-laravel
 title: Upgrading Laravel
 createdAt: 2024-05-18
 description: Documenting my process of moving through major Laravel upgrades.
-featuredImage: https://images.unsplash.com/photo-1586864387789-628af9feed72?q=80&w=768&h=512&auto=format&fit=crop
+featuredImage:
+  url: https://images.unsplash.com/photo-1586864387789-628af9feed72?q=80&w=768&h=512&auto=format&fit=crop
+  attributionAuthor: iMattSmart
+  attributionUrl: https://unsplash.com/photos/black-and-silver-claw-hammer-sm0Bkoj5bnA
 ---
 
 I have a few side projects written using the PHP framework [Laravel](https://laravel.com). If you've not given it a shot, I highly recommend building with it!

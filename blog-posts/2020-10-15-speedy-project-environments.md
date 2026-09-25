@@ -3,7 +3,10 @@ slug: speedy-project-environments
 title: Quick project environments
 createdAt: 2020-10-15
 description: Do you know your Password Manager can (probably) do a lot more than store passwords?
-featuredImage: https://images.unsplash.com/photo-1683151146729-663ea2037bc0?q=80&w=768&h=512&auto=format&fit=crop
+featuredImage:
+  url: https://images.unsplash.com/photo-1683151146729-663ea2037bc0?q=80&w=768&h=512&auto=format&fit=crop
+  attributionAuthor: Mihály Köles
+  attributionUrl: https://unsplash.com/photos/a-bunch-of-locks-are-stacked-on-top-of-each-other-J3VghCOxYB0
 ---
 
 I tend to try to keep as much free-space on my computer as possible. I'm not quite sure why, but if development on a project I'm working on has stalled I'll make sure that source-control is up-to-date and delete the entire folder.

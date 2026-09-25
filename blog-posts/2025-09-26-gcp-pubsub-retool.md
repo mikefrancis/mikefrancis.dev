@@ -3,7 +3,10 @@ slug: gcp-pubsub-retool
 title: Retool to GCP Pub/Sub
 createdAt: 2025-09-26
 description: Publishing messages from Retool to Google Cloud Pub/Sub
-featuredImage: https://images.unsplash.com/photo-1586864387789-628af9feed72?q=80&w=768&h=512&auto=format&fit=crop
+featuredImage:
+  url: https://images.unsplash.com/photo-1586864387789-628af9feed72?q=80&w=768&h=512&auto=format&fit=crop
+  attributionAuthor: iMattSmart
+  attributionUrl: https://unsplash.com/photos/black-and-silver-claw-hammer-sm0Bkoj5bnA
 ---
 
 [Retool](https://www.retool.com) is great as a no/low code solution for building apps. Although their catalogue of "off the shelf" resources is growing (and includes more and more Google Cloud Platform resources), there's still a few key resources missing, such as a native [Pub/Sub](https://cloud.google.com/pubsub) resource (AWS SNS is there, if this is your jam).

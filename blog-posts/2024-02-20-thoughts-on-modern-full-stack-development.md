@@ -3,7 +3,10 @@ slug: thoughts-on-modern-full-stack-development
 title: Modern full stack JavaScript
 description: Thoughts about migrating this website from Next.js to Astro, and full stack development in general.
 createdAt: 2024-02-20
-featuredImage: https://images.unsplash.com/photo-1682686580452-37f1892ee5e8?q=80&w=768&h=512&auto=format&fit=crop
+featuredImage:
+  url: https://images.unsplash.com/photo-1682686580452-37f1892ee5e8?q=80&w=768&h=512&auto=format&fit=crop
+  attributionAuthor: NEOM
+  attributionUrl: https://unsplash.com/photos/an-aerial-view-of-a-desert-with-rocks-and-sand-ljEXet84nL8
 ---
 
 I started off writing a post about migrating this website from [Next.js](https://nextjs.org/) to [Astro](https://astro.build/), however the more I thought about _why_ I chose to do this, the deeper I wanted to go in explaining this, and address some of the prevalent topics in the area.

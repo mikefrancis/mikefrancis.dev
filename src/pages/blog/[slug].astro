@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import { getCollection, render } from "astro:content";
 import dayjs from "dayjs";
 
@@ -26,7 +26,7 @@ const { Content } = await render(post);
 <BaseLayout
   title={post.data.title}
   description={post.data.description}
-  image={post.data.featuredImage}
+  image={post.data.featuredImage?.url}
 >
   <script
     is:inline
@@ -42,7 +42,7 @@ const { Content } = await render(post);
         name: "Mike Francis",
         url: "https://www.mikefrancis.dev",
       },
-      image: post.data.featuredImage ?? "",
+      image: post.data.featuredImage?.url ?? "",
       datePublished: dayjs(post.data.createdAt).format("YYYY-MM-DD"),
       dateCreated: dayjs(post.data.createdAt).format("YYYY-MM-DD"),
       dateModified: dayjs(post.data.createdAt).format("YYYY-MM-DD"),
@@ -101,15 +101,44 @@ const { Content } = await render(post);
 
     {
       post.data.featuredImage ? (
-        <div class="max-w-3xl mx-auto">
+        <figure class="max-w-3xl mx-auto">
           <Image
-            class="sepia-50 aspect-2/1 object-cover rounded-2xl"
-            src={post.data.featuredImage}
+            class="aspect-2/1 object-cover rounded-xl"
+            src={post.data.featuredImage.url}
             alt={post.data.title}
             inferSize={true}
             priority
           />
-        </div>
+          {post.data.featuredImage.attributionAuthor &&
+          post.data.featuredImage.attributionUrl ? (
+            <figcaption class="mt-2 flex items-center justify-end gap-2 text-xs text-zinc-600 dark:text-zinc-400">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="size-4"
+              >
+                <path d="M9.5 8.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 5A1.5 1.5 0 0 0 1 6.5v5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 13.5 5h-.879a1.5 1.5 0 0 1-1.06-.44l-1.122-1.12A1.5 1.5 0 0 0 9.38 3H6.62a1.5 1.5 0 0 0-1.06.44L4.439 4.56A1.5 1.5 0 0 1 3.38 5H2.5ZM11 8.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>
+                Photo by{" "}
+                <a
+                  class="underline"
+                  href={post.data.featuredImage.attributionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {post.data.featuredImage.attributionAuthor}
+                </a>
+              </span>
+            </figcaption>
+          ) : null}
+        </figure>
       ) : null
     }
 

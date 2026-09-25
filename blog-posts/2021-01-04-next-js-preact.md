@@ -3,7 +3,8 @@ slug: next-js-preact
 title: Next.js + Preact
 createdAt: 2021-01-04
 description: A step-by-step walkthrough to replace React with Preact for smaller bundle sizes
-featuredImage: https://images.unsplash.com/photo-1506818144585-74b29c980d4b?q=80&w=768&h=512&auto=format&fit=crop
+featuredImage:
+  url: https://images.unsplash.com/photo-1506818144585-74b29c980d4b?q=80&w=768&h=512&auto=format&fit=crop
 ---
 
 While perusing Twitter I stumbled across the following video by Lee Robinson:
