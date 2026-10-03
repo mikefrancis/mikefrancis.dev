@@ -26,6 +26,6 @@
     "dayjs": "^1.11.23",
     "solid-js": "^1.9.15",
     "tailwindcss": "^4.0.0",
-    "typescript": "^7"
+    "typescript": "^6"
   }
 }
